@@ -45,7 +45,7 @@ const metaTitle = `${c.eyebrow.split('· ')[1]} — První pozice`;
         <h2>{c.gridTitle} <span class="count">{refs.length}</span></h2>
         <p>{c.gridLead}</p>
       </div>
-      <div class="grid">
+      <div class="grid" data-reveal-group>
         {refs.map((r) => (
           <ShowcaseCard name={r.name} href={`/reference/${r.slug}/`} img={r.img} bullets={r.bullets} />
         ))}

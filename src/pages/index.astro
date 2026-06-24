@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import AiHeroVisual from '../components/AiHeroVisual.astro';
 
 // Služby — obsah dle DS web kitu. Ikony = lehké linkové SVG (Lucide-like).
 const services = [
@@ -45,8 +46,7 @@ const ICONS: Record<string, string> = {
         <a href="/ai-agenti/" class="btn secondary">Jak pracujeme s AI</a>
       </div>
       <div class="hero-visual">
-        <div class="rank-badge">1</div>
-        <div class="ph" style="height:460px"><span class="tag">[ product shot — dashboard / AI aplikace ]</span></div>
+        <AiHeroVisual />
       </div>
     </div>
   </header>
@@ -65,9 +65,9 @@ const ICONS: Record<string, string> = {
         <h2>Celé digitální řemeslo pod jednou střechou.</h2>
         <p>Od první verze webu po nasazené AI agenty. Vše navržené tak, aby vám dávalo náskok.</p>
       </div>
-      <div class="cards">
+      <div class="cards" data-reveal-group>
         {services.map((s) => (
-          <a class={`scard${s.feature ? ' feature' : ''}`} href={s.href}>
+          <a class={`scard${s.feature ? ' feature' : ''}`} href={s.href} data-glow>
             <div class="ico">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={s.feature ? '#1d1f1e' : '#4f6900'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={ICONS[s.icon]} />
             </div>

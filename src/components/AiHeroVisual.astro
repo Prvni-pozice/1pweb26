@@ -1,0 +1,91 @@
+---
+// AI hero vizuál — živá "agentní síť": pulzující uzly + spoje + putující datové
+// pakety + scan line. Čisté SVG/CSS, žádný generovaný asset. Reduced-motion safe.
+// Uzly (viewBox 0..600 x 0..460)
+const nodes = [
+  { x: 90, y: 110, r: 5, d: 0 }, { x: 215, y: 70, r: 4, d: 0.4 },
+  { x: 320, y: 150, r: 6, d: 0.8 }, { x: 470, y: 95, r: 4, d: 1.2 },
+  { x: 150, y: 250, r: 4, d: 0.6 }, { x: 300, y: 300, r: 7, d: 0.2 },
+  { x: 440, y: 240, r: 5, d: 1.0 }, { x: 520, y: 330, r: 4, d: 1.4 },
+  { x: 110, y: 370, r: 5, d: 0.9 }, { x: 250, y: 410, r: 4, d: 0.3 },
+  { x: 400, y: 380, r: 6, d: 1.1 },
+];
+const links = [
+  [0, 1], [1, 2], [2, 3], [0, 4], [4, 5], [2, 5], [5, 6], [3, 6],
+  [6, 7], [4, 8], [8, 9], [5, 9], [9, 10], [6, 10], [10, 7],
+];
+// "Datové pakety" putují po vybraných spojích
+const packets = [
+  { a: 0, b: 2, dur: 3.2, d: 0 }, { a: 4, b: 5, dur: 2.6, d: 0.6 },
+  { a: 5, b: 6, dur: 3.0, d: 1.1 }, { a: 9, b: 10, dur: 2.8, d: 0.3 },
+];
+---
+<div class="aiviz">
+  <div class="rank-badge">1</div>
+  <span class="viz-tag">agent · network · live</span>
+
+  <svg class="net" viewBox="0 0 600 460" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    {links.map(([a, b]) => (
+      <line x1={nodes[a].x} y1={nodes[a].y} x2={nodes[b].x} y2={nodes[b].y} class="edge" />
+    ))}
+    {packets.map((p) => (
+      <circle r="2.6" class="packet">
+        <animate attributeName="cx" from={nodes[p.a].x} to={nodes[p.b].x} dur={`${p.dur}s`} begin={`${p.d}s`} repeatCount="indefinite" />
+        <animate attributeName="cy" from={nodes[p.a].y} to={nodes[p.b].y} dur={`${p.dur}s`} begin={`${p.d}s`} repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0" dur={`${p.dur}s`} begin={`${p.d}s`} repeatCount="indefinite" />
+      </circle>
+    ))}
+    {nodes.map((n) => (
+      <g style={`--d:${n.d}s`}>
+        <circle cx={n.x} cy={n.y} r={n.r + 6} class="halo" />
+        <circle cx={n.x} cy={n.y} r={n.r} class="node" />
+      </g>
+    ))}
+  </svg>
+
+  <div class="scan"></div>
+</div>
+
+<style>
+  .aiviz {
+    position: relative; height: 460px; border-radius: var(--radius-2xl); overflow: hidden;
+    background:
+      radial-gradient(120% 90% at 78% 12%, rgba(152,200,0,.16), transparent 55%),
+      radial-gradient(80% 70% at 15% 100%, rgba(152,200,0,.08), transparent 60%),
+      linear-gradient(160deg, #16181a 0%, var(--n-900) 60%, #121413 100%);
+    border: 1px solid var(--border); box-shadow: var(--shadow-xl);
+  }
+  .net { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .edge { stroke: rgba(152,200,0,.22); stroke-width: 1; }
+  .node { fill: var(--lime); }
+  .halo { fill: var(--lime); opacity: .14; transform-box: fill-box; transform-origin: center;
+    animation: pulse 3.4s var(--ease-standard) infinite; animation-delay: var(--d); }
+  .packet { fill: #eaf6c4; filter: drop-shadow(0 0 4px rgba(152,200,0,.9)); }
+
+  @keyframes pulse { 0%,100% { transform: scale(.7); opacity: .10; } 50% { transform: scale(1.25); opacity: .30; } }
+
+  .scan {
+    position: absolute; left: 0; right: 0; height: 38%;
+    background: linear-gradient(180deg, transparent, rgba(152,200,0,.06) 50%, transparent);
+    animation: scan 6s var(--ease-standard) infinite;
+  }
+  @keyframes scan { 0% { transform: translateY(-60%); } 100% { transform: translateY(280%); } }
+
+  .rank-badge {
+    position: absolute; top: 24px; left: 24px; z-index: 3; width: 60px; height: 60px;
+    border-radius: var(--radius-lg); background: var(--n-900); color: var(--lime);
+    font-weight: var(--fw-black); font-size: 32px; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-lg); border: 1px solid rgba(152,200,0,.3);
+  }
+  .viz-tag {
+    position: absolute; right: 22px; bottom: 20px; z-index: 3;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--lime); background: rgba(13,15,14,.6); padding: 6px 12px; border-radius: var(--radius-pill);
+    border: 1px solid rgba(152,200,0,.25);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .halo, .scan { animation: none; }
+    .packet { display: none; }
+  }
+</style>
