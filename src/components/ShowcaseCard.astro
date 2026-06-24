@@ -1,0 +1,56 @@
+---
+// Referenční „kartička s grafickým efektem" v novém DS pojetí:
+// full-bleed obrázek, tmavý gradient, jméno + bullety, hover lift + lime CTA.
+interface Props {
+  name: string;
+  href: string;
+  img: string;
+  bullets?: string[];
+}
+const { name, href, img, bullets = [] } = Astro.props;
+---
+<a class="showcase" href={href}>
+  <div class="media"><img src={img} alt={name} loading="lazy" decoding="async" /></div>
+  <div class="overlay">
+    <h3>{name}</h3>
+    {bullets.length > 0 && (
+      <ul>{bullets.slice(0, 3).map((b) => <li>{b}</li>)}</ul>
+    )}
+    <span class="more">Zobrazit referenci →</span>
+  </div>
+</a>
+
+<style>
+  .showcase {
+    position: relative; display: block; overflow: hidden;
+    border-radius: var(--radius-xl); background: var(--n-900);
+    box-shadow: var(--shadow-sm); aspect-ratio: 4 / 3; color: #fff;
+    transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard);
+  }
+  .showcase:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .media { position: absolute; inset: 0; }
+  .media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--dur-slow) var(--ease-standard); }
+  .showcase:hover .media img { transform: scale(1.04); }
+  .overlay {
+    position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 24px; gap: 8px;
+    background: linear-gradient(to top, rgba(17,18,17,.92) 0%, rgba(17,18,17,.55) 38%, rgba(17,18,17,0) 72%);
+  }
+  .overlay h3 { font-size: 22px; font-weight: var(--fw-bold); color: #fff; letter-spacing: -.012em; }
+  .overlay ul {
+    margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px;
+    max-height: 0; opacity: 0; overflow: hidden;
+    transition: max-height var(--dur-base) var(--ease-standard), opacity var(--dur-base) var(--ease-standard);
+  }
+  .showcase:hover .overlay ul { max-height: 120px; opacity: 1; }
+  .overlay li {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .02em;
+    color: rgba(255,255,255,.82); background: rgba(255,255,255,.12);
+    padding: 4px 9px; border-radius: var(--radius-pill);
+  }
+  .more {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 4px;
+    font-size: 14px; font-weight: var(--fw-bold); color: var(--lime);
+  }
+  .showcase:focus-visible { outline: none; box-shadow: var(--ring); }
+</style>

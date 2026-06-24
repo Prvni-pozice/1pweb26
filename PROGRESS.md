@@ -20,7 +20,20 @@
 7. **Git** — `git init`, secret scan čistý, commit `2a5d090`.
 8. **Upgrade Astro 7 + Node 22** — `.nvmrc`, sitemap 3.7.3. Build zelený. Commit `f932ddf`.
 
+### 2026-06-24 — Rozhodnutí o migraci (zadavatel)
+- **URL:** clean slugy + 301 redirecty.
+- **Rozsah:** nejdřív pilot 5–10 stran na schválení směru, pak zbytek.
+- **Media:** stáhnout vše as-is.
+
+### 2026-06-24 — Pilot
+9. **Scraping recept** — starý web (CMS) vrací 404 bez správných hlaviček; funguje s `-A "Mozilla/5.0 (Macintosh…)" -H "Referer: …/cs/" -L`.
+10. **Kategorie e-shopy** — naparsováno 18 referenčních kartiček (`.category-frame`: id, název, bullety, obrázek `kat-pic/1920/<id>.jpg`) → `src/data/eshopy.json`. Staženo 18 obrázků (1.8 MB) do `public/img/eshopy/`.
+11. **`/eshopy/`** — nová DS kategorie: hero, 4 feature body, grid 18 `ShowcaseCard` (full-bleed obrázek, tmavý gradient, hover lift + lime CTA) = „kartičky s grafickým efektem" v novém pojetí.
+12. **`/reference/[slug]/`** — dynamická šablona, 18 stran z dat (hero obrázek, body, CTA aside). Plný obsah detailů → hlavní migrace.
+13. **301 redirecty** — `vercel.json`, 38 pravidel (eshopy + 18 referencí, s/bez trailing slash).
+14. **Build zelený: 20 stran.** Dev server na http://116.203.103.27:4330/ (port 4330). **STOP — čeká schválení směru pilotu.**
+
 ## Blokované / čeká na rozhodnutí
-- **Migrace 343 podstran** — strategie URL (zachovat `/cs/<id>-<slug>/` vs. clean slugy + 301), fidelity obsahu, stažení obrázků/videí. Kategorie-kartičky (`/cs/12-eshopy/`) překlopit do nového designu.
+- **Schválení pilotu** → pak migrace zbylých ~325 stran (hlavní sekce: weby, marketing, AI; reference ostatních kategorií; servisní stránky; full redirect mapa z celé sitemapy).
 - GitHub remote.
 - Footer IČO/DIČ; homepage slider — reálné obrázky.

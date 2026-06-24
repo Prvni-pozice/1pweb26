@@ -1,0 +1,194 @@
+{
+  "redirects": [
+    {
+      "source": "/cs/12-eshopy",
+      "destination": "/eshopy/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/12-eshopy/",
+      "destination": "/eshopy/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/60-vandastore",
+      "destination": "/reference/vandastore/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/60-vandastore/",
+      "destination": "/reference/vandastore/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/287-luxusni-pradlo-skiny",
+      "destination": "/reference/luxusni-pradlo-skiny/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/287-luxusni-pradlo-skiny/",
+      "destination": "/reference/luxusni-pradlo-skiny/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/246-woodiy-cz",
+      "destination": "/reference/woodiy-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/246-woodiy-cz/",
+      "destination": "/reference/woodiy-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/48-velosport",
+      "destination": "/reference/velosport/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/48-velosport/",
+      "destination": "/reference/velosport/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/233-fk-pelhrimov",
+      "destination": "/reference/fk-pelhrimov/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/233-fk-pelhrimov/",
+      "destination": "/reference/fk-pelhrimov/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/294-mt-tech-cz",
+      "destination": "/reference/mt-tech-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/294-mt-tech-cz/",
+      "destination": "/reference/mt-tech-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/226-rotmak",
+      "destination": "/reference/rotmak/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/226-rotmak/",
+      "destination": "/reference/rotmak/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/261-pear-control",
+      "destination": "/reference/pear-control/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/261-pear-control/",
+      "destination": "/reference/pear-control/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/296-obchod-bezlepku-cz",
+      "destination": "/reference/obchod-bezlepku-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/296-obchod-bezlepku-cz/",
+      "destination": "/reference/obchod-bezlepku-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/253-doudou",
+      "destination": "/reference/doudou/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/253-doudou/",
+      "destination": "/reference/doudou/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/57-zdravi-z-vysociny",
+      "destination": "/reference/zdravi-z-vysociny/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/57-zdravi-z-vysociny/",
+      "destination": "/reference/zdravi-z-vysociny/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s",
+      "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
+      "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/91-luxury-baby",
+      "destination": "/reference/luxury-baby/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/91-luxury-baby/",
+      "destination": "/reference/luxury-baby/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/295-pevex",
+      "destination": "/reference/pevex/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/295-pevex/",
+      "destination": "/reference/pevex/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/55-toptenis",
+      "destination": "/reference/toptenis/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/55-toptenis/",
+      "destination": "/reference/toptenis/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/224-galaxieknih-cz",
+      "destination": "/reference/galaxieknih-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/224-galaxieknih-cz/",
+      "destination": "/reference/galaxieknih-cz/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/56-reklamni-potisk",
+      "destination": "/reference/reklamni-potisk/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/56-reklamni-potisk/",
+      "destination": "/reference/reklamni-potisk/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/240-topicrem",
+      "destination": "/reference/topicrem/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/240-topicrem/",
+      "destination": "/reference/topicrem/",
+      "permanent": true
+    }
+  ]
+}
