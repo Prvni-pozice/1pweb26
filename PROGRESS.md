@@ -33,7 +33,19 @@
 13. **301 redirecty** — `vercel.json`, 38 pravidel (eshopy + 18 referencí, s/bez trailing slash).
 14. **Build zelený: 20 stran.** Dev server na http://116.203.103.27:4330/ (port 4330). **STOP — čeká schválení směru pilotu.**
 
-## Blokované / čeká na rozhodnutí
-- **Schválení pilotu** → pak migrace zbylých ~325 stran (hlavní sekce: weby, marketing, AI; reference ostatních kategorií; servisní stránky; full redirect mapa z celé sitemapy).
-- GitHub remote.
-- Footer IČO/DIČ; homepage slider — reálné obrázky.
+### 2026-06-24 — Plná migrace: reference + kategorie (schváleno „zpracuj vše")
+15. **Bulk download** — všech 343 stran sitemapy staženo lokálně do `scratchpad/pages/` (recept: realistická UA + Referer). Offline analýza `analysis.json`.
+16. **Klasifikace referencí** — union dvou metod: featured kartičky kategorií (11-weby/12-eshopy/13-propagace, mají `kat-pic` thumbnail) ∪ detekce přes externí odkaz na web klienta + title „Klient – služba". Výsledek **103 klientských referencí**: 59 weby, 26 eshopy, 17 marketing, 1 aplikace. (Archiv vyřešen tím, že reference jsou samostatné stránky v sitemapě — AJAX load-more netřeba.)
+17. **Thumbnaily** — 100/103 staženo (`kat-pic/1920/<id>.jpg`) do `public/img/reference/`; 5 bez thumbnailu → brandovaný placeholder (iniciála na tmavé).
+18. **Kategorie data-driven** — `categories.json` + `CategoryPage.astro` (hero + feature body + grid + CTA) → tenké stránky `/weby/`, `/eshopy/`, `/marketing/`.
+19. **E-shop grafika** — staženy 4 velké feature grafiky (001–004) + hero; sekce „Na čem si zakládáme" (grafika + hesla) **pod výpisem referencí** na `/eshopy/` (`eshop_graphics.json`).
+20. **Detail reference** — `/reference/[slug]` z `references.json` (103 stran): popis, bullety, odkaz na web klienta, CTA aside.
+21. **Navigace** — Nav + homepage služby napojeny na `/weby/ /eshopy/ /marketing/`.
+22. **301 mapa** — `vercel.json` 214 pravidel (kategorie + 103 referencí + `/cs`, s/bez trailing slash).
+23. **Build zelený: 107 stran.**
+
+## Zbývá
+- **Hlavní nav stránky:** `/o-nas/`, `/kontakt/` (DS má `ui_kits/website/kontakt.html`), `/ai-agenti/`, `/skoleni/` — zatím 404.
+- **Obsahové stránky** (~240 zbývajících URL): SEO články, blog (`248-blog`), pojmy/diskuze, info stránky, servisní (status, ochrana údajů). → rozhodnout rozsah.
+- Doplnit 301 pro tyto zbývající URL.
+- GitHub remote. Footer IČO/DIČ. Homepage slider — reálné obrázky.

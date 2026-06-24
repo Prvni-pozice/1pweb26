@@ -1,0 +1,1359 @@
+[
+ {
+  "slug": "nutriservis",
+  "name": "Nutriservis",
+  "cat": "aplikace",
+  "url": "http://www.nutriservis.cz",
+  "desc": "Pro zákazníka jsme vytvořili webové stránky, jejichž součástí je i aplikace, která propočítává nutriční hodnoty potravin dle zadání uživatele. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/152.jpg",
+  "oldHref": "/cs/152-nutriservis/",
+  "featured": false
+ },
+ {
+  "slug": "doudou",
+  "name": "Doudou",
+  "cat": "eshopy",
+  "url": "http://www.doudou.cz",
+  "desc": "E-shop na míru, který zákazníkům nabízí kvalitní a luxusní hračky. Jednoduchost designu eshopu pomáhá návštěvníkům k lepší orientaci na stránkách. Samozřejmostí je responzivita. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/253.jpg",
+  "oldHref": "/cs/253-doudou/",
+  "featured": true
+ },
+ {
+  "slug": "fk-pelhrimov",
+  "name": "FK Pelhřimov",
+  "cat": "eshopy",
+  "url": "https://shop.fkpelhrimov.cz",
+  "desc": "Pro pelhřimovský fotbalový (FK Pelhřimov) tým jsme v zimě roku 2018 vytvořili zbrusu nový fanshop, který hned po spuštění zaznamenal kladné reakce. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/233.jpg",
+  "oldHref": "/cs/233-fk-pelhrimov/",
+  "featured": true
+ },
+ {
+  "slug": "galaxieknih-cz",
+  "name": "Galaxieknih.cz",
+  "cat": "eshopy",
+  "url": "http://www.galaxieknih.cz",
+  "desc": "Jak již název napovídá, tak e-shop Galaxie knih se zaměřuje na prodej knih a podobného sortimentu. Klient požadoval napojení na sklad a tak vznikl moderní a přehledný internetový obchod. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/224.jpg",
+  "oldHref": "/cs/224-galaxieknih-cz/",
+  "featured": true
+ },
+ {
+  "slug": "luxury-baby",
+  "name": "Luxury Baby",
+  "cat": "eshopy",
+  "url": "http://www.luxurybaby.cz/",
+  "desc": "E-shop klade důraz na jednoduchost a čistotu. Prodávají se v něm luxusní kočárky a hračky a proto design musí odpovídat moderním trendům. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/91.jpg",
+  "oldHref": "/cs/91-luxury-baby/",
+  "featured": true
+ },
+ {
+  "slug": "luxusni-pradlo-skiny",
+  "name": "Luxusní prádlo Skiny",
+  "cat": "eshopy",
+  "url": "http://www.pradloskiny.cz",
+  "desc": "Koncem roku 2019 jsme začali pracovat na novém eshopu Luxusní prádlo Skiny. Mimo exportů zboží a napojením na ekonomický systém jsme se zaměřili na snadnou orientaci na stránkách a intuitivním výběru požadované velikosti a barvy. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "natažení produktů pomocí feedů",
+   "napojení na ekonomický systém"
+  ],
+  "img": "/img/reference/287.jpg",
+  "oldHref": "/cs/287-luxusni-pradlo-skiny/",
+  "featured": true
+ },
+ {
+  "slug": "mt-tech-cz",
+  "name": "MT-TECH CZ",
+  "cat": "eshopy",
+  "url": "https://www.mttech.cz/",
+  "desc": "Pro MT-TECH CZ jsme realizovali nové a moderní www stránky, které slouží jako online katalog. Tato společnost poskytovuje služeby zákazníkům v oblasti dodávek technologií pro třískové obrábění na CNC obráběcích strojích a v oblasti zakázkové výroby dílců. Plně responzivní design podporuje snadnou orientaci a přehlednost na stránkách na jakémkoliv zařízení. V případě zájmu o podobný projekt neváhej",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/294.jpg",
+  "oldHref": "/cs/294-mt-tech-cz/",
+  "featured": true
+ },
+ {
+  "slug": "obchod-bezlepku-cz",
+  "name": "Obchod-bezlepku.cz",
+  "cat": "eshopy",
+  "url": "",
+  "desc": "Tento eshop, který jsem tvořili přímo na míru klienta, nabízí široký sortiment bezlepkových výrobků nejen celiakům. E-shop byl přesunut, nyní se připravuje provoz na nové doméně.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/296.jpg",
+  "oldHref": "/cs/296-obchod-bezlepku-cz/",
+  "featured": true
+ },
+ {
+  "slug": "pear-control",
+  "name": "Pear Control",
+  "cat": "eshopy",
+  "url": "http://www.pear-control.com",
+  "desc": "Dalším naším projektem je e-shop na mítu Pear Control, který nabízí zařízení používané k odstranění rychlostních omezení příšlapu elektrokola. Celkový design internetového obchodu byl tvořen tak, aby byl pro zákazíka co nejpříjemňější a snadno se v něm orientoval. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/261.jpg",
+  "oldHref": "/cs/261-pear-control/",
+  "featured": true
+ },
+ {
+  "slug": "pevex",
+  "name": "PEVEX",
+  "cat": "eshopy",
+  "url": "http://www.pevex.cz",
+  "desc": "PEVEX spol. s r.o. Pelhřimov se zabývá velkoobchodním prodejem krabiček na šperky, hodinky, mince a medaile.Rovněž prodejem aranžerských materíálů pro zlatníky a hodináře. My jsme pro společnost Pevex tvořili nový eshop na míru. Zde jsem pracovali na: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/295.jpg",
+  "oldHref": "/cs/295-pevex/",
+  "featured": true
+ },
+ {
+  "slug": "reklamni-potisk",
+  "name": "Reklamní potisk",
+  "cat": "eshopy",
+  "url": "http://www.reklamnipotisk.cz",
+  "desc": "Pro výrobce a prodejce reklamního potisku na Vysočině usilovně pracujeme nejen na samotném eshopu, ale také na skvělé vyhledatelnosti klíčových výrazů. Dosažení prvních pozic na hlavních vyhledávačích pro výrazy: stužky pro maturanty, šerpy, maturitní trička, maturitní skleničky ....",
+  "bullets": [
+   "1. pozice na slovo \"stužky pro maturanty\" ve vyhledávači seznam.cz",
+   "1. pozice na slovo \"šerpy\" ve vyhledávači seznam.cz",
+   "6. pozice na slovo \"maturitní trička\" ve vyhledávači seznam.cz",
+   "5. pozice na slovo \"maturitní skleničky\" ve vyhledávači seznam.cz"
+  ],
+  "img": "/img/reference/182.jpg",
+  "oldHref": "/cs/182-reklamni-potisk/",
+  "featured": true
+ },
+ {
+  "slug": "rotmak",
+  "name": "Rotmak",
+  "cat": "eshopy",
+  "url": "https://www.rotmak.cz",
+  "desc": "S e-shopem Rotmak spolupracujeme již několik let a tak jsme rádi, že si pro novou podobu svého obchodu vybrali právě naši společnost. Tyto stránky jsme navrhli tak, aby byly čisté a přehledné pro všechny uživatele na všech zařízeních. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "grafický design loga"
+  ],
+  "img": "/img/reference/226.jpg",
+  "oldHref": "/cs/226-rotmak/",
+  "featured": true
+ },
+ {
+  "slug": "topicrem",
+  "name": "Topicrem",
+  "cat": "eshopy",
+  "url": "http://www.topicrem.cz",
+  "desc": "E-shop Topicrem zaujme čistým designem a velice snadnou orientací v něm. Samozřejmostí je responzivní design, který ocení všichni uživatelé na mobilních zařízeních. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/240.jpg",
+  "oldHref": "/cs/240-topicrem/",
+  "featured": true
+ },
+ {
+  "slug": "toptenis",
+  "name": "Toptenis",
+  "cat": "eshopy",
+  "url": "http://www.toptenis.cz/",
+  "desc": "E-shop toptenis.cz nabízí především vybavení na tenis a ostatní sporty. Samozřejmostí je i responzivní, přehledný a čistý design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/55.jpg",
+  "oldHref": "/cs/55-toptenis/",
+  "featured": true
+ },
+ {
+  "slug": "vandastore",
+  "name": "Vandastore",
+  "cat": "eshopy",
+  "url": "http://www.vandastore.cz/",
+  "desc": "Pro klienta, který provozuje obchod Vandastore jsme realizovali e-shop a nyní pracujeme na Seo optimalizacích. Naše usilovná práce zatím přináší výrazné zvýšení vyhledatelnosti klíčových výrazů a tím pádem i navýšení návštěvnosti a s tím spojené tržby obchodu. Získat a dlouhodobě udržet 1. pozice na klíčová slova a příbuzná slova spojené se značkami: Bugaboo, Stokke, Joolz, Cybex. Průběžně jsou do",
+  "bullets": [
+   "1. pozice na slovo \"Bugaboo\" ve vyhledávači google.cz",
+   "1. pozice na slovo \"Bugaboo\" ve vyhledávači seznam.cz",
+   "2. pozice na slovo \"Stokke\" ve vyhledávači seznam.cz",
+   "2. pozice na slovo \"Stokke\" ve vyhledávači google.cz"
+  ],
+  "img": "/img/reference/192.jpg",
+  "oldHref": "/cs/192-vandastore/",
+  "featured": true
+ },
+ {
+  "slug": "velosport",
+  "name": "Velosport",
+  "cat": "eshopy",
+  "url": "http://www.velosport.cz",
+  "desc": "S tímto klientem spolupracujeme již několik let a jako odměna naší práce se tento e-shop stal finalistou prestižní ankety \"shop roku 2012\". Na jaře roku 2015 došlo k přepracování, kdy plně responzivní design, veliká přehlednost stránek a také dvě implementované platební brány jsou jen jedny z mnoha předností tohoto internetového obchodu. V případě zájmu o podobný projekt neváhejte kontaktovat naši",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "věrnostní / motivační program"
+  ],
+  "img": "/img/reference/48.jpg",
+  "oldHref": "/cs/48-velosport/",
+  "featured": true
+ },
+ {
+  "slug": "woodiy-cz",
+  "name": "Woodiy.cz",
+  "cat": "eshopy",
+  "url": "https://www.woodiy.cz/",
+  "desc": "E-shop WooDIY spojuje slova wood a zkratky DIY - Do it yourself a zamřuje se prodej dřevěných produktů. Tento internetový obchod jsme tvořili od základu. Tvorba grafických podkladů včetně loga byl jen začátek. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "redakční a administrační systém",
+   "grafická tvorba loga"
+  ],
+  "img": "/img/reference/246.jpg",
+  "oldHref": "/cs/246-woodiy-cz/",
+  "featured": true
+ },
+ {
+  "slug": "zdravi-z-vysociny",
+  "name": "Zdraví z Vysočiny",
+  "cat": "eshopy",
+  "url": "http://www.zdravizvysociny.cz/",
+  "desc": "E-shop, který nabízí především zdravé a bio potraviny má nyní zbrusu nový design. Čistota celkového eshopu pomáhá zákazníkům k lepší orientaci na stránkách. Eshop odráží krásu farem a \"zdraví z Vysočiny\". Samozřejmostí je i responzivní design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/57.jpg",
+  "oldHref": "/cs/57-zdravi-z-vysociny/",
+  "featured": true
+ },
+ {
+  "slug": "ck-marketa",
+  "name": "CK Markéta",
+  "cat": "eshopy",
+  "url": "http://www.ckmarketa.cz/",
+  "desc": "Cestovní kancelář, která nabízí jak pobytové, poznávací tak i skupinové zájezdy se může pochlubit líbivým designem nových stránek, který vychází z kvalitních úvodních fotografií. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/202.jpg",
+  "oldHref": "/cs/202-ck-marketa/",
+  "featured": false
+ },
+ {
+  "slug": "fofrovac",
+  "name": "Fofrovač.cz",
+  "cat": "eshopy",
+  "url": "http://www.fofrovac.cz",
+  "desc": "Pro našeho klienta jsme realizovali nákupní internetový portál. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/92.jpg",
+  "oldHref": "/cs/92-fofrovac/",
+  "featured": false
+ },
+ {
+  "slug": "kaap-cz",
+  "name": "Kaap.cz",
+  "cat": "eshopy",
+  "url": "http://www.kaap.cz",
+  "desc": "Na jaře roku 2015 jsme spustili tento internetový obchod. Tento eshop se zaměřuje především na elektroniku a tak musí být přehledný a responzivní. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/207.jpg",
+  "oldHref": "/cs/207-kaap-cz/",
+  "featured": false
+ },
+ {
+  "slug": "snadny-profit",
+  "name": "Snadný Profit",
+  "cat": "eshopy",
+  "url": "http://www.snadnyprofit.cz/",
+  "desc": "Snadný Profit je nový nákupní portál, který Vám pomůže ušetřit peníze za nákupy na internetu. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/61.jpg",
+  "oldHref": "/cs/61-snadny-profit/",
+  "featured": false
+ },
+ {
+  "slug": "tradition-gifts",
+  "name": "Tradition-gifts.cz",
+  "cat": "eshopy",
+  "url": "http://www.tradition-gifts.cz",
+  "desc": "Tradiční výrobky z originálních lokalit prodává nový e-shop, který naše společnost realizovala. Design, který je pochopitelně responzivní, se snaží navodit atmosféru tradiční ruční výroby s odkazem na naší hystorii. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/69.jpg",
+  "oldHref": "/cs/69-tradition-gifts/",
+  "featured": false
+ },
+ {
+  "slug": "veloservis",
+  "name": "velo-team.com",
+  "cat": "eshopy",
+  "url": "http://www.velo-team.com",
+  "desc": "Dalším naším projektem realizovaným v roce 2015 byl i tento e-shop. Design stránek jsme navrhovali s důrazem na dobrou přehlednost a vizuální čistotu a je také plně responzivní. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/54.jpg",
+  "oldHref": "/cs/54-veloservis/",
+  "featured": false
+ },
+ {
+  "slug": "elektrohned",
+  "name": "Elektrohned",
+  "cat": "eshopy",
+  "url": "http://www.elektrohned.cz/",
+  "desc": "V průběhu roku 2015 jsme spustili internetový obchod, který se zaměřuje zejména na elektroniku hračky a domácí potřeby. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": null,
+  "oldHref": "/cs/78-elektrohned/",
+  "featured": false
+ },
+ {
+  "slug": "fifty-fifty",
+  "name": "Fifty-Fifty",
+  "cat": "eshopy",
+  "url": "http://www.fifty-fifty.cz",
+  "desc": "Pro dlouhodobého klienta naše společnost realizovala novou grafiku a kompletně přepracovaný systém skateshopu Fifty-Fifty. Tento e-shop se setkal s velice kladnými reakcemi ze strany nakupujících. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": null,
+  "oldHref": "/cs/89-fifty-fifty/",
+  "featured": false
+ },
+ {
+  "slug": "vnd",
+  "name": "VND",
+  "cat": "eshopy",
+  "url": "http://www.vnd.cz",
+  "desc": "Pro našeho klienta jsme realizovali následující eshop, který má být přehledný a srozumitelný. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": null,
+  "oldHref": "/cs/100-vnd/",
+  "featured": false
+ },
+ {
+  "slug": "e-mailovy-marketing",
+  "name": "E-mailový marketing",
+  "cat": "marketing",
+  "url": "",
+  "desc": "je v dnešní době velice účinnou metodou, jak oslovit velikou masu lidí. Jedná se o cílené rozesílání emailových zpráv na přesný seznam adres. Pravidelné rozesílání newsletterů a e-mailů s nabídkou udržuje povědomí mezi příjemci a v neposlední řadě má také dobrý vliv na budování značky. Velikou výhodou této formy propagace jsou celkem nízké náklady na oslovení velikého množství příjemců a velice do",
+  "bullets": [
+   "Efektivní nástroj pro budování one-to-one komunikace",
+   "Udržuje povědomí příjemců",
+   "Budování značky společnosti",
+   "Snadné měření a vyhodnocování kampaně"
+  ],
+  "img": "/img/reference/174.jpg",
+  "oldHref": "/cs/174-e-mailovy-marketing/",
+  "featured": true
+ },
+ {
+  "slug": "geo",
+  "name": "GEO",
+  "cat": "marketing",
+  "url": "https://geo.prvni-pozice.com/blog/ai/ai-a-budoucnost-vyhledavani/",
+  "desc": "GEO neboli Generative Engine Optimization je moderní forma optimalizace webu a obsahu pro nástroje využívající umělou inteligenci, jako jsou ChatGPT, Google AI Overviews, Perplexity nebo Gemini. Cílem je, aby se vaše značka, služby a web objevovaly v odpovědích, které AI generuje pro uživatele. Zatímco klasické SEO řeší viditelnost ve vyhledávačích, GEO rozšiřuje optimalizaci o nové prostředí AI v",
+  "bullets": [],
+  "img": "/img/reference/427.jpg",
+  "oldHref": "/cs/427-geo/",
+  "featured": true
+ },
+ {
+  "slug": "ppc",
+  "name": "PPC",
+  "cat": "marketing",
+  "url": "",
+  "desc": "Pro Vaše projekty jsme schopni vytvořit a posléze spravotat kampaně na hlavních PPC portálech Sklik a AdWords. Vytvoříme takové kampaně se zaměřením na konkrétního klienta, které fungují. Samozřejmostí je i každodenní kontrola a přenastavení reklamních sestav podle aktuálního vývoje. Klientům se vždy snažíme nabídnout opravdu jen to nejlepší a tak jsme například během tří měsíců dokázali zobrazit ",
+  "bullets": [
+   "Sklik",
+   "Adwords",
+   "Facebook",
+   "Retargeting"
+  ],
+  "img": "/img/reference/169.jpg",
+  "oldHref": "/cs/169-ppc/",
+  "featured": true
+ },
+ {
+  "slug": "prednasky",
+  "name": "Přednášky",
+  "cat": "marketing",
+  "url": "",
+  "desc": "Jelikož je nám jasné, že oblast online marketingu a IT je pro mnoho lidí velká neznámá, proto se snažíme pro majitele firem, jejich zaměstnance a také ve své podstatě pro každého, kdo má zájem o toto téma, pořádat přednášky, které by jim jednotlivá támata objasnila a pomohla by jim je pochopit. Lépe se tak budou moci rozhodnout například pro to, jakou formu by měli směřovat prezentaci své firmy na",
+  "bullets": [
+   "Přednášky v oblasti online marketingu",
+   "Přednášky v oblasti IT technologií",
+   "Osvěta pro podnikatele",
+   "Informace pro širokou veřejnost"
+  ],
+  "img": "/img/reference/173.jpg",
+  "oldHref": "/cs/173-prednasky/",
+  "featured": true
+ },
+ {
+  "slug": "socialni-site",
+  "name": "Sociální sítě",
+  "cat": "marketing",
+  "url": "",
+  "desc": "Pro Vaše projekty jsme schopni vytvořit a spravotat kampaně na sociálních sítích a to například na Facebooku,Twitteru, Instagramu či Linked In. Profesionálně vytvoříme profily přesně dle potřeb a zaměření konkrétního klienta, které osloví mnoho lidí. Neustále sledujeme novinky a trendy a ty posléze aplikujeme do správy profilů a kampaní našich zákazníků. je společenská a v současnosti nejpoužívaně",
+  "bullets": [
+   "Facebook",
+   "Instagram",
+   "Google +",
+   "Twitter"
+  ],
+  "img": "/img/reference/166.jpg",
+  "oldHref": "/cs/166-socialni-site/",
+  "featured": true
+ },
+ {
+  "slug": "tisk",
+  "name": "TISK",
+  "cat": "marketing",
+  "url": "",
+  "desc": "",
+  "bullets": [],
+  "img": "/img/reference/170.jpg",
+  "oldHref": "/cs/170-tisk/",
+  "featured": true
+ },
+ {
+  "slug": "test",
+  "name": "VIDEO",
+  "cat": "marketing",
+  "url": "",
+  "desc": "",
+  "bullets": [],
+  "img": "/img/reference/230.jpg",
+  "oldHref": "/cs/230-test/",
+  "featured": true
+ },
+ {
+  "slug": "zbozove-servery",
+  "name": "Zbožové servery",
+  "cat": "marketing",
+  "url": "https://www.zbozi.cz/",
+  "desc": "Zbožové srovnávače jsou v současné době jedním z nejdůležitějším zdrojem zisku objednávek. Pro maximalizaci jejich počtu je však potřeba perfektního nastavení, o které se postaráme a dostaneme Vás tak před konkurenci. Pro e-shopy je dnes takřka povinností mít kvalitní napojení na zbožové servery. U všech portálů vám pomůžeme správně nastavit účet, validaci XML feedu a zoptimalizujem párování produ",
+  "bullets": [
+   "Zboží.cz",
+   "Heureka",
+   "Google Nákupy",
+   "Validní XML feed"
+  ],
+  "img": "/img/reference/167.jpg",
+  "oldHref": "/cs/167-zbozove-servery/",
+  "featured": true
+ },
+ {
+  "slug": "seo",
+  "name": "SEO",
+  "cat": "marketing",
+  "url": "",
+  "desc": "SEO neboli Search Engine Optimization (Optimalizace pro vyhledávače), je soubor strategií a technik, které pomáhají zvyšovat viditelnost webových stránek ve výsledcích vyhledávacích strojů, jako je Google, Seznam, Bing nebo Yahoo. Důležitým cílem SEO je přitáhnout více návštěvníků na stránku tím, že se zobrazuje na vyšších pozicích ve výsledcích vyhledávání pro určité klíčové slovo nebo frázi. Vyh",
+  "bullets": [
+   "První pozice na seznamu",
+   "První pozice na google",
+   "Více zákazníků s garancí",
+   "Kvalitní a unikátní obsah"
+  ],
+  "img": null,
+  "oldHref": "/cs/397-seo/",
+  "featured": true
+ },
+ {
+  "slug": "1p-sport-com",
+  "name": "1P sport",
+  "cat": "marketing",
+  "url": "http://1p-sport.com/",
+  "desc": "1P sport je projekt, který řeší a pomáhá sportovcům s marketingem, grafikou a mediální známostí. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/232.jpg",
+  "oldHref": "/cs/232-1p-sport-com/",
+  "featured": false
+ },
+ {
+  "slug": "autoneza",
+  "name": "AutoNEZA",
+  "cat": "marketing",
+  "url": "http://www.autoneza.cz",
+  "desc": "Pro společnost AutoNEZA pracujeme na dobrých pozicích klíčových slov. Kromě SEO, optimalizací jsme pro klienta vytvářeli i www stránky. Dosažení prvních stran pro výrazy: karosárna Pelhřimov, lakovna Pelhřimov, autoservis Pelhřimov, autolakovna Pelhřimov",
+  "bullets": [
+   "1. pozice na slovo \"karosárna Pelhřimov\" ve vyhledávači seznam.cz",
+   "1. pozice na slovo \"karosárna Pelhřimov\" ve vyhledávači google.cz",
+   "2. pozice na slovo \"lakovna Pelhřimov\" ve vyhledávači google.cz",
+   "7. pozice na slovo \"autoservis Pelhřimov\" ve vyhledávači seznam.cz"
+  ],
+  "img": "/img/reference/183.jpg",
+  "oldHref": "/cs/183-autoneza/",
+  "featured": false
+ },
+ {
+  "slug": "euro-palety",
+  "name": "euro-palety",
+  "cat": "marketing",
+  "url": "http://www.euro-palety.cz/",
+  "desc": "Pro klienta, který prodává palety jsme realizovali Seo optimalizace. Opatření, která jsme provedli, přináší zvýšení vyhledatelnosti klíčových výrazů. Získat a dlouhodobě udržet 1. strany na klíčová slova: europalety, gitterbox, paleta, palety, prodej palet, výkup palet",
+  "bullets": [
+   "1. pozice na slovo \"europalety\" ve vyhledávači google.cz",
+   "2. pozice na slovo \"europalety\" ve vyhledávači seznam.cz",
+   "2. pozice na slovo \"gitterbox\" ve vyhledávači google.cz",
+   "1. pozice na slovo \"gitterbox\" ve vyhledávači seznam.cz"
+  ],
+  "img": "/img/reference/191.jpg",
+  "oldHref": "/cs/191-euro-palety/",
+  "featured": false
+ },
+ {
+  "slug": "kingspas-virivky",
+  "name": "KingSpas",
+  "cat": "marketing",
+  "url": "http://www.kingspas.cz/",
+  "desc": "Pro tohoto klienta realizujeme Seo optimalizace na klíčové výrazy a hlavní položky sortimentu. Získat a dlouhodobě udržet 1. strany na klíčová slova: vířivky, vířivka, vířivky Pelhřimov.",
+  "bullets": [],
+  "img": "/img/reference/179.jpg",
+  "oldHref": "/cs/179-kingspas-virivky/",
+  "featured": false
+ },
+ {
+  "slug": "profit-trans",
+  "name": "Profit Trans",
+  "cat": "marketing",
+  "url": "http://www.profittrans.cz",
+  "desc": "Pro společnost Profit Trans s.r.o., která se zaměřuje na mezinárodní dopravu, spedici a servis jsme vytvořili nové www stránky a to včetně loga a reklamních a propagačních materiálů. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/106.jpg",
+  "oldHref": "/cs/106-profit-trans/",
+  "featured": false
+ },
+ {
+  "slug": "reklama-vysocina",
+  "name": "Reklama Vysočina",
+  "cat": "marketing",
+  "url": "http://www.reklamavysocina.cz",
+  "desc": "Jedním z dalších zákazníků naší společnosti je i velice ambiciózní projekt z Jihlavy. Jedná se o efektivní velkoplošnou reklamu, na LCD obrazovce na velice rušném místě v Jihlavě. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/141.jpg",
+  "oldHref": "/cs/141-reklama-vysocina/",
+  "featured": false
+ },
+ {
+  "slug": "rz-trnavka",
+  "name": "RZ Trnávka",
+  "cat": "marketing",
+  "url": "http://www.trnavka.net/",
+  "desc": "Tyto stránky mají propagovat kvalitní letní ubytování u vodní nádrže Trnávka. Vzhled stránek měl evokovat hezkou dovolenou v malebné krajině Vysočiny. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/137.jpg",
+  "oldHref": "/cs/137-rz-trnavka/",
+  "featured": false
+ },
+ {
+  "slug": "technicky-audit-seo-5",
+  "name": "Technický audit SEO - 5",
+  "cat": "marketing",
+  "url": "https://pagespeed.web.dev/",
+  "desc": "Téma rychlosti webu se stává stále oblíbenějším, zvláště poté, co Google prohlásil, že rychlost mobilního připojení je faktorem pro hodnocení. Od května 2021 Google využívá tzv. Core Web Vitals (CWV) pro hodnocení stránek. Pomocí Largest Contentful Paint (LCP) hodnotí vizuální zátěž, Cumulative Layout Shift (CLS) zkouší vizuální stabilitu a First Input Delay (FID) měří interaktivitu. Všechny tyto ",
+  "bullets": [],
+  "img": null,
+  "oldHref": "/cs/418-technicky-audit-seo-5/",
+  "featured": false
+ },
+ {
+  "slug": "asekol",
+  "name": "Asekol",
+  "cat": "weby",
+  "url": "https://www.asekol.cz/",
+  "desc": "Pro společnost Asekol, která organizuje celostátní systém zpětného odběru elektrozařízení, jsme nedávno vytvořili zbrusu nové webové stránky. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace",
+   "webhosting, provoz a servis s dostupností 24 hodin denně"
+  ],
+  "img": "/img/reference/289.jpg",
+  "oldHref": "/cs/289-asekol/",
+  "featured": true
+ },
+ {
+  "slug": "asekol-solar-s-r-o",
+  "name": "ASEKOL Solar s.r.o.",
+  "cat": "weby",
+  "url": "https://www.asekolsolar.cz",
+  "desc": "ASEKOL Solar je společnost, která se specializuje na zpětný odběr solárních panelů a zajištění jejich recyklace. Právě zaměření společnosti se graficky odráží i v celkovém designu webové prezentace. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/254.jpg",
+  "oldHref": "/cs/254-asekol-solar-s-r-o/",
+  "featured": true
+ },
+ {
+  "slug": "atelier-radost",
+  "name": "Ateliér Radost",
+  "cat": "weby",
+  "url": "https://www.atelier-radost.cz",
+  "desc": "Pro Ateliér Radost jsme realizovali nové čisté www stránky včetně tvorby loga. Celému designu dominují květiny a přírodní vzory. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "grafická tvorba loga",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/244.jpg",
+  "oldHref": "/cs/244-atelier-radost/",
+  "featured": true
+ },
+ {
+  "slug": "auto-bejda",
+  "name": "Auto Bejda",
+  "cat": "weby",
+  "url": "https://www.autobejda.cz",
+  "desc": "Pro společnost Auto Bejda s.r.o., jejíž hlavní náplní je servis, opravy a renovace vozů Porsche, jsme nedávno provedli kompletní přestavbu webu na platformě od Googlu. Web bylo potřeba postavit od nuly na nové verzi a kromě modernizace grafické stránky bylo cílem udržet pozice ve vyhledávačích. Na webu se prováděly také změny ve struktuře, a tak jsme museli pečlivě ohlídat, aby ke všem původním UR",
+  "bullets": [
+   "grafický design",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/297.jpg",
+  "oldHref": "/cs/297-auto-bejda/",
+  "featured": true
+ },
+ {
+  "slug": "bookin",
+  "name": "Bookin",
+  "cat": "weby",
+  "url": "https://www.bookin.cz/",
+  "desc": "Pro digitální a marketingovou agenturu Bookin agency, jsme realizovali zbrusu novou webovou prezentaci. Moderní a responzivní design je u našich projektů samozřejmostí. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/288.jpg",
+  "oldHref": "/cs/288-bookin/",
+  "featured": true
+ },
+ {
+  "slug": "fine-design",
+  "name": "Fine design",
+  "cat": "weby",
+  "url": "http://www.fd-interier.cz",
+  "desc": "Pro tohoto klienta jsme realizovali nové stylové www stránky včetně tvorby loga. Moderní vzhled odráží fakt, že stránky jsou tvořeny pro interiérového designéra. Čistý a responzivní design podporuje snadnou orientaci a přehlednost na stránkách. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "grafická tvorba loga",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/44.jpg",
+  "oldHref": "/cs/44-fine-design/",
+  "featured": true
+ },
+ {
+  "slug": "gasparin-sisters",
+  "name": "Gasparin Sisters",
+  "cat": "weby",
+  "url": "https://www.gasparin.ch",
+  "desc": "Pro fenomenální švýcarské biatlonové reprezentantky jsme vytvořili zbrusu nové webové stránky s fanshopem. Moderní, responzivní, ale hlavně reprezentativní design pomůže fanouškům dohledat všechny potřebné informace o kariéře těchto úspěšných olympioniček. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/252.jpg",
+  "oldHref": "/cs/252-gasparin-sisters/",
+  "featured": true
+ },
+ {
+  "slug": "itc-real-com",
+  "name": "Itc-real.com",
+  "cat": "weby",
+  "url": "http://www.itc-real.com",
+  "desc": "Pro klienta se kterým spolupracujeme dlouhodobě, jsme realizovali nové www stránky. Moderní design, uživatelská přívětivost a snadná orientace je zárukou spokojenosti klienta. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/110.jpg",
+  "oldHref": "/cs/110-itc-real-com/",
+  "featured": true
+ },
+ {
+  "slug": "knoflikarsky-prumysl-zirovnice-a-s",
+  "name": "Knoflíkářský Průmysl Žirovnice a.s.",
+  "cat": "weby",
+  "url": "http://www.knofliky.cz/",
+  "desc": "Knoflíkářský Průmysl Žirovnice a.s. patří mezi největší české výrobce zaměřené na knoflíky a spony. Všechny produkty vyráběné touto společností si můžete objednat na novém e-shopu (www.knofliky.cz), který jsme tvořili na přelomu let 2017/2018. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "průběžné analýzy a návrhy vylepšení eshopu",
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/238.jpg",
+  "oldHref": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
+  "featured": true
+ },
+ {
+  "slug": "kozlovna-u-zachu",
+  "name": "Kozlovna U Zachů",
+  "cat": "weby",
+  "url": "https://www.kozlovnauzachu.cz/",
+  "desc": "Pro novou restauraci Kozlovna U Zachů, jsme vytvořili webové stránky. Na tomto projektu jsme rozvněž pomáhali s marketingem, tiskem a fotografováním. Moderní a responzivní design je samozřejmostí. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/234.jpg",
+  "oldHref": "/cs/234-kozlovna-u-zachu/",
+  "featured": true
+ },
+ {
+  "slug": "kukuricny-mlyn-mrzkovice",
+  "name": "Kukuřičný mlýn Mrzkovice",
+  "cat": "weby",
+  "url": "https://www.kukuricnymlyn.cz/",
+  "desc": "Pro Kukuřičný mlýn Mrzkovice jsme počátkem roku 2020 vytvořili nové responzivní a přehledné www stránky. Celý grafický design vychází z podoby kukuřice, na kterou se tento mlýn specializuje. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/284.jpg",
+  "oldHref": "/cs/284-kukuricny-mlyn-mrzkovice/",
+  "featured": true
+ },
+ {
+  "slug": "landeco",
+  "name": "Landeco",
+  "cat": "weby",
+  "url": "https://www.landeco.cz/",
+  "desc": "Pro atelier Landeco, který se zaměřuje na projekci, realizace a údržby zeleně jsme vytvořili nové a responzivní webové stránky. Svěží a decentní design skvěle doplňují krásné originální fotografie přímo z realizací společnosti. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/243.jpg",
+  "oldHref": "/cs/243-landeco/",
+  "featured": true
+ },
+ {
+  "slug": "novague-design",
+  "name": "Novague design",
+  "cat": "weby",
+  "url": "",
+  "desc": "Pro jednoho z nejlepších našich designérů, který je mimo jiné také držitelem několika cen Red Dot Design Award jsme programovali nové stránky. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/43.jpg",
+  "oldHref": "/cs/43-novague-design/",
+  "featured": true
+ },
+ {
+  "slug": "psp-pelhrimov",
+  "name": "PSP Pelhřimov",
+  "cat": "weby",
+  "url": "http://www.psppelhrimov.cz/",
+  "desc": "Pro tohoto klienta jsme realizovali nové www stránky včetně návrhu a tvorby loga. Velice příjemný vzhled odráží zaměření společnosti. Moderní a čistý design podporuje snadnou orientaci a přehlednost na stránkách. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "grafická tvorba loga",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/107.jpg",
+  "oldHref": "/cs/107-psp-pelhrimov/",
+  "featured": true
+ },
+ {
+  "slug": "spartak-pelhrimov-oddil-florbalu",
+  "name": "Spartak Pelhřimov - oddíl florbalu",
+  "cat": "weby",
+  "url": "http://www.florbalpe.cz",
+  "desc": "Dalším z našich klientů je i Spartak Pelhřimov oddíl florbalu, pro který jsme tvořili nový web. Stránky mino všech informačních povinností také představují celý A tým pomocí měnících se fotografií. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/227.jpg",
+  "oldHref": "/cs/227-spartak-pelhrimov-oddil-florbalu/",
+  "featured": true
+ },
+ {
+  "slug": "technocon-s-r-o",
+  "name": "TECHNOCON, s.r.o.",
+  "cat": "weby",
+  "url": "https://www.technocon.cz",
+  "desc": "Pro klienta který se specializuje na konstrukci a výrobu složitých dílů a sestav, upínacích přípravků pro manuální i robotické svařování, chapadel pro průmyslové roboty atd. jsme připravili nové www stárnky na míru včetně responzivního designu. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/242.jpg",
+  "oldHref": "/cs/242-technocon-s-r-o/",
+  "featured": true
+ },
+ {
+  "slug": "traficon-advisors-s-r-o",
+  "name": "Traficon advisors s.r.o.",
+  "cat": "weby",
+  "url": "http://www.traficonadvisors.eu",
+  "desc": "Pro společnost Traficon, která je registrovaným investičním zprostředkovatelem u ČNB, jsme realizovali nové www stránky. Moderní a responzivní design je zárukou snadné orientace na stránkách. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu",
+   "poradenství a konzultace"
+  ],
+  "img": "/img/reference/50.jpg",
+  "oldHref": "/cs/50-traficon-advisors-s-r-o/",
+  "featured": true
+ },
+ {
+  "slug": "skrobarny-pelhrimov-a-s",
+  "name": "Škrobárny Pelhřimov, a.s.",
+  "cat": "weby",
+  "url": "http://www.skrobarny.com",
+  "desc": "Pro Škrobárny Pelhřimov, a.s. jsme realizovali nové a moderní www stránky včetně redesignu loga, které odráží zaměření společnosti. Čistý design, který je pochopitelně plně responzivní podporuje snadnou orientaci a přehlednost na stránkách na jakémkoliv zařízení. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "grafický design včetně kódování",
+   "redesign loga",
+   "redakční a administrační systém",
+   "plnění a úpravy webového obsahu"
+  ],
+  "img": "/img/reference/225.jpg",
+  "oldHref": "/cs/225-skrobarny-pelhrimov-a-s/",
+  "featured": true
+ },
+ {
+  "slug": "acre",
+  "name": "Acre",
+  "cat": "weby",
+  "url": "http://www.acre.cz/",
+  "desc": "Společnost Acre se specializuje na realizace zelených střech a právě proto je celkový design navržen v duchu toho oboru. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/129.jpg",
+  "oldHref": "/cs/129-acre/",
+  "featured": false
+ },
+ {
+  "slug": "agos-a-s",
+  "name": "Agos a.s.",
+  "cat": "weby",
+  "url": "http://www.agos.cz",
+  "desc": "Pro společnost Agos stavební jsem realizovali nové webové stránky. Mimo individuální grafiky, responzivního designu a našeho nejnovějšího systému jsme tyto stránky doplnili kvalitními fotografiemi, které doplňují tvář stavební společnosti. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/222.jpg",
+  "oldHref": "/cs/222-agos-a-s/",
+  "featured": false
+ },
+ {
+  "slug": "alfa-top",
+  "name": "ALFA",
+  "cat": "weby",
+  "url": "http://www.alfa-top.cz",
+  "desc": "Na základě individuálních požadavků našeho nového klienta jsme vytvořili moderní firemní internetovou prezentaci, která je pochopitelně plně responzivní a odpovídá tak všem požadavkům na moderní webové stránky. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/143.jpg",
+  "oldHref": "/cs/143-alfa-top/",
+  "featured": false
+ },
+ {
+  "slug": "anglicky-resort",
+  "name": "Anglický Resort",
+  "cat": "weby",
+  "url": "http://www.anglickyresort.cz",
+  "desc": "Nově spuštěný web, je velmi přehledný a interaktivní. Obsahuje pěkné animace přechodů po stránce všemi směry. Samozřejmostí je i responzivní design, který je standardem u všech našich webů. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/123.jpg",
+  "oldHref": "/cs/123-anglicky-resort/",
+  "featured": false
+ },
+ {
+  "slug": "better-process",
+  "name": "Better process",
+  "cat": "weby",
+  "url": "http://www.better-process.cz",
+  "desc": "Dalším zákazníkem, pro kterého jsme realizovali www stránky je společnost Better process. Důraz byl kladen na moderní vzhled stabilní a silné firmy. Pro tuto společnost jsme rovněž realizovali návrhy na veškeré tiskoviny. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/139.jpg",
+  "oldHref": "/cs/139-better-process/",
+  "featured": false
+ },
+ {
+  "slug": "davidfoto-cz",
+  "name": "davidfoto.cz",
+  "cat": "weby",
+  "url": "http://www.davidfoto.cz/",
+  "desc": "Stránky jsou určeny pro fotografa a tak při jejich tvorbě jsme kladli veliký důraz na stylový a originální design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/197.jpg",
+  "oldHref": "/cs/197-davidfoto-cz/",
+  "featured": false
+ },
+ {
+  "slug": "duo-trans-cz-s-r-o",
+  "name": "DuoTrans",
+  "cat": "weby",
+  "url": "http://www.duotrans.cz",
+  "desc": "Pro dopravní společnost DUO TRANS CZ, s.r.o. jsme realizovali tvorbu www stránek a to včetně pořizování fotografií vozového parku. Tato společnost tedy od nás dostala komplexní služby od hostingu po fotografování. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/198.jpg",
+  "oldHref": "/cs/198-duo-trans-cz-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "eco-house",
+  "name": "Eco-house",
+  "cat": "weby",
+  "url": "http://www.eco-house.cz",
+  "desc": "Společnost Eco-house se specializuje na projektování, výrobu a výstavbu dřevěných domů, hotelů, restaurací a saun z lepeného hranolu, profilovaného hranolu a frézované kulatiny. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/235.jpg",
+  "oldHref": "/cs/235-eco-house/",
+  "featured": false
+ },
+ {
+  "slug": "ekoimpex",
+  "name": "Ekoimpex",
+  "cat": "weby",
+  "url": "http://www.ekoimpex.cz",
+  "desc": "Pro klienta se kterým spolupracujeme dlouhodobě, jsme realizovali nové www stránky. Moderní design a snadná orientace na stránkách zaručují vysokou uživatelskou přívětivost. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/42.jpg",
+  "oldHref": "/cs/42-ekoimpex/",
+  "featured": false
+ },
+ {
+  "slug": "eurobyt-design-s-r-o",
+  "name": "EUROBYT design s.r.o",
+  "cat": "weby",
+  "url": "http://www.eurobyt-jihlava.cz",
+  "desc": "Další www stránky z naší dílky jsou pro firmu EUROBYT design s.r.o , která chce poskytnout lidem z Jihlavy a okolí co nejlepší komfort při rekonstrukci bytu. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/200.jpg",
+  "oldHref": "/cs/200-eurobyt-design-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "fepo-europalety-s-r-o",
+  "name": "FEPO",
+  "cat": "weby",
+  "url": "http://www.euro-palety.cz",
+  "desc": "Kvalitní webové stránky na míru jsme tvořili i pro společnost Fepo, která se zaměřuje na palety. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/231.jpg",
+  "oldHref": "/cs/231-fepo-europalety-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "fert-a-s",
+  "name": "Fert",
+  "cat": "weby",
+  "url": "http://www.fert.cz",
+  "desc": "Pro společnost Fert, která vyrábí betonářskou ocel, jsme vytvořili moderní a přehlednou webovou prezentaci, která je plně responzivní. Požadavkem klienta bylo vytvořit 8 jazykových mutací. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/201.jpg",
+  "oldHref": "/cs/201-fert-a-s/",
+  "featured": false
+ },
+ {
+  "slug": "florbalak-cz",
+  "name": "Florbalak.cz",
+  "cat": "weby",
+  "url": "http://www.florbalak.cz/",
+  "desc": "Jeden z nejoblíbenějších letních táborů na Vysočině Florbalák.cz se nyní může pochlubit novým responzivním webem. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/109.jpg",
+  "oldHref": "/cs/109-florbalak-cz/",
+  "featured": false
+ },
+ {
+  "slug": "funzorbing-cz",
+  "name": "FunZorbing",
+  "cat": "weby",
+  "url": "http://www.funzorbing.cz/",
+  "desc": "Tyto stránky kladou vysoké nároky především na funkční, stylový a originální design a aby také bylo zjevné zaměření stránek. FunZorbing je zábava a tak stránky mají vyzařovat optimismus a samotnou podstatu hry. Samozřejmostí je u našich projektů responzivní design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/204.jpg",
+  "oldHref": "/cs/204-funzorbing-cz/",
+  "featured": false
+ },
+ {
+  "slug": "glenowell",
+  "name": "Glenowell",
+  "cat": "weby",
+  "url": "http://www.glenowell.cz",
+  "desc": "Pro společnost Glenowell, vyrábějící zejména různé druhy pásových dopravníků, jsme vytvořili responzivní webové stránky. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/237.jpg",
+  "oldHref": "/cs/237-glenowell/",
+  "featured": false
+ },
+ {
+  "slug": "intelsol",
+  "name": "Intelsol",
+  "cat": "weby",
+  "url": "http://www.intelsol.cz",
+  "desc": "Intelsol je společnost, která se na nás obrátila, abychom jim vytvořili nové webové stránky. Responzivní a velice čistý design dělá z tohoto webu výjimečnou firemní prezentaci. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/124.jpg",
+  "oldHref": "/cs/124-intelsol/",
+  "featured": false
+ },
+ {
+  "slug": "kuks-a-s",
+  "name": "KUKS a.s.",
+  "cat": "weby",
+  "url": "http://www.kuks-as.cz",
+  "desc": "Pro společnost Kuks a.s. sídlící v Pelhřimově jsem vypracovali nové responzivní webové stránky. Příjemný vzhled odráží zaměření společnosti v zemědělství. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/205.jpg",
+  "oldHref": "/cs/205-kuks-a-s/",
+  "featured": false
+ },
+ {
+  "slug": "mastra-tuning",
+  "name": "Mastra Tuning",
+  "cat": "weby",
+  "url": "http://www.mastratuning.cz",
+  "desc": "Luxusní vzhled stránek, který na první pohled napovídá, že prezentuje autoservis. Responzivní design dělá z tohoto webu moderní a přehlednou firemní prezentaci. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/114.jpg",
+  "oldHref": "/cs/114-mastra-tuning/",
+  "featured": false
+ },
+ {
+  "slug": "maturak-na-klic",
+  "name": "Maturák na klíč",
+  "cat": "weby",
+  "url": "http://www.maturaknaklic.cz/",
+  "desc": "Tento projekt klade vysoké nároky především na funkční, stylový a originální design. Zajímavé prostorové efekty na úvodní straně dotváří exklusivní dojem z tohoto webu. Samozřejmostí je také responzivní design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/119.jpg",
+  "oldHref": "/cs/119-maturak-na-klic/",
+  "featured": false
+ },
+ {
+  "slug": "ms-dubovice",
+  "name": "MŠ Dubovice",
+  "cat": "weby",
+  "url": "http://www.msdubovice.cz/",
+  "desc": "Mateřská školka v Dubovicích s prvky Montessori nabízí rodičům alternativu ve výchově svých dětí. Pro tohoto klienta jsme tvořili webové stránky včetně loga. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/45.jpg",
+  "oldHref": "/cs/45-ms-dubovice/",
+  "featured": false
+ },
+ {
+  "slug": "nerez-blucina",
+  "name": "Nerez Blučina",
+  "cat": "weby",
+  "url": "http://www.nerezblucina.cz",
+  "desc": "NEREZ Blučina s.r.o. se zabývá výrobou z nerezavějících ocelí a z tohoto zaměření bylo potřeba vycházet i při tvorbě grafického vzhledu nových www stránek. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/195.jpg",
+  "oldHref": "/cs/195-nerez-blucina/",
+  "featured": false
+ },
+ {
+  "slug": "neza",
+  "name": "Neza",
+  "cat": "weby",
+  "url": "http://www.neza.cz",
+  "desc": "Pro našeho dlouholetého klienta jsme realizovali tyto stránky, které mají být jednoduché a přehledné. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "1. pozice na výraz \"nerez vybavení jídelen\" ve vyhledávačích seznam.cz, google.cz",
+   "1. pozice na výraz \"nerez vybavení kuchyní \" ve vyhledávačích seznam.cz, google.cz",
+   "1. pozice na výraz \"nerez vybavení\" ve vyhledávači google.cz",
+   "2. pozice na výraz \"nerez gastro vybavení\" ve vyhledávači seznam.cz"
+  ],
+  "img": "/img/reference/208.jpg",
+  "oldHref": "/cs/208-neza/",
+  "featured": false
+ },
+ {
+  "slug": "park-desetileti",
+  "name": "Park desetiletí",
+  "cat": "weby",
+  "url": "http://www.parkdesetileti.cz",
+  "desc": "Pro anketu Park desetiletí jsme vytvářeli nové stránky, interaktivní mapu a také celý systém hlasování. Lidé tak velice snadno a přehledně mohou hlasovat pro svůj oblíbený park. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/120.jpg",
+  "oldHref": "/cs/120-park-desetileti/",
+  "featured": false
+ },
+ {
+  "slug": "pevak",
+  "name": "Pevak",
+  "cat": "weby",
+  "url": "http://www.pevak.info/",
+  "desc": "Družsto Pevak se zaměřuje na nákup a prodej vody a na správu vodovodního zařízení. Celá trasa k jednotlivým vodojemům je zhruba 90 km a toto družstvo zajišťuje pitnou vodu pro velikou část Vysočiny. I zde jsme vyzvořili www stránky, které jsou přehledné a designově odpovídají zaměření firmy. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/209.jpg",
+  "oldHref": "/cs/209-pevak/",
+  "featured": false
+ },
+ {
+  "slug": "pharma-alpha-a-s",
+  "name": "Pharma Alpha a.s.",
+  "cat": "weby",
+  "url": "http://www.pharma-alpha.cz",
+  "desc": "Od 1.1.2014 je povinnost pro všechny akciové společnosti mít zřízené informativní internetové stránky. Právě to byl i důvod vytvořit www stránky společnosti Pharma Alpha a.s. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/210.jpg",
+  "oldHref": "/cs/210-pharma-alpha-a-s/",
+  "featured": false
+ },
+ {
+  "slug": "pokorny-s-r-o",
+  "name": "Podlahy Pokorný",
+  "cat": "weby",
+  "url": "http://www.pokorny-podlahy.cz/",
+  "desc": "Stále více se na nás obracejí i drobní živnostníci a řemeslníci. Pro ně je prioritní přehledný a informativní web. Stejně tomu bylo i u tohoto zákazníka, který podniká v oblasti podlahových krytin. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/211.jpg",
+  "oldHref": "/cs/211-pokorny-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "skochuv-dum",
+  "name": "Restaurace Škochův dům",
+  "cat": "weby",
+  "url": "http://www.skochuv-dum.cz",
+  "desc": "Pro nového klienta jsme kompletně realizovali www stránky. Příjemný vzhled doplňují fotografie jídel, které se v tomto podniku vaří. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/175.jpg",
+  "oldHref": "/cs/175-skochuv-dum/",
+  "featured": false
+ },
+ {
+  "slug": "sportstarter",
+  "name": "SportStarter",
+  "cat": "weby",
+  "url": "http://www.sportstarter.cz",
+  "desc": "Tento projekt je prvním českým sportovním crowdfundingovým portálem. Klade vysoké nároky především na funkční, stylový a čistý design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/121.jpg",
+  "oldHref": "/cs/121-sportstarter/",
+  "featured": false
+ },
+ {
+  "slug": "subter-plus-s-r-o",
+  "name": "SUBTER PLUS",
+  "cat": "weby",
+  "url": "http://www.subterplus.cz",
+  "desc": "Přehlednost a čistota designu stránek byly naším vodítkem při tvorbě internetové prezentace pro firmu SUBTER PLUS s. r. o. Samozřejmostí je responzivní design a možnost plné editace celého obsahu stánek. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/213.jpg",
+  "oldHref": "/cs/213-subter-plus-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "szuz",
+  "name": "SZUZ",
+  "cat": "weby",
+  "url": "http://www.szuz.cz/",
+  "desc": "Základem tohoto webu je čistý design a za zmínku stojí seznam členů této organizace. Na stránkách naleznete interaktivní mapu, na které lze jednoduše najít spolehlivé firmy ve Vašem okolí. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/142.jpg",
+  "oldHref": "/cs/142-szuz/",
+  "featured": false
+ },
+ {
+  "slug": "talpa-zahradnicke-sluzby-s-r-o",
+  "name": "talpa-orlova.cz",
+  "cat": "weby",
+  "url": "http://www.talpa-orlova.cz/",
+  "desc": "Vkusnou a graficky povedenou firemní prezentaci jsme realizovali pro společnost Talpa. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/214.jpg",
+  "oldHref": "/cs/214-talpa-zahradnicke-sluzby-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "tmccr",
+  "name": "TMCcr s.r.o.",
+  "cat": "weby",
+  "url": "http://www.tmccr.cz",
+  "desc": "Pro tohoto zákazníka bylo velice důležité, aby jeho stránky byly funkční a přehledné a také musí obsahovat jazykové mutace, protože se TMCcr zaměřuje i na zahraniční trhy. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/161.jpg",
+  "oldHref": "/cs/161-tmccr/",
+  "featured": false
+ },
+ {
+  "slug": "tokra-okna",
+  "name": "Tokra okna",
+  "cat": "weby",
+  "url": "http://www.tokra-okna.cz",
+  "desc": "Jeden z největších podniků, který se zaměřuje na okna a dveře na Vysočině, se na nás obrátil s požadavkem na moderní a designově propracované stránky. Výsledek naší práce si můžete prohlédnout níže a posoudit, zda se nám to podařilo splnit. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [
+   "1. pozice na slovo \"garážová vrata Pelhřimov\" ve vyhledávači seznam.cz",
+   "2. pozice na slovo \"garážová vrata Pelhřimov\" ve vyhledávači google.cz",
+   "1. pozice na slovo \"zelená úsporám Pelhřimov\" ve vyhledávači seznam.cz",
+   "2. pozice na slovo \"zelená úsporám Pelhřimov\" ve vyhledávači google.cz"
+  ],
+  "img": "/img/reference/127.jpg",
+  "oldHref": "/cs/127-tokra-okna/",
+  "featured": false
+ },
+ {
+  "slug": "top-team-s-r-o",
+  "name": "TOP TEAM, s.r.o.",
+  "cat": "weby",
+  "url": "http://www.topteam.cz/",
+  "desc": "Pro společnost Top Team s.r.o. jsme vytvořili www stránky. Naším úkolem byl také redesign loga. Dostali jsme volnou ruku a tak jsme mohli navrhnout design, který odpovídá zaměření firmy. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/221.jpg",
+  "oldHref": "/cs/221-top-team-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "traficon-re-s-r-o",
+  "name": "Traficon RE s.r.o.",
+  "cat": "weby",
+  "url": "https://www.traficon-re.eu",
+  "desc": "Pro společnost Traficon RE s.r.o., která se zaměřuje na M&A poradenství, financování, oceňování a poradenských službách pro firmy středních velikostí a rodinné podniky, jsme zhotovili nové www stránky na míru včetně responzivního designu. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/241.jpg",
+  "oldHref": "/cs/241-traficon-re-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "vanprodukt",
+  "name": "Vanprodukt",
+  "cat": "weby",
+  "url": "http://www.vanprodukt.cz/",
+  "desc": "Pro našeho dlouhodobého klienta jsme spustili jednoduchou prezentaci firmy. Hlavní dominantou je responzivní design, takže si lze web prohlížet pohodlně na mobilních zařízeních. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/154.jpg",
+  "oldHref": "/cs/154-vanprodukt/",
+  "featured": false
+ },
+ {
+  "slug": "team-velosport",
+  "name": "Velosport Valenta Scott Team",
+  "cat": "weby",
+  "url": "http://www.team.velosport.cz/",
+  "desc": "Pro tento úspěšný sportovní tým jsme realizovali nové www stránky. Pochopitelně i tyto stránky mají responzivní design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/220.jpg",
+  "oldHref": "/cs/220-team-velosport/",
+  "featured": false
+ },
+ {
+  "slug": "water-heat-systems-s-r-o",
+  "name": "Water & Heat Systems, s.r.o.",
+  "cat": "weby",
+  "url": "https://www.whsys.cz",
+  "desc": "Od společnosti Water & Heat Systems, s.r.o. jsme dostali za úkol, vytvořit responzivní a moderní webové stránky. Projekt mimo jiné zahrnuje: V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/263.jpg",
+  "oldHref": "/cs/263-water-heat-systems-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "anketa-zahrada-desetileti",
+  "name": "Zahrada desetiletí",
+  "cat": "weby",
+  "url": "http://www.zahradadesetileti.cz/",
+  "desc": "Pro anketu www.zahradadesetileti.cz, jsme vytvářeli nové stránky, které jsou pochopitelně responzivní a také obsahují zajímavé efekty, které mají být příjemné pro všechny lidi, kteří chtějí na stránkách hlasovat pro svou oblíbenou zahradu. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/215.jpg",
+  "oldHref": "/cs/215-anketa-zahrada-desetileti/",
+  "featured": false
+ },
+ {
+  "slug": "zahradnictvi-simkova-s-r-o",
+  "name": "Zahradnictví Šimková, s.r.o.",
+  "cat": "weby",
+  "url": "http://www.zahradnictvi-simkova.cz",
+  "desc": "Tato firemní prezentace se zaměřením na zahrady, realizace zeleně, biobazény a koupací jezírka má velice přívětivé rozvržení stránek. Díky velkým a přehledným prvkům je uživatelsky snadno ovladatelné a to na všech typech zařízení. Tento fakt doplňuje i responzivní design. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/144.jpg",
+  "oldHref": "/cs/144-zahradnictvi-simkova-s-r-o/",
+  "featured": false
+ },
+ {
+  "slug": "zkontroluj-vodu",
+  "name": "Zkontroluj vodu",
+  "cat": "weby",
+  "url": "http://www.zkontrolujvodu.cz",
+  "desc": "Pro klienta zkontroluj vodu jsme tvořili zbrusu nové webové stránky, na kterých si můžete snadno objednat kontrolu kvality své vody. V případě zájmu o podobný projekt neváhejte kontaktovat naši zákaznickou podporu.",
+  "bullets": [],
+  "img": "/img/reference/259.jpg",
+  "oldHref": "/cs/259-zkontroluj-vodu/",
+  "featured": false
+ }
+]

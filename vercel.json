@@ -1,194 +1,1074 @@
 {
-  "redirects": [
-    {
-      "source": "/cs/12-eshopy",
-      "destination": "/eshopy/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/12-eshopy/",
-      "destination": "/eshopy/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/60-vandastore",
-      "destination": "/reference/vandastore/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/60-vandastore/",
-      "destination": "/reference/vandastore/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/287-luxusni-pradlo-skiny",
-      "destination": "/reference/luxusni-pradlo-skiny/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/287-luxusni-pradlo-skiny/",
-      "destination": "/reference/luxusni-pradlo-skiny/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/246-woodiy-cz",
-      "destination": "/reference/woodiy-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/246-woodiy-cz/",
-      "destination": "/reference/woodiy-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/48-velosport",
-      "destination": "/reference/velosport/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/48-velosport/",
-      "destination": "/reference/velosport/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/233-fk-pelhrimov",
-      "destination": "/reference/fk-pelhrimov/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/233-fk-pelhrimov/",
-      "destination": "/reference/fk-pelhrimov/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/294-mt-tech-cz",
-      "destination": "/reference/mt-tech-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/294-mt-tech-cz/",
-      "destination": "/reference/mt-tech-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/226-rotmak",
-      "destination": "/reference/rotmak/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/226-rotmak/",
-      "destination": "/reference/rotmak/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/261-pear-control",
-      "destination": "/reference/pear-control/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/261-pear-control/",
-      "destination": "/reference/pear-control/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/296-obchod-bezlepku-cz",
-      "destination": "/reference/obchod-bezlepku-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/296-obchod-bezlepku-cz/",
-      "destination": "/reference/obchod-bezlepku-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/253-doudou",
-      "destination": "/reference/doudou/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/253-doudou/",
-      "destination": "/reference/doudou/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/57-zdravi-z-vysociny",
-      "destination": "/reference/zdravi-z-vysociny/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/57-zdravi-z-vysociny/",
-      "destination": "/reference/zdravi-z-vysociny/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s",
-      "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
-      "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/91-luxury-baby",
-      "destination": "/reference/luxury-baby/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/91-luxury-baby/",
-      "destination": "/reference/luxury-baby/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/295-pevex",
-      "destination": "/reference/pevex/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/295-pevex/",
-      "destination": "/reference/pevex/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/55-toptenis",
-      "destination": "/reference/toptenis/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/55-toptenis/",
-      "destination": "/reference/toptenis/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/224-galaxieknih-cz",
-      "destination": "/reference/galaxieknih-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/224-galaxieknih-cz/",
-      "destination": "/reference/galaxieknih-cz/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/56-reklamni-potisk",
-      "destination": "/reference/reklamni-potisk/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/56-reklamni-potisk/",
-      "destination": "/reference/reklamni-potisk/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/240-topicrem",
-      "destination": "/reference/topicrem/",
-      "permanent": true
-    },
-    {
-      "source": "/cs/240-topicrem/",
-      "destination": "/reference/topicrem/",
-      "permanent": true
-    }
-  ]
+ "redirects": [
+  {
+   "source": "/cs",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/11-weby",
+   "destination": "/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/11-weby/",
+   "destination": "/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/12-eshopy",
+   "destination": "/eshopy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/12-eshopy/",
+   "destination": "/eshopy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/13-propagace-a-marketing",
+   "destination": "/marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/13-propagace-a-marketing/",
+   "destination": "/marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/152-nutriservis",
+   "destination": "/reference/nutriservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/152-nutriservis/",
+   "destination": "/reference/nutriservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/253-doudou",
+   "destination": "/reference/doudou/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/253-doudou/",
+   "destination": "/reference/doudou/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/233-fk-pelhrimov",
+   "destination": "/reference/fk-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/233-fk-pelhrimov/",
+   "destination": "/reference/fk-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/224-galaxieknih-cz",
+   "destination": "/reference/galaxieknih-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/224-galaxieknih-cz/",
+   "destination": "/reference/galaxieknih-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/91-luxury-baby",
+   "destination": "/reference/luxury-baby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/91-luxury-baby/",
+   "destination": "/reference/luxury-baby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/287-luxusni-pradlo-skiny",
+   "destination": "/reference/luxusni-pradlo-skiny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/287-luxusni-pradlo-skiny/",
+   "destination": "/reference/luxusni-pradlo-skiny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/294-mt-tech-cz",
+   "destination": "/reference/mt-tech-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/294-mt-tech-cz/",
+   "destination": "/reference/mt-tech-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/296-obchod-bezlepku-cz",
+   "destination": "/reference/obchod-bezlepku-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/296-obchod-bezlepku-cz/",
+   "destination": "/reference/obchod-bezlepku-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/261-pear-control",
+   "destination": "/reference/pear-control/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/261-pear-control/",
+   "destination": "/reference/pear-control/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/295-pevex",
+   "destination": "/reference/pevex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/295-pevex/",
+   "destination": "/reference/pevex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/182-reklamni-potisk",
+   "destination": "/reference/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/182-reklamni-potisk/",
+   "destination": "/reference/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/226-rotmak",
+   "destination": "/reference/rotmak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/226-rotmak/",
+   "destination": "/reference/rotmak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/240-topicrem",
+   "destination": "/reference/topicrem/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/240-topicrem/",
+   "destination": "/reference/topicrem/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/55-toptenis",
+   "destination": "/reference/toptenis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/55-toptenis/",
+   "destination": "/reference/toptenis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/192-vandastore",
+   "destination": "/reference/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/192-vandastore/",
+   "destination": "/reference/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/48-velosport",
+   "destination": "/reference/velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/48-velosport/",
+   "destination": "/reference/velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/246-woodiy-cz",
+   "destination": "/reference/woodiy-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/246-woodiy-cz/",
+   "destination": "/reference/woodiy-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/57-zdravi-z-vysociny",
+   "destination": "/reference/zdravi-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/57-zdravi-z-vysociny/",
+   "destination": "/reference/zdravi-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/202-ck-marketa",
+   "destination": "/reference/ck-marketa/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/202-ck-marketa/",
+   "destination": "/reference/ck-marketa/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/92-fofrovac",
+   "destination": "/reference/fofrovac/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/92-fofrovac/",
+   "destination": "/reference/fofrovac/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/207-kaap-cz",
+   "destination": "/reference/kaap-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/207-kaap-cz/",
+   "destination": "/reference/kaap-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/61-snadny-profit",
+   "destination": "/reference/snadny-profit/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/61-snadny-profit/",
+   "destination": "/reference/snadny-profit/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/69-tradition-gifts",
+   "destination": "/reference/tradition-gifts/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/69-tradition-gifts/",
+   "destination": "/reference/tradition-gifts/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/54-veloservis",
+   "destination": "/reference/veloservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/54-veloservis/",
+   "destination": "/reference/veloservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/78-elektrohned",
+   "destination": "/reference/elektrohned/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/78-elektrohned/",
+   "destination": "/reference/elektrohned/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/89-fifty-fifty",
+   "destination": "/reference/fifty-fifty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/89-fifty-fifty/",
+   "destination": "/reference/fifty-fifty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/100-vnd",
+   "destination": "/reference/vnd/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/100-vnd/",
+   "destination": "/reference/vnd/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/174-e-mailovy-marketing",
+   "destination": "/reference/e-mailovy-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/174-e-mailovy-marketing/",
+   "destination": "/reference/e-mailovy-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/427-geo",
+   "destination": "/reference/geo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/427-geo/",
+   "destination": "/reference/geo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/169-ppc",
+   "destination": "/reference/ppc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/169-ppc/",
+   "destination": "/reference/ppc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/173-prednasky",
+   "destination": "/reference/prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/173-prednasky/",
+   "destination": "/reference/prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/166-socialni-site",
+   "destination": "/reference/socialni-site/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/166-socialni-site/",
+   "destination": "/reference/socialni-site/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/170-tisk",
+   "destination": "/reference/tisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/170-tisk/",
+   "destination": "/reference/tisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/230-test",
+   "destination": "/reference/test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/230-test/",
+   "destination": "/reference/test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/167-zbozove-servery",
+   "destination": "/reference/zbozove-servery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/167-zbozove-servery/",
+   "destination": "/reference/zbozove-servery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/397-seo",
+   "destination": "/reference/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/397-seo/",
+   "destination": "/reference/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/232-1p-sport-com",
+   "destination": "/reference/1p-sport-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/232-1p-sport-com/",
+   "destination": "/reference/1p-sport-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/183-autoneza",
+   "destination": "/reference/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/183-autoneza/",
+   "destination": "/reference/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/191-euro-palety",
+   "destination": "/reference/euro-palety/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/191-euro-palety/",
+   "destination": "/reference/euro-palety/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/179-kingspas-virivky",
+   "destination": "/reference/kingspas-virivky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/179-kingspas-virivky/",
+   "destination": "/reference/kingspas-virivky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/106-profit-trans",
+   "destination": "/reference/profit-trans/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/106-profit-trans/",
+   "destination": "/reference/profit-trans/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/141-reklama-vysocina",
+   "destination": "/reference/reklama-vysocina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/141-reklama-vysocina/",
+   "destination": "/reference/reklama-vysocina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/137-rz-trnavka",
+   "destination": "/reference/rz-trnavka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/137-rz-trnavka/",
+   "destination": "/reference/rz-trnavka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/418-technicky-audit-seo-5",
+   "destination": "/reference/technicky-audit-seo-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/418-technicky-audit-seo-5/",
+   "destination": "/reference/technicky-audit-seo-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/289-asekol",
+   "destination": "/reference/asekol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/289-asekol/",
+   "destination": "/reference/asekol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/254-asekol-solar-s-r-o",
+   "destination": "/reference/asekol-solar-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/254-asekol-solar-s-r-o/",
+   "destination": "/reference/asekol-solar-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/244-atelier-radost",
+   "destination": "/reference/atelier-radost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/244-atelier-radost/",
+   "destination": "/reference/atelier-radost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/297-auto-bejda",
+   "destination": "/reference/auto-bejda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/297-auto-bejda/",
+   "destination": "/reference/auto-bejda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/288-bookin",
+   "destination": "/reference/bookin/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/288-bookin/",
+   "destination": "/reference/bookin/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/44-fine-design",
+   "destination": "/reference/fine-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/44-fine-design/",
+   "destination": "/reference/fine-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/252-gasparin-sisters",
+   "destination": "/reference/gasparin-sisters/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/252-gasparin-sisters/",
+   "destination": "/reference/gasparin-sisters/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/110-itc-real-com",
+   "destination": "/reference/itc-real-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/110-itc-real-com/",
+   "destination": "/reference/itc-real-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s",
+   "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
+   "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/234-kozlovna-u-zachu",
+   "destination": "/reference/kozlovna-u-zachu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/234-kozlovna-u-zachu/",
+   "destination": "/reference/kozlovna-u-zachu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/284-kukuricny-mlyn-mrzkovice",
+   "destination": "/reference/kukuricny-mlyn-mrzkovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/284-kukuricny-mlyn-mrzkovice/",
+   "destination": "/reference/kukuricny-mlyn-mrzkovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/243-landeco",
+   "destination": "/reference/landeco/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/243-landeco/",
+   "destination": "/reference/landeco/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/43-novague-design",
+   "destination": "/reference/novague-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/43-novague-design/",
+   "destination": "/reference/novague-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/107-psp-pelhrimov",
+   "destination": "/reference/psp-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/107-psp-pelhrimov/",
+   "destination": "/reference/psp-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu",
+   "destination": "/reference/spartak-pelhrimov-oddil-florbalu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu/",
+   "destination": "/reference/spartak-pelhrimov-oddil-florbalu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/242-technocon-s-r-o",
+   "destination": "/reference/technocon-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/242-technocon-s-r-o/",
+   "destination": "/reference/technocon-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/50-traficon-advisors-s-r-o",
+   "destination": "/reference/traficon-advisors-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/50-traficon-advisors-s-r-o/",
+   "destination": "/reference/traficon-advisors-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/225-skrobarny-pelhrimov-a-s",
+   "destination": "/reference/skrobarny-pelhrimov-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/225-skrobarny-pelhrimov-a-s/",
+   "destination": "/reference/skrobarny-pelhrimov-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/129-acre",
+   "destination": "/reference/acre/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/129-acre/",
+   "destination": "/reference/acre/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/222-agos-a-s",
+   "destination": "/reference/agos-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/222-agos-a-s/",
+   "destination": "/reference/agos-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/143-alfa-top",
+   "destination": "/reference/alfa-top/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/143-alfa-top/",
+   "destination": "/reference/alfa-top/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/123-anglicky-resort",
+   "destination": "/reference/anglicky-resort/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/123-anglicky-resort/",
+   "destination": "/reference/anglicky-resort/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/139-better-process",
+   "destination": "/reference/better-process/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/139-better-process/",
+   "destination": "/reference/better-process/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/197-davidfoto-cz",
+   "destination": "/reference/davidfoto-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/197-davidfoto-cz/",
+   "destination": "/reference/davidfoto-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/198-duo-trans-cz-s-r-o",
+   "destination": "/reference/duo-trans-cz-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/198-duo-trans-cz-s-r-o/",
+   "destination": "/reference/duo-trans-cz-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/235-eco-house",
+   "destination": "/reference/eco-house/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/235-eco-house/",
+   "destination": "/reference/eco-house/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/42-ekoimpex",
+   "destination": "/reference/ekoimpex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/42-ekoimpex/",
+   "destination": "/reference/ekoimpex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/200-eurobyt-design-s-r-o",
+   "destination": "/reference/eurobyt-design-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/200-eurobyt-design-s-r-o/",
+   "destination": "/reference/eurobyt-design-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/231-fepo-europalety-s-r-o",
+   "destination": "/reference/fepo-europalety-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/231-fepo-europalety-s-r-o/",
+   "destination": "/reference/fepo-europalety-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/201-fert-a-s",
+   "destination": "/reference/fert-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/201-fert-a-s/",
+   "destination": "/reference/fert-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/109-florbalak-cz",
+   "destination": "/reference/florbalak-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/109-florbalak-cz/",
+   "destination": "/reference/florbalak-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/204-funzorbing-cz",
+   "destination": "/reference/funzorbing-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/204-funzorbing-cz/",
+   "destination": "/reference/funzorbing-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/237-glenowell",
+   "destination": "/reference/glenowell/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/237-glenowell/",
+   "destination": "/reference/glenowell/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/124-intelsol",
+   "destination": "/reference/intelsol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/124-intelsol/",
+   "destination": "/reference/intelsol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/205-kuks-a-s",
+   "destination": "/reference/kuks-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/205-kuks-a-s/",
+   "destination": "/reference/kuks-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/114-mastra-tuning",
+   "destination": "/reference/mastra-tuning/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/114-mastra-tuning/",
+   "destination": "/reference/mastra-tuning/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/119-maturak-na-klic",
+   "destination": "/reference/maturak-na-klic/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/119-maturak-na-klic/",
+   "destination": "/reference/maturak-na-klic/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/45-ms-dubovice",
+   "destination": "/reference/ms-dubovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/45-ms-dubovice/",
+   "destination": "/reference/ms-dubovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/195-nerez-blucina",
+   "destination": "/reference/nerez-blucina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/195-nerez-blucina/",
+   "destination": "/reference/nerez-blucina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/208-neza",
+   "destination": "/reference/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/208-neza/",
+   "destination": "/reference/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/120-park-desetileti",
+   "destination": "/reference/park-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/120-park-desetileti/",
+   "destination": "/reference/park-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/209-pevak",
+   "destination": "/reference/pevak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/209-pevak/",
+   "destination": "/reference/pevak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/210-pharma-alpha-a-s",
+   "destination": "/reference/pharma-alpha-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/210-pharma-alpha-a-s/",
+   "destination": "/reference/pharma-alpha-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/211-pokorny-s-r-o",
+   "destination": "/reference/pokorny-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/211-pokorny-s-r-o/",
+   "destination": "/reference/pokorny-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/175-skochuv-dum",
+   "destination": "/reference/skochuv-dum/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/175-skochuv-dum/",
+   "destination": "/reference/skochuv-dum/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/121-sportstarter",
+   "destination": "/reference/sportstarter/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/121-sportstarter/",
+   "destination": "/reference/sportstarter/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/213-subter-plus-s-r-o",
+   "destination": "/reference/subter-plus-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/213-subter-plus-s-r-o/",
+   "destination": "/reference/subter-plus-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/142-szuz",
+   "destination": "/reference/szuz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/142-szuz/",
+   "destination": "/reference/szuz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o",
+   "destination": "/reference/talpa-zahradnicke-sluzby-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o/",
+   "destination": "/reference/talpa-zahradnicke-sluzby-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/161-tmccr",
+   "destination": "/reference/tmccr/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/161-tmccr/",
+   "destination": "/reference/tmccr/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/127-tokra-okna",
+   "destination": "/reference/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/127-tokra-okna/",
+   "destination": "/reference/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/221-top-team-s-r-o",
+   "destination": "/reference/top-team-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/221-top-team-s-r-o/",
+   "destination": "/reference/top-team-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/241-traficon-re-s-r-o",
+   "destination": "/reference/traficon-re-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/241-traficon-re-s-r-o/",
+   "destination": "/reference/traficon-re-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/154-vanprodukt",
+   "destination": "/reference/vanprodukt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/154-vanprodukt/",
+   "destination": "/reference/vanprodukt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/220-team-velosport",
+   "destination": "/reference/team-velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/220-team-velosport/",
+   "destination": "/reference/team-velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/263-water-heat-systems-s-r-o",
+   "destination": "/reference/water-heat-systems-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/263-water-heat-systems-s-r-o/",
+   "destination": "/reference/water-heat-systems-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/215-anketa-zahrada-desetileti",
+   "destination": "/reference/anketa-zahrada-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/215-anketa-zahrada-desetileti/",
+   "destination": "/reference/anketa-zahrada-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/144-zahradnictvi-simkova-s-r-o",
+   "destination": "/reference/zahradnictvi-simkova-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/144-zahradnictvi-simkova-s-r-o/",
+   "destination": "/reference/zahradnictvi-simkova-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/259-zkontroluj-vodu",
+   "destination": "/reference/zkontroluj-vodu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/259-zkontroluj-vodu/",
+   "destination": "/reference/zkontroluj-vodu/",
+   "permanent": true
+  }
+ ]
 }

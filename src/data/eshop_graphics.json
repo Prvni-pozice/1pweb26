@@ -1,0 +1,22 @@
+[
+  {
+    "img": "/img/eshopy/graphics/001_rychlost.png",
+    "title": "Rychlost",
+    "text": "Vaši zákazníci nečekají. Naše e-shopy se načtou během milisekund — což pomáhá konverzím i lepším pozicím ve vyhledávání."
+  },
+  {
+    "img": "/img/eshopy/graphics/002_nejnovejsi_technologie.png",
+    "title": "Nejnovější technologie",
+    "text": "Stavíme na moderním a bezpečném základu, který snadno poroste s vaším byznysem a snese i velký provoz."
+  },
+  {
+    "img": "/img/eshopy/graphics/003_design.png",
+    "title": "Moderní design",
+    "text": "Online trh v ČR patří k nejkonkurenčnějším v Evropě. Každý nový e-shop se musí odlišit — návrhem na míru vaší značce."
+  },
+  {
+    "img": "/img/eshopy/graphics/004_responzivita.png",
+    "title": "Responzivita",
+    "text": "Dokonalé zobrazení na mobilu, tabletu i desktopu. Většina nákupů dnes začíná na telefonu."
+  }
+]

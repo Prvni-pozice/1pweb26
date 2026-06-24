@@ -1,37 +1,59 @@
 ---
 import Base from '../../layouts/Base.astro';
-import eshopy from '../../data/eshopy.json';
+import references from '../../data/references.json';
 
-// Pilotní referenční šablona — generuje stránku pro každou referenci z dat.
-// Plný obsah (dlouhý popis, galerie) se doplní v hlavní migraci obsahu.
+const CAT_LABEL: Record<string, string> = {
+  weby: 'Web', eshopy: 'E-shop', marketing: 'Online marketing', aplikace: 'Webová aplikace',
+};
+const CAT_HREF: Record<string, string> = {
+  weby: '/weby/', eshopy: '/eshopy/', marketing: '/marketing/', aplikace: '/weby/',
+};
+
 export function getStaticPaths() {
-  return eshopy.map((e) => ({ params: { slug: e.slug }, props: { ref: e } }));
+  return (references as any[]).map((r) => ({ params: { slug: r.slug }, props: { ref: r } }));
 }
 const { ref } = Astro.props;
+const catLabel = CAT_LABEL[ref.cat] ?? 'Reference';
+const backHref = CAT_HREF[ref.cat] ?? '/weby/';
+let host = '';
+try { host = new URL(ref.url).host.replace(/^www\./, ''); } catch {}
 ---
 <Base
   title={`${ref.name} — reference | První pozice`}
-  description={`Reference e-shopu ${ref.name} od agentury První pozice.`}
+  description={ref.desc ? ref.desc.slice(0, 155) : `Reference ${catLabel.toLowerCase()} ${ref.name} od agentury První pozice.`}
 >
   <article class="ref">
     <div class="wrap">
-      <a class="back" href="/eshopy/">← Všechny e-shopy</a>
-      <span class="overline"><span class="dot"></span><span class="label">Reference · E-shop</span></span>
+      <a class="back" href={backHref}>← Všechny reference</a>
+      <span class="overline"><span class="dot"></span><span class="label">Reference · {catLabel}</span></span>
       <h1>{ref.name}</h1>
 
-      <div class="hero-img"><img src={ref.img} alt={ref.name} /></div>
+      {ref.img && (
+        <div class="hero-img"><img src={ref.img} alt={ref.name} /></div>
+      )}
 
       <div class="ref-body">
         <div class="ref-main">
-          <h2>Co jsme řešili</h2>
-          <ul class="points">
-            {ref.bullets.map((b) => <li>{b}</li>)}
-          </ul>
-          <p class="note">Detailní popis projektu a galerie se doplní v rámci migrace obsahu.</p>
+          {ref.desc && <p class="desc">{ref.desc}</p>}
+          {ref.bullets && ref.bullets.length > 0 && (
+            <>
+              <h2>Co jsme řešili</h2>
+              <ul class="points">{ref.bullets.map((b: string) => <li>{b}</li>)}</ul>
+            </>
+          )}
+          {!ref.desc && (!ref.bullets || ref.bullets.length === 0) && (
+            <p class="desc">Realizace {catLabel.toLowerCase()} pro klienta {ref.name}.</p>
+          )}
         </div>
         <aside class="ref-aside">
+          {host && (
+            <div class="visit">
+              <span class="overline"><span class="dot"></span><span class="label">Web klienta</span></span>
+              <a class="visit-link" href={ref.url} target="_blank" rel="noopener noreferrer">{host} →</a>
+            </div>
+          )}
           <div class="cta-card">
-            <h3>Chcete podobný e-shop?</h3>
+            <h3>Chcete podobný projekt?</h3>
             <p>Ozvěte se — nezávazně probereme, co dává smysl právě pro vás.</p>
             <a href="/kontakt/" class="btn primary lg">Domluvit konzultaci</a>
           </div>
@@ -50,12 +72,17 @@ const { ref } = Astro.props;
   .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .ref-body { display: grid; grid-template-columns: 1fr 340px; gap: 48px; margin-top: 56px; align-items: start; }
-  .ref-main h2 { font-size: var(--fs-title-lg); font-weight: var(--fw-bold); color: var(--text-strong); }
-  .points { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .desc { font-size: 18px; line-height: var(--lh-relaxed); color: var(--text); }
+  .ref-main h2 { font-size: var(--fs-title-lg); font-weight: var(--fw-bold); color: var(--text-strong); margin-top: 32px; }
+  .points { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
   .points li { position: relative; padding-left: 26px; font-size: 17px; line-height: var(--lh-body); color: var(--text); }
   .points li::before { content: ""; position: absolute; left: 0; top: 9px; width: 9px; height: 9px; border-radius: var(--radius-pill); background: var(--lime); }
-  .note { margin-top: 24px; font-size: 14px; color: var(--text-subtle); font-style: italic; }
 
+  .ref-aside { display: grid; gap: 20px; }
+  .visit { background: var(--n-900); border-radius: var(--radius-xl); padding: 22px 24px; }
+  .visit :global(.label) { color: var(--lime); }
+  .visit-link { display: inline-block; margin-top: 10px; font-size: 18px; font-weight: var(--fw-bold); color: #fff; }
+  .visit-link:hover { color: var(--lime); }
   .cta-card { background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 28px; position: sticky; top: 90px; }
   .cta-card h3 { font-size: 20px; font-weight: var(--fw-bold); color: var(--text-strong); }
   .cta-card p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin: 10px 0 20px; }

@@ -1,0 +1,51 @@
+{
+  "weby": {
+    "slug": "weby",
+    "eyebrow": "Služby · Weby",
+    "title": "Weby, které dělají <u>první dojem</u>.",
+    "lead": "Tvoříme webové prezentace na míru — moderní, rychlé a postavené na vaší značce. Od návrhu přes kódování po provoz a růst.",
+    "ctaLabel": "Chci web",
+    "oldHref": "/cs/11-weby/",
+    "features": [
+      { "title": "Návrh na míru", "desc": "Žádná šablona z police — vzhled, který drží vaši firemní identitu." },
+      { "title": "Rychlost", "desc": "Optimalizované načítání a zelené Core Web Vitals. Rychlý web boduje u Googlu i u lidí." },
+      { "title": "Responzivita", "desc": "Dokonalé zobrazení na mobilu, tabletu i desktopu." },
+      { "title": "Snadná správa", "desc": "Redakční systém, ve kterém si obsah spravujete sami." }
+    ],
+    "gridTitle": "Reference webů",
+    "gridLead": "Výběr webových prezentací, které jsme postavili a dál rozvíjíme."
+  },
+  "eshopy": {
+    "slug": "eshopy",
+    "eyebrow": "Služby · E-shopy",
+    "title": "E-shopy, které <u>prodávají</u>.",
+    "lead": "Stavíme e-shopy na míru — rychlé, čisté a postavené na měřitelných výsledcích. Od návrhu přes kódování po provoz a růst.",
+    "ctaLabel": "Chci e-shop",
+    "oldHref": "/cs/12-eshopy/",
+    "features": [
+      { "title": "Rychlost", "desc": "Načtení během milisekund. Rychlý e-shop prodává víc a boduje ve vyhledávání." },
+      { "title": "Responzivita", "desc": "Většina nákupů začíná na telefonu — u nás vypadá e-shop skvěle všude." },
+      { "title": "Design dle značky", "desc": "Moderní vzhled, který drží vaši firemní identitu — ne šablona z police." },
+      { "title": "Nejnovější technologie", "desc": "Stabilní, bezpečné a snadno rozšiřitelné řešení připravené na růst." }
+    ],
+    "gridTitle": "Reference e-shopů",
+    "gridLead": "Výběr e-shopů, které jsme postavili a dál rozvíjíme.",
+    "showEshopGraphics": true
+  },
+  "marketing": {
+    "slug": "marketing",
+    "eyebrow": "Služby · Online marketing",
+    "title": "Marketing, který jde <u>vidět v číslech</u>.",
+    "lead": "SEO, PPC a obsah s přehledem. Přivádíme návštěvníky, kteří se mění v zákazníky — a vše měříme.",
+    "ctaLabel": "Chci víc zákazníků",
+    "oldHref": "/cs/13-propagace-a-marketing/",
+    "features": [
+      { "title": "SEO", "desc": "Optimalizace pro vyhledávače, která drží dlouhodobě — ne triky na jeden měsíc." },
+      { "title": "PPC kampaně", "desc": "Reklama, která se vyplatí. Cílíme na lidi připravené nakoupit." },
+      { "title": "Obsah", "desc": "Texty a obsah, které prodávají i vzdělávají." },
+      { "title": "Měření", "desc": "Vše napojené na analytiku — víte, co funguje a kam jdou peníze." }
+    ],
+    "gridTitle": "Reference marketingu",
+    "gridLead": "Projekty, kterým jsme pomohli růst v online prostoru."
+  }
+}
