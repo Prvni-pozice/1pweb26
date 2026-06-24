@@ -5,17 +5,16 @@ const cols = [
   {
     title: 'Služby',
     links: [
-      { href: '/sluzby/weby-eshopy/', label: 'Weby & e-shopy' },
-      { href: '/sluzby/aplikace/', label: 'Aplikace' },
-      { href: '/sluzby/ai-aplikace/', label: 'AI aplikace' },
-      { href: '/sluzby/online-marketing/', label: 'Online marketing' },
+      { href: '/weby/', label: 'Weby' },
+      { href: '/eshopy/', label: 'E-shopy' },
+      { href: '/marketing/', label: 'Online marketing' },
     ],
   },
   {
     title: 'AI',
     links: [
-      { href: '/ai-agenti/', label: 'AI agenti' },
-      { href: '/skoleni/', label: 'Školení' },
+      { href: '/ai-agenti/', label: 'AI & agenti' },
+      { href: '/skoleni/', label: 'AI školení' },
       { href: '/kontakt/', label: 'Konzultace' },
     ],
   },
@@ -23,7 +22,7 @@ const cols = [
     title: 'Firma',
     links: [
       { href: '/o-nas/', label: 'O nás' },
-      { href: '/reference/', label: 'Reference' },
+      { href: '/weby/', label: 'Reference' },
       { href: '/kontakt/', label: 'Kontakt' },
     ],
   },
@@ -44,8 +43,8 @@ const cols = [
       ))}
     </div>
     <div class="foot-bottom">
-      <span>© {year} První pozice, s.r.o.</span>
-      <span>prvni-pozice.com</span>
+      <span>© {year} První pozice, s.r.o. · IČO 29136334 · DIČ CZ29136334</span>
+      <span><a href="tel:+420775387231">+420 775 387 231</a> · <a href="mailto:podpora@prvni-pozice.com">podpora@prvni-pozice.com</a></span>
     </div>
   </div>
 </footer>
@@ -61,8 +60,10 @@ const cols = [
   .foot-col a:hover { color: #fff; }
   .foot-bottom {
     margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.14);
-    display: flex; justify-content: space-between; font-size: 13px; color: rgba(255, 255, 255, 0.5); font-family: var(--font-mono);
+    display: flex; justify-content: space-between; gap: 16px; font-size: 13px; color: rgba(255, 255, 255, 0.5); font-family: var(--font-mono);
   }
+  .foot-bottom a { color: rgba(255, 255, 255, 0.7); }
+  .foot-bottom a:hover { color: var(--lime); }
   @media (max-width: 640px) {
     .foot-bottom { flex-direction: column; gap: 8px; }
   }

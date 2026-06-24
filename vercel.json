@@ -41,6 +41,46 @@
    "permanent": true
   },
   {
+   "source": "/cs/276-skoleni",
+   "destination": "/skoleni/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/276-skoleni/",
+   "destination": "/skoleni/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/16-1p-prvni-pozice",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/16-1p-prvni-pozice/",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/15-divize",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/15-divize/",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/298-webove-aplikace",
+   "destination": "/ai-agenti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/298-webove-aplikace/",
+   "destination": "/ai-agenti/",
+   "permanent": true
+  },
+  {
    "source": "/cs/152-nutriservis",
    "destination": "/reference/nutriservis/",
    "permanent": true

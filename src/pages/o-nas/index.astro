@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const stats = [
+  { big: '15', u: '+', lbl: 'let na trhu' },
+  { big: '200', u: '+', lbl: 'realizovaných projektů' },
+  { big: '100', u: '+', lbl: 'spokojených klientů' },
+  { big: '1.', u: '', lbl: 'pozice je cíl' },
+];
+const values = [
+  { title: 'Náskok napřed', desc: 'Sledujeme, co přichází — a nasazujeme to dřív než ostatní. Teď hlavně AI.' },
+  { title: 'Měřitelné výsledky', desc: 'Nejde o hezké obrázky, ale o čísla. Web a marketing musí prodávat.' },
+  { title: 'Lidé, ne formuláře', desc: 'Mluvíte rovnou s těmi, kdo na vašem projektu pracují.' },
+  { title: 'Bez balastu', desc: 'Věcně, uvolněně a narovinu. Řekneme i to, co nechcete slyšet.' },
+];
+---
+<Base title="O nás — První pozice" description="Lokální internetová agentura První pozice: 15+ let zkušeností, 200+ projektů. Dnes tvůrce AI aplikací a partner pro rapidní vývoj s agenty.">
+  <header class="page-hero">
+    <div class="wrap">
+      <span class="overline"><span class="dot"></span><span class="label">O nás</span></span>
+      <h1>Držíme klienty na <u>první pozici</u> už 15 let.</h1>
+      <p class="lead">První pozice je lokální internetová agentura. Tvoříme weby, e-shopy, aplikace a online marketing — a dnes je posouváme dál pomocí AI nástrojů a agentů.</p>
+    </div>
+  </header>
+
+  <section class="section stats-sec">
+    <div class="wrap">
+      <div class="stats">
+        {stats.map((s) => (
+          <div class="stat"><div class="big">{s.big}<span class="u">{s.u}</span></div><div class="lbl">{s.lbl}</div></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two">
+      <div class="sec-head">
+        <span class="overline"><span class="dot"></span><span class="label">Posun, který děláme</span></span>
+        <h2>Z klasické agentury do éry AI.</h2>
+      </div>
+      <div class="prose">
+        <p>Začínali jsme tvorbou webů a e-shopů na míru. Za 15 let jsme jich postavili stovky — od malých prezentací po rozsáhlé e-shopy a interní aplikace.</p>
+        <p>Dnes jdeme dál: stáváme se tvůrcem <b>AI aplikací</b>, školitelem AI a partnerem pro <b>rapidní vývoj s agenty</b>. Agenty nasazujeme do komunikace, vývoje i návrhů — a učíme firmy, jak je používat každý den.</p>
+        <p>Cíl zůstává stejný jako v názvu: dostat vás na první pozici a udržet vás tam.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section values-sec">
+    <div class="wrap">
+      <div class="sec-head"><span class="overline"><span class="dot"></span><span class="label">Jak pracujeme</span></span><h2>Na čem nám záleží</h2></div>
+      <div class="values">
+        {values.map((v) => (
+          <div class="val"><div class="val-mark"></div><h3>{v.title}</h3><p>{v.desc}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div><h2>Pojďme z vašeho nápadu udělat první pozici.</h2><p>Nezávazná konzultace zdarma.</p></div>
+        <a href="/kontakt/" class="btn dark lg" style="flex:none">Domluvit konzultaci</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-hero { padding: 72px 0 8px; }
+  .page-hero h1 { font-size: var(--fs-display-xl); font-weight: var(--fw-black); letter-spacing: -.025em; line-height: 1.04; color: var(--text-strong); margin: 18px 0 0; max-width: 16ch; }
+  .page-hero h1 u { text-decoration: none; box-shadow: inset 0 -.12em 0 var(--lime); }
+  .page-hero .lead { font-size: 20px; line-height: var(--lh-body); color: var(--text-muted); max-width: 640px; margin: 24px 0 0; }
+
+  .stats-sec { padding-top: 56px; padding-bottom: 56px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .stat .big { font-size: 56px; font-weight: var(--fw-black); letter-spacing: -.03em; color: var(--text-strong); line-height: 1; }
+  .stat .big .u { color: var(--lime); }
+  .stat .lbl { font-size: 15px; color: var(--text-muted); margin-top: 10px; }
+
+  .two { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: start; }
+  .prose p { font-size: 18px; line-height: var(--lh-relaxed); color: var(--text); margin-bottom: 18px; }
+  .prose b { color: var(--text-strong); }
+
+  .values-sec { background: var(--surface-sunken); border-radius: var(--radius-2xl); }
+  .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 44px; }
+  .val-mark { width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--lime-100); position: relative; margin-bottom: 16px; }
+  .val-mark::after { content: ""; position: absolute; inset: 13px; border-radius: var(--radius-pill); background: var(--lime); }
+  .val h3 { font-size: 19px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .val p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin-top: 8px; }
+
+  .cta-band { background: var(--lime); border-radius: var(--radius-2xl); padding: 64px 56px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band h2 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: var(--ls-display); color: var(--n-900); line-height: 1.05; }
+  .cta-band p { font-size: 18px; color: var(--lime-900); margin-top: 12px; }
+
+  @media (max-width: 980px) { .stats, .values { grid-template-columns: repeat(2, 1fr); } .two { grid-template-columns: 1fr; gap: 28px; } }
+  @media (max-width: 760px) { .page-hero h1 { font-size: 40px; } .cta-band { flex-direction: column; align-items: flex-start; padding: 40px 28px; } }
+</style>

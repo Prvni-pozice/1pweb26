@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Kontakt — dle DS předlohy ui_kits/website/kontakt.html, s reálnými údaji ze starého webu.
+const contact = {
+  person: 'Václav Tůma',
+  role: 'zákaznická podpora',
+  tel: '+420 775 387 231',
+  telHref: 'tel:+420775387231',
+  email: 'podpora@prvni-pozice.com',
+  company: 'První pozice, s.r.o.',
+  ico: '29136334',
+  dic: 'CZ29136334',
+};
+const interests = ['AI aplikace', 'Web / e-shop', 'AI školení', 'Online marketing', 'AI agenti'];
+---
+<Base title="Kontakt — poptávka | První pozice" description="Nezávazná konzultace zdarma. Ozveme se do 24 hodin a řekneme rovnou, kde dává AI smysl.">
+  <div class="kont">
+    <div class="wrap grid">
+      <div class="intro">
+        <span class="overline"><span class="dot"></span><span class="label">Nezávazná konzultace</span></span>
+        <h1>Řekněte nám, co chcete <u>posunout</u>.</h1>
+        <p class="lead">Ozveme se do 24 hodin. Rovnou vám napíšeme, kde dává AI smysl — a kde byste jen utráceli.</p>
+
+        <div class="bullets">
+          <div class="bullet"><span class="chk">✓</span><div><b>Bez balastu.</b><p>Žádné dlouhé nabídky. Konkrétní další krok.</p></div></div>
+          <div class="bullet"><span class="chk">✓</span><div><b>Lidé, ne formuláře.</b><p>Mluvíte rovnou s těmi, kdo to budou dělat.</p></div></div>
+          <div class="bullet"><span class="chk">✓</span><div><b>Náskok od začátku.</b><p>První doporučení dostanete hned na úvodním hovoru.</p></div></div>
+        </div>
+
+        <div class="direct">
+          <a class="dcard" href={contact.telHref}><span class="dlabel">Telefon</span><span class="dval">{contact.tel}</span></a>
+          <a class="dcard" href={`mailto:${contact.email}`}><span class="dlabel">E-mail</span><span class="dval">{contact.email}</span></a>
+        </div>
+        <p class="who">{contact.person} · {contact.role}</p>
+      </div>
+
+      <div class="panel">
+        <h2>Poptávka</h2>
+        <form class="form" method="post" action="https://formspree.io/f/your-endpoint" data-todo="backend">
+          <div class="field"><label for="name">Jméno</label><input id="name" name="name" required /></div>
+          <div class="field"><label for="firma">Firma</label><input id="firma" name="firma" /></div>
+          <div class="field"><label for="email">Pracovní e-mail</label><input id="email" name="email" type="email" required /></div>
+          <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" placeholder="+420" /></div>
+          <div class="field full"><label>O co máte zájem?</label>
+            <div class="chips">
+              {interests.map((i) => <label class="chip"><input type="checkbox" name="zajem" value={i} /> {i}</label>)}
+            </div>
+          </div>
+          <div class="field full"><label for="zprava">Stručně k projektu</label><textarea id="zprava" name="zprava" rows="3"></textarea></div>
+          <div class="submit">
+            <label class="cbrow"><input type="checkbox" name="souhlas" required /> Souhlasím se <a href="/zasady-ochrany-udaju/">zpracováním údajů</a></label>
+            <button class="btn primary" type="submit">Odeslat poptávku</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrap legal">
+      <span>{contact.company}</span><span>IČO {contact.ico}</span><span>DIČ {contact.dic}</span>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .kont { background: var(--surface-sunken); padding: 64px 0 80px; }
+  .grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
+  .intro h1 { font-size: var(--fs-display-lg); font-weight: var(--fw-black); letter-spacing: -.022em; line-height: 1.06; color: var(--text-strong); margin: 16px 0 0; }
+  .intro h1 u { text-decoration: none; box-shadow: inset 0 -.12em 0 var(--lime); }
+  .lead { font-size: 18px; line-height: var(--lh-body); color: var(--text-muted); margin: 20px 0 0; }
+  .bullets { margin: 32px 0 0; display: flex; flex-direction: column; gap: 16px; }
+  .bullet { display: flex; gap: 12px; align-items: flex-start; }
+  .bullet .chk { width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--lime-100); color: var(--lime-800); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex: none; margin-top: 1px; }
+  .bullet b { color: var(--text-strong); font-weight: var(--fw-bold); }
+  .bullet p { font-size: 15px; color: var(--text-muted); margin: 2px 0 0; }
+
+  .direct { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .dcard { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 20px; flex: 1; min-width: 180px; }
+  .dcard:hover { border-color: var(--lime-400); }
+  .dlabel { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-subtle); }
+  .dval { font-size: 18px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .who { margin-top: 14px; font-size: 14px; color: var(--text-subtle); }
+
+  .panel { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 40px; box-shadow: var(--shadow-md); }
+  .panel h2 { font-size: var(--fs-title-md); font-weight: var(--fw-bold); letter-spacing: -.012em; color: var(--text-strong); }
+  .form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 14px; font-weight: var(--fw-medium); color: var(--text-strong); }
+  .field input, .field textarea { padding: 12px 14px; background: #fff; border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); font-family: var(--font-sans); font-size: 16px; color: var(--text); outline: none; resize: none; }
+  .field input:focus, .field textarea:focus { border-color: var(--lime); box-shadow: var(--ring); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { padding: 8px 14px; font-size: 14px; font-weight: var(--fw-medium); border-radius: var(--radius-pill); background: var(--n-100); color: var(--text); border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .chip:has(input:checked) { background: var(--lime-100); color: var(--n-900); border-color: var(--lime-400); }
+  .chip input { accent-color: var(--lime); }
+  .submit { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 6px; flex-wrap: wrap; }
+  .cbrow { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted); }
+  .cbrow input { accent-color: var(--lime); width: 20px; height: 20px; }
+  .btn.primary[type="submit"] { padding: 14px 28px; font-size: 16px; }
+
+  .legal { margin-top: 40px; display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; color: var(--text-subtle); }
+
+  @media (max-width: 880px) {
+    .grid { grid-template-columns: 1fr; gap: 40px; }
+    .form { grid-template-columns: 1fr; }
+    .intro h1 { font-size: var(--fs-display-md); }
+  }
+</style>

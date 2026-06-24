@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const learn = [
+  { title: 'Založíte si vlastní AI nástroje', desc: 'Od účtu a limitů po první funkční výstup — prakticky, ne teoreticky.' },
+  { title: 'Naučíte se promptovat', desc: 'Co dělá dobrý prompt, jak iterovat a jak z AI dostat použitelný výsledek.' },
+  { title: 'Design systém jako jádro', desc: 'Jak postavit firemní brand manuál, profil a materiály konzistentně.' },
+  { title: 'AI do každodenní práce', desc: 'Marketing, prezentace, grafika i obchodní materiály — rychleji a bez balastu.' },
+];
+---
+<Base title="AI školení pro firmy | První pozice" description="Praktické školení AI pro majitele a manažery SMB. Bez designového ani technického zázemí — odejdete s hotovými výstupy.">
+  <header class="page-hero">
+    <div class="wrap">
+      <span class="overline"><span class="dot"></span><span class="label">AI školení</span></span>
+      <h1>Naučíme váš tým používat AI <u>každý den</u>.</h1>
+      <p class="lead">Praktické školení pro majitele a manažery — bez designového ani technického zázemí. Lektor vede, vy rovnou tvoříte. Odcházíte s hotovými výstupy, ne s poznámkami.</p>
+      <div class="cta"><a href="/kontakt/" class="btn primary lg">Mám zájem o školení</a></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head"><span class="overline"><span class="dot"></span><span class="label">Co si odnesete</span></span><h2>Z čeho se školení skládá</h2></div>
+      <div class="cards">
+        {learn.map((l, i) => (
+          <div class="lc"><div class="ln">{String(i + 1).padStart(2, '0')}</div><h3>{l.title}</h3><p>{l.desc}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div><h2>Chcete proškolit svůj tým?</h2><p>Ozvěte se a domluvíme termín i obsah na míru vaší firmě.</p></div>
+        <a href="/kontakt/" class="btn dark lg" style="flex:none">Domluvit školení</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-hero { padding: 72px 0 8px; }
+  .page-hero h1 { font-size: var(--fs-display-xl); font-weight: var(--fw-black); letter-spacing: -.025em; line-height: 1.04; color: var(--text-strong); margin: 18px 0 0; max-width: 17ch; }
+  .page-hero h1 u { text-decoration: none; box-shadow: inset 0 -.12em 0 var(--lime); }
+  .page-hero .lead { font-size: 20px; line-height: var(--lh-body); color: var(--text-muted); max-width: 660px; margin: 24px 0 0; }
+  .page-hero .cta { margin-top: 30px; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px; }
+  .lc { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-sm); }
+  .ln { font-family: var(--font-mono); font-size: 13px; color: var(--lime-800); letter-spacing: .1em; }
+  .lc h3 { font-size: 20px; font-weight: var(--fw-bold); color: var(--text-strong); margin-top: 10px; }
+  .lc p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin-top: 8px; }
+
+  .cta-band { background: var(--lime); border-radius: var(--radius-2xl); padding: 64px 56px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band h2 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: var(--ls-display); color: var(--n-900); line-height: 1.05; }
+  .cta-band p { font-size: 18px; color: var(--lime-900); margin-top: 12px; }
+
+  @media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .page-hero h1 { font-size: 40px; } .cta-band { flex-direction: column; align-items: flex-start; padding: 40px 28px; } }
+</style>

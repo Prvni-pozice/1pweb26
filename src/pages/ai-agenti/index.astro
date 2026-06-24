@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const steps = [
+  { n: '01', title: 'Návrh s agenty', desc: 'Koncept, wireframe i prototyp vznikají ve dnech. Iterujeme s vámi v reálném čase.' },
+  { n: '02', title: 'Rapidní vývoj', desc: 'AI nástroje zrychlují kód i obsah. Funkční verzi vidíte dřív než kdy dřív.' },
+  { n: '03', title: 'Agenti v provozu', desc: 'Komunikace, podpora a rutina běží samy. Tým se věnuje tomu, co má smysl.' },
+];
+const useCases = [
+  { title: 'AI aplikace na míru', desc: 'Od nápadu k funkčnímu prototypu za dny. Nástroj, který řeší přesně váš problém.' },
+  { title: 'Agenti pro podporu', desc: 'Odpovídají zákazníkům, třídí dotazy a předávají jen to, co potřebuje člověka.' },
+  { title: 'Automatizace procesů', desc: 'Rutinní úkoly — zpracování dat, reporty, e-maily — necháte běžet na pozadí.' },
+  { title: 'AI do stávajících systémů', desc: 'Napojíme agenty na vaše nástroje, e-shop nebo interní aplikace.' },
+];
+---
+<Base title="AI & agenti — rapidní vývoj | První pozice" description="Tvoříme AI aplikace a nasazujeme agenty do komunikace, vývoje i provozu. Od nápadu k prototypu za dny, ne měsíce.">
+  <section class="hero-dark">
+    <div class="wrap">
+      <span class="overline"><span class="dot"></span><span class="label dl">Posun, který děláme</span></span>
+      <h1>Nech agenta napsat <em>první verzi</em>.</h1>
+      <p class="lead">Posouváme se z klasické tvorby aplikací do éry rapidního vývoje s AI. Návrh, vývoj i provoz zrychlují agenti — vy získáváte náskok.</p>
+      <div class="cta"><a href="/kontakt/" class="btn primary lg">Pojďme to rozjet</a><a href="/skoleni/" class="btn ghost light">AI školení →</a></div>
+      <div class="steps">
+        {steps.map((s) => (<div class="step"><div class="sn">{s.n}</div><h4>{s.title}</h4><p>{s.desc}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head"><span class="overline"><span class="dot"></span><span class="label">Co s AI děláme</span></span><h2>Kde dává AI smysl</h2><p>A kde ne — to vám řekneme rovnou. Bez utrácení za hype.</p></div>
+      <div class="cards">
+        {useCases.map((u) => (<div class="uc"><h3>{u.title}</h3><p>{u.desc}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div><h2>Máte nápad? Pojďme z něj udělat prototyp.</h2><p>Nezávazná konzultace zdarma. Řekneme vám, kde dává AI smysl.</p></div>
+        <a href="/kontakt/" class="btn dark lg" style="flex:none">Domluvit konzultaci</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero-dark { background: var(--n-900); color: #fff; padding: 84px 0 72px; }
+  .hero-dark .dl { color: var(--lime); }
+  .hero-dark h1 { font-size: var(--fs-display-xl); font-weight: var(--fw-black); letter-spacing: -.025em; line-height: 1.04; color: #fff; margin: 16px 0 0; max-width: 16ch; }
+  .hero-dark h1 em { font-style: normal; color: var(--lime); }
+  .hero-dark .lead { font-size: 20px; line-height: var(--lh-body); color: rgba(255,255,255,.7); max-width: 620px; margin: 22px 0 0; }
+  .hero-dark .cta { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+  .btn.ghost.light { color: #fff; }
+  .btn.ghost.light:hover { color: var(--lime); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 64px; }
+  .step { border-top: 1px solid rgba(255,255,255,.16); padding-top: 18px; }
+  .sn { font-family: var(--font-mono); font-size: 13px; color: var(--lime); letter-spacing: .1em; }
+  .step h4 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
+  .step p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.66); }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px; }
+  .uc { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-sm); }
+  .uc h3 { font-size: 21px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .uc p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin-top: 8px; }
+
+  .cta-band { background: var(--lime); border-radius: var(--radius-2xl); padding: 64px 56px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band h2 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: var(--ls-display); color: var(--n-900); line-height: 1.05; }
+  .cta-band p { font-size: 18px; color: var(--lime-900); margin-top: 12px; }
+
+  @media (max-width: 880px) { .steps { grid-template-columns: 1fr; } .cards { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .hero-dark h1 { font-size: 40px; } .cta-band { flex-direction: column; align-items: flex-start; padding: 40px 28px; } }
+</style>
