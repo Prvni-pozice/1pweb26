@@ -1,0 +1,44 @@
+---
+// Frosted sticky navigace dle DS web kitu.
+const links = [
+  { href: '/sluzby/', label: 'Služby' },
+  { href: '/ai-agenti/', label: 'AI & agenti' },
+  { href: '/reference/', label: 'Reference' },
+  { href: '/skoleni/', label: 'Školení' },
+  { href: '/o-nas/', label: 'O nás' },
+];
+---
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="/assets/logo-1p-dark.png" alt="První pozice" /></a>
+    <div class="nav-links">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </div>
+    <div class="nav-right">
+      <a href="/kontakt/" class="btn primary">Domluvit konzultaci</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247, 248, 245, 0.72);
+    backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--container-wide); margin: 0 auto; padding: 14px var(--space-8);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: block; }
+  .nav-logo img { height: 26px; display: block; }
+  .nav-links { display: flex; gap: 30px; }
+  .nav-links a { font-size: 15px; font-weight: var(--fw-medium); color: var(--text); }
+  .nav-links a:hover { color: var(--lime-800); }
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+  }
+</style>

@@ -1,0 +1,67 @@
+:root {
+  /* ============================================================
+     BRAND COLORS — První pozice / 1P
+     Lime green (logo) + dark gray (#333) + white.
+     ============================================================ */
+
+  /* — Lime (signature) — sampled from logo: #98C800 — */
+  --lime-50:   #f6faea;
+  --lime-100:  #eaf4cf;
+  --lime-200:  #d6ea9f;
+  --lime-300:  #bcdd5e;
+  --lime-400:  #a8d42b;
+  --lime:      #98c800;   /* PRIMARY — the brand lime */
+  --lime-600:  #82ad00;   /* hover on lime surfaces */
+  --lime-700:  #688a00;   /* pressed */
+  --lime-800:  #4f6900;   /* lime text on white (AA on white for large) */
+  --lime-900:  #3a4d00;   /* deepest — accessible lime ink */
+
+  /* — Neutrals — cool-warm grey, faint green undertone to tie to brand — */
+  --n-0:    #ffffff;
+  --n-50:   #f7f8f5;   /* page background, sunken surfaces */
+  --n-100:  #eef0ea;
+  --n-150:  #e6e9e1;
+  --n-200:  #dde0d8;   /* hairline borders */
+  --n-300:  #c7cbc1;
+  --n-400:  #a6aaa0;
+  --n-500:  #7e837a;
+  --n-600:  #5d625a;
+  --n-700:  #41463f;
+  --n-800:  #333333;   /* BRAND dark grey */
+  --n-900:  #1d1f1e;   /* headings / strongest ink */
+
+  /* — Semantic accents (share chroma/lightness, vary hue) — */
+  --info:    #2f72e0;
+  --success: #2f9e57;
+  --warning: #e0962f;
+  --danger:  #db4c3f;
+
+  /* ============================================================
+     SEMANTIC ALIASES
+     ============================================================ */
+  --text-strong:  var(--n-900);
+  --text:         var(--n-800);   /* body copy = brand #333 */
+  --text-muted:   var(--n-600);
+  --text-subtle:  var(--n-500);
+  --text-on-lime: var(--n-900);   /* dark ink reads best on bright lime */
+  --text-on-dark: var(--n-0);
+
+  --surface:        var(--n-0);
+  --surface-sunken: var(--n-50);
+  --surface-dark:   var(--n-900);
+  --surface-lime:   var(--lime);
+
+  --border:         var(--n-200);
+  --border-strong:  var(--n-300);
+  --border-on-dark: rgba(255,255,255,.14);
+
+  --accent:         var(--lime);
+  --accent-hover:   var(--lime-600);
+  --accent-pressed: var(--lime-700);
+  --accent-ink:     var(--lime-800);   /* lime as readable text/icon on white */
+
+  /* Focus ring — react-aria style: visible, offset, brand-tinted */
+  --ring:        0 0 0 3px rgba(152, 200, 0, .45);
+  --ring-dark:   0 0 0 3px rgba(29, 31, 30, .35);
+  --ring-offset: 0 0 0 2px var(--n-0);
+}

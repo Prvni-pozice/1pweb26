@@ -1,0 +1,4 @@
+/* První pozice — webfonts
+   Roboto (chosen brand typeface) + Roboto Mono for labels/code.
+   Apple-like clarity: tight, neutral grotesk with a humanist warmth. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Roboto+Mono:wght@400;500;600&display=swap');

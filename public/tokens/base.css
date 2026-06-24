@@ -1,0 +1,42 @@
+/* ============================================================
+   Base resets + brand defaults
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text-strong);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-title);
+  line-height: var(--lh-heading);
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--accent-ink); text-decoration: none; }
+a:hover { color: var(--lime-900); }
+
+/* Mono overline — recurring brand label motif */
+.overline {
+  font-family: var(--font-mono);
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-overline);
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+::selection { background: var(--lime-200); color: var(--n-900); }

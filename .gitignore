@@ -1,0 +1,20 @@
+# build output
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# vercel
+.vercel/
+
+# env / secrets
+.env
+.env.*
+*.local
+*.key
+*.pem
+
+# logs / os
+*.log
+.DS_Store

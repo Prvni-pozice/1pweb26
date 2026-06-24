@@ -1,0 +1,69 @@
+---
+// Tmavý footer dle DS web kitu.
+const year = 2026;
+const cols = [
+  {
+    title: 'Služby',
+    links: [
+      { href: '/sluzby/weby-eshopy/', label: 'Weby & e-shopy' },
+      { href: '/sluzby/aplikace/', label: 'Aplikace' },
+      { href: '/sluzby/ai-aplikace/', label: 'AI aplikace' },
+      { href: '/sluzby/online-marketing/', label: 'Online marketing' },
+    ],
+  },
+  {
+    title: 'AI',
+    links: [
+      { href: '/ai-agenti/', label: 'AI agenti' },
+      { href: '/skoleni/', label: 'Školení' },
+      { href: '/kontakt/', label: 'Konzultace' },
+    ],
+  },
+  {
+    title: 'Firma',
+    links: [
+      { href: '/o-nas/', label: 'O nás' },
+      { href: '/reference/', label: 'Reference' },
+      { href: '/kontakt/', label: 'Kontakt' },
+    ],
+  },
+];
+---
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="/assets/logo-1p-white.png" alt="První pozice" />
+        <p>Lokální internetová agentura. Weby, aplikace, e-shopy a AI — vždy o krok napřed.</p>
+      </div>
+      {cols.map((c) => (
+        <div class="foot-col">
+          <h5>{c.title}</h5>
+          {c.links.map((l) => <a href={l.href}>{l.label}</a>)}
+        </div>
+      ))}
+    </div>
+    <div class="foot-bottom">
+      <span>© {year} První pozice, s.r.o.</span>
+      <span>prvni-pozice.com</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer { background: var(--n-900); color: rgba(255, 255, 255, 0.7); margin-top: var(--section-y); padding: 64px 0 40px; }
+  .foot { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .foot-brand { max-width: 280px; }
+  footer img { height: 24px; }
+  .foot-brand p { margin-top: 16px; font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.55); }
+  .foot-col h5 { font-size: 13px; font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin: 0 0 14px; }
+  .foot-col a { display: block; color: rgba(255, 255, 255, 0.66); font-size: 15px; margin-bottom: 9px; }
+  .foot-col a:hover { color: #fff; }
+  .foot-bottom {
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex; justify-content: space-between; font-size: 13px; color: rgba(255, 255, 255, 0.5); font-family: var(--font-mono);
+  }
+  @media (max-width: 640px) {
+    .foot-bottom { flex-direction: column; gap: 8px; }
+  }
+</style>

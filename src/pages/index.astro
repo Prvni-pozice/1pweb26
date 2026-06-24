@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Služby — obsah dle DS web kitu. Ikony = lehké linkové SVG (Lucide-like).
+const services = [
+  { title: 'Weby & e-shopy', desc: 'Rychlé, čisté a prodávající. Postavené na měřitelných výsledcích.', href: '/sluzby/weby-eshopy/', link: 'Více', icon: 'web' },
+  { title: 'AI aplikace', desc: 'Od nápadu k funkčnímu prototypu za dny, ne měsíce. Rapidní vývoj s agenty.', href: '/sluzby/ai-aplikace/', link: 'Novinka', icon: 'ai', feature: true },
+  { title: 'Webové aplikace', desc: 'Interní nástroje a portály, které vašemu týmu reálně ušetří čas.', href: '/sluzby/aplikace/', link: 'Více', icon: 'app' },
+  { title: 'Online marketing', desc: 'Výkon, který jde vidět v číslech. PPC, SEO a obsah s přehledem.', href: '/sluzby/online-marketing/', link: 'Více', icon: 'chart' },
+  { title: 'AI agenti', desc: 'Automatizace komunikace, podpory i návrhů. Agenti, co pracují za vás.', href: '/ai-agenti/', link: 'Více', icon: 'bot' },
+  { title: 'AI školení', desc: 'Naučíme váš tým používat AI každý den — prakticky a bez balastu.', href: '/skoleni/', link: 'Více', icon: 'shield' },
+];
+
+const steps = [
+  { n: '01', title: 'Návrh s agenty', desc: 'Koncept, wireframe i prototyp vznikají ve dnech. Iterujeme s vámi v reálném čase.' },
+  { n: '02', title: 'Rapidní vývoj', desc: 'AI nástroje zrychlují kód i obsah. Vy vidíte funkční verzi dřív než kdy dřív.' },
+  { n: '03', title: 'Agenti v provozu', desc: 'Komunikace, podpora a rutina běží samy. Tým se věnuje tomu, co má smysl.' },
+];
+
+const stats = [
+  { big: '3', u: '×', lbl: 'rychlejší prototyp' },
+  { big: '15', u: '+', lbl: 'let na trhu' },
+  { big: '200', u: '+', lbl: 'projektů' },
+  { big: '1.', u: '', lbl: 'pozice je cíl' },
+];
+
+// Inner SVG (stroke ikony, Lucide-like) — barva se nastavuje přes stroke na <svg>.
+const ICONS: Record<string, string> = {
+  web: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/>',
+  ai: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/>',
+  app: '<path d="M4 17l5-5-5-5M12 19h8"/>',
+  chart: '<path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 4-6"/>',
+  bot: '<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="10" r="1.3"/><circle cx="15" cy="10" r="1.3"/><path d="M9 15h6"/>',
+  shield: '<path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7z"/><path d="M9 12l2 2 4-4"/>',
+};
+---
+<Base>
+  <header class="hero">
+    <div class="wrap">
+      <span class="overline"><span class="dot"></span><span class="label">Lokální agentura · nově s AI</span></span>
+      <h1>Držíme vás na <u>první pozici</u>. Teď i s AI.</h1>
+      <p class="sub">Tvoříme weby, e-shopy a aplikace — a posouváme je dál pomocí AI nástrojů a agentů. Rychleji, chytřeji, měřitelně.</p>
+      <div class="cta">
+        <a href="/kontakt/" class="btn primary lg">Pojďme to rozjet</a>
+        <a href="/ai-agenti/" class="btn secondary">Jak pracujeme s AI</a>
+      </div>
+      <div class="hero-visual">
+        <div class="rank-badge">1</div>
+        <div class="ph" style="height:460px"><span class="tag">[ product shot — dashboard / AI aplikace ]</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="trust">
+      <span>Důvěřují nám:</span>
+      <b>Klient&nbsp;A</b><b>Klient&nbsp;B</b><b>Klient&nbsp;C</b><b>Klient&nbsp;D</b><b>Klient&nbsp;E</b>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="overline"><span class="dot"></span><span class="label">Co děláme</span></span>
+        <h2>Celé digitální řemeslo pod jednou střechou.</h2>
+        <p>Od první verze webu po nasazené AI agenty. Vše navržené tak, aby vám dávalo náskok.</p>
+      </div>
+      <div class="cards">
+        {services.map((s) => (
+          <a class={`scard${s.feature ? ' feature' : ''}`} href={s.href}>
+            <div class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={s.feature ? '#1d1f1e' : '#4f6900'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={ICONS[s.icon]} />
+            </div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="lnk">{s.link} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="band">
+      <span class="overline"><span class="dot"></span><span class="label band-label">Posun, který děláme</span></span>
+      <h2>Z klasické tvorby aplikací do éry <em>rapidního vývoje s AI</em>.</h2>
+      <div class="steps">
+        {steps.map((st) => (
+          <div class="step"><div class="n">{st.n}</div><h4>{st.title}</h4><p>{st.desc}</p></div>
+        ))}
+      </div>
+      <div class="stats">
+        {stats.map((s) => (
+          <div class="stat"><div class="big">{s.big}<span class="u">{s.u}</span></div><div class="lbl">{s.lbl}</div></div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Pojďme z vašeho nápadu udělat první pozici.</h2>
+          <p>Nezávazná konzultace zdarma. Řekneme vám rovnou, kde dává AI smysl — a kde ne.</p>
+        </div>
+        <a href="/kontakt/" class="btn dark lg cta-btn">Domluvit konzultaci</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* HERO */
+  .hero { padding: 84px 0 64px; }
+  .hero h1 { font-size: var(--fs-display-2xl); font-weight: var(--fw-black); letter-spacing: -0.025em; line-height: 1.02; color: var(--text-strong); margin: 20px 0 0; max-width: 880px; }
+  .hero h1 u { text-decoration: none; box-shadow: inset 0 -0.12em 0 var(--lime); }
+  .hero .sub { font-size: 20px; line-height: var(--lh-body); color: var(--text-muted); max-width: 600px; margin: 26px 0 0; }
+  .hero .cta { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+
+  .hero-visual { margin-top: 56px; position: relative; border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--border); }
+  .ph { background-color: var(--n-100); background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(29,31,30,.035) 18px 19px); display: flex; align-items: center; justify-content: center; }
+  .ph .tag { font-family: var(--font-mono); font-size: 13px; color: var(--text-subtle); background: rgba(255,255,255,.7); padding: 7px 14px; border-radius: var(--radius-pill); }
+  .rank-badge { position: absolute; top: 24px; left: 24px; width: 60px; height: 60px; border-radius: var(--radius-lg); background: var(--n-900); color: var(--lime); font-weight: var(--fw-black); font-size: 32px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); }
+
+  /* TRUST */
+  .trust { padding: 38px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; }
+  .trust span { font-family: var(--font-mono); font-size: 13px; color: var(--text-subtle); letter-spacing: .04em; }
+  .trust b { color: var(--text-muted); font-weight: var(--fw-bold); font-size: 19px; font-family: var(--font-sans); letter-spacing: -.01em; }
+
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .scard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-sm); transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard); display: block; color: inherit; }
+  .scard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .scard.feature { background: var(--lime); border-color: transparent; }
+  .scard .ico { width: 46px; height: 46px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; background: var(--lime-100); }
+  .scard.feature .ico { background: rgba(29,31,30,.12); }
+  .scard h3 { font-size: 22px; font-weight: var(--fw-bold); letter-spacing: -.012em; color: var(--text-strong); }
+  .scard.feature h3 { color: var(--n-900); }
+  .scard p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin-top: 8px; }
+  .scard.feature p { color: var(--lime-900); }
+  .scard .lnk { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 14px; font-weight: var(--fw-bold); color: var(--lime-800); }
+  .scard.feature .lnk { color: var(--n-900); }
+
+  /* AI BAND (dark) */
+  .band { background: var(--n-900); color: #fff; border-radius: var(--radius-2xl); padding: 72px 64px; }
+  .band .overline .dot { background: var(--lime); }
+  .band .band-label { color: var(--lime); }
+  .band h2 { font-size: 50px; font-weight: var(--fw-black); letter-spacing: var(--ls-display); line-height: 1.08; color: #fff; margin: 16px 0 0; max-width: 780px; }
+  .band h2 em { font-style: normal; color: var(--lime); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 54px; }
+  .step { border-top: 1px solid rgba(255,255,255,.16); padding-top: 18px; }
+  .step .n { font-family: var(--font-mono); font-size: 13px; color: var(--lime); letter-spacing: .1em; }
+  .step h4 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
+  .step p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.66); }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 84px; }
+  .stat { text-align: left; }
+  .stat .big { font-size: 56px; font-weight: var(--fw-black); letter-spacing: -.03em; color: #fff; line-height: 1; }
+  .stat .big .u { color: var(--lime); }
+  .stat .lbl { font-size: 15px; color: rgba(255,255,255,.6); margin-top: 10px; }
+
+  /* CTA */
+  .cta-band { background: var(--lime); border-radius: var(--radius-2xl); padding: 72px 64px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band h2 { font-size: var(--fs-display-lg); font-weight: var(--fw-black); letter-spacing: var(--ls-display); color: var(--n-900); line-height: 1.05; max-width: 620px; }
+  .cta-band p { font-size: 18px; color: var(--lime-900); margin-top: 14px; max-width: 520px; }
+  .cta-btn { flex: none; }
+
+  @media (max-width: 980px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .hero { padding: 56px 0 40px; }
+    .hero h1 { font-size: 44px; }
+    .cards { grid-template-columns: 1fr; }
+    .band, .cta-band { padding: 44px 28px; }
+    .band h2 { font-size: 34px; }
+    .cta-band { flex-direction: column; align-items: flex-start; }
+  }
+</style>
