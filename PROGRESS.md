@@ -44,8 +44,22 @@
 22. **301 mapa** — `vercel.json` 214 pravidel (kategorie + 103 referencí + `/cs`, s/bez trailing slash).
 23. **Build zelený: 107 stran.**
 
+### 2026-06-24 — Hlavní nav stránky
+24. `/kontakt/` (DS předloha + reálný kontakt: Václav Tůma, +420 775 387 231, podpora@prvni-pozice.com, IČO 29136334 / DIČ CZ29136334), `/o-nas/`, `/ai-agenti/`, `/skoleni/`. Nav + Footer napojeny. **Form backend = TODO** (placeholder Formspree).
+
+### 2026-06-24 — Iterace 1+2 (vylepšení, inspirace GEO web)
+25. **AI hero** `AiHeroVisual.astro` — živá „agentní neuronová síť" (SVG uzly + pulzující spoje + putující pakety + scan line), reduced-motion safe.
+26. **motion.js** — reveal on scroll + pointer-glow karet + scroll-scrub video (technika z GEO `CrowdVideo`).
+27. **Video patička** `VideoFooter.astro` nad footerem — CSS „data horizon" fallback (funguje hned), slot `<video data-scrub>` pro generovaný klip.
+28. Card efekty: lime glow + reveal na služby/reference, lime ring na hover.
+
+### 2026-06-24 — Výkon + bezpečnost
+29. **Obrázky:** 123× WebP ~900px (sharp), 24 MB → ~3 MB. CLS řešen aspect-ratio kontejnery.
+30. **Fonty:** Roboto + Roboto Mono self-hosted (`@fontsource`), **0 Google Fonts requestů**, žádný render-blocking `@import`. JS ~4 KB/stránku.
+31. **Security:** secrets ČISTÉ, externí odkazy `rel=noopener noreferrer`, `set:html` jen z důvěryhodných zdrojů, scrapnutý obsah escapovaný text → bez XSS.
+
 ## Zbývá
-- **Hlavní nav stránky:** `/o-nas/`, `/kontakt/` (DS má `ui_kits/website/kontakt.html`), `/ai-agenti/`, `/skoleni/` — zatím 404.
-- **Obsahové stránky** (~240 zbývajících URL): SEO články, blog (`248-blog`), pojmy/diskuze, info stránky, servisní (status, ochrana údajů). → rozhodnout rozsah.
-- Doplnit 301 pro tyto zbývající URL.
-- GitHub remote. Footer IČO/DIČ. Homepage slider — reálné obrázky.
+- **OBSAHOVÉ STRÁNKY ~240 URL** (SEO blog `248-blog`, pojmy-v-seo, seo-diskuze, trendy-v-seo, info/servisní `20-zasady-ochrany-udaju`, status…) — rozhodnuto migrovat 1:1, ZATÍM NEHOTOVO. Všech 343 HTML staženo lokálně ve `scratchpad/pages/` → deterministická dávka.
+- **K vygenerování (zadavatel):** footer scrub video `/assets/footer/scrub.mp4` + poster (1920×1080, H.264 all-keyframe `-g 1`, ~15fps, 6–10 s, theme = AI síť/data horizon v limetce), pak `hasVideo=true` v `VideoFooter`. Volitelně ambient hero video.
+- **Form backend** `/kontakt/` (Formspree/vlastní endpoint).
+- GitHub remote. Reálný 100/100 PageSpeed = ověřit Lighthouse na Vercel preview (lokálně bez headless Chrome neměřitelné).
