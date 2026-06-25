@@ -2,7 +2,8 @@
 // Hero slider — připraven na víc fotek. Crossfade + jemný Ken Burns zoom.
 // object-position nahoře = ořez odspodu → hlava vidět na všech rozlišeních.
 const slides = [
-  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI' },
+  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 12%' },
+  { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%' },
   // další fotky přidávej sem
 ];
 const multi = slides.length > 1;
@@ -11,7 +12,7 @@ const multi = slides.length > 1;
   <div class="rank-badge">1</div>
   {slides.map((s, i) => (
     <figure class={`hslide${i === 0 ? ' is-active' : ''}`} data-index={i}>
-      <img src={s.src} alt={s.alt} width="1000" height="1050" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
+      <img src={s.src} alt={s.alt} width="1000" height="1250" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
     </figure>
   ))}
   {multi && (
