@@ -1,0 +1,95 @@
+---
+// Overlay menu — MUSÍ být na úrovni <body> (mimo .nav s backdrop-filter, jinak se
+// position:fixed pozicuje vůči liště, ne viewportu). Ovládá ho openSiteMenu/closeSiteMenu.
+import site from '../data/site.json';
+const map = site as Record<string, any>;
+const SECTIONS = [
+  { path: '/weby/', label: 'Weby' },
+  { path: '/eshopy/', label: 'E-shopy' },
+  { path: '/marketing/', label: 'SEO a marketing' },
+  { path: '/blog/', label: 'Blog' },
+];
+const EXTRA = [
+  { path: '/ai-agenti/', label: 'AI & agenti' },
+  { path: '/skoleni/', label: 'AI školení' },
+  { path: '/o-nas/', label: 'O nás' },
+  { path: '/kontakt/', label: 'Kontakt' },
+];
+function kids(path: string) {
+  const n = map[path];
+  return n ? (n.children || []).map((c: string) => map[c]).filter(Boolean) : [];
+}
+const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
+---
+<div class="ham-overlay" id="site-menu" style="display:none" onclick="if(event.target===this)closeSiteMenu()">
+  <div class="ham-inner">
+    <div class="ham-head">
+      <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
+      <button class="ham-close" type="button" onclick="closeSiteMenu()" aria-label="Zavřít menu"><span class="x">✕</span><span class="xlabel">zavřít</span></button>
+    </div>
+    <nav class="ham-nav" aria-label="Hlavní navigace">
+      <div class="ham-cols">
+        {tree.map((s) => (
+          <div class="ham-col">
+            <a href={s.path} class="ham-sec">{s.label}</a>
+            {s.children.length > 0 && (
+              <ul>
+                {s.children.slice(0, 10).map((c: any) => <li><a href={c.path}>{c.label}</a></li>)}
+                {s.children.length > 10 && <li><a href={s.path} class="more">+ vše ({s.children.length}) →</a></li>}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="ham-extra">
+        {EXTRA.map((e) => <a href={e.path}>{e.label}</a>)}
+      </div>
+    </nav>
+  </div>
+</div>
+
+<script is:inline>
+  window.openSiteMenu = function () {
+    var m = document.getElementById('site-menu');
+    if (!m) return;
+    m.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    var t = document.querySelector('.menu-trigger');
+    if (t) t.setAttribute('aria-expanded', 'true');
+  };
+  window.closeSiteMenu = function () {
+    var m = document.getElementById('site-menu');
+    if (!m) return;
+    m.style.display = 'none';
+    document.body.style.overflow = '';
+    var t = document.querySelector('.menu-trigger');
+    if (t) t.setAttribute('aria-expanded', 'false');
+  };
+  document.addEventListener('keydown', function (e) {
+    var m = document.getElementById('site-menu');
+    if (e.key === 'Escape' && m && m.style.display === 'block') window.closeSiteMenu();
+  });
+</script>
+
+<style>
+  .ham-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(247,248,245,.98); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; }
+  .ham-inner { max-width: var(--container-wide); margin: 0 auto; padding: 22px clamp(20px,5vw,64px) 64px; }
+  .ham-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; }
+  .ham-close { display: inline-flex; align-items: center; gap: 7px; background: transparent; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 8px 14px; cursor: pointer; color: var(--text-strong); }
+  .ham-close:hover { border-color: var(--n-400); }
+  .ham-close .x { font-size: 18px; line-height: 1; }
+  .ham-close .xlabel { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+  .ham-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .ham-sec { display: block; font-size: 22px; font-weight: var(--fw-black); letter-spacing: -.018em; color: var(--text-strong); padding-bottom: 12px; margin-bottom: 12px; border-bottom: 2px solid var(--lime); }
+  .ham-sec:hover { color: var(--lime-800); }
+  .ham-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .ham-col li a { font-size: 15px; color: var(--text-muted); }
+  .ham-col li a:hover { color: var(--lime-800); }
+  .ham-col .more { font-family: var(--font-mono); font-size: 12px; color: var(--accent-ink); }
+  .ham-extra { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 24px; }
+  .ham-extra a { font-size: 16px; font-weight: var(--fw-medium); color: var(--text); }
+  .ham-extra a:hover { color: var(--lime-800); }
+
+  @media (max-width: 880px) { .ham-cols { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  @media (max-width: 560px) { .ham-cols { grid-template-columns: 1fr; } }
+</style>
