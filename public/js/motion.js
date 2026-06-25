@@ -8,19 +8,22 @@ const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* 1) Reveal: [data-reveal] / [data-reveal-group] */
 function initReveal() {
   const els = document.querySelectorAll('[data-reveal],[data-reveal-group]');
-  if (rm) { els.forEach((el) => el.classList.add('is-visible')); return; }
+  const show = (el) => {
+    el.classList.add('is-visible');
+    if (el.hasAttribute('data-reveal-group')) {
+      Array.from(el.children).forEach((c, i) => { c.style.transitionDelay = `${i * 60}ms`; });
+    }
+  };
+  if (rm || !('IntersectionObserver' in window)) { els.forEach(show); return; }
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      el.classList.add('is-visible');
-      if (el.hasAttribute('data-reveal-group')) {
-        Array.from(el.children).forEach((c, i) => { c.style.transitionDelay = `${i * 70}ms`; });
-      }
-      obs.unobserve(el);
+      // jakýkoli dotek viewportu odhalí (spolehlivé i u vysokých gridů)
+      if (e.isIntersecting || e.intersectionRatio > 0) { show(e.target); obs.unobserve(e.target); }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
   els.forEach((el) => obs.observe(el));
+  // Failsafe: cokoli ještě skrytého odhal po 1.5 s (kdyby observer nesepnul)
+  setTimeout(() => els.forEach((el) => { if (!el.classList.contains('is-visible')) show(el); }), 1500);
 }
 
 /* 2) Pointer glow na kartách [data-glow] — nastaví --mx/--my pro radial highlight */

@@ -36,6 +36,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="/styles.css" />
+    <!-- reveal-on-scroll skrývá obsah jen když běží JS (jinak je vždy vidět) -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <script src="/js/motion.js" defer></script>
   </head>
   <body>
@@ -86,14 +88,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     .sec-head h2 { font-size: var(--fs-display-md); }
   }
 
-  /* Reveal on scroll (motion.js) */
-  [data-reveal], [data-reveal-group] > * {
+  /* Reveal on scroll (motion.js) — skryté JEN když běží JS (html.js) */
+  .js [data-reveal], .js [data-reveal-group] > * {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
     will-change: opacity, transform;
   }
-  [data-reveal].is-visible, [data-reveal-group].is-visible > * {
+  .js [data-reveal].is-visible, .js [data-reveal-group].is-visible > * {
     opacity: 1;
     transform: none;
   }
