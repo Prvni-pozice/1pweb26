@@ -3,6 +3,7 @@
 const slides = [
   { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 12%', fx: 'kenburns' },
   { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
+  { src: '/img/hero/hero-3.webp', alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
   // další snímky přidávej sem
 ];
 const multi = slides.length > 1;
@@ -88,6 +89,10 @@ const multi = slides.length > 1;
   }
   .fx-shine.is-active::after { animation: shine 2.4s var(--ease-standard) .4s 1; }
   @keyframes shine { to { transform: translateX(120%); } }
+
+  /* Efekt 3 — jemný horizontální pan + lehký zoom */
+  .fx-pan.is-active img { animation: pan 14s ease-out forwards; }
+  @keyframes pan { from { transform: scale(1.08) translateX(-2%); } to { transform: scale(1.08) translateX(2%); } }
 
   .hdots { position: absolute; bottom: 18px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 9px; }
   .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 0; transition: background var(--dur-base), width var(--dur-base); }
