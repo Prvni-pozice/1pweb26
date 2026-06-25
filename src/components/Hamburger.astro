@@ -1,5 +1,5 @@
 ---
-// Hamburger menu se strukturou webu (sekce → podsekce z reálného stromu).
+// Menu se strukturou webu — trigger "Menu" (jako starý web), overlay s plnou strukturou.
 import site from '../data/site.json';
 const map = site as Record<string, any>;
 const SECTIONS = [
@@ -14,54 +14,63 @@ const EXTRA = [
   { path: '/o-nas/', label: 'O nás' },
   { path: '/kontakt/', label: 'Kontakt' },
 ];
-// pro každou sekci vytáhni přímé děti (a u nich případně vnoučata pro hloubku)
 function kids(path: string) {
   const n = map[path];
-  if (!n) return [];
-  return (n.children || []).map((c: string) => map[c]).filter(Boolean);
+  return n ? (n.children || []).map((c: string) => map[c]).filter(Boolean) : [];
 }
 const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
 ---
-<button class="ham-btn" aria-label="Otevřít menu" aria-expanded="false" data-ham-open>
-  <span></span><span></span><span></span>
+<button class="menu-trigger" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-menu" data-ham-open>
+  <span class="mt-icon"><span></span><span></span><span></span></span>
+  <span class="mt-label">Menu</span>
 </button>
 
-<div class="ham-overlay" data-ham-overlay hidden>
-  <div class="ham-head">
-    <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
-    <button class="ham-close" aria-label="Zavřít menu" data-ham-close>✕</button>
+<div class="ham-overlay" id="site-menu" data-ham-overlay hidden>
+  <div class="ham-inner">
+    <div class="ham-head">
+      <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
+      <button class="ham-close" type="button" data-ham-close>Zavřít ✕</button>
+    </div>
+    <nav class="ham-nav" aria-label="Hlavní navigace">
+      <div class="ham-cols">
+        {tree.map((s) => (
+          <div class="ham-col">
+            <a href={s.path} class="ham-sec">{s.label}</a>
+            {s.children.length > 0 && (
+              <ul>
+                {s.children.slice(0, 10).map((c: any) => <li><a href={c.path}>{c.label}</a></li>)}
+                {s.children.length > 10 && <li><a href={s.path} class="more">+ vše ({s.children.length}) →</a></li>}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="ham-extra">
+        {EXTRA.map((e) => <a href={e.path}>{e.label}</a>)}
+      </div>
+    </nav>
   </div>
-  <nav class="ham-nav">
-    <div class="ham-cols">
-      {tree.map((s) => (
-        <div class="ham-col">
-          <a href={s.path} class="ham-sec">{s.label}</a>
-          {s.children.length > 0 && (
-            <ul>
-              {s.children.slice(0, 12).map((c: any) => (
-                <li><a href={c.path}>{c.label}</a></li>
-              ))}
-              {s.children.length > 12 && <li><a href={s.path} class="more">+ další →</a></li>}
-            </ul>
-          )}
-        </div>
-      ))}
-    </div>
-    <div class="ham-extra">
-      {EXTRA.map((e) => <a href={e.path}>{e.label}</a>)}
-    </div>
-  </nav>
 </div>
 
 <style>
-  .ham-btn { display: inline-flex; flex-direction: column; gap: 5px; justify-content: center; width: 44px; height: 44px; padding: 0 10px; background: transparent; border: 0; cursor: pointer; }
-  .ham-btn span { height: 2px; background: var(--text-strong); border-radius: 2px; transition: transform var(--dur-base) var(--ease-standard), opacity var(--dur-fast); }
+  .menu-trigger {
+    display: inline-flex; align-items: center; gap: 9px; padding: 9px 16px;
+    background: var(--n-900); color: #fff; border: 0; border-radius: var(--radius-pill);
+    font-family: var(--font-sans); font-size: 15px; font-weight: var(--fw-medium); cursor: pointer;
+    transition: background var(--dur-base) var(--ease-standard);
+  }
+  .menu-trigger:hover { background: var(--n-800); }
+  .menu-trigger:focus-visible { outline: none; box-shadow: var(--ring); }
+  .mt-icon { display: inline-flex; flex-direction: column; gap: 3.5px; width: 16px; }
+  .mt-icon span { height: 2px; background: var(--lime); border-radius: 2px; }
+  .mt-label { line-height: 1; }
 
-  .ham-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(247,248,245,.97); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; padding: 24px clamp(20px, 5vw, 64px) 64px; }
+  .ham-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(247,248,245,.98); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; }
   .ham-overlay[hidden] { display: none; }
-  .ham-head { display: flex; align-items: center; justify-content: space-between; max-width: var(--container-wide); margin: 0 auto 32px; }
-  .ham-close { font-size: 22px; background: transparent; border: 0; cursor: pointer; color: var(--text-strong); width: 44px; height: 44px; }
-  .ham-nav { max-width: var(--container-wide); margin: 0 auto; }
+  .ham-inner { max-width: var(--container-wide); margin: 0 auto; padding: 22px clamp(20px,5vw,64px) 64px; }
+  .ham-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; }
+  .ham-close { font-family: var(--font-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; background: transparent; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 9px 16px; cursor: pointer; color: var(--text-strong); }
+  .ham-close:hover { border-color: var(--n-400); }
   .ham-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .ham-sec { display: block; font-size: 22px; font-weight: var(--fw-black); letter-spacing: -.018em; color: var(--text-strong); padding-bottom: 12px; margin-bottom: 12px; border-bottom: 2px solid var(--lime); }
   .ham-sec:hover { color: var(--lime-800); }
@@ -74,20 +83,24 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
   .ham-extra a:hover { color: var(--lime-800); }
 
   @media (max-width: 880px) { .ham-cols { grid-template-columns: 1fr 1fr; gap: 24px; } }
-  @media (max-width: 560px) { .ham-cols { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .ham-cols { grid-template-columns: 1fr; } .mt-label { display: none; } .menu-trigger { padding: 10px 12px; } }
 </style>
 
-<script is:inline>
-  (function () {
-    const btn = document.querySelector('[data-ham-open]');
-    const ov = document.querySelector('[data-ham-overlay]');
-    const close = document.querySelector('[data-ham-close]');
-    if (!btn || !ov) return;
-    const open = () => { ov.hidden = false; btn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
-    const hide = () => { ov.hidden = true; btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
-    btn.addEventListener('click', open);
-    close && close.addEventListener('click', hide);
-    ov.addEventListener('click', (e) => { if (e.target === ov) hide(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !ov.hidden) hide(); });
-  })();
+<script>
+  // Klik = otevřít/zavřít overlay. Robustní: delegace na document, běží po DOMContentLoaded.
+  function initSiteMenu() {
+    const trigger = document.querySelector('[data-ham-open]');
+    const overlay = document.querySelector('[data-ham-overlay]');
+    if (!trigger || !overlay) return;
+    const open = () => { overlay.hidden = false; trigger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
+    const close = () => { overlay.hidden = true; trigger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
+    trigger.addEventListener('click', open);
+    overlay.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      if (t.closest('[data-ham-close]') || t === overlay) close();
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !overlay.hidden) close(); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSiteMenu);
+  else initSiteMenu();
 </script>

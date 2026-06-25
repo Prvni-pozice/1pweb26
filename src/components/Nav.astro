@@ -1,20 +1,10 @@
 ---
-// Frosted sticky navigace dle DS web kitu.
+// Frosted sticky navigace: logo + CTA + "Menu" (plná struktura webu jako starý web).
 import Hamburger from './Hamburger.astro';
-const links = [
-  { href: '/weby/', label: 'Weby' },
-  { href: '/eshopy/', label: 'E-shopy' },
-  { href: '/marketing/', label: 'Marketing' },
-  { href: '/ai-agenti/', label: 'AI & agenti' },
-  { href: '/o-nas/', label: 'O nás' },
-];
 ---
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img src="/assets/logo-1p-dark.png" alt="První pozice" /></a>
-    <div class="nav-links">
-      {links.map((l) => <a href={l.href}>{l.label}</a>)}
-    </div>
     <div class="nav-right">
       <a href="/kontakt/" class="btn primary nav-cta">Domluvit konzultaci</a>
       <Hamburger />
@@ -35,12 +25,9 @@ const links = [
   }
   .nav-logo { display: block; }
   .nav-logo img { height: 26px; display: block; }
-  .nav-links { display: flex; gap: 30px; }
-  .nav-links a { font-size: 15px; font-weight: var(--fw-medium); color: var(--text); }
-  .nav-links a:hover { color: var(--lime-800); }
-  .nav-right { display: flex; align-items: center; gap: 14px; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
 
-  @media (max-width: 880px) {
-    .nav-links { display: none; }
+  @media (max-width: 560px) {
+    .nav-cta { display: none; }
   }
 </style>
