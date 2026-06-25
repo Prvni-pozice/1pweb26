@@ -11,7 +11,7 @@ const links = [
 ---
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/assets/logo-1p-lime.png" alt="První pozice" /></a>
+    <a href="/" class="nav-logo"><img src="/assets/logo-1p-dark.png" alt="První pozice" /></a>
     <div class="nav-links">
       {links.map((l) => <a href={l.href}>{l.label}</a>)}
     </div>
@@ -34,7 +34,7 @@ const links = [
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-logo { display: block; }
-  .nav-logo img { height: 26px; display: block; }
+  .nav-logo img { height: 33px; display: block; }
   .nav-links { display: flex; gap: 28px; }
   .nav-links a { font-size: 15px; font-weight: var(--fw-medium); color: var(--text); }
   .nav-links a:hover { color: var(--lime-800); }

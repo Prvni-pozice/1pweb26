@@ -1,25 +1,18 @@
 ---
 // Overlay menu — MUSÍ být na úrovni <body> (mimo .nav s backdrop-filter, jinak se
 // position:fixed pozicuje vůči liště, ne viewportu). Ovládá ho openSiteMenu/closeSiteMenu.
-import site from '../data/site.json';
-const map = site as Record<string, any>;
-const SECTIONS = [
+const PRIMARY = [
+  { path: '/skoleni/', label: 'AI školení' },
+  { path: '/marketing/', label: 'GEO a marketing' },
   { path: '/weby/', label: 'Weby' },
   { path: '/eshopy/', label: 'E-shopy' },
-  { path: '/marketing/', label: 'SEO a marketing' },
-  { path: '/blog/', label: 'Blog' },
-];
-const EXTRA = [
-  { path: '/ai-agenti/', label: 'AI & agenti' },
-  { path: '/skoleni/', label: 'AI školení' },
-  { path: '/o-nas/', label: 'O nás' },
   { path: '/kontakt/', label: 'Kontakt' },
 ];
-function kids(path: string) {
-  const n = map[path];
-  return n ? (n.children || []).map((c: string) => map[c]).filter(Boolean) : [];
-}
-const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
+const SECONDARY = [
+  { path: '/ai-agenti/', label: 'AI & agenti' },
+  { path: '/o-nas/', label: 'O nás' },
+  { path: '/blog/', label: 'Blog' },
+];
 ---
 <div class="ham-overlay" id="site-menu" style="display:none" onclick="if(event.target===this)closeSiteMenu()">
   <div class="ham-inner">
@@ -29,8 +22,10 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
     </div>
     <nav class="ham-nav" aria-label="Hlavní navigace">
       <ul class="ham-list">
-        {SECTIONS.map((s) => <li><a href={s.path} class="ham-sec">{s.label}</a></li>)}
-        {EXTRA.map((e) => <li><a href={e.path} class="ham-sec">{e.label}</a></li>)}
+        {PRIMARY.map((s) => <li><a href={s.path} class="ham-sec">{s.label}</a></li>)}
+      </ul>
+      <ul class="ham-list ham-sub">
+        {SECONDARY.map((s) => <li><a href={s.path} class="ham-sec2">{s.label}</a></li>)}
       </ul>
     </nav>
   </div>
@@ -71,4 +66,8 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
   .ham-list li { border-bottom: 1px solid var(--border); }
   .ham-sec { display: block; font-size: clamp(26px, 6vw, 40px); font-weight: var(--fw-black); letter-spacing: -.02em; color: var(--text-strong); padding: 16px 0; }
   .ham-sec:hover { color: var(--lime-800); }
+  .ham-sub { margin-top: 28px; gap: 0; }
+  .ham-sub li { border-bottom: none; }
+  .ham-sec2 { display: block; font-size: clamp(17px, 3.5vw, 21px); font-weight: var(--fw-bold); letter-spacing: -.01em; color: var(--text-muted); padding: 8px 0; }
+  .ham-sec2:hover { color: var(--lime-800); }
 </style>

@@ -1,0 +1,75 @@
+---
+// Hero slider — připraven na víc fotek. Crossfade + jemný Ken Burns zoom.
+// object-position nahoře = ořez odspodu → hlava vidět na všech rozlišeních.
+const slides = [
+  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI' },
+  // další fotky přidávej sem
+];
+const multi = slides.length > 1;
+---
+<div class="hslider" data-hero-slider>
+  <div class="rank-badge">1</div>
+  {slides.map((s, i) => (
+    <figure class={`hslide${i === 0 ? ' is-active' : ''}`} data-index={i}>
+      <img src={s.src} alt={s.alt} width="1000" height="1050" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
+    </figure>
+  ))}
+  {multi && (
+    <div class="hdots">
+      {slides.map((_, i) => <button class={`hdot${i === 0 ? ' is-active' : ''}`} data-dot={i} aria-label={`Snímek ${i + 1}`}></button>)}
+    </div>
+  )}
+</div>
+
+{multi && (
+  <script is:inline>
+    (function () {
+      var root = document.querySelector('[data-hero-slider]');
+      if (!root) return;
+      var slides = root.querySelectorAll('.hslide');
+      var dots = root.querySelectorAll('.hdot');
+      var i = 0, timer;
+      function go(n) {
+        slides[i].classList.remove('is-active');
+        if (dots[i]) dots[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+        if (dots[i]) dots[i].classList.add('is-active');
+      }
+      function start() { timer = setInterval(function () { go(i + 1); }, 5500); }
+      dots.forEach(function (d, n) { d.addEventListener('click', function () { clearInterval(timer); go(n); start(); }); });
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
+    })();
+  </script>
+)}
+
+<style>
+  .hslider {
+    position: relative; border-radius: var(--radius-2xl); overflow: hidden;
+    box-shadow: var(--shadow-xl); border: 1px solid var(--border);
+    aspect-ratio: 4 / 5; background: var(--n-100);
+  }
+  .hslide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease-standard); }
+  .hslide.is-active { opacity: 1; }
+  .hslide img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%;
+    display: block; transform: scale(1.02);
+  }
+  .hslide.is-active img { animation: kenburns 14s ease-out forwards; }
+  @keyframes kenburns { from { transform: scale(1.02); } to { transform: scale(1.09); } }
+
+  .rank-badge {
+    position: absolute; top: 22px; left: 22px; z-index: 3; width: 56px; height: 56px;
+    border-radius: var(--radius-lg); background: var(--n-900); color: var(--lime);
+    font-weight: var(--fw-black); font-size: 30px; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .hdots { position: absolute; bottom: 18px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 9px; }
+  .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 0; transition: background var(--dur-base), width var(--dur-base); }
+  .hdot.is-active { background: var(--lime); width: 26px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hslide.is-active img { animation: none; transform: none; }
+  }
+  @media (max-width: 880px) { .hslider { aspect-ratio: 5 / 4; } }
+</style>
