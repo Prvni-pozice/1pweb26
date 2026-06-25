@@ -20,16 +20,16 @@ function kids(path: string) {
 }
 const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
 ---
-<button class="menu-trigger" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-menu" data-ham-open>
+<button class="menu-trigger" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-menu" onclick="openSiteMenu()">
   <span class="mt-icon"><span></span><span></span><span></span></span>
   <span class="mt-label">Menu</span>
 </button>
 
-<div class="ham-overlay" id="site-menu" data-ham-overlay>
+<div class="ham-overlay" id="site-menu" style="display:none" onclick="if(event.target===this)closeSiteMenu()">
   <div class="ham-inner">
     <div class="ham-head">
       <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
-      <button class="ham-close" type="button" data-ham-close aria-label="Zavřít menu"><span class="x">✕</span><span class="xlabel">zavřít</span></button>
+      <button class="ham-close" type="button" onclick="closeSiteMenu()" aria-label="Zavřít menu"><span class="x">✕</span><span class="xlabel">zavřít</span></button>
     </div>
     <nav class="ham-nav" aria-label="Hlavní navigace">
       <div class="ham-cols">
@@ -59,6 +59,8 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
     font-family: var(--font-sans); font-size: 15px; font-weight: var(--fw-medium); cursor: pointer;
     transition: background var(--dur-base) var(--ease-standard);
   }
+  /* Responzivní: na desktopu jsou inline odkazy → "Menu" jen na mobilu/tabletu */
+  @media (min-width: 881px) { .menu-trigger { display: none; } }
   .menu-trigger:hover { background: var(--n-800); }
   .menu-trigger:focus-visible { outline: none; box-shadow: var(--ring); }
   .mt-icon { display: inline-flex; flex-direction: column; gap: 3.5px; width: 16px; }
@@ -88,20 +90,22 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
   @media (max-width: 560px) { .ham-cols { grid-template-columns: 1fr; } .mt-label { display: none; } .menu-trigger { padding: 10px 12px; } }
 </style>
 
-<script>
-  // Modulový script je deferovaný → DOM je hotový, voláme přímo. Třídový přepínač (.is-open).
-  function initSiteMenu() {
-    const trigger = document.querySelector('[data-ham-open]');
-    const overlay = document.querySelector('[data-ham-overlay]');
-    if (!trigger || !overlay) return;
-    const open = () => { overlay.classList.add('is-open'); trigger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
-    const close = () => { overlay.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
-    trigger.addEventListener('click', open);
-    overlay.addEventListener('click', (e) => {
-      const t = e.target as HTMLElement;
-      if (t.closest('[data-ham-close]') || t === overlay) close();
-    });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('is-open')) close(); });
-  }
-  initSiteMenu();
+<script is:inline>
+  // Neprůstřelné: globální funkce volané přes inline onclick (nezávislé na načtení modulu/scoped CSS).
+  window.openSiteMenu = function () {
+    var m = document.getElementById('site-menu');
+    if (!m) return;
+    m.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeSiteMenu = function () {
+    var m = document.getElementById('site-menu');
+    if (!m) return;
+    m.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+  document.addEventListener('keydown', function (e) {
+    var m = document.getElementById('site-menu');
+    if (e.key === 'Escape' && m && m.style.display === 'block') window.closeSiteMenu();
+  });
 </script>
