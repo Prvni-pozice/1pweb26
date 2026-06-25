@@ -1,76 +1,102 @@
 ---
-// Hero slider — připraven na víc fotek. Crossfade + jemný Ken Burns zoom.
-// object-position nahoře = ořez odspodu → hlava vidět na všech rozlišeních.
+// Hero slider — crossfade + Ken Burns + per-slide efekt, tečky + swipe + autoplay.
 const slides = [
-  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 12%' },
-  { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%' },
-  // další fotky přidávej sem
+  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 12%', fx: 'kenburns' },
+  { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
+  // další snímky přidávej sem
 ];
 const multi = slides.length > 1;
 ---
 <div class="hslider" data-hero-slider>
-  <div class="rank-badge">1</div>
   {slides.map((s, i) => (
-    <figure class={`hslide${i === 0 ? ' is-active' : ''}`} data-index={i}>
+    <figure class={`hslide fx-${s.fx}${i === 0 ? ' is-active' : ''}`} data-index={i}>
       <img src={s.src} alt={s.alt} width="1000" height="1250" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
     </figure>
   ))}
   {multi && (
     <div class="hdots">
-      {slides.map((_, i) => <button class={`hdot${i === 0 ? ' is-active' : ''}`} data-dot={i} aria-label={`Snímek ${i + 1}`}></button>)}
+      {slides.map((_, i) => <button class={`hdot${i === 0 ? ' is-active' : ''}`} type="button" data-dot={i} aria-label={`Snímek ${i + 1}`}></button>)}
     </div>
   )}
 </div>
 
-{multi && (
-  <script is:inline>
-    (function () {
-      var root = document.querySelector('[data-hero-slider]');
-      if (!root) return;
-      var slides = root.querySelectorAll('.hslide');
-      var dots = root.querySelectorAll('.hdot');
-      var i = 0, timer;
-      function go(n) {
-        slides[i].classList.remove('is-active');
-        if (dots[i]) dots[i].classList.remove('is-active');
-        i = (n + slides.length) % slides.length;
-        slides[i].classList.add('is-active');
-        if (dots[i]) dots[i].classList.add('is-active');
-      }
-      function start() { timer = setInterval(function () { go(i + 1); }, 5500); }
-      dots.forEach(function (d, n) { d.addEventListener('click', function () { clearInterval(timer); go(n); start(); }); });
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
-    })();
-  </script>
-)}
+<script is:inline>
+  (function () {
+    var root = document.querySelector('[data-hero-slider]');
+    if (!root) return;
+    var slides = [].slice.call(root.querySelectorAll('.hslide'));
+    var dots = [].slice.call(root.querySelectorAll('.hdot'));
+    if (slides.length < 2) return;
+    var i = 0, timer = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function show(n) {
+      n = (n + slides.length) % slides.length;
+      slides[i].classList.remove('is-active');
+      if (dots[i]) dots[i].classList.remove('is-active');
+      i = n;
+      slides[i].classList.add('is-active');
+      if (dots[i]) dots[i].classList.add('is-active');
+    }
+    function start() { if (reduce) return; stop(); timer = setInterval(function () { show(i + 1); }, 5500); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    dots.forEach(function (d, n) {
+      d.addEventListener('click', function () { show(n); start(); });
+    });
+    // swipe
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+      x0 = null; start();
+    }, { passive: true });
+    // myš drag (desktop)
+    var mx0 = null;
+    root.addEventListener('mousedown', function (e) { mx0 = e.clientX; stop(); });
+    window.addEventListener('mouseup', function (e) {
+      if (mx0 === null) return;
+      var dx = e.clientX - mx0;
+      if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1));
+      mx0 = null; start();
+    });
+    start();
+  })();
+</script>
 
 <style>
   .hslider {
     position: relative; border-radius: var(--radius-2xl); overflow: hidden;
     box-shadow: var(--shadow-xl); border: 1px solid var(--border);
-    aspect-ratio: 4 / 5; background: var(--n-100);
+    aspect-ratio: 4 / 5; background: var(--n-900); touch-action: pan-y; user-select: none;
   }
   .hslide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease-standard); }
-  .hslide.is-active { opacity: 1; }
-  .hslide img {
-    width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%;
-    display: block; transform: scale(1.02);
-  }
-  .hslide.is-active img { animation: kenburns 14s ease-out forwards; }
+  .hslide.is-active { opacity: 1; z-index: 1; }
+  .hslide img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.02); }
+
+  /* Efekt 1 — Ken Burns (pomalý zoom in) */
+  .fx-kenburns.is-active img { animation: kenburns 14s ease-out forwards; }
   @keyframes kenburns { from { transform: scale(1.02); } to { transform: scale(1.09); } }
 
-  .rank-badge {
-    position: absolute; top: 22px; left: 22px; z-index: 3; width: 56px; height: 56px;
-    border-radius: var(--radius-lg); background: var(--n-900); color: var(--lime);
-    font-weight: var(--fw-black); font-size: 30px; display: flex; align-items: center; justify-content: center;
-    box-shadow: var(--shadow-lg);
+  /* Efekt 2 — pomalý zoom out + diagonální „shine" přejezd přes kartu */
+  .fx-shine.is-active img { animation: zoomout 14s ease-out forwards; }
+  @keyframes zoomout { from { transform: scale(1.1); } to { transform: scale(1.0); } }
+  .fx-shine::after {
+    content: ""; position: absolute; inset: -30%;
+    background: linear-gradient(115deg, transparent 40%, rgba(152,200,0,.16) 50%, transparent 60%);
+    transform: translateX(-120%); pointer-events: none;
   }
+  .fx-shine.is-active::after { animation: shine 2.4s var(--ease-standard) .4s 1; }
+  @keyframes shine { to { transform: translateX(120%); } }
+
   .hdots { position: absolute; bottom: 18px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 9px; }
   .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 0; transition: background var(--dur-base), width var(--dur-base); }
+  .hdot:hover { background: rgba(255,255,255,.85); }
   .hdot.is-active { background: var(--lime); width: 26px; }
 
   @media (prefers-reduced-motion: reduce) {
     .hslide.is-active img { animation: none; transform: none; }
+    .fx-shine.is-active::after { animation: none; }
   }
   @media (max-width: 880px) { .hslider { aspect-ratio: 5 / 4; } }
 </style>
