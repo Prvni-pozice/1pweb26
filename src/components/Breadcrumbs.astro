@@ -1,0 +1,34 @@
+---
+// Breadcrumbs z reálné hierarchie (site.json parent_path řetěz).
+import site from '../data/site.json';
+interface Props { path: string; }
+const { path } = Astro.props;
+const map = site as Record<string, any>;
+const trail: { label: string; href: string }[] = [{ label: 'Úvod', href: '/' }];
+const chain: string[] = [];
+let cur: string | null = path;
+const seen = new Set<string>();
+while (cur && map[cur] && !seen.has(cur)) {
+  seen.add(cur);
+  chain.unshift(cur);
+  cur = map[cur].parent_path;
+}
+for (const p of chain) trail.push({ label: map[p].label, href: p });
+---
+<nav class="crumbs" aria-label="Drobečková navigace">
+  {trail.map((c, i) => (
+    <span class="crumb">
+      {i < trail.length - 1 ? <a href={c.href}>{c.label}</a> : <span class="cur" aria-current="page">{c.label}</span>}
+      {i < trail.length - 1 && <span class="sep">›</span>}
+    </span>
+  ))}
+</nav>
+
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; }
+  .crumb { display: inline-flex; align-items: center; gap: 6px; }
+  .crumbs a { color: var(--text-subtle); text-decoration: none; }
+  .crumbs a:hover { color: var(--lime-800); }
+  .crumbs .cur { color: var(--text-muted); }
+  .crumbs .sep { color: var(--n-300); }
+</style>

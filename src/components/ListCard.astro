@@ -1,0 +1,28 @@
+---
+// Generická rozcestníková karta (hub/článek bez thumbnailu).
+interface Props { href: string; label: string; intro?: string; kind?: string; }
+const { href, label, intro, kind } = Astro.props;
+---
+<a class="lcard" href={href} data-glow>
+  {kind && <span class="lkind">{kind}</span>}
+  <h3>{label}</h3>
+  {intro && <p>{intro}</p>}
+  <span class="larr">→</span>
+</a>
+
+<style>
+  .lcard {
+    position: relative; display: flex; flex-direction: column; gap: 8px;
+    background: #fff; border: 1px solid var(--border); border-radius: var(--radius-xl);
+    padding: 24px 26px; color: inherit; min-height: 120px;
+    transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-base) var(--ease-standard);
+  }
+  .lcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--lime-400); }
+  .lkind { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+  .lcard h3 { font-size: 19px; font-weight: var(--fw-bold); color: var(--text-strong); letter-spacing: -.01em; }
+  .lcard p { font-size: 14px; line-height: var(--lh-body); color: var(--text-muted);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .larr { margin-top: auto; color: var(--lime-800); font-weight: var(--fw-bold); transition: transform var(--dur-base) var(--ease-standard); }
+  .lcard:hover .larr { transform: translateX(4px); }
+  .lcard:focus-visible { outline: none; box-shadow: var(--ring); }
+</style>

@@ -21,6 +21,66 @@
    "permanent": true
   },
   {
+   "source": "/cs/263-water-heat-systems-s-r-o",
+   "destination": "/weby/water-heat-systems-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/263-water-heat-systems-s-r-o/",
+   "destination": "/weby/water-heat-systems-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/248-blog",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/248-blog/",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/273-online-marketing",
+   "destination": "/blog/online-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/273-online-marketing/",
+   "destination": "/blog/online-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/291-seo",
+   "destination": "/blog/online-marketing/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/291-seo/",
+   "destination": "/blog/online-marketing/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/377-seo-diskuze",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/377-seo-diskuze/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/391-jak-efektivne-pracovat-s-klicovymi-slovy-3",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-efektivne-pracovat-s-klicovymi-slovy-3/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/391-jak-efektivne-pracovat-s-klicovymi-slovy-3/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-efektivne-pracovat-s-klicovymi-slovy-3/",
+   "permanent": true
+  },
+  {
    "source": "/cs/12-eshopy",
    "destination": "/eshopy/",
    "permanent": true
@@ -28,6 +88,106 @@
   {
    "source": "/cs/12-eshopy/",
    "destination": "/eshopy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/59-cesky-cesnek-z-vysociny",
+   "destination": "/eshopy/cesky-cesnek-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/59-cesky-cesnek-z-vysociny/",
+   "destination": "/eshopy/cesky-cesnek-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/257-e-shopy",
+   "destination": "/blog/e-shopy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/257-e-shopy/",
+   "destination": "/blog/e-shopy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/264-co-nas-eshop-dokaze",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/264-co-nas-eshop-dokaze/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/87-vibrator4you-cz",
+   "destination": "/eshopy/vibrator4you-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/87-vibrator4you-cz/",
+   "destination": "/eshopy/vibrator4you-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/297-auto-bejda",
+   "destination": "/weby/auto-bejda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/297-auto-bejda/",
+   "destination": "/weby/auto-bejda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/253-doudou",
+   "destination": "/eshopy/doudou/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/253-doudou/",
+   "destination": "/eshopy/doudou/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/298-webove-aplikace",
+   "destination": "/blog/webove-aplikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/298-webove-aplikace/",
+   "destination": "/blog/webove-aplikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/428-nekonecna-renta",
+   "destination": "/blog/webove-aplikace/nekonecna-renta/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/428-nekonecna-renta/",
+   "destination": "/blog/webove-aplikace/nekonecna-renta/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/429-privacy-policy",
+   "destination": "/blog/webove-aplikace/nekonecna-renta/privacy-policy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/429-privacy-policy/",
+   "destination": "/blog/webove-aplikace/nekonecna-renta/privacy-policy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/233-fk-pelhrimov",
+   "destination": "/eshopy/fk-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/233-fk-pelhrimov/",
+   "destination": "/eshopy/fk-pelhrimov/",
    "permanent": true
   },
   {
@@ -41,13 +201,3153 @@
    "permanent": true
   },
   {
+   "source": "/cs/168-seo",
+   "destination": "/marketing/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/168-seo/",
+   "destination": "/marketing/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/191-euro-palety",
+   "destination": "/marketing/seo/euro-palety/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/191-euro-palety/",
+   "destination": "/marketing/seo/euro-palety/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/255-akce-a-prednasky",
+   "destination": "/blog/akce-a-prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/255-akce-a-prednasky/",
+   "destination": "/blog/akce-a-prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/307-prumkathon-2021",
+   "destination": "/blog/akce-a-prednasky/prumkathon-2021/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/307-prumkathon-2021/",
+   "destination": "/blog/akce-a-prednasky/prumkathon-2021/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/332-pojmy-v-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/332-pojmy-v-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/346-off-page-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/off-page-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/346-off-page-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/off-page-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/194-archiv",
+   "destination": "/marketing/seo/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/194-archiv/",
+   "destination": "/marketing/seo/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/190-vlajky-levne",
+   "destination": "/marketing/seo/archiv/vlajky-levne/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/190-vlajky-levne/",
+   "destination": "/marketing/seo/archiv/vlajky-levne/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/407-pruzkum-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/pruzkum-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/407-pruzkum-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/pruzkum-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/92-fofrovac",
+   "destination": "/eshopy/fofrovac/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/92-fofrovac/",
+   "destination": "/eshopy/fofrovac/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/51-aquaprogress",
+   "destination": "/weby/aquaprogress/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/51-aquaprogress/",
+   "destination": "/weby/aquaprogress/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/127-tokra-okna",
+   "destination": "/weby/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/127-tokra-okna/",
+   "destination": "/weby/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/301-javascriptove-knihovny-a-aplikace",
+   "destination": "/blog/webove-aplikace/javascriptove-knihovny-a-aplikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/301-javascriptove-knihovny-a-aplikace/",
+   "destination": "/blog/webove-aplikace/javascriptove-knihovny-a-aplikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/278-kosik",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/kosik/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/278-kosik/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/kosik/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/379-znackove-vyhledavani-branded-search",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/znackove-vyhledavani-branded-search/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/379-znackove-vyhledavani-branded-search/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/znackove-vyhledavani-branded-search/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/366-nofollow",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/nofollow/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/366-nofollow/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/nofollow/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/68-archiv",
+   "destination": "/eshopy/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/68-archiv/",
+   "destination": "/eshopy/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/85-nas-maturak",
+   "destination": "/eshopy/archiv/nas-maturak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/85-nas-maturak/",
+   "destination": "/eshopy/archiv/nas-maturak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/319-trendy-v-seo",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/319-trendy-v-seo/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/325-2023-vizualni-vyhledavani",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-vizualni-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/325-2023-vizualni-vyhledavani/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-vizualni-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/234-kozlovna-u-zachu",
+   "destination": "/weby/kozlovna-u-zachu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/234-kozlovna-u-zachu/",
+   "destination": "/weby/kozlovna-u-zachu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/240-topicrem",
+   "destination": "/eshopy/topicrem/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/240-topicrem/",
+   "destination": "/eshopy/topicrem/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/215-anketa-zahrada-desetileti",
+   "destination": "/weby/anketa-zahrada-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/215-anketa-zahrada-desetileti/",
+   "destination": "/weby/anketa-zahrada-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/396-chatgpt-a-seo-ruzove-sny-nebo-skryte-pasti",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/chatgpt-a-seo-ruzove-sny-nebo-skryte-pasti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/396-chatgpt-a-seo-ruzove-sny-nebo-skryte-pasti/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/chatgpt-a-seo-ruzove-sny-nebo-skryte-pasti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/213-subter-plus-s-r-o",
+   "destination": "/weby/subter-plus-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/213-subter-plus-s-r-o/",
+   "destination": "/weby/subter-plus-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/309-seo-podle-google",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/309-seo-podle-google/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/318-seo-office-hours-brezen-2023-4",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-4/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/318-seo-office-hours-brezen-2023-4/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-4/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/64-nunynek",
+   "destination": "/eshopy/nunynek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/64-nunynek/",
+   "destination": "/eshopy/nunynek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/258-proc-jsou-zbozaky-a-jejich-spravne-nastaveni-tak-dulezite",
+   "destination": "/blog/online-marketing/proc-jsou-zbozaky-a-jejich-spravne-nastaveni-tak-dulezite/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/258-proc-jsou-zbozaky-a-jejich-spravne-nastaveni-tak-dulezite/",
+   "destination": "/blog/online-marketing/proc-jsou-zbozaky-a-jejich-spravne-nastaveni-tak-dulezite/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/282-weby",
+   "destination": "/blog/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/282-weby/",
+   "destination": "/blog/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/283-mini-weby",
+   "destination": "/blog/weby/mini-weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/283-mini-weby/",
+   "destination": "/blog/weby/mini-weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/246-woodiy-cz",
+   "destination": "/eshopy/woodiy-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/246-woodiy-cz/",
+   "destination": "/eshopy/woodiy-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/295-pevex",
+   "destination": "/eshopy/pevex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/295-pevex/",
+   "destination": "/eshopy/pevex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/367-analyza-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/367-analyza-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/373-klicova-slova-jak-vybirat",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/klicova-slova-jak-vybirat/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/373-klicova-slova-jak-vybirat/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/klicova-slova-jak-vybirat/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/397-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/397-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/342-on-page-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/on-page-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/342-on-page-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/on-page-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/58-archiv",
+   "destination": "/weby/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/58-archiv/",
+   "destination": "/weby/archiv/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/160-well-group",
+   "destination": "/weby/archiv/well-group/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/160-well-group/",
+   "destination": "/weby/archiv/well-group/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/210-pharma-alpha-a-s",
+   "destination": "/weby/pharma-alpha-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/210-pharma-alpha-a-s/",
+   "destination": "/weby/pharma-alpha-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/237-glenowell",
+   "destination": "/weby/glenowell/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/237-glenowell/",
+   "destination": "/weby/glenowell/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/316-seo-office-hours-brezen-2023-doplnujici-dotazy",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-doplnujici-dotazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/316-seo-office-hours-brezen-2023-doplnujici-dotazy/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-doplnujici-dotazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/399-optimalizace-pro-vyhledavace",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-pro-vyhledavace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/399-optimalizace-pro-vyhledavace/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-pro-vyhledavace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/173-prednasky",
+   "destination": "/marketing/prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/173-prednasky/",
+   "destination": "/marketing/prednasky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/216-proc-mit-uspesny-web-4-8-2016",
+   "destination": "/marketing/prednasky/proc-mit-uspesny-web-4-8-2016/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/216-proc-mit-uspesny-web-4-8-2016/",
+   "destination": "/marketing/prednasky/proc-mit-uspesny-web-4-8-2016/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/180-koralky-komponenty",
+   "destination": "/marketing/seo/archiv/koralky-komponenty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/180-koralky-komponenty/",
+   "destination": "/marketing/seo/archiv/koralky-komponenty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/56-reklamni-potisk",
+   "destination": "/eshopy/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/56-reklamni-potisk/",
+   "destination": "/eshopy/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/201-fert-a-s",
+   "destination": "/weby/fert-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/201-fert-a-s/",
+   "destination": "/weby/fert-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/181-b-spol",
+   "destination": "/marketing/seo/archiv/b-spol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/181-b-spol/",
+   "destination": "/marketing/seo/archiv/b-spol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/16-1p-prvni-pozice",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/16-1p-prvni-pozice/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/20-zasady-ochrany-udaju",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/20-zasady-ochrany-udaju/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/420-vylouceni-odpovednosti",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/420-vylouceni-odpovednosti/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/254-asekol-solar-s-r-o",
+   "destination": "/weby/asekol-solar-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/254-asekol-solar-s-r-o/",
+   "destination": "/weby/asekol-solar-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/212-status-a-s",
+   "destination": "/weby/status-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/212-status-a-s/",
+   "destination": "/weby/status-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/360-klicova-slova-keywords",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/360-klicova-slova-keywords/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/382-jak-cilit-klicova-slova-pomoci-blogu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/jak-cilit-klicova-slova-pomoci-blogu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/382-jak-cilit-klicova-slova-pomoci-blogu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/jak-cilit-klicova-slova-pomoci-blogu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/93-vice-vina",
+   "destination": "/eshopy/archiv/vice-vina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/93-vice-vina/",
+   "destination": "/eshopy/archiv/vice-vina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/242-technocon-s-r-o",
+   "destination": "/weby/technocon-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/242-technocon-s-r-o/",
+   "destination": "/weby/technocon-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/344-white-hat-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/white-hat-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/344-white-hat-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/white-hat-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/152-nutriservis",
+   "destination": "/weby/nutriservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/152-nutriservis/",
+   "destination": "/weby/nutriservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/107-psp-pelhrimov",
+   "destination": "/weby/psp-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/107-psp-pelhrimov/",
+   "destination": "/weby/psp-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/338-big-data-velka-data-a-analytika",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/big-data-velka-data-a-analytika/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/338-big-data-velka-data-a-analytika/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/big-data-velka-data-a-analytika/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/390-efektivni-analyza-napadu-na-klicova-slova",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/efektivni-analyza-napadu-na-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/390-efektivni-analyza-napadu-na-klicova-slova/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/efektivni-analyza-napadu-na-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/144-zahradnictvi-simkova-s-r-o",
+   "destination": "/weby/zahradnictvi-simkova-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/144-zahradnictvi-simkova-s-r-o/",
+   "destination": "/weby/zahradnictvi-simkova-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/393-nastroje-pro-pruzkum-klicovych-slov-5",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/nastroje-pro-pruzkum-klicovych-slov-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/393-nastroje-pro-pruzkum-klicovych-slov-5/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/nastroje-pro-pruzkum-klicovych-slov-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/184-tokra-okna",
+   "destination": "/marketing/seo/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/184-tokra-okna/",
+   "destination": "/marketing/seo/tokra-okna/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/424-wms",
+   "destination": "/blog/webove-aplikace/wms/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/424-wms/",
+   "destination": "/blog/webove-aplikace/wms/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/425-digitalizace-skladu-proc-je-wms-dnes-klicove-i-pro-ceske-firmy",
+   "destination": "/blog/webove-aplikace/wms/digitalizace-skladu-proc-je-wms-dnes-klicove-i-pro-ceske-firmy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/425-digitalizace-skladu-proc-je-wms-dnes-klicove-i-pro-ceske-firmy/",
+   "destination": "/blog/webove-aplikace/wms/digitalizace-skladu-proc-je-wms-dnes-klicove-i-pro-ceske-firmy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/427-geo",
+   "destination": "/marketing/geo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/427-geo/",
+   "destination": "/marketing/geo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/202-ck-marketa",
+   "destination": "/eshopy/ck-marketa/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/202-ck-marketa/",
+   "destination": "/eshopy/ck-marketa/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/129-acre",
+   "destination": "/weby/acre/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/129-acre/",
+   "destination": "/weby/acre/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/402-obecne-o-analyze-klicovych-slov-konkurence",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/obecne-o-analyze-klicovych-slov-konkurence/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/402-obecne-o-analyze-klicovych-slov-konkurence/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/obecne-o-analyze-klicovych-slov-konkurence/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/177-ceeor",
+   "destination": "/marketing/seo/archiv/ceeor/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/177-ceeor/",
+   "destination": "/marketing/seo/archiv/ceeor/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/408-technicke-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/408-technicke-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/414-technicky-audit-seo-1-kroky",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-1-kroky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/414-technicky-audit-seo-1-kroky/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-1-kroky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/49-remax-well",
+   "destination": "/weby/remax-well/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/49-remax-well/",
+   "destination": "/weby/remax-well/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/3-grafika",
+   "destination": "/grafika/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/3-grafika/",
+   "destination": "/grafika/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/9-slider",
+   "destination": "/grafika/slider/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/9-slider/",
+   "destination": "/grafika/slider/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/226-rotmak",
+   "destination": "/eshopy/rotmak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/226-rotmak/",
+   "destination": "/eshopy/rotmak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/353-zamer-vyhledavani",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/zamer-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/353-zamer-vyhledavani/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/zamer-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/296-obchod-bezlepku-cz",
+   "destination": "/eshopy/obchod-bezlepku-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/296-obchod-bezlepku-cz/",
+   "destination": "/eshopy/obchod-bezlepku-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/204-funzorbing-cz",
+   "destination": "/weby/funzorbing-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/204-funzorbing-cz/",
+   "destination": "/weby/funzorbing-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/260-proc-si-bez-automatizovaneho-testovani-brzo-ani-neskrtnete",
+   "destination": "/blog/akce-a-prednasky/proc-si-bez-automatizovaneho-testovani-brzo-ani-neskrtnete/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/260-proc-si-bez-automatizovaneho-testovani-brzo-ani-neskrtnete/",
+   "destination": "/blog/akce-a-prednasky/proc-si-bez-automatizovaneho-testovani-brzo-ani-neskrtnete/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/266-platebni-brany",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/platebni-brany/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/266-platebni-brany/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/platebni-brany/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/196-arreda",
+   "destination": "/weby/arreda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/196-arreda/",
+   "destination": "/weby/arreda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/121-sportstarter",
+   "destination": "/weby/sportstarter/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/121-sportstarter/",
+   "destination": "/weby/sportstarter/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/334-amp-akcelerovane-mobilni-stranky",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/amp-akcelerovane-mobilni-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/334-amp-akcelerovane-mobilni-stranky/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/amp-akcelerovane-mobilni-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/131-truhlarstvi-slza",
+   "destination": "/weby/archiv/truhlarstvi-slza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/131-truhlarstvi-slza/",
+   "destination": "/weby/archiv/truhlarstvi-slza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/252-gasparin-sisters",
+   "destination": "/weby/gasparin-sisters/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/252-gasparin-sisters/",
+   "destination": "/weby/gasparin-sisters/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/135-vlajky-levne",
+   "destination": "/weby/archiv/vlajky-levne/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/135-vlajky-levne/",
+   "destination": "/weby/archiv/vlajky-levne/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/139-better-process",
+   "destination": "/weby/better-process/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/139-better-process/",
+   "destination": "/weby/better-process/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/175-skochuv-dum",
+   "destination": "/weby/skochuv-dum/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/175-skochuv-dum/",
+   "destination": "/weby/skochuv-dum/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/169-ppc",
+   "destination": "/marketing/ppc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/169-ppc/",
+   "destination": "/marketing/ppc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/348-rychlost-nacitani-stranky",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/rychlost-nacitani-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/348-rychlost-nacitani-stranky/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/rychlost-nacitani-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/375-jak-pripravit-strategii-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/jak-pripravit-strategii-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/375-jak-pripravit-strategii-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/jak-pripravit-strategii-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/119-maturak-na-klic",
+   "destination": "/weby/maturak-na-klic/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/119-maturak-na-klic/",
+   "destination": "/weby/maturak-na-klic/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/110-itc-real-com",
+   "destination": "/weby/itc-real-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/110-itc-real-com/",
+   "destination": "/weby/itc-real-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/231-fepo-europalety-s-r-o",
+   "destination": "/weby/fepo-europalety-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/231-fepo-europalety-s-r-o/",
+   "destination": "/weby/fepo-europalety-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/170-tisk",
+   "destination": "/marketing/tisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/170-tisk/",
+   "destination": "/marketing/tisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/155-b-spol",
+   "destination": "/weby/archiv/b-spol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/155-b-spol/",
+   "destination": "/weby/archiv/b-spol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/323-seo-2023-a-co-dal",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/seo-2023-a-co-dal/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/323-seo-2023-a-co-dal/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/seo-2023-a-co-dal/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/114-mastra-tuning",
+   "destination": "/weby/mastra-tuning/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/114-mastra-tuning/",
+   "destination": "/weby/mastra-tuning/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/207-kaap-cz",
+   "destination": "/eshopy/kaap-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/207-kaap-cz/",
+   "destination": "/eshopy/kaap-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/378-odhadovani-obtiznosti-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/odhadovani-obtiznosti-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/378-odhadovani-obtiznosti-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/odhadovani-obtiznosti-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/137-rz-trnavka",
+   "destination": "/weby/rz-trnavka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/137-rz-trnavka/",
+   "destination": "/weby/rz-trnavka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/225-skrobarny-pelhrimov-a-s",
+   "destination": "/weby/skrobarny-pelhrimov-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/225-skrobarny-pelhrimov-a-s/",
+   "destination": "/weby/skrobarny-pelhrimov-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s",
+   "destination": "/eshopy/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
+   "destination": "/eshopy/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/355-link-building-budovani-odkazu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/355-link-building-budovani-odkazu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/359-white-hat-techniky-pro-budovani-zpetnych-odkazu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/white-hat-techniky-pro-budovani-zpetnych-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/359-white-hat-techniky-pro-budovani-zpetnych-odkazu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/white-hat-techniky-pro-budovani-zpetnych-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/341-aktualizace-algoritmu-googlu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/aktualizace-algoritmu-googlu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/341-aktualizace-algoritmu-googlu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/aktualizace-algoritmu-googlu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/156-retro-music",
+   "destination": "/weby/archiv/retro-music/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/156-retro-music/",
+   "destination": "/weby/archiv/retro-music/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/286-weby-s-administraci",
+   "destination": "/blog/weby/weby-s-administraci/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/286-weby-s-administraci/",
+   "destination": "/blog/weby/weby-s-administraci/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/178-secondhandautex",
+   "destination": "/marketing/seo/archiv/secondhandautex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/178-secondhandautex/",
+   "destination": "/marketing/seo/archiv/secondhandautex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/327-vyzvy-seo-2023",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/vyzvy-seo-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/327-vyzvy-seo-2023/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/vyzvy-seo-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/50-traficon-advisors-s-r-o",
+   "destination": "/weby/traficon-advisors-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/50-traficon-advisors-s-r-o/",
+   "destination": "/weby/traficon-advisors-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/89-fifty-fifty",
+   "destination": "/eshopy/archiv/fifty-fifty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/89-fifty-fifty/",
+   "destination": "/eshopy/archiv/fifty-fifty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/387-analyza-klicovych-slov-konkurence",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/analyza-klicovych-slov-konkurence/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/387-analyza-klicovych-slov-konkurence/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/analyza-klicovych-slov-konkurence/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/120-park-desetileti",
+   "destination": "/weby/park-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/120-park-desetileti/",
+   "destination": "/weby/park-desetileti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/70-gasoil-fashion",
+   "destination": "/weby/gasoil-fashion/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/70-gasoil-fashion/",
+   "destination": "/weby/gasoil-fashion/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/69-tradition-gifts",
+   "destination": "/eshopy/tradition-gifts/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/69-tradition-gifts/",
+   "destination": "/eshopy/tradition-gifts/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/84-koralek-obchod",
+   "destination": "/eshopy/archiv/koralek-obchod/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/84-koralek-obchod/",
+   "destination": "/eshopy/archiv/koralek-obchod/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/174-e-mailovy-marketing",
+   "destination": "/marketing/e-mailovy-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/174-e-mailovy-marketing/",
+   "destination": "/marketing/e-mailovy-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/96-zelandia",
+   "destination": "/eshopy/archiv/zelandia/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/96-zelandia/",
+   "destination": "/eshopy/archiv/zelandia/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/95-zahradni-sekacky",
+   "destination": "/eshopy/archiv/zahradni-sekacky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/95-zahradni-sekacky/",
+   "destination": "/eshopy/archiv/zahradni-sekacky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/158-zamek-cervena-recice",
+   "destination": "/weby/archiv/zamek-cervena-recice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/158-zamek-cervena-recice/",
+   "destination": "/weby/archiv/zamek-cervena-recice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/311-seo-office-hours-11-2022",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-11-2022/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/311-seo-office-hours-11-2022/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-11-2022/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/141-reklama-vysocina",
+   "destination": "/weby/reklama-vysocina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/141-reklama-vysocina/",
+   "destination": "/weby/reklama-vysocina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/287-luxusni-pradlo-skiny",
+   "destination": "/eshopy/luxusni-pradlo-skiny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/287-luxusni-pradlo-skiny/",
+   "destination": "/eshopy/luxusni-pradlo-skiny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/241-traficon-re-s-r-o",
+   "destination": "/weby/traficon-re-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/241-traficon-re-s-r-o/",
+   "destination": "/weby/traficon-re-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/55-toptenis",
+   "destination": "/eshopy/toptenis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/55-toptenis/",
+   "destination": "/eshopy/toptenis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/405-externi-odkazy-external-outbound-links",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/externi-odkazy-external-outbound-links/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/405-externi-odkazy-external-outbound-links/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/externi-odkazy-external-outbound-links/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/187-aquaprogress",
+   "destination": "/marketing/seo/aquaprogress/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/187-aquaprogress/",
+   "destination": "/marketing/seo/aquaprogress/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/256-seo-neni-raketova-veda",
+   "destination": "/blog/akce-a-prednasky/seo-neni-raketova-veda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/256-seo-neni-raketova-veda/",
+   "destination": "/blog/akce-a-prednasky/seo-neni-raketova-veda/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/219-ppc-jak-na-placenou-reklamu-12-6-2017",
+   "destination": "/marketing/prednasky/ppc-jak-na-placenou-reklamu-12-6-2017/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/219-ppc-jak-na-placenou-reklamu-12-6-2017/",
+   "destination": "/marketing/prednasky/ppc-jak-na-placenou-reklamu-12-6-2017/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/356-kupovane-odkazy",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/kupovane-odkazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/356-kupovane-odkazy/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/kupovane-odkazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/280-oceneni-a-certifikaty",
+   "destination": "/blog/oceneni-a-certifikaty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/280-oceneni-a-certifikaty/",
+   "destination": "/blog/oceneni-a-certifikaty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/281-google-ads-certifikace",
+   "destination": "/blog/oceneni-a-certifikaty/google-ads-certifikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/281-google-ads-certifikace/",
+   "destination": "/blog/oceneni-a-certifikaty/google-ads-certifikace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/176-2safe4u",
+   "destination": "/weby/2safe4u/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/176-2safe4u/",
+   "destination": "/weby/2safe4u/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/364-souvisejici-vyrazy",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/souvisejici-vyrazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/364-souvisejici-vyrazy/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/souvisejici-vyrazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/305-reseni-sporu",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/305-reseni-sporu/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/415-technicky-audit-seo-2",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/415-technicky-audit-seo-2/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/279-slevovy-modul",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/slevovy-modul/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/279-slevovy-modul/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/slevovy-modul/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/365-long-tail-keywords-dlouha-klicova-slova",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/long-tail-keywords-dlouha-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/365-long-tail-keywords-dlouha-klicova-slova/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/long-tail-keywords-dlouha-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/310-seo-office-hours-12-2022",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-12-2022/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/310-seo-office-hours-12-2022/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-12-2022/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o",
+   "destination": "/weby/talpa-zahradnicke-sluzby-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o/",
+   "destination": "/weby/talpa-zahradnicke-sluzby-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/284-kukuricny-mlyn-mrzkovice",
+   "destination": "/weby/kukuricny-mlyn-mrzkovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/284-kukuricny-mlyn-mrzkovice/",
+   "destination": "/weby/kukuricny-mlyn-mrzkovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/164-hotel-pod-kastany-telc",
+   "destination": "/weby/archiv/hotel-pod-kastany-telc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/164-hotel-pod-kastany-telc/",
+   "destination": "/weby/archiv/hotel-pod-kastany-telc/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/45-ms-dubovice",
+   "destination": "/weby/ms-dubovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/45-ms-dubovice/",
+   "destination": "/weby/ms-dubovice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/193-koralek-obchod",
+   "destination": "/marketing/seo/koralek-obchod/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/193-koralek-obchod/",
+   "destination": "/marketing/seo/koralek-obchod/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/209-pevak",
+   "destination": "/weby/pevak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/209-pevak/",
+   "destination": "/weby/pevak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/200-eurobyt-design-s-r-o",
+   "destination": "/weby/eurobyt-design-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/200-eurobyt-design-s-r-o/",
+   "destination": "/weby/eurobyt-design-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/324-2023-seo-a-google-shopping",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-a-google-shopping/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/324-2023-seo-a-google-shopping/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-a-google-shopping/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/142-szuz",
+   "destination": "/weby/szuz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/142-szuz/",
+   "destination": "/weby/szuz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/322-2023-seo-ai-a-co-dal",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-ai-a-co-dal/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/322-2023-seo-ai-a-co-dal/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-ai-a-co-dal/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/329-klicova-slova-a-longtail",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/klicova-slova-a-longtail/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/329-klicova-slova-a-longtail/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/klicova-slova-a-longtail/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/208-neza",
+   "destination": "/weby/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/208-neza/",
+   "destination": "/weby/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/423-povinna-publicita",
+   "destination": "/blog/povinna-publicita/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/423-povinna-publicita/",
+   "destination": "/blog/povinna-publicita/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/60-vandastore",
+   "destination": "/eshopy/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/60-vandastore/",
+   "destination": "/eshopy/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/404-interni-odkazy-internal-links",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/interni-odkazy-internal-links/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/404-interni-odkazy-internal-links/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/interni-odkazy-internal-links/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/221-top-team-s-r-o",
+   "destination": "/weby/top-team-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/221-top-team-s-r-o/",
+   "destination": "/weby/top-team-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/183-autoneza",
+   "destination": "/marketing/seo/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/183-autoneza/",
+   "destination": "/marketing/seo/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/211-pokorny-s-r-o",
+   "destination": "/weby/pokorny-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/211-pokorny-s-r-o/",
+   "destination": "/weby/pokorny-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/320-trendy-v-seo",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/320-trendy-v-seo/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/159-finance-bulldog",
+   "destination": "/weby/archiv/finance-bulldog/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/159-finance-bulldog/",
+   "destination": "/weby/archiv/finance-bulldog/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/368-mapovani-klicovych-slov-keyword-mapping",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/mapovani-klicovych-slov-keyword-mapping/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/368-mapovani-klicovych-slov-keyword-mapping/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/mapovani-klicovych-slov-keyword-mapping/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/384-vyber-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/vyber-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/384-vyber-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/vyber-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/351-lsi-klicova-slova",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/lsi-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/351-lsi-klicova-slova/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/lsi-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/197-davidfoto-cz",
+   "destination": "/weby/davidfoto-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/197-davidfoto-cz/",
+   "destination": "/weby/davidfoto-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/229-okresni-hospodarska-komora-pelhrimov",
+   "destination": "/weby/okresni-hospodarska-komora-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/229-okresni-hospodarska-komora-pelhrimov/",
+   "destination": "/weby/okresni-hospodarska-komora-pelhrimov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/259-zkontroluj-vodu",
+   "destination": "/weby/zkontroluj-vodu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/259-zkontroluj-vodu/",
+   "destination": "/weby/zkontroluj-vodu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/419-seo-analyza",
+   "destination": "/blog/online-marketing/seo/seo-analyza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/419-seo-analyza/",
+   "destination": "/blog/online-marketing/seo/seo-analyza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/151-bytovy-dum-pardubice",
+   "destination": "/weby/bytovy-dum-pardubice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/151-bytovy-dum-pardubice/",
+   "destination": "/weby/bytovy-dum-pardubice/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/91-luxury-baby",
+   "destination": "/eshopy/luxury-baby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/91-luxury-baby/",
+   "destination": "/eshopy/luxury-baby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/274-postup-pri-realizaci-projektu",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/274-postup-pri-realizaci-projektu/",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/236-knoflikarsky-prumysl-zirovnice-a-s",
+   "destination": "/weby/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/236-knoflikarsky-prumysl-zirovnice-a-s/",
+   "destination": "/weby/knoflikarsky-prumysl-zirovnice-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/270-clanky",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/clanky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/270-clanky/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/clanky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/268-napojeni-na-erp-ekonomicke-a-ucetni-systemy",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/napojeni-na-erp-ekonomicke-a-ucetni-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/268-napojeni-na-erp-ekonomicke-a-ucetni-systemy/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/napojeni-na-erp-ekonomicke-a-ucetni-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/417-technicky-audit-seo-4",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-4/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/417-technicky-audit-seo-4/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-4/",
+   "permanent": true
+  },
+  {
    "source": "/cs/276-skoleni",
-   "destination": "/skoleni/",
+   "destination": "/blog/skoleni/",
    "permanent": true
   },
   {
    "source": "/cs/276-skoleni/",
-   "destination": "/skoleni/",
+   "destination": "/blog/skoleni/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/422-ai-umela-inteligence-proc-by-ji-zadny-manazer-nemel-zmeskat",
+   "destination": "/blog/skoleni/ai-umela-inteligence-proc-by-ji-zadny-manazer-nemel-zmeskat/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/422-ai-umela-inteligence-proc-by-ji-zadny-manazer-nemel-zmeskat/",
+   "destination": "/blog/skoleni/ai-umela-inteligence-proc-by-ji-zadny-manazer-nemel-zmeskat/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/143-alfa-top",
+   "destination": "/weby/alfa-top/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/143-alfa-top/",
+   "destination": "/weby/alfa-top/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/406-uzivatelska-zkusenost-user-experience-ux",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/uzivatelska-zkusenost-user-experience-ux/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/406-uzivatelska-zkusenost-user-experience-ux/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/uzivatelska-zkusenost-user-experience-ux/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/330-autenticke-recenze-u-produktu",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/autenticke-recenze-u-produktu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/330-autenticke-recenze-u-produktu/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/autenticke-recenze-u-produktu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/61-snadny-profit",
+   "destination": "/eshopy/snadny-profit/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/61-snadny-profit/",
+   "destination": "/eshopy/snadny-profit/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/358-typy-zpetnych-odkazu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/typy-zpetnych-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/358-typy-zpetnych-odkazu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/typy-zpetnych-odkazu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/386-druhy-vyhledavani",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/druhy-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/386-druhy-vyhledavani/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/druhy-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/337-strukturovana-data-schema-markup",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/strukturovana-data-schema-markup/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/337-strukturovana-data-schema-markup/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/strukturovana-data-schema-markup/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/333-rozsirene-vysledky-rich-snippets-strukturovana-data-v-serp",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/rozsirene-vysledky-rich-snippets-strukturovana-data-v-serp/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/333-rozsirene-vysledky-rich-snippets-strukturovana-data-v-serp/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/rozsirene-vysledky-rich-snippets-strukturovana-data-v-serp/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/376-seed-keywords",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/seed-keywords/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/376-seed-keywords/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/seed-keywords/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/192-vandastore",
+   "destination": "/marketing/seo/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/192-vandastore/",
+   "destination": "/marketing/seo/vandastore/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/410-prochazeni-webu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/prochazeni-webu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/410-prochazeni-webu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/prochazeni-webu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/189-neza",
+   "destination": "/marketing/seo/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/189-neza/",
+   "destination": "/marketing/seo/neza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/244-atelier-radost",
+   "destination": "/weby/atelier-radost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/244-atelier-radost/",
+   "destination": "/weby/atelier-radost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/411-indexace-stranek",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/indexace-stranek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/411-indexace-stranek/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/indexace-stranek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/57-zdravi-z-vysociny",
+   "destination": "/eshopy/zdravi-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/57-zdravi-z-vysociny/",
+   "destination": "/eshopy/zdravi-z-vysociny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/154-vanprodukt",
+   "destination": "/weby/vanprodukt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/154-vanprodukt/",
+   "destination": "/weby/vanprodukt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/336-video-obsah-z-pohledu-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/video-obsah-z-pohledu-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/336-video-obsah-z-pohledu-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/video-obsah-z-pohledu-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/140-prezenta",
+   "destination": "/weby/prezenta/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/140-prezenta/",
+   "destination": "/weby/prezenta/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/392-prioritizace-klicovych-slov-4",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/prioritizace-klicovych-slov-4/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/392-prioritizace-klicovych-slov-4/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/prioritizace-klicovych-slov-4/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/157-autoneza",
+   "destination": "/weby/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/157-autoneza/",
+   "destination": "/weby/autoneza/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/203-hezky-kryty",
+   "destination": "/eshopy/hezky-kryty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/203-hezky-kryty/",
+   "destination": "/eshopy/hezky-kryty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/302-reklamacni-systemy",
+   "destination": "/blog/webove-aplikace/reklamacni-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/302-reklamacni-systemy/",
+   "destination": "/blog/webove-aplikace/reklamacni-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/416-technicky-audit-seo-3",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-3/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/416-technicky-audit-seo-3/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-3/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/269-kategorie",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/kategorie/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/269-kategorie/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/kategorie/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/413-technicky-audit-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/413-technicky-audit-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/398-algoritmy-vyhledavacich-stroju",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/algoritmy-vyhledavacich-stroju/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/398-algoritmy-vyhledavacich-stroju/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/algoritmy-vyhledavacich-stroju/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/349-meta-description",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/meta-description/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/349-meta-description/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/meta-description/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/363-lsi-klicova-slova",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/lsi-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/363-lsi-klicova-slova/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/lsi-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/321-2023-trendy-v-seo",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/321-2023-trendy-v-seo/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-trendy-v-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/340-optimalizace-obrazku-pro-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-obrazku-pro-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/340-optimalizace-obrazku-pro-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-obrazku-pro-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/146-pharma2",
+   "destination": "/weby/archiv/pharma2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/146-pharma2/",
+   "destination": "/weby/archiv/pharma2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/335-hlasove-vyhledavani",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/hlasove-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/335-hlasove-vyhledavani/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/hlasove-vyhledavani/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/199-ekogreen",
+   "destination": "/weby/ekogreen/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/199-ekogreen/",
+   "destination": "/weby/ekogreen/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/345-black-hat-seo-zakazane-techniky",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/black-hat-seo-zakazane-techniky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/345-black-hat-seo-zakazane-techniky/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/black-hat-seo-zakazane-techniky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/315-google-seo-office-hours-brezen-2023",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/google-seo-office-hours-brezen-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/315-google-seo-office-hours-brezen-2023/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/google-seo-office-hours-brezen-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/224-galaxieknih-cz",
+   "destination": "/eshopy/galaxieknih-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/224-galaxieknih-cz/",
+   "destination": "/eshopy/galaxieknih-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/99-rotasport",
+   "destination": "/eshopy/archiv/rotasport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/99-rotasport/",
+   "destination": "/eshopy/archiv/rotasport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu",
+   "destination": "/weby/spartak-pelhrimov-oddil-florbalu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu/",
+   "destination": "/weby/spartak-pelhrimov-oddil-florbalu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/44-fine-design",
+   "destination": "/weby/fine-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/44-fine-design/",
+   "destination": "/weby/fine-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/395-umela-inteligence-a-seo-jake-jsou-moznosti",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/umela-inteligence-a-seo-jake-jsou-moznosti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/395-umela-inteligence-a-seo-jake-jsou-moznosti/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/umela-inteligence-a-seo-jake-jsou-moznosti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/161-tmccr",
+   "destination": "/weby/tmccr/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/161-tmccr/",
+   "destination": "/weby/tmccr/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/86-partes",
+   "destination": "/eshopy/archiv/partes/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/86-partes/",
+   "destination": "/eshopy/archiv/partes/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/42-ekoimpex",
+   "destination": "/weby/ekoimpex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/42-ekoimpex/",
+   "destination": "/weby/ekoimpex/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/350-title",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/title/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/350-title/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/title/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/54-veloservis",
+   "destination": "/eshopy/veloservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/54-veloservis/",
+   "destination": "/eshopy/veloservis/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/313-seo-office-hours-leden-2023",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-leden-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/313-seo-office-hours-leden-2023/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-leden-2023/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/52-greenplan",
+   "destination": "/weby/greenplan/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/52-greenplan/",
+   "destination": "/weby/greenplan/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/357-blogger-outreach",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/blogger-outreach/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/357-blogger-outreach/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/link-building-budovani-odkazu/blogger-outreach/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/372-klicova-slova-proc-a-jak",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/klicova-slova-proc-a-jak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/372-klicova-slova-proc-a-jak/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/klicova-slova-proc-a-jak/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/185-a-gastro",
+   "destination": "/marketing/seo/a-gastro/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/185-a-gastro/",
+   "destination": "/marketing/seo/a-gastro/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/206-duffek-s-r-o",
+   "destination": "/eshopy/duffek-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/206-duffek-s-r-o/",
+   "destination": "/eshopy/duffek-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/299-objednavkove-systemy",
+   "destination": "/blog/webove-aplikace/objednavkove-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/299-objednavkove-systemy/",
+   "destination": "/blog/webove-aplikace/objednavkove-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/78-elektrohned",
+   "destination": "/eshopy/archiv/elektrohned/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/78-elektrohned/",
+   "destination": "/eshopy/archiv/elektrohned/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/106-profit-trans",
+   "destination": "/weby/profit-trans/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/106-profit-trans/",
+   "destination": "/weby/profit-trans/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/369-shlukovani-klicovych-slov-keyword-clustering",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/shlukovani-klicovych-slov-keyword-clustering/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/369-shlukovani-klicovych-slov-keyword-clustering/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/shlukovani-klicovych-slov-keyword-clustering/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/222-agos-a-s",
+   "destination": "/weby/agos-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/222-agos-a-s/",
+   "destination": "/weby/agos-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/217-co-jste-nevedeli-o-vasem-webu-30-11-2016",
+   "destination": "/marketing/prednasky/co-jste-nevedeli-o-vasem-webu-30-11-2016/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/217-co-jste-nevedeli-o-vasem-webu-30-11-2016/",
+   "destination": "/marketing/prednasky/co-jste-nevedeli-o-vasem-webu-30-11-2016/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/380-nevyuzita-klicova-slova",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/nevyuzita-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/380-nevyuzita-klicova-slova/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/nevyuzita-klicova-slova/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/230-test",
+   "destination": "/marketing/test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/230-test/",
+   "destination": "/marketing/test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/249-eshop-na-zkousku",
+   "destination": "/blog/e-shopy/eshop-na-zkousku/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/249-eshop-na-zkousku/",
+   "destination": "/blog/e-shopy/eshop-na-zkousku/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/195-nerez-blucina",
+   "destination": "/weby/nerez-blucina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/195-nerez-blucina/",
+   "destination": "/weby/nerez-blucina/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/362-typy-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/typy-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/362-typy-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/typy-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/374-serp-search-engine-result-page",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/serp-search-engine-result-page/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/374-serp-search-engine-result-page/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/serp-search-engine-result-page/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/418-technicky-audit-seo-5",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/418-technicky-audit-seo-5/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/technicky-audit-seo-5/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/314-seo-office-hours-leden-2023-dalsi-dotazy",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-leden-2023-dalsi-dotazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/314-seo-office-hours-leden-2023-dalsi-dotazy/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-leden-2023-dalsi-dotazy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/339-aktualizace-stareho-obsahu",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/aktualizace-stareho-obsahu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/339-aktualizace-stareho-obsahu/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/aktualizace-stareho-obsahu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/306-co-by-mel-obsahovat-uspesny-eshop",
+   "destination": "/blog/e-shopy/co-by-mel-obsahovat-uspesny-eshop/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/306-co-by-mel-obsahovat-uspesny-eshop/",
+   "destination": "/blog/e-shopy/co-by-mel-obsahovat-uspesny-eshop/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/347-optimalizace-pro-google-mapy",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-pro-google-mapy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/347-optimalizace-pro-google-mapy/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/optimalizace-pro-google-mapy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/343-garance-prvni-stranky",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/garance-prvni-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/343-garance-prvni-stranky/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/garance-prvni-stranky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/400-indexace",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/indexace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/400-indexace/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/indexace/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/97-zlatnictvi-hodinarstvi-miroslav-kubu",
+   "destination": "/eshopy/archiv/zlatnictvi-hodinarstvi-miroslav-kubu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/97-zlatnictvi-hodinarstvi-miroslav-kubu/",
+   "destination": "/eshopy/archiv/zlatnictvi-hodinarstvi-miroslav-kubu/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/220-team-velosport",
+   "destination": "/weby/team-velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/220-team-velosport/",
+   "destination": "/weby/team-velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/43-novague-design",
+   "destination": "/weby/novague-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/43-novague-design/",
+   "destination": "/weby/novague-design/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/267-ceny-a-meny",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/ceny-a-meny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/267-ceny-a-meny/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/ceny-a-meny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/90-wixx",
+   "destination": "/eshopy/wixx/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/90-wixx/",
+   "destination": "/eshopy/wixx/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/303-jak-zalozit-eshop",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/jak-zalozit-eshop/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/303-jak-zalozit-eshop/",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/jak-zalozit-eshop/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/271-zbozi-produkty",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/zbozi-produkty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/271-zbozi-produkty/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/zbozi-produkty/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/385-jak-najit-klicova-slova-s-nizkou-konkurencnosti",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-najit-klicova-slova-s-nizkou-konkurencnosti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/385-jak-najit-klicova-slova-s-nizkou-konkurencnosti/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-najit-klicova-slova-s-nizkou-konkurencnosti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/383-long-tail-keywords-dlouha-klicova-slova-jak-z-nich-ziskat-navstevnost",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/long-tail-keywords-dlouha-klicova-slova-jak-z-nich-ziskat-navstevnost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/383-long-tail-keywords-dlouha-klicova-slova-jak-z-nich-ziskat-navstevnost/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/long-tail-keywords-dlouha-klicova-slova-jak-z-nich-ziskat-navstevnost/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/186-krby-komitech",
+   "destination": "/marketing/seo/krby-komitech/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/186-krby-komitech/",
+   "destination": "/marketing/seo/krby-komitech/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/421-ai-ve-firmach-pro-majitele-a-manazery",
+   "destination": "/blog/skoleni/ai-ve-firmach-pro-majitele-a-manazery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/421-ai-ve-firmach-pro-majitele-a-manazery/",
+   "destination": "/blog/skoleni/ai-ve-firmach-pro-majitele-a-manazery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/401-responzivita",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/responzivita/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/401-responzivita/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/responzivita/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/293-pozice-ve-vyhledavacich",
+   "destination": "/blog/online-marketing/seo/pozice-ve-vyhledavacich/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/293-pozice-ve-vyhledavacich/",
+   "destination": "/blog/online-marketing/seo/pozice-ve-vyhledavacich/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/409-google-lighthouse-pagespeed",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/google-lighthouse-pagespeed/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/409-google-lighthouse-pagespeed/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/google-lighthouse-pagespeed/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/48-velosport",
+   "destination": "/eshopy/velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/48-velosport/",
+   "destination": "/eshopy/velosport/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/403-obsahove-mezery-content-gap",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/obsahove-mezery-content-gap/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/403-obsahove-mezery-content-gap/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/obsahove-mezery-content-gap/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/162-eco-building-brno-s-r-o",
+   "destination": "/weby/archiv/eco-building-brno-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/162-eco-building-brno-s-r-o/",
+   "destination": "/weby/archiv/eco-building-brno-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/109-florbalak-cz",
+   "destination": "/weby/florbalak-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/109-florbalak-cz/",
+   "destination": "/weby/florbalak-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/232-1p-sport-com",
+   "destination": "/weby/1p-sport-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/232-1p-sport-com/",
+   "destination": "/weby/1p-sport-com/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/265-moznosti-dopravy",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/moznosti-dopravy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/265-moznosti-dopravy/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/moznosti-dopravy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/289-asekol",
+   "destination": "/weby/asekol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/289-asekol/",
+   "destination": "/weby/asekol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/388-pruzkum-klicovych-slov-pro-seo",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/pruzkum-klicovych-slov-pro-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/388-pruzkum-klicovych-slov-pro-seo/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/pruzkum-klicovych-slov-pro-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/381-klicova-slova-test",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/klicova-slova-test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/381-klicova-slova-test/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/klicova-slova-test/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/182-reklamni-potisk",
+   "destination": "/marketing/seo/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/182-reklamni-potisk/",
+   "destination": "/marketing/seo/reklamni-potisk/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/235-eco-house",
+   "destination": "/weby/eco-house/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/235-eco-house/",
+   "destination": "/weby/eco-house/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/198-duo-trans-cz-s-r-o",
+   "destination": "/weby/duo-trans-cz-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/198-duo-trans-cz-s-r-o/",
+   "destination": "/weby/duo-trans-cz-s-r-o/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/272-ostatni-funkce",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/ostatni-funkce/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/272-ostatni-funkce/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/ostatni-funkce/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/389-jak-efektivne-provadet-pruzkum-klicovych-slov-2",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-efektivne-provadet-pruzkum-klicovych-slov-2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/389-jak-efektivne-provadet-pruzkum-klicovych-slov-2/",
+   "destination": "/blog/online-marketing/seo/seo-diskuze/jak-efektivne-provadet-pruzkum-klicovych-slov-2/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/361-vyber-a-optimalizace-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/vyber-a-optimalizace-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/361-vyber-a-optimalizace-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/klicova-slova-keywords/vyber-a-optimalizace-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/352-autorita-domeny",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/autorita-domeny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/352-autorita-domeny/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/autorita-domeny/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/285-zpracovani-objednavek",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/zpracovani-objednavek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/285-zpracovani-objednavek/",
+   "destination": "/blog/e-shopy/co-nas-eshop-dokaze/zpracovani-objednavek/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/188-pohary",
+   "destination": "/marketing/seo/pohary/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/188-pohary/",
+   "destination": "/marketing/seo/pohary/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/304-analyza-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/analyza-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/304-analyza-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/analyza-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/317-seo-office-hours-brezen-2023-3",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-3/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/317-seo-office-hours-brezen-2023-3/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/seo-office-hours-brezen-2023-3/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/243-landeco",
+   "destination": "/weby/landeco/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/243-landeco/",
+   "destination": "/weby/landeco/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/167-zbozove-servery",
+   "destination": "/marketing/zbozove-servery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/167-zbozove-servery/",
+   "destination": "/marketing/zbozove-servery/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/371-nastroje-pro-navrh-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/nastroje-pro-navrh-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/371-nastroje-pro-navrh-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/nastroje-pro-navrh-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/205-kuks-a-s",
+   "destination": "/weby/kuks-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/205-kuks-a-s/",
+   "destination": "/weby/kuks-a-s/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/165-hotel-brixen",
+   "destination": "/weby/archiv/hotel-brixen/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/165-hotel-brixen/",
+   "destination": "/weby/archiv/hotel-brixen/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/46-wellgroup",
+   "destination": "/weby/wellgroup/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/46-wellgroup/",
+   "destination": "/weby/wellgroup/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/412-9-castych-problemu-technickeho-seo",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/9-castych-problemu-technickeho-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/412-9-castych-problemu-technickeho-seo/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/technicke-seo/9-castych-problemu-technickeho-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/123-anglicky-resort",
+   "destination": "/weby/anglicky-resort/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/123-anglicky-resort/",
+   "destination": "/weby/anglicky-resort/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/394-vyhledavaci-provoz",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/vyhledavaci-provoz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/394-vyhledavaci-provoz/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/vyhledavaci-provoz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/124-intelsol",
+   "destination": "/weby/intelsol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/124-intelsol/",
+   "destination": "/weby/intelsol/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/223-reusepoint-cz",
+   "destination": "/eshopy/reusepoint-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/223-reusepoint-cz/",
+   "destination": "/eshopy/reusepoint-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/328-2023-seo-generovany-obsah-a-klastry",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-generovany-obsah-a-klastry/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/328-2023-seo-generovany-obsah-a-klastry/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-generovany-obsah-a-klastry/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/261-pear-control",
+   "destination": "/eshopy/pear-control/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/261-pear-control/",
+   "destination": "/eshopy/pear-control/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/163-kavarna-flet",
+   "destination": "/weby/archiv/kavarna-flet/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/163-kavarna-flet/",
+   "destination": "/weby/archiv/kavarna-flet/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/354-landing-page-pristavaci-stranka",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/landing-page-pristavaci-stranka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/354-landing-page-pristavaci-stranka/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/landing-page-pristavaci-stranka/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/370-vyuziti-google-trends-pro-analyzu-klicovych-slov",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/vyuziti-google-trends-pro-analyzu-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/370-vyuziti-google-trends-pro-analyzu-klicovych-slov/",
+   "destination": "/blog/online-marketing/seo/pojmy-v-seo/analyza-klicovych-slov/vyuziti-google-trends-pro-analyzu-klicovych-slov/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/100-vnd",
+   "destination": "/eshopy/archiv/vnd/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/100-vnd/",
+   "destination": "/eshopy/archiv/vnd/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/312-filtrovani-a-omezeni-dat-v-search-console",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/filtrovani-a-omezeni-dat-v-search-console/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/312-filtrovani-a-omezeni-dat-v-search-console/",
+   "destination": "/blog/online-marketing/seo/seo-podle-google/filtrovani-a-omezeni-dat-v-search-console/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/166-socialni-site",
+   "destination": "/marketing/socialni-site/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/166-socialni-site/",
+   "destination": "/marketing/socialni-site/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/277-firemni-vzdelavani-na-zakazku",
+   "destination": "/blog/skoleni/firemni-vzdelavani-na-zakazku/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/277-firemni-vzdelavani-na-zakazku/",
+   "destination": "/blog/skoleni/firemni-vzdelavani-na-zakazku/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/326-2023-seo-a-ai-generovane-obrazky",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-a-ai-generovane-obrazky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/326-2023-seo-a-ai-generovane-obrazky/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/2023-seo-a-ai-generovane-obrazky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/101-pohary",
+   "destination": "/eshopy/pohary/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/101-pohary/",
+   "destination": "/eshopy/pohary/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/290-cena-eshopu-na-miru",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/cena-eshopu-na-miru/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/290-cena-eshopu-na-miru/",
+   "destination": "/blog/e-shopy/postup-pri-realizaci-projektu/cena-eshopu-na-miru/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/288-bookin",
+   "destination": "/weby/bookin/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/288-bookin/",
+   "destination": "/weby/bookin/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/300-crm-systemy",
+   "destination": "/blog/webove-aplikace/crm-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/300-crm-systemy/",
+   "destination": "/blog/webove-aplikace/crm-systemy/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/331-obsahova-lokalizace-a-lokalni-seo",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/obsahova-lokalizace-a-lokalni-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/331-obsahova-lokalizace-a-lokalni-seo/",
+   "destination": "/blog/online-marketing/seo/trendy-v-seo/obsahova-lokalizace-a-lokalni-seo/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/218-ux-design-3-5-2017",
+   "destination": "/marketing/prednasky/ux-design-3-5-2017/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/218-ux-design-3-5-2017/",
+   "destination": "/marketing/prednasky/ux-design-3-5-2017/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/179-kingspas-virivky",
+   "destination": "/marketing/seo/archiv/kingspas-virivky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/179-kingspas-virivky/",
+   "destination": "/marketing/seo/archiv/kingspas-virivky/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/426-seo-trendy-pro-rok-2026",
+   "destination": "/blog/online-marketing/seo/seo-trendy-pro-rok-2026/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/426-seo-trendy-pro-rok-2026/",
+   "destination": "/blog/online-marketing/seo/seo-trendy-pro-rok-2026/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/294-mt-tech-cz",
+   "destination": "/eshopy/mt-tech-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/294-mt-tech-cz/",
+   "destination": "/eshopy/mt-tech-cz/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/98-playforever",
+   "destination": "/eshopy/archiv/playforever/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/98-playforever/",
+   "destination": "/eshopy/archiv/playforever/",
    "permanent": true
   },
   {
@@ -61,13 +3361,13 @@
    "permanent": true
   },
   {
-   "source": "/cs/15-divize",
-   "destination": "/o-nas/",
+   "source": "/cs/276-skoleni",
+   "destination": "/skoleni/",
    "permanent": true
   },
   {
-   "source": "/cs/15-divize/",
-   "destination": "/o-nas/",
+   "source": "/cs/276-skoleni/",
+   "destination": "/skoleni/",
    "permanent": true
   },
   {
@@ -78,1036 +3378,6 @@
   {
    "source": "/cs/298-webove-aplikace/",
    "destination": "/ai-agenti/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/152-nutriservis",
-   "destination": "/reference/nutriservis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/152-nutriservis/",
-   "destination": "/reference/nutriservis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/253-doudou",
-   "destination": "/reference/doudou/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/253-doudou/",
-   "destination": "/reference/doudou/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/233-fk-pelhrimov",
-   "destination": "/reference/fk-pelhrimov/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/233-fk-pelhrimov/",
-   "destination": "/reference/fk-pelhrimov/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/224-galaxieknih-cz",
-   "destination": "/reference/galaxieknih-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/224-galaxieknih-cz/",
-   "destination": "/reference/galaxieknih-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/91-luxury-baby",
-   "destination": "/reference/luxury-baby/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/91-luxury-baby/",
-   "destination": "/reference/luxury-baby/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/287-luxusni-pradlo-skiny",
-   "destination": "/reference/luxusni-pradlo-skiny/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/287-luxusni-pradlo-skiny/",
-   "destination": "/reference/luxusni-pradlo-skiny/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/294-mt-tech-cz",
-   "destination": "/reference/mt-tech-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/294-mt-tech-cz/",
-   "destination": "/reference/mt-tech-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/296-obchod-bezlepku-cz",
-   "destination": "/reference/obchod-bezlepku-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/296-obchod-bezlepku-cz/",
-   "destination": "/reference/obchod-bezlepku-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/261-pear-control",
-   "destination": "/reference/pear-control/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/261-pear-control/",
-   "destination": "/reference/pear-control/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/295-pevex",
-   "destination": "/reference/pevex/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/295-pevex/",
-   "destination": "/reference/pevex/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/182-reklamni-potisk",
-   "destination": "/reference/reklamni-potisk/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/182-reklamni-potisk/",
-   "destination": "/reference/reklamni-potisk/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/226-rotmak",
-   "destination": "/reference/rotmak/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/226-rotmak/",
-   "destination": "/reference/rotmak/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/240-topicrem",
-   "destination": "/reference/topicrem/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/240-topicrem/",
-   "destination": "/reference/topicrem/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/55-toptenis",
-   "destination": "/reference/toptenis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/55-toptenis/",
-   "destination": "/reference/toptenis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/192-vandastore",
-   "destination": "/reference/vandastore/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/192-vandastore/",
-   "destination": "/reference/vandastore/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/48-velosport",
-   "destination": "/reference/velosport/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/48-velosport/",
-   "destination": "/reference/velosport/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/246-woodiy-cz",
-   "destination": "/reference/woodiy-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/246-woodiy-cz/",
-   "destination": "/reference/woodiy-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/57-zdravi-z-vysociny",
-   "destination": "/reference/zdravi-z-vysociny/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/57-zdravi-z-vysociny/",
-   "destination": "/reference/zdravi-z-vysociny/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/202-ck-marketa",
-   "destination": "/reference/ck-marketa/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/202-ck-marketa/",
-   "destination": "/reference/ck-marketa/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/92-fofrovac",
-   "destination": "/reference/fofrovac/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/92-fofrovac/",
-   "destination": "/reference/fofrovac/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/207-kaap-cz",
-   "destination": "/reference/kaap-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/207-kaap-cz/",
-   "destination": "/reference/kaap-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/61-snadny-profit",
-   "destination": "/reference/snadny-profit/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/61-snadny-profit/",
-   "destination": "/reference/snadny-profit/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/69-tradition-gifts",
-   "destination": "/reference/tradition-gifts/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/69-tradition-gifts/",
-   "destination": "/reference/tradition-gifts/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/54-veloservis",
-   "destination": "/reference/veloservis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/54-veloservis/",
-   "destination": "/reference/veloservis/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/78-elektrohned",
-   "destination": "/reference/elektrohned/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/78-elektrohned/",
-   "destination": "/reference/elektrohned/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/89-fifty-fifty",
-   "destination": "/reference/fifty-fifty/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/89-fifty-fifty/",
-   "destination": "/reference/fifty-fifty/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/100-vnd",
-   "destination": "/reference/vnd/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/100-vnd/",
-   "destination": "/reference/vnd/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/174-e-mailovy-marketing",
-   "destination": "/reference/e-mailovy-marketing/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/174-e-mailovy-marketing/",
-   "destination": "/reference/e-mailovy-marketing/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/427-geo",
-   "destination": "/reference/geo/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/427-geo/",
-   "destination": "/reference/geo/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/169-ppc",
-   "destination": "/reference/ppc/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/169-ppc/",
-   "destination": "/reference/ppc/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/173-prednasky",
-   "destination": "/reference/prednasky/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/173-prednasky/",
-   "destination": "/reference/prednasky/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/166-socialni-site",
-   "destination": "/reference/socialni-site/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/166-socialni-site/",
-   "destination": "/reference/socialni-site/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/170-tisk",
-   "destination": "/reference/tisk/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/170-tisk/",
-   "destination": "/reference/tisk/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/230-test",
-   "destination": "/reference/test/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/230-test/",
-   "destination": "/reference/test/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/167-zbozove-servery",
-   "destination": "/reference/zbozove-servery/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/167-zbozove-servery/",
-   "destination": "/reference/zbozove-servery/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/397-seo",
-   "destination": "/reference/seo/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/397-seo/",
-   "destination": "/reference/seo/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/232-1p-sport-com",
-   "destination": "/reference/1p-sport-com/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/232-1p-sport-com/",
-   "destination": "/reference/1p-sport-com/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/183-autoneza",
-   "destination": "/reference/autoneza/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/183-autoneza/",
-   "destination": "/reference/autoneza/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/191-euro-palety",
-   "destination": "/reference/euro-palety/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/191-euro-palety/",
-   "destination": "/reference/euro-palety/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/179-kingspas-virivky",
-   "destination": "/reference/kingspas-virivky/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/179-kingspas-virivky/",
-   "destination": "/reference/kingspas-virivky/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/106-profit-trans",
-   "destination": "/reference/profit-trans/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/106-profit-trans/",
-   "destination": "/reference/profit-trans/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/141-reklama-vysocina",
-   "destination": "/reference/reklama-vysocina/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/141-reklama-vysocina/",
-   "destination": "/reference/reklama-vysocina/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/137-rz-trnavka",
-   "destination": "/reference/rz-trnavka/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/137-rz-trnavka/",
-   "destination": "/reference/rz-trnavka/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/418-technicky-audit-seo-5",
-   "destination": "/reference/technicky-audit-seo-5/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/418-technicky-audit-seo-5/",
-   "destination": "/reference/technicky-audit-seo-5/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/289-asekol",
-   "destination": "/reference/asekol/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/289-asekol/",
-   "destination": "/reference/asekol/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/254-asekol-solar-s-r-o",
-   "destination": "/reference/asekol-solar-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/254-asekol-solar-s-r-o/",
-   "destination": "/reference/asekol-solar-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/244-atelier-radost",
-   "destination": "/reference/atelier-radost/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/244-atelier-radost/",
-   "destination": "/reference/atelier-radost/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/297-auto-bejda",
-   "destination": "/reference/auto-bejda/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/297-auto-bejda/",
-   "destination": "/reference/auto-bejda/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/288-bookin",
-   "destination": "/reference/bookin/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/288-bookin/",
-   "destination": "/reference/bookin/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/44-fine-design",
-   "destination": "/reference/fine-design/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/44-fine-design/",
-   "destination": "/reference/fine-design/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/252-gasparin-sisters",
-   "destination": "/reference/gasparin-sisters/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/252-gasparin-sisters/",
-   "destination": "/reference/gasparin-sisters/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/110-itc-real-com",
-   "destination": "/reference/itc-real-com/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/110-itc-real-com/",
-   "destination": "/reference/itc-real-com/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s",
-   "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/238-knoflikarsky-prumysl-zirovnice-a-s/",
-   "destination": "/reference/knoflikarsky-prumysl-zirovnice-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/234-kozlovna-u-zachu",
-   "destination": "/reference/kozlovna-u-zachu/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/234-kozlovna-u-zachu/",
-   "destination": "/reference/kozlovna-u-zachu/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/284-kukuricny-mlyn-mrzkovice",
-   "destination": "/reference/kukuricny-mlyn-mrzkovice/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/284-kukuricny-mlyn-mrzkovice/",
-   "destination": "/reference/kukuricny-mlyn-mrzkovice/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/243-landeco",
-   "destination": "/reference/landeco/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/243-landeco/",
-   "destination": "/reference/landeco/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/43-novague-design",
-   "destination": "/reference/novague-design/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/43-novague-design/",
-   "destination": "/reference/novague-design/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/107-psp-pelhrimov",
-   "destination": "/reference/psp-pelhrimov/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/107-psp-pelhrimov/",
-   "destination": "/reference/psp-pelhrimov/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu",
-   "destination": "/reference/spartak-pelhrimov-oddil-florbalu/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/227-spartak-pelhrimov-oddil-florbalu/",
-   "destination": "/reference/spartak-pelhrimov-oddil-florbalu/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/242-technocon-s-r-o",
-   "destination": "/reference/technocon-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/242-technocon-s-r-o/",
-   "destination": "/reference/technocon-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/50-traficon-advisors-s-r-o",
-   "destination": "/reference/traficon-advisors-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/50-traficon-advisors-s-r-o/",
-   "destination": "/reference/traficon-advisors-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/225-skrobarny-pelhrimov-a-s",
-   "destination": "/reference/skrobarny-pelhrimov-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/225-skrobarny-pelhrimov-a-s/",
-   "destination": "/reference/skrobarny-pelhrimov-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/129-acre",
-   "destination": "/reference/acre/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/129-acre/",
-   "destination": "/reference/acre/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/222-agos-a-s",
-   "destination": "/reference/agos-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/222-agos-a-s/",
-   "destination": "/reference/agos-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/143-alfa-top",
-   "destination": "/reference/alfa-top/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/143-alfa-top/",
-   "destination": "/reference/alfa-top/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/123-anglicky-resort",
-   "destination": "/reference/anglicky-resort/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/123-anglicky-resort/",
-   "destination": "/reference/anglicky-resort/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/139-better-process",
-   "destination": "/reference/better-process/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/139-better-process/",
-   "destination": "/reference/better-process/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/197-davidfoto-cz",
-   "destination": "/reference/davidfoto-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/197-davidfoto-cz/",
-   "destination": "/reference/davidfoto-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/198-duo-trans-cz-s-r-o",
-   "destination": "/reference/duo-trans-cz-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/198-duo-trans-cz-s-r-o/",
-   "destination": "/reference/duo-trans-cz-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/235-eco-house",
-   "destination": "/reference/eco-house/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/235-eco-house/",
-   "destination": "/reference/eco-house/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/42-ekoimpex",
-   "destination": "/reference/ekoimpex/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/42-ekoimpex/",
-   "destination": "/reference/ekoimpex/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/200-eurobyt-design-s-r-o",
-   "destination": "/reference/eurobyt-design-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/200-eurobyt-design-s-r-o/",
-   "destination": "/reference/eurobyt-design-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/231-fepo-europalety-s-r-o",
-   "destination": "/reference/fepo-europalety-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/231-fepo-europalety-s-r-o/",
-   "destination": "/reference/fepo-europalety-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/201-fert-a-s",
-   "destination": "/reference/fert-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/201-fert-a-s/",
-   "destination": "/reference/fert-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/109-florbalak-cz",
-   "destination": "/reference/florbalak-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/109-florbalak-cz/",
-   "destination": "/reference/florbalak-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/204-funzorbing-cz",
-   "destination": "/reference/funzorbing-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/204-funzorbing-cz/",
-   "destination": "/reference/funzorbing-cz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/237-glenowell",
-   "destination": "/reference/glenowell/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/237-glenowell/",
-   "destination": "/reference/glenowell/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/124-intelsol",
-   "destination": "/reference/intelsol/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/124-intelsol/",
-   "destination": "/reference/intelsol/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/205-kuks-a-s",
-   "destination": "/reference/kuks-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/205-kuks-a-s/",
-   "destination": "/reference/kuks-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/114-mastra-tuning",
-   "destination": "/reference/mastra-tuning/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/114-mastra-tuning/",
-   "destination": "/reference/mastra-tuning/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/119-maturak-na-klic",
-   "destination": "/reference/maturak-na-klic/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/119-maturak-na-klic/",
-   "destination": "/reference/maturak-na-klic/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/45-ms-dubovice",
-   "destination": "/reference/ms-dubovice/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/45-ms-dubovice/",
-   "destination": "/reference/ms-dubovice/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/195-nerez-blucina",
-   "destination": "/reference/nerez-blucina/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/195-nerez-blucina/",
-   "destination": "/reference/nerez-blucina/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/208-neza",
-   "destination": "/reference/neza/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/208-neza/",
-   "destination": "/reference/neza/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/120-park-desetileti",
-   "destination": "/reference/park-desetileti/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/120-park-desetileti/",
-   "destination": "/reference/park-desetileti/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/209-pevak",
-   "destination": "/reference/pevak/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/209-pevak/",
-   "destination": "/reference/pevak/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/210-pharma-alpha-a-s",
-   "destination": "/reference/pharma-alpha-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/210-pharma-alpha-a-s/",
-   "destination": "/reference/pharma-alpha-a-s/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/211-pokorny-s-r-o",
-   "destination": "/reference/pokorny-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/211-pokorny-s-r-o/",
-   "destination": "/reference/pokorny-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/175-skochuv-dum",
-   "destination": "/reference/skochuv-dum/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/175-skochuv-dum/",
-   "destination": "/reference/skochuv-dum/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/121-sportstarter",
-   "destination": "/reference/sportstarter/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/121-sportstarter/",
-   "destination": "/reference/sportstarter/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/213-subter-plus-s-r-o",
-   "destination": "/reference/subter-plus-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/213-subter-plus-s-r-o/",
-   "destination": "/reference/subter-plus-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/142-szuz",
-   "destination": "/reference/szuz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/142-szuz/",
-   "destination": "/reference/szuz/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o",
-   "destination": "/reference/talpa-zahradnicke-sluzby-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/214-talpa-zahradnicke-sluzby-s-r-o/",
-   "destination": "/reference/talpa-zahradnicke-sluzby-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/161-tmccr",
-   "destination": "/reference/tmccr/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/161-tmccr/",
-   "destination": "/reference/tmccr/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/127-tokra-okna",
-   "destination": "/reference/tokra-okna/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/127-tokra-okna/",
-   "destination": "/reference/tokra-okna/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/221-top-team-s-r-o",
-   "destination": "/reference/top-team-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/221-top-team-s-r-o/",
-   "destination": "/reference/top-team-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/241-traficon-re-s-r-o",
-   "destination": "/reference/traficon-re-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/241-traficon-re-s-r-o/",
-   "destination": "/reference/traficon-re-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/154-vanprodukt",
-   "destination": "/reference/vanprodukt/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/154-vanprodukt/",
-   "destination": "/reference/vanprodukt/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/220-team-velosport",
-   "destination": "/reference/team-velosport/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/220-team-velosport/",
-   "destination": "/reference/team-velosport/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/263-water-heat-systems-s-r-o",
-   "destination": "/reference/water-heat-systems-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/263-water-heat-systems-s-r-o/",
-   "destination": "/reference/water-heat-systems-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/215-anketa-zahrada-desetileti",
-   "destination": "/reference/anketa-zahrada-desetileti/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/215-anketa-zahrada-desetileti/",
-   "destination": "/reference/anketa-zahrada-desetileti/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/144-zahradnictvi-simkova-s-r-o",
-   "destination": "/reference/zahradnictvi-simkova-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/144-zahradnictvi-simkova-s-r-o/",
-   "destination": "/reference/zahradnictvi-simkova-s-r-o/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/259-zkontroluj-vodu",
-   "destination": "/reference/zkontroluj-vodu/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/259-zkontroluj-vodu/",
-   "destination": "/reference/zkontroluj-vodu/",
    "permanent": true
   }
  ]

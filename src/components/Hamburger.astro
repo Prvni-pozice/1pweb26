@@ -1,0 +1,93 @@
+---
+// Hamburger menu se strukturou webu (sekce → podsekce z reálného stromu).
+import site from '../data/site.json';
+const map = site as Record<string, any>;
+const SECTIONS = [
+  { path: '/weby/', label: 'Weby' },
+  { path: '/eshopy/', label: 'E-shopy' },
+  { path: '/marketing/', label: 'SEO a marketing' },
+  { path: '/blog/', label: 'Blog' },
+];
+const EXTRA = [
+  { path: '/ai-agenti/', label: 'AI & agenti' },
+  { path: '/skoleni/', label: 'AI školení' },
+  { path: '/o-nas/', label: 'O nás' },
+  { path: '/kontakt/', label: 'Kontakt' },
+];
+// pro každou sekci vytáhni přímé děti (a u nich případně vnoučata pro hloubku)
+function kids(path: string) {
+  const n = map[path];
+  if (!n) return [];
+  return (n.children || []).map((c: string) => map[c]).filter(Boolean);
+}
+const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
+---
+<button class="ham-btn" aria-label="Otevřít menu" aria-expanded="false" data-ham-open>
+  <span></span><span></span><span></span>
+</button>
+
+<div class="ham-overlay" data-ham-overlay hidden>
+  <div class="ham-head">
+    <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
+    <button class="ham-close" aria-label="Zavřít menu" data-ham-close>✕</button>
+  </div>
+  <nav class="ham-nav">
+    <div class="ham-cols">
+      {tree.map((s) => (
+        <div class="ham-col">
+          <a href={s.path} class="ham-sec">{s.label}</a>
+          {s.children.length > 0 && (
+            <ul>
+              {s.children.slice(0, 12).map((c: any) => (
+                <li><a href={c.path}>{c.label}</a></li>
+              ))}
+              {s.children.length > 12 && <li><a href={s.path} class="more">+ další →</a></li>}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+    <div class="ham-extra">
+      {EXTRA.map((e) => <a href={e.path}>{e.label}</a>)}
+    </div>
+  </nav>
+</div>
+
+<style>
+  .ham-btn { display: inline-flex; flex-direction: column; gap: 5px; justify-content: center; width: 44px; height: 44px; padding: 0 10px; background: transparent; border: 0; cursor: pointer; }
+  .ham-btn span { height: 2px; background: var(--text-strong); border-radius: 2px; transition: transform var(--dur-base) var(--ease-standard), opacity var(--dur-fast); }
+
+  .ham-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(247,248,245,.97); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; padding: 24px clamp(20px, 5vw, 64px) 64px; }
+  .ham-overlay[hidden] { display: none; }
+  .ham-head { display: flex; align-items: center; justify-content: space-between; max-width: var(--container-wide); margin: 0 auto 32px; }
+  .ham-close { font-size: 22px; background: transparent; border: 0; cursor: pointer; color: var(--text-strong); width: 44px; height: 44px; }
+  .ham-nav { max-width: var(--container-wide); margin: 0 auto; }
+  .ham-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .ham-sec { display: block; font-size: 22px; font-weight: var(--fw-black); letter-spacing: -.018em; color: var(--text-strong); padding-bottom: 12px; margin-bottom: 12px; border-bottom: 2px solid var(--lime); }
+  .ham-sec:hover { color: var(--lime-800); }
+  .ham-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .ham-col li a { font-size: 15px; color: var(--text-muted); }
+  .ham-col li a:hover { color: var(--lime-800); }
+  .ham-col .more { font-family: var(--font-mono); font-size: 12px; color: var(--accent-ink); }
+  .ham-extra { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 24px; }
+  .ham-extra a { font-size: 16px; font-weight: var(--fw-medium); color: var(--text); }
+  .ham-extra a:hover { color: var(--lime-800); }
+
+  @media (max-width: 880px) { .ham-cols { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  @media (max-width: 560px) { .ham-cols { grid-template-columns: 1fr; } }
+</style>
+
+<script is:inline>
+  (function () {
+    const btn = document.querySelector('[data-ham-open]');
+    const ov = document.querySelector('[data-ham-overlay]');
+    const close = document.querySelector('[data-ham-close]');
+    if (!btn || !ov) return;
+    const open = () => { ov.hidden = false; btn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
+    const hide = () => { ov.hidden = true; btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
+    btn.addEventListener('click', open);
+    close && close.addEventListener('click', hide);
+    ov.addEventListener('click', (e) => { if (e.target === ov) hide(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !ov.hidden) hide(); });
+  })();
+</script>

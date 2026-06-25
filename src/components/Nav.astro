@@ -1,5 +1,6 @@
 ---
 // Frosted sticky navigace dle DS web kitu.
+import Hamburger from './Hamburger.astro';
 const links = [
   { href: '/weby/', label: 'Weby' },
   { href: '/eshopy/', label: 'E-shopy' },
@@ -15,7 +16,8 @@ const links = [
       {links.map((l) => <a href={l.href}>{l.label}</a>)}
     </div>
     <div class="nav-right">
-      <a href="/kontakt/" class="btn primary">Domluvit konzultaci</a>
+      <a href="/kontakt/" class="btn primary nav-cta">Domluvit konzultaci</a>
+      <Hamburger />
     </div>
   </div>
 </nav>

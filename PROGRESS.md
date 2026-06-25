@@ -58,6 +58,22 @@
 30. **Fonty:** Roboto + Roboto Mono self-hosted (`@fontsource`), **0 Google Fonts requestů**, žádný render-blocking `@import`. JS ~4 KB/stránku.
 31. **Security:** secrets ČISTÉ, externí odkazy `rel=noopener noreferrer`, `set:html` jen z důvěryhodných zdrojů, scrapnutý obsah escapovaný text → bez XSS.
 
+### 2026-06-25 — STRUKTURNÍ REBUILD (oprava: zrcadlit reálný strom, ne heuristika)
+Zpětná vazba zadavatele: `/marketing/` měly být SLUŽBY (ne reference), blogové články (`technicky-audit-seo-5`) spadly omylem do `/reference/`, část referencí ve špatné kategorii. Řešení = **zrcadlit skutečnou hierarchii starého webu** + opravit breadcrumbs všude + hamburger menu.
+- **Strom z breadcrumbs** (`scratchpad/sitetree.json`, `site.json`): 334 uzlů, hloubka až 6. Hlavní sekce: Weby(90), E-shopy(45), SEO a marketing(31, =SLUŽBY), Blog(158), 1P(3), Grafika(1).
+- **Obsahový kontejner = `<main>`** (breadcrumb na začátku odstranit, pak h1+tělo; `.description` je jen kontakt-sidebar). Karty dětí = `.category-frame`.
+- **Nested clean cesty** mirror stromu: `/blog/online-marketing/seo/pojmy-v-seo/<článek>/`. Section-root sluggy: weby/eshopy/marketing/blog/o-nas/grafika.
+- TODO render-engine: catch-all `[...path].astro` z `site.json` (breadcrumbs + obsah + grid dětí/rozcestník + reference treatment), `Hamburger` menu dle stromu, stáhnout obsahové obrázky `/UserFiles/`, přepsat interní odkazy a img src, 301 z `/cs/<id>-slug/` → nested cesta, odstranit staré hardcoded /weby|eshopy|marketing|reference. Kontaktní form backend = ČEKÁ na volbu (Web3Forms/Formspree/Vercel+Resend/mailto).
+
+### 2026-06-25 — STRUKTURNÍ REBUILD HOTOV (catch-all)
+- **`src/data/site.json`** = 329 uzlů (path → {label, parent_path, children, content, intro, thumb, ext, type}). Obsah z `<main>` sanitizován (pryč breadcrumb/karty/script/style/on*=/javascript:), interní odkazy a img přepsány na nové cesty.
+- **`[...path].astro`** catch-all renderer: breadcrumbs + h1 + obsah (`set:html` z 1st-party starého webu) + grid dětí (reference=`ShowcaseCard` jen pod /weby /eshopy; ostatní=`ListCard` rozcestník) + reference aside (web klienta + CTA).
+- **`Breadcrumbs.astro`** z reálné hierarchie (parent_path řetěz). **`Hamburger.astro`** vpravo nahoře = menu se strukturou (sekce → děti), overlay + ESC/klik zavřít.
+- Staré hardcoded `/weby /eshopy /marketing /reference` + `CategoryPage` ODSTRANĚNY → vše tree-driven.
+- 74 obsahových obrázků staženo → `public/img/content/` (webp).
+- **301 mapa**: `vercel.json` 676 pravidel z 334 starých URL → nested cesty.
+- **Build 334 stran zelený.** Opraveno: `/marketing/`=služby (ListCard), `/eshopy/`=reference (ShowcaseCard), blog články pod `/blog/...`, staré `/reference/` → 404.
+
 ## Zbývá
 - **OBSAHOVÉ STRÁNKY ~240 URL** (SEO blog `248-blog`, pojmy-v-seo, seo-diskuze, trendy-v-seo, info/servisní `20-zasady-ochrany-udaju`, status…) — rozhodnuto migrovat 1:1, ZATÍM NEHOTOVO. Všech 343 HTML staženo lokálně ve `scratchpad/pages/` → deterministická dávka.
 - **K vygenerování (zadavatel):** footer scrub video `/assets/footer/scrub.mp4` + poster (1920×1080, H.264 all-keyframe `-g 1`, ~15fps, 6–10 s, theme = AI síť/data horizon v limetce), pak `hasVideo=true` v `VideoFooter`. Volitelně ambient hero video.
