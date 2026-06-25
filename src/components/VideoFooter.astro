@@ -44,7 +44,7 @@ const { hasVideo = false } = Astro.props;
 <style>
   .vfoot {
     position: relative; overflow: hidden;
-    aspect-ratio: 16 / 7; max-height: 70vh; min-height: 360px;
+    width: 100%; height: clamp(380px, 42vw, 600px);
     background: var(--n-900); margin-bottom: -2px;
     display: flex; align-items: center;
   }
@@ -83,5 +83,5 @@ const { hasVideo = false } = Astro.props;
   @media (prefers-reduced-motion: reduce) {
     .grid-floor, .constell .dots circle { animation: none; }
   }
-  @media (max-width: 640px) { .vfoot { aspect-ratio: auto; min-height: 420px; } }
+  @media (max-width: 640px) { .vfoot { height: auto; min-height: 460px; padding: 48px 0; } }
 </style>
