@@ -3,9 +3,11 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ShowcaseCard from '../components/ShowcaseCard.astro';
 import ListCard from '../components/ListCard.astro';
+import SectionRoot from '../components/SectionRoot.astro';
 import site from '../data/site.json';
 
 const map = site as Record<string, any>;
+const ROOTS: Record<string, string> = { '/weby/': 'weby', '/eshopy/': 'eshopy', '/marketing/': 'marketing' };
 
 export function getStaticPaths() {
   const m = site as Record<string, any>;
@@ -16,83 +18,92 @@ export function getStaticPaths() {
 }
 const { node, pathKey } = Astro.props;
 const children = (node.children || []).map((c: string) => map[c]).filter(Boolean);
-// Referenční karta (ShowcaseCard) jen pro klientské reference pod /weby/ nebo /eshopy/.
-const isRefCard = (c: any) => /^\/(weby|eshopy)\//.test(c.path) && c.thumb;
-const childRefs = children.filter(isRefCard);
-const childOther = children.filter((c: any) => !isRefCard(c));
+
+// Karta s obrázkem (ShowcaseCard) pro jakékoli dítě s thumbnailem; jinak ListCard.
+const imageCards = children.filter((c: any) => c.thumb);
+const listCards = children.filter((c: any) => !c.thumb);
+
+// Reference detail = jen tady dává smysl "web klienta" + CTA aside.
+const isReference = node.type === 'reference' || (!!node.ext && /^\/(weby|eshopy)\//.test(pathKey));
 let host = '';
 try { if (node.ext) host = new URL(node.ext).host.replace(/^www\./, ''); } catch {}
 
 const KIND: Record<string, string> = { hub: 'Sekce', article: 'Článek', reference: 'Reference' };
+const sectionTop = pathKey.replace(/^\//, '').split('/')[0];
+const cardsHeading = sectionTop === 'blog' ? 'V této sekci' : (imageCards.length ? 'Reference' : 'V této sekci');
 const metaDesc = node.intro || `${node.label} — První pozice.`;
+const isRoot = pathKey in ROOTS;
 ---
 <Base title={`${node.label} — První pozice`} description={metaDesc.slice(0, 155)}>
-  <article class="node">
-    <div class="wrap">
-      <Breadcrumbs path={pathKey} />
-      <h1>{node.label}</h1>
+  {isRoot ? (
+    <SectionRoot cat={ROOTS[pathKey]} pathKey={pathKey} kids={children} />
+  ) : (
+    <article class="node">
+      <div class="wrap">
+        <Breadcrumbs path={pathKey} />
+        <h1>{node.label}</h1>
 
-      {node.thumb && (
-        <div class="node-hero"><img src={node.thumb} alt={node.label} loading="lazy" /></div>
-      )}
+        {isReference && node.thumb && (
+          <div class="node-hero"><img src={node.thumb} alt={node.label} loading="lazy" /></div>
+        )}
 
-      <div class="node-body">
-        <div class="node-main">
-          {node.content
-            ? <div class="prose" set:html={node.content} />
-            : node.intro && <p class="prose-lead">{node.intro}</p>}
-        </div>
-
-        {(host || true) && (
-          <aside class="node-aside">
-            {host && (
-              <div class="visit">
-                <span class="overline"><span class="dot"></span><span class="label">Web klienta</span></span>
-                <a class="visit-link" href={node.ext} target="_blank" rel="noopener noreferrer">{host} →</a>
-              </div>
-            )}
-            <div class="cta-card">
-              <h3>Chcete podobný projekt?</h3>
-              <p>Ozvěte se — nezávazně probereme, co dává smysl právě pro vás.</p>
-              <a href="/kontakt/" class="btn primary">Domluvit konzultaci</a>
+        {isReference ? (
+          <div class="node-body">
+            <div class="node-main">
+              {node.content ? <div class="prose" set:html={node.content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
             </div>
-          </aside>
+            <aside class="node-aside">
+              {host && (
+                <div class="visit">
+                  <span class="overline"><span class="dot"></span><span class="label">Web klienta</span></span>
+                  <a class="visit-link" href={node.ext} target="_blank" rel="noopener noreferrer">{host} →</a>
+                </div>
+              )}
+              <div class="cta-card">
+                <h3>Chcete podobný projekt?</h3>
+                <p>Ozvěte se — nezávazně probereme, co dává smysl právě pro vás.</p>
+                <a href="/kontakt/" class="btn primary">Domluvit konzultaci</a>
+              </div>
+            </aside>
+          </div>
+        ) : (
+          <div class="node-main wide">
+            {node.content ? <div class="prose" set:html={node.content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
+          </div>
+        )}
+
+        {imageCards.length > 0 && (
+          <section class="kids">
+            <h2 class="kids-title">{cardsHeading} <span class="count">{imageCards.length}</span></h2>
+            <div class="grid" data-reveal-group>
+              {imageCards.map((c: any) => <ShowcaseCard name={c.label} href={c.path} img={c.thumb} />)}
+            </div>
+          </section>
+        )}
+
+        {listCards.length > 0 && (
+          <section class="kids">
+            {imageCards.length > 0 && <h2 class="kids-title">Další v této sekci</h2>}
+            {imageCards.length === 0 && <h2 class="kids-title">V této sekci <span class="count">{listCards.length}</span></h2>}
+            <div class="lgrid" data-reveal-group>
+              {listCards.map((c: any) => <ListCard href={c.path} label={c.label} intro={c.intro} kind={KIND[c.type]} />)}
+            </div>
+          </section>
         )}
       </div>
-
-      {childRefs.length > 0 && (
-        <section class="kids">
-          <h2 class="kids-title">Reference <span class="count">{childRefs.length}</span></h2>
-          <div class="grid" data-reveal-group>
-            {childRefs.map((c: any) => (
-              <ShowcaseCard name={c.label} href={c.path} img={c.thumb} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {childOther.length > 0 && (
-        <section class="kids">
-          <h2 class="kids-title">{childRefs.length > 0 ? 'Další v této sekci' : 'Obsah sekce'}</h2>
-          <div class="lgrid" data-reveal-group>
-            {childOther.map((c: any) => (
-              <ListCard href={c.path} label={c.label} intro={c.intro} kind={KIND[c.type]} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  </article>
+    </article>
+  )}
 </Base>
 
 <style>
   .node { padding: 40px 0 24px; }
-  .node h1 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: -.022em; color: var(--text-strong); margin: 18px 0 0; max-width: 22ch; }
+  .node h1 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: -.022em; color: var(--text-strong); margin: 18px 0 0; max-width: 24ch; }
   .node-hero { margin-top: 28px; border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--border); aspect-ratio: 16 / 9; max-width: 760px; }
   .node-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .node-body { display: grid; grid-template-columns: 1fr 320px; gap: 48px; margin-top: 40px; align-items: start; }
   .node-main { min-width: 0; }
+  .node-main.wide { margin-top: 28px; max-width: 760px; }
   .prose :global(h2) { font-size: var(--fs-title-lg); font-weight: var(--fw-bold); color: var(--text-strong); margin: 32px 0 0; }
   .prose :global(h3) { font-size: var(--fs-title-sm); font-weight: var(--fw-bold); color: var(--text-strong); margin: 26px 0 0; }
   .prose :global(p) { font-size: 17px; line-height: var(--lh-relaxed); color: var(--text); margin: 14px 0 0; }
