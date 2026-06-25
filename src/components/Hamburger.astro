@@ -25,11 +25,11 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
   <span class="mt-label">Menu</span>
 </button>
 
-<div class="ham-overlay" id="site-menu" data-ham-overlay hidden>
+<div class="ham-overlay" id="site-menu" data-ham-overlay>
   <div class="ham-inner">
     <div class="ham-head">
       <span class="overline"><span class="dot"></span><span class="label">Navigace</span></span>
-      <button class="ham-close" type="button" data-ham-close>Zavřít ✕</button>
+      <button class="ham-close" type="button" data-ham-close aria-label="Zavřít menu"><span class="x">✕</span><span class="xlabel">zavřít</span></button>
     </div>
     <nav class="ham-nav" aria-label="Hlavní navigace">
       <div class="ham-cols">
@@ -65,12 +65,14 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
   .mt-icon span { height: 2px; background: var(--lime); border-radius: 2px; }
   .mt-label { line-height: 1; }
 
-  .ham-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(247,248,245,.98); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; }
-  .ham-overlay[hidden] { display: none; }
+  .ham-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(247,248,245,.98); backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass); overflow-y: auto; }
+  .ham-overlay.is-open { display: block; }
   .ham-inner { max-width: var(--container-wide); margin: 0 auto; padding: 22px clamp(20px,5vw,64px) 64px; }
   .ham-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; }
-  .ham-close { font-family: var(--font-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; background: transparent; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 9px 16px; cursor: pointer; color: var(--text-strong); }
+  .ham-close { display: inline-flex; align-items: center; gap: 7px; background: transparent; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 8px 14px; cursor: pointer; color: var(--text-strong); }
   .ham-close:hover { border-color: var(--n-400); }
+  .ham-close .x { font-size: 18px; line-height: 1; }
+  .ham-close .xlabel { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
   .ham-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .ham-sec { display: block; font-size: 22px; font-weight: var(--fw-black); letter-spacing: -.018em; color: var(--text-strong); padding-bottom: 12px; margin-bottom: 12px; border-bottom: 2px solid var(--lime); }
   .ham-sec:hover { color: var(--lime-800); }
@@ -87,20 +89,19 @@ const tree = SECTIONS.map((s) => ({ ...s, children: kids(s.path) }));
 </style>
 
 <script>
-  // Klik = otevřít/zavřít overlay. Robustní: delegace na document, běží po DOMContentLoaded.
+  // Modulový script je deferovaný → DOM je hotový, voláme přímo. Třídový přepínač (.is-open).
   function initSiteMenu() {
     const trigger = document.querySelector('[data-ham-open]');
     const overlay = document.querySelector('[data-ham-overlay]');
     if (!trigger || !overlay) return;
-    const open = () => { overlay.hidden = false; trigger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
-    const close = () => { overlay.hidden = true; trigger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
+    const open = () => { overlay.classList.add('is-open'); trigger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
+    const close = () => { overlay.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
     trigger.addEventListener('click', open);
     overlay.addEventListener('click', (e) => {
       const t = e.target as HTMLElement;
       if (t.closest('[data-ham-close]') || t === overlay) close();
     });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !overlay.hidden) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('is-open')) close(); });
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSiteMenu);
-  else initSiteMenu();
+  initSiteMenu();
 </script>

@@ -14,5 +14,8 @@
     "@fontsource/roboto": "^5.2.10",
     "@fontsource/roboto-mono": "^5.2.9",
     "astro": "^7.0.2"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
   }
 }
