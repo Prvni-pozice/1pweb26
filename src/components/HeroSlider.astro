@@ -1,9 +1,10 @@
 ---
 // Hero slider — crossfade + Ken Burns + per-slide efekt, tečky + swipe + autoplay.
 const slides = [
-  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 12%', fx: 'kenburns' },
+  { src: '/img/hero/hero-1.webp', alt: 'Zdeněk — První pozice, AI', pos: '50% 22%', fx: 'kenburns' },
   { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
   { src: '/img/hero/hero-3.webp', alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
+  { src: '/img/hero/hero-4.webp', alt: 'Nech agenta napsat první verzi — AI agenti', pos: '50% 50%', fx: 'kenburns' },
   // další snímky přidávej sem
 ];
 const multi = slides.length > 1;
@@ -69,7 +70,7 @@ const multi = slides.length > 1;
   .hslider {
     position: relative; border-radius: var(--radius-2xl); overflow: hidden;
     box-shadow: var(--shadow-xl); border: 1px solid var(--border);
-    aspect-ratio: 4 / 5; background: var(--n-900); touch-action: pan-y; user-select: none;
+    aspect-ratio: 1 / 1; background: var(--n-900); touch-action: pan-y; user-select: none;
   }
   .hslide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease-standard); }
   .hslide.is-active { opacity: 1; z-index: 1; }
@@ -103,5 +104,5 @@ const multi = slides.length > 1;
     .hslide.is-active img { animation: none; transform: none; }
     .fx-shine.is-active::after { animation: none; }
   }
-  @media (max-width: 880px) { .hslider { aspect-ratio: 5 / 4; } }
+  @media (max-width: 880px) { .hslider { aspect-ratio: 4 / 3; } }
 </style>
