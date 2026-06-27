@@ -1,0 +1,129 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Zásady ochrany osobních údajů | První pozice"
+  description="Informace o zpracování osobních údajů společností První pozice, s.r.o. dle GDPR (nařízení EU 2016/679)."
+>
+  <div class="wrap prose-legal">
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p class="lead">Informace dle čl. 13 nařízení Evropského parlamentu a Rady (EU) 2016/679 (GDPR).</p>
+
+    <h2>1. Správce osobních údajů</h2>
+    <p>
+      <strong>První pozice, s.r.o.</strong><br />
+      IČO: 29136334 · DIČ: CZ29136334<br />
+      E-mail: <a href="mailto:podpora@prvni-pozice.com">podpora@prvni-pozice.com</a><br />
+      Telefon: <a href="tel:+420775387231">+420 775 387 231</a>
+    </p>
+
+    <h2>2. Jaké osobní údaje zpracováváme</h2>
+    <p>Zpracováváme pouze údaje, které nám sami sdělíte — zejména prostřednictvím kontaktního formuláře:</p>
+    <ul>
+      <li>jméno a příjmení</li>
+      <li>pracovní e-mailová adresa</li>
+      <li>telefonní číslo (nepovinné)</li>
+      <li>název firmy (nepovinné)</li>
+      <li>obsah zprávy / poptávky</li>
+    </ul>
+
+    <h2>3. Účel a právní základ zpracování</h2>
+    <table>
+      <thead><tr><th>Účel</th><th>Právní základ</th></tr></thead>
+      <tbody>
+        <tr><td>Odpověď na poptávku / konzultaci</td><td>Oprávněný zájem správce (čl. 6 odst. 1 písm. f) GDPR)</td></tr>
+        <tr><td>Uzavření a plnění smlouvy</td><td>Plnění smlouvy (čl. 6 odst. 1 písm. b) GDPR)</td></tr>
+        <tr><td>Plnění zákonných povinností</td><td>Právní povinnost (čl. 6 odst. 1 písm. c) GDPR)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Doba uchování</h2>
+    <p>
+      Osobní údaje z poptávkového formuláře uchováváme po dobu nezbytnou k vyřízení dotazu, nejdéle 3 roky.
+      Údaje ze smluvní dokumentace uchováváme po dobu trvání smluvního vztahu a dále po dobu stanovenou
+      příslušnými právními předpisy (účetní a daňová dokumentace zpravidla 10 let).
+    </p>
+
+    <h2>5. Příjemci osobních údajů</h2>
+    <p>
+      Vaše údaje neprodáváme ani nesdílíme s třetími stranami pro jejich vlastní marketingové účely.
+      Údaje mohou být předány pouze zpracovatelům zajišťujícím technický provoz (hostingové a e-mailové
+      služby), a to v rozsahu nezbytném pro dané zpracování. Tito zpracovatelé jsou smluvně vázáni
+      povinností mlčenlivosti a ochrany dat.
+    </p>
+
+    <h2>6. Vaše práva</h2>
+    <p>Máte právo:</p>
+    <ul>
+      <li><strong>na přístup</strong> — získat kopii osobních údajů, které o vás zpracováváme,</li>
+      <li><strong>na opravu</strong> — požádat o opravu nepřesných nebo doplnění neúplných údajů,</li>
+      <li><strong>na výmaz</strong> — požádat o smazání údajů, pokud pominul účel zpracování,</li>
+      <li><strong>na omezení zpracování</strong> — v případech stanovených GDPR,</li>
+      <li><strong>na přenositelnost</strong> — obdržet své údaje ve strojově čitelném formátu,</li>
+      <li><strong>vznést námitku</strong> — proti zpracování na základě oprávněného zájmu.</li>
+    </ul>
+    <p>
+      Žádost uplatněte e-mailem na
+      <a href="mailto:podpora@prvni-pozice.com">podpora@prvni-pozice.com</a>.
+      Odpovíme nejpozději do 30 dnů.
+    </p>
+
+    <h2>7. Právo podat stížnost</h2>
+    <p>
+      Pokud se domníváte, že zpracování vašich osobních údajů porušuje GDPR, máte právo podat stížnost
+      u dozorového úřadu — <strong>Úřadu pro ochranu osobních údajů</strong>
+      (<a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>).
+    </p>
+
+    <h2>8. Soubory cookies</h2>
+    <p>
+      Tento web v současnosti nepoužívá analytické ani marketingové cookies. Používáme pouze technické
+      cookies nezbytné pro funkci webu, pro jejichž ukládání není dle zákona č. 127/2005 Sb. vyžadován
+      souhlas.
+    </p>
+
+    <p class="updated">Poslední aktualizace: červen 2026</p>
+  </div>
+</Base>
+
+<style>
+  .prose-legal {
+    max-width: 760px;
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  .prose-legal h1 {
+    font-size: var(--fs-display-lg);
+    font-weight: var(--fw-black);
+    letter-spacing: var(--ls-display);
+    color: var(--text-strong);
+    margin: 0 0 12px;
+  }
+  .prose-legal .lead {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 0 0 48px;
+    line-height: var(--lh-body);
+  }
+  .prose-legal h2 {
+    font-size: 22px;
+    font-weight: var(--fw-bold);
+    color: var(--text-strong);
+    margin: 40px 0 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  .prose-legal p, .prose-legal li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .prose-legal ul { padding-left: 20px; margin: 10px 0; }
+  .prose-legal li { margin-bottom: 6px; }
+  .prose-legal a { color: var(--lime-800); text-decoration: underline; }
+  .prose-legal a:hover { color: var(--lime-600); }
+  .prose-legal table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+  .prose-legal th { text-align: left; padding: 10px 14px; background: var(--n-50); font-weight: var(--fw-bold); color: var(--text-strong); border: 1px solid var(--border); }
+  .prose-legal td { padding: 10px 14px; border: 1px solid var(--border); color: var(--text); vertical-align: top; }
+  .prose-legal .updated { font-size: 13px; color: var(--text-subtle); margin-top: 48px; font-family: var(--font-mono); }
+</style>
