@@ -70,7 +70,7 @@ const multi = slides.length > 1;
   .hslider {
     position: relative; border-radius: var(--radius-2xl); overflow: hidden;
     box-shadow: var(--shadow-xl); border: 1px solid var(--border);
-    aspect-ratio: 1 / 1; background: var(--n-900); touch-action: pan-y; user-select: none;
+    aspect-ratio: 4 / 3; background: var(--n-900); touch-action: pan-y; user-select: none;
   }
   .hslide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease-standard); }
   .hslide.is-active { opacity: 1; z-index: 1; }
@@ -104,5 +104,4 @@ const multi = slides.length > 1;
     .hslide.is-active img { animation: none; transform: none; }
     .fx-shine.is-active::after { animation: none; }
   }
-  @media (max-width: 880px) { .hslider { aspect-ratio: 4 / 3; } }
 </style>
