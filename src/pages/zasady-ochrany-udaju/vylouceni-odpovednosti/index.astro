@@ -1,0 +1,47 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+<Base
+  title="Vyloučení odpovědnosti | První pozice"
+  description="Rozsah odpovědnosti společnosti První pozice, s.r.o. za informace zveřejněné na webových stránkách."
+>
+  <div class="wrap prose-legal">
+    <div class="breadcrumb">
+      <a href="/zasady-ochrany-udaju/">Zásady ochrany os. údajů</a>
+      <span>→</span>
+      <span>Vyloučení odpovědnosti</span>
+    </div>
+    <h1>Vyloučení odpovědnosti</h1>
+
+    <p>
+      Naše společnost vynakládá veškeré úsilí pro zajištění přesnosti a aktuálnosti informací
+      na této webové stránce. Vzhledem k naší obchodní politice a neustálému zdokonalování
+      produktů a služeb jsou všechny údaje předmětem revize a vyhrazujeme si právo měnit
+      a upravovat obchodní a produktové informace — mimo jiné specifikace, podmínky a ceny —
+      kdykoliv bez předchozího upozornění.
+    </p>
+    <p>
+      Naše společnost nenese odpovědnost za jakékoliv případy, ztráty či škody, které mohou
+      nastat v důsledku spoléhání se na jakékoliv informace poskytnuté na těchto stránkách.
+    </p>
+    <p>
+      Informace obsažené na tomto webu jsou určeny primárně pro Českou republiku
+      a nemusejí splňovat právní požadavky jiných zemí.
+    </p>
+
+    <p class="updated">Poslední aktualizace: červen 2026</p>
+    <p><a href="/zasady-ochrany-udaju/">← Zpět na Zásady ochrany os. údajů</a></p>
+  </div>
+</Base>
+
+<style>
+  .prose-legal { max-width: 760px; padding-top: 64px; padding-bottom: 80px; }
+  .prose-legal h1 { font-size: var(--fs-display-lg); font-weight: var(--fw-black); letter-spacing: var(--ls-display); color: var(--text-strong); margin: 0 0 32px; }
+  .prose-legal p { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 18px; }
+  .prose-legal a { color: var(--lime-800); text-decoration: underline; }
+  .prose-legal a:hover { color: var(--lime-600); }
+  .prose-legal .updated { font-size: 13px; color: var(--text-subtle); margin-top: 48px; font-family: var(--font-mono); }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 28px; }
+  .breadcrumb a { color: var(--lime-800); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+</style>
