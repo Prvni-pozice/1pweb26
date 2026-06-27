@@ -1,18 +1,26 @@
 ---
 // Hero slider — crossfade + Ken Burns + per-slide efekt, tečky + swipe + autoplay.
+// Slidy jsou buď fotky (src) nebo grafické 4:3 bannery (banner = varianta HeroBanner).
+import HeroBanner from './HeroBanner.astro';
 const slides = [
   { src: '/img/hero/hero-1.webp', alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns' },
   { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
   { src: '/img/hero/hero-3.webp', alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
+  { banner: 'stat', alt: '3× rychlejší prototyp díky AI vývoji — První pozice' },
   { src: '/img/hero/hero-4.webp', alt: 'Náskok. Teď i s AI — První pozice', pos: '50% 50%', fx: 'kenburns' },
+  { banner: 'skoleni', alt: 'Školení AI pro firmy na míru — První pozice' },
   // další snímky přidávej sem
 ];
 const multi = slides.length > 1;
 ---
 <div class="hslider" data-hero-slider>
   {slides.map((s, i) => (
-    <figure class={`hslide fx-${s.fx}${i === 0 ? ' is-active' : ''}`} data-index={i}>
-      <img src={s.src} alt={s.alt} width="1000" height="1250" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
+    <figure class={`hslide${s.banner ? ' is-banner' : ` fx-${s.fx}`}${i === 0 ? ' is-active' : ''}`} data-index={i} aria-label={s.alt}>
+      {s.banner ? (
+        <HeroBanner variant={s.banner as 'skoleni' | 'stat'} />
+      ) : (
+        <img src={s.src} alt={s.alt} width="1448" height="1086" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
+      )}
     </figure>
   ))}
   {multi && (
@@ -75,6 +83,8 @@ const multi = slides.length > 1;
   .hslide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease-standard); }
   .hslide.is-active { opacity: 1; z-index: 1; }
   .hslide img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.02); }
+  /* grafický banner — container-query kontext pro --u škálování v HeroBanner */
+  .hslide.is-banner { container-type: inline-size; }
 
   /* Efekt 1 — Ken Burns (pomalý zoom in) */
   .fx-kenburns.is-active img { animation: kenburns 14s ease-out forwards; }
@@ -95,11 +105,13 @@ const multi = slides.length > 1;
   .fx-pan.is-active img { animation: pan 14s ease-out forwards; }
   @keyframes pan { from { transform: scale(1.08) translateX(-2%); } to { transform: scale(1.08) translateX(2%); } }
 
-  .hdots { position: absolute; bottom: 10px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 0; }
-  /* padding zvětšuje tap area na ~44px bez změny vizuálního rozměru */
-  .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 14px; background-clip: content-box; transition: background var(--dur-base), width var(--dur-base); }
-  .hdot:hover { background: rgba(255,255,255,.85); background-clip: content-box; }
-  .hdot.is-active { background: var(--lime); background-clip: content-box; width: 26px; }
+  /* tečky s průsvitným tmavým podkladem — čitelné na fotce i světlém/tmavém banneru */
+  .hdots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 9px 13px; border-radius: 999px; background: rgba(29,31,30,.32); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .hdot { position: relative; width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: rgba(255,255,255,.6); cursor: pointer; transition: background var(--dur-base), width var(--dur-base); }
+  /* neviditelný pseudoelement zvětšuje tap area na ~35px */
+  .hdot::before { content: ""; position: absolute; inset: -13px; }
+  .hdot:hover { background: rgba(255,255,255,.9); }
+  .hdot.is-active { background: var(--lime); width: 26px; }
 
   @media (prefers-reduced-motion: reduce) {
     .hslide.is-active img { animation: none; transform: none; }

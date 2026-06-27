@@ -13,6 +13,20 @@ const contact = {
   dic: 'CZ29136334',
 };
 const interests = ['AI aplikace', 'Web / e-shop', 'AI školení', 'Online marketing', 'AI agenti'];
+
+// Všechna oddělení a adresy převzaté ze starého webu (/cs/14-kontakt/).
+const departments = [
+  { dept: 'Zákaznická podpora', person: 'Václav Tůma', tel: '+420 775 387 231', telHref: 'tel:+420775387231', email: 'podpora@prvni-pozice.com' },
+  { dept: 'Obchodní oddělení', person: 'Ing. Michal Martínek', tel: '+420 608 717 845', telHref: 'tel:+420608717845', email: 'michal@prvni-pozice.com' },
+  { dept: 'Online marketing', person: 'Bc. Antonín Martínek', tel: '+420 776 717 857', telHref: 'tel:+420776717857', email: 'statistiky@prvni-pozice.com' },
+  { dept: 'Grafické oddělení', person: 'Nikola Horáková', tel: '', telHref: '', email: 'grafik@prvni-pozice.com' },
+  { dept: 'Vedení společnosti', person: 'Mgr. Zdeněk Martínek, MBA', tel: '+420 608 903 395', telHref: 'tel:+420608903395', email: 'zdenek@prvni-pozice.com' },
+];
+const addresses = [
+  { label: 'Sídlo a fakturační adresa', lines: ['První pozice, s.r.o.', 'Na úlehli 1256/9', '141 00 Praha 4 – Michle'] },
+  { label: 'Korespondenční adresa', lines: ['První pozice, s.r.o.', 'Skrýšov 78', '393 01 Pelhřimov'] },
+  { label: 'Fakturační údaje', lines: ['IČO 29136334', 'DIČ CZ29136334', 'Bankovní účet 2800345268 / 2010'] },
+];
 ---
 <Base title="Kontakt — poptávka | První pozice" description="Nezávazná konzultace zdarma. Ozveme se do 24 hodin a řekneme rovnou, kde dává AI smysl.">
   <div class="kont">
@@ -20,12 +34,12 @@ const interests = ['AI aplikace', 'Web / e-shop', 'AI školení', 'Online market
       <div class="intro">
         <span class="overline"><span class="dot"></span><span class="label">Nezávazná konzultace</span></span>
         <h1>Řekněte nám, co chcete <u>posunout</u>.</h1>
-        <p class="lead">Ozveme se do 24 hodin. Rovnou vám napíšeme, kde dává AI smysl — a kde byste jen utráceli.</p>
+        <p class="lead">Reagujeme rychle. Jakmile budeme znát váš záměr, přinášíme konkrétní návrhy řešení — a rovnou řekneme, kde vám AI dá náskok a kde byste jen utráceli.</p>
 
         <div class="bullets">
-          <div class="bullet"><span class="chk">✓</span><div><b>Bez balastu.</b><p>Žádné dlouhé nabídky. Konkrétní další krok.</p></div></div>
-          <div class="bullet"><span class="chk">✓</span><div><b>Lidé, ne formuláře.</b><p>Mluvíte rovnou s těmi, kdo to budou dělat.</p></div></div>
-          <div class="bullet"><span class="chk">✓</span><div><b>Náskok od začátku.</b><p>První doporučení dostanete hned na úvodním hovoru.</p></div></div>
+          <div class="bullet"><span class="chk">✓</span><div><b>Rychlá reakce.</b><p>Ozýváme se rychle a hned se domluvíme na dalším kroku — žádné týdny čekání.</p></div></div>
+          <div class="bullet"><span class="chk">✓</span><div><b>Konkrétní návrhy, ne fráze.</b><p>Často se sejdeme osobně a přicházíme s řešením ušitým na míru vašemu záměru.</p></div></div>
+          <div class="bullet"><span class="chk">✓</span><div><b>Náskok díky AI.</b><p>Ukážeme, kde vám AI přinese reálný náskok — a kde by byla jen ztrátou času.</p></div></div>
         </div>
 
         <div class="direct">
@@ -56,9 +70,39 @@ const interests = ['AI aplikace', 'Web / e-shop', 'AI školení', 'Online market
       </div>
     </div>
 
-    <div class="wrap legal">
-      <span>{contact.company}</span><span>IČO {contact.ico}</span><span>DIČ {contact.dic}</span>
-    </div>
+    <section class="wrap contacts">
+      <div class="sec-head2">
+        <span class="overline"><span class="dot"></span><span class="label">Všechny kontakty</span></span>
+        <h2>Spojte se přímo s oddělením.</h2>
+      </div>
+      <div class="dept-grid">
+        {departments.map((d) => (
+          <div class="dept">
+            <span class="dept-name">{d.dept}</span>
+            <span class="dept-person">{d.person}</span>
+            <div class="dept-lines">
+              {d.tel && <a href={d.telHref}>{d.tel}</a>}
+              <a href={`mailto:${d.email}`}>{d.email}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="addr-grid">
+        {addresses.map((a) => (
+          <div class="addr">
+            <span class="addr-label">{a.label}</span>
+            <p>{a.lines.map((l, i) => (<>{i > 0 && <br />}{l}</>))}</p>
+          </div>
+        ))}
+      </div>
+      <div class="closing-band">
+        <div class="cb-top">
+          <span class="cb-kick"><span class="dot"></span>Pojďme na to</span>
+          <img class="cb-mark" src="/assets/logo-1p-dark.png" alt="První pozice" />
+        </div>
+        <p class="cb-head">Od první zprávy<br /><span>k První pozici.</span></p>
+      </div>
+    </section>
   </div>
 </Base>
 
@@ -98,11 +142,42 @@ const interests = ['AI aplikace', 'Web / e-shop', 'AI školení', 'Online market
   .cbrow input { accent-color: var(--lime); width: 20px; height: 20px; }
   .btn.primary[type="submit"] { padding: 14px 28px; font-size: 16px; }
 
-  .legal { margin-top: 40px; display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; color: var(--text-subtle); }
+  /* — Sekce všech kontaktů pod formulářem — */
+  .contacts { margin-top: 64px; }
+  .sec-head2 { margin-bottom: 28px; }
+  .sec-head2 h2 { font-size: var(--fs-display-md); font-weight: var(--fw-black); letter-spacing: -.022em; color: var(--text-strong); margin: 12px 0 0; }
+  .dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .dept { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column; gap: 5px; }
+  .dept-name { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+  .dept-person { font-size: 17px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .dept-lines { display: flex; flex-direction: column; gap: 2px; margin-top: 6px; }
+  .dept-lines a { font-size: 15px; color: var(--text-muted); text-decoration: none; }
+  .dept-lines a:hover { color: var(--lime-800); }
 
+  .addr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .addr { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+  .addr-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-subtle); }
+  .addr p { font-size: 15px; line-height: 1.6; color: var(--text); margin: 10px 0 0; }
+
+  /* lime statement blok dle DS (slide-title) — tmavý ink na lime, mono kicker, 1P značka */
+  .closing-band { margin-top: 56px; background: var(--lime); border-radius: var(--radius-2xl); padding: 56px 56px 60px; position: relative; overflow: hidden; }
+  .closing-band::after { content: ""; position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 999px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 62%); pointer-events: none; }
+  .cb-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; position: relative; z-index: 1; }
+  .cb-kick { font-family: var(--font-mono); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--n-900); display: flex; align-items: center; gap: 10px; }
+  .cb-kick .dot { width: 10px; height: 10px; border-radius: 999px; background: var(--n-900); }
+  .cb-mark { height: 30px; width: auto; display: block; }
+  .cb-head { margin: 0; font-size: calc(var(--fs-display-md) + 2px); font-weight: var(--fw-black); letter-spacing: -.022em; line-height: 1.04; color: var(--n-900); position: relative; z-index: 1; }
+  .cb-head span { text-decoration: none; box-shadow: inset 0 -.12em 0 #fff; }
+
+  @media (max-width: 980px) {
+    .dept-grid, .addr-grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 880px) {
     .grid { grid-template-columns: 1fr; gap: 40px; }
     .form { grid-template-columns: 1fr; }
     .intro h1 { font-size: var(--fs-display-md); }
+  }
+  @media (max-width: 620px) {
+    .dept-grid, .addr-grid { grid-template-columns: 1fr; }
   }
 </style>

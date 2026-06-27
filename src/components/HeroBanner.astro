@@ -1,0 +1,105 @@
+---
+// Grafický 4:3 banner do hero slideru — vychází ze sociálních šablon DS
+// (post-tip = "skoleni", post-stat = "stat"). Vše škálované přes container-query
+// jednotku --u (1 design px = 100cqw/1440), takže banner sedí v jakékoli velikosti.
+interface Props {
+  variant: 'skoleni' | 'stat';
+}
+const { variant } = Astro.props;
+---
+<div class={`pbanner ${variant}`}>
+  {variant === 'skoleni' && (
+    <>
+      <div class="top">
+        <span class="ov"><span class="dot"></span>Školení pro firmy</span>
+        <img class="mark" src="/assets/logo-1p-lime.png" alt="První pozice" />
+      </div>
+      <div class="mid">
+        <p class="ey">Připravili jsme školení na míru</p>
+        <h2>Posouváme týmy v <span>AI dovednostech</span>.</h2>
+        <p class="lead">Sestavili jsme několik školení přímo pro firmy — a největší radost máme z toho, když lidé po nich pracují s AI sebejistě a chytře.</p>
+        <div class="chips">
+          <span class="chip">Základy AI v praxi</span>
+          <span class="chip">Prompting</span>
+          <span class="chip">AI agenti</span>
+          <span class="chip">Automatizace</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <span class="handle">@1pprvnipozice</span>
+        <span class="swipe">Domluvit školení →</span>
+      </div>
+    </>
+  )}
+  {variant === 'stat' && (
+    <>
+      <div class="top">
+        <span class="ov"><span class="dot"></span>Co umí AI vývoj</span>
+        <img class="mark" src="/assets/logo-1p-dark.png" alt="První pozice" />
+      </div>
+      <div class="mid statrow">
+        <div class="big">3<span class="u">×</span></div>
+        <p class="statlead"><b>rychlejší prototyp</b> než klasickým vývojem.</p>
+      </div>
+      <div class="bottom">
+        <span class="handle handle--dark">@1pprvnipozice</span>
+        <span class="bar"></span>
+      </div>
+    </>
+  )}
+</div>
+
+<style>
+  /* 1 design px = --u; návrhové plátno 1440×1080 (4:3). */
+  .pbanner {
+    --u: calc(100cqw / 1440);
+    width: 100%; height: 100%; box-sizing: border-box;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-family: 'Roboto', sans-serif; line-height: 1;
+    padding: calc(90 * var(--u)) calc(100 * var(--u));
+    position: relative; overflow: hidden;
+  }
+
+  .top { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .ov { font-family: 'Roboto Mono', monospace; font-size: calc(26 * var(--u)); letter-spacing: .14em; text-transform: uppercase; display: flex; align-items: center; gap: calc(14 * var(--u)); }
+  .ov .dot { width: calc(14 * var(--u)); height: calc(14 * var(--u)); border-radius: 999px; }
+  .mark { height: calc(44 * var(--u)); width: auto; display: block; }
+
+  .mid { position: relative; z-index: 1; }
+  .ey { font-family: 'Roboto Mono', monospace; font-size: calc(28 * var(--u)); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 calc(26 * var(--u)); }
+  .mid h2 { font-size: calc(96 * var(--u)); font-weight: 900; letter-spacing: -.03em; line-height: 1; margin: 0 0 calc(30 * var(--u)); }
+  .lead { font-size: calc(34 * var(--u)); line-height: 1.45; margin: 0; max-width: calc(1000 * var(--u)); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: calc(18 * var(--u)); margin-top: calc(42 * var(--u)); }
+  .chip { font-family: 'Roboto Mono', monospace; font-size: calc(26 * var(--u)); letter-spacing: .02em; border-radius: 999px; padding: calc(14 * var(--u)) calc(28 * var(--u)); }
+
+  .bottom { display: flex; align-items: center; justify-content: space-between; padding-top: calc(28 * var(--u)); position: relative; z-index: 1; }
+  .handle { font-family: 'Roboto Mono', monospace; font-size: calc(27 * var(--u)); }
+  .swipe { font-weight: 700; font-size: calc(27 * var(--u)); }
+
+  /* — Varianta „skoleni" (tmavá) — */
+  .skoleni { background: #1d1f1e; color: #fff; }
+  .skoleni::after { content: ""; position: absolute; right: calc(-180 * var(--u)); top: calc(-180 * var(--u)); width: calc(620 * var(--u)); height: calc(620 * var(--u)); border-radius: 999px; background: radial-gradient(circle at 30% 30%, rgba(152,200,0,.20), transparent 62%); pointer-events: none; }
+  .skoleni .ov { color: #98c800; }
+  .skoleni .ov .dot { background: #98c800; }
+  .skoleni .ey { color: rgba(255,255,255,.5); }
+  .skoleni h2 { color: #fff; }
+  .skoleni h2 span { color: #98c800; }
+  .skoleni .lead { color: rgba(255,255,255,.72); }
+  .skoleni .chip { color: #98c800; border: 1.5px solid rgba(152,200,0,.45); }
+  .skoleni .bottom { border-top: 1px solid rgba(255,255,255,.16); }
+  .skoleni .handle { color: rgba(255,255,255,.55); }
+  .skoleni .swipe { color: #98c800; }
+
+  /* — Varianta „stat" (bílá) — */
+  .stat { background: #fff; color: #1d1f1e; }
+  .stat .ov { color: #4f6900; }
+  .stat .ov .dot { background: #98c800; }
+  .statrow { display: flex; align-items: flex-end; gap: calc(70 * var(--u)); }
+  .big { font-size: calc(440 * var(--u)); font-weight: 900; letter-spacing: -.05em; line-height: .82; color: #1d1f1e; }
+  .big .u { color: #98c800; }
+  .statlead { font-size: calc(48 * var(--u)); font-weight: 700; letter-spacing: -.02em; line-height: 1.15; color: #5d625a; margin: 0 0 calc(40 * var(--u)); max-width: calc(560 * var(--u)); }
+  .statlead b { color: #1d1f1e; }
+  .handle--dark { color: #7e837a; }
+  .bar { height: calc(14 * var(--u)); border-radius: 999px; background: #98c800; width: calc(320 * var(--u)); }
+</style>
