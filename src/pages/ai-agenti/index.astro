@@ -21,7 +21,7 @@ const useCases = [
       <p class="lead">Posouváme se z klasické tvorby aplikací do éry rapidního vývoje s AI. Návrh, vývoj i provoz zrychlují agenti — vy získáváte náskok.</p>
       <div class="cta"><a href="/kontakt/" class="btn primary lg">Pojďme to rozjet</a><a href="/skoleni/" class="btn ghost light">AI školení →</a></div>
       <div class="steps">
-        {steps.map((s) => (<div class="step"><div class="sn">{s.n}</div><h4>{s.title}</h4><p>{s.desc}</p></div>))}
+        {steps.map((s) => (<div class="step"><div class="sn">{s.n}</div><h3>{s.title}</h3><p>{s.desc}</p></div>))}
       </div>
     </div>
   </section>
@@ -71,7 +71,7 @@ const useCases = [
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 64px; }
   .step { border-top: 1px solid rgba(255,255,255,.16); padding-top: 18px; }
   .sn { font-family: var(--font-mono); font-size: 13px; color: var(--lime); letter-spacing: .1em; }
-  .step h4 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
+  .step h3 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
   .step p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.66); }
 
   .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px; }

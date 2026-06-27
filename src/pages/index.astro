@@ -87,7 +87,7 @@ const ICONS: Record<string, string> = {
       <h2>Z klasické tvorby aplikací do éry <em>rapidního vývoje s AI</em>.</h2>
       <div class="steps">
         {steps.map((st) => (
-          <div class="step"><div class="n">{st.n}</div><h4>{st.title}</h4><p>{st.desc}</p></div>
+          <div class="step"><div class="n">{st.n}</div><h3>{st.title}</h3><p>{st.desc}</p></div>
         ))}
       </div>
       <div class="stats">
@@ -149,7 +149,7 @@ const ICONS: Record<string, string> = {
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 54px; }
   .step { border-top: 1px solid rgba(255,255,255,.16); padding-top: 18px; }
   .step .n { font-family: var(--font-mono); font-size: 13px; color: var(--lime); letter-spacing: .1em; }
-  .step h4 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
+  .step h3 { font-size: 21px; font-weight: var(--fw-bold); color: #fff; margin: 12px 0 8px; }
   .step p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.66); }
 
   /* STATS */

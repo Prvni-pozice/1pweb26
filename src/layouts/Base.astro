@@ -1,13 +1,18 @@
 ---
 // Globální layout: hlavička, design-systém tokeny (/styles.css), Nav + Footer.
-// Self-hostované fonty (Roboto + Roboto Mono) — bez render-blocking Google Fonts.
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import '@fontsource/roboto/900.css';
-import '@fontsource/roboto-mono/400.css';
-import '@fontsource/roboto-mono/500.css';
+// Self-hostované fonty (Roboto + Roboto Mono) — pouze latin + latin-ext (CZ web).
+import '@fontsource/roboto/latin-400.css';
+import '@fontsource/roboto/latin-ext-400.css';
+import '@fontsource/roboto/latin-500.css';
+import '@fontsource/roboto/latin-ext-500.css';
+import '@fontsource/roboto/latin-700.css';
+import '@fontsource/roboto/latin-ext-700.css';
+import '@fontsource/roboto/latin-900.css';
+import '@fontsource/roboto/latin-ext-900.css';
+import '@fontsource/roboto-mono/latin-400.css';
+import '@fontsource/roboto-mono/latin-ext-400.css';
+import '@fontsource/roboto-mono/latin-500.css';
+import '@fontsource/roboto-mono/latin-ext-500.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import VideoFooter from '../components/VideoFooter.astro';
@@ -58,6 +63,8 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImageUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="stylesheet" href="/styles.css" />
     <!-- reveal-on-scroll skrývá obsah jen když běží JS (jinak je vždy vidět) -->
     <script is:inline>document.documentElement.classList.add('js');</script>
@@ -74,8 +81,9 @@ const jsonLd = {
     <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
     <Nav />
     <SiteMenuOverlay />
-    <span id="main-content" tabindex="-1" aria-hidden="true"></span>
-    <slot />
+    <main id="main-content">
+      <slot />
+    </main>
     <VideoFooter />
     <Footer />
   </body>
@@ -142,15 +150,19 @@ const jsonLd = {
     transform: none;
   }
 
-  /* Pointer glow vrstva na kartách [data-glow] */
+  /* Pointer glow — pevný kruh pohybovaný přes transform (compositor-only, žádný repaint) */
   [data-glow] { position: relative; isolation: isolate; }
   [data-glow]::before {
     content: "";
-    position: absolute; inset: 0;
-    border-radius: inherit;
-    background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 0%), rgba(152,200,0,.16), transparent 60%);
+    position: absolute;
+    width: 280px; height: 280px;
+    left: 0; top: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(152,200,0,.18) 0%, transparent 65%);
+    transform: translate(calc(var(--mx, -140px) - 140px), calc(var(--my, -140px) - 140px));
     opacity: 0; transition: opacity .35s var(--ease-out);
     pointer-events: none; z-index: 0;
+    will-change: transform, opacity;
   }
   [data-glow] > * { position: relative; z-index: 1; }
   [data-glow]:hover::before { opacity: 1; }
