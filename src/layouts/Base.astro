@@ -150,22 +150,18 @@ const jsonLd = {
     transform: none;
   }
 
-  /* Pointer glow — pevný kruh pohybovaný přes transform (compositor-only, žádný repaint) */
-  [data-glow] { position: relative; isolation: isolate; }
-  [data-glow]::before {
-    content: "";
-    position: absolute;
-    width: 280px; height: 280px;
-    left: 0; top: 0;
-    border-radius: 50%;
+  /* Pointer glow — real DOM element pohybovaný přes style.transform (čistě compositor) */
+  [data-glow] { position: relative; isolation: isolate; overflow: hidden; }
+  .glow-orb {
+    position: absolute; width: 280px; height: 280px; left: 0; top: 0;
+    border-radius: 50%; pointer-events: none; z-index: 0;
     background: radial-gradient(circle, rgba(152,200,0,.18) 0%, transparent 65%);
-    transform: translate(calc(var(--mx, -140px) - 140px), calc(var(--my, -140px) - 140px));
     opacity: 0; transition: opacity .35s var(--ease-out);
-    pointer-events: none; z-index: 0;
     will-change: transform, opacity;
+    transform: translate(-140px, -140px);
   }
-  [data-glow] > * { position: relative; z-index: 1; }
-  [data-glow]:hover::before { opacity: 1; }
+  [data-glow]:hover .glow-orb { opacity: 1; }
+  [data-glow] > *:not(.glow-orb) { position: relative; z-index: 1; }
 
   @media (prefers-reduced-motion: reduce) {
     [data-reveal], [data-reveal-group] > * { opacity: 1 !important; transform: none !important; }

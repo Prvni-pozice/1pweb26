@@ -26,14 +26,17 @@ function initReveal() {
   setTimeout(() => els.forEach((el) => { if (!el.classList.contains('is-visible')) show(el); }), 1500);
 }
 
-/* 2) Pointer glow na kartách [data-glow] — nastaví --mx/--my pro radial highlight */
+/* 2) Pointer glow na kartách [data-glow] — real DOM element, transform compositor-only */
 function initGlow() {
   if (rm) return;
   document.querySelectorAll('[data-glow]').forEach((card) => {
+    const orb = document.createElement('span');
+    orb.className = 'glow-orb';
+    orb.setAttribute('aria-hidden', 'true');
+    card.appendChild(orb);
     card.addEventListener('pointermove', (ev) => {
       const r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${ev.clientX - r.left}px`);
-      card.style.setProperty('--my', `${ev.clientY - r.top}px`);
+      orb.style.transform = `translate(${ev.clientX - r.left - 140}px, ${ev.clientY - r.top - 140}px)`;
     });
   });
 }

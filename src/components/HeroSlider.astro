@@ -12,7 +12,7 @@ const multi = slides.length > 1;
 <div class="hslider" data-hero-slider>
   {slides.map((s, i) => (
     <figure class={`hslide fx-${s.fx}${i === 0 ? ' is-active' : ''}`} data-index={i}>
-      <img src={s.src} alt={s.alt} width="1000" height="1250" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
+      <img src={s.src} alt={s.alt} width="1000" height="1250" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
     </figure>
   ))}
   {multi && (
@@ -95,10 +95,11 @@ const multi = slides.length > 1;
   .fx-pan.is-active img { animation: pan 14s ease-out forwards; }
   @keyframes pan { from { transform: scale(1.08) translateX(-2%); } to { transform: scale(1.08) translateX(2%); } }
 
-  .hdots { position: absolute; bottom: 18px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 9px; }
-  .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 0; transition: background var(--dur-base), width var(--dur-base); }
-  .hdot:hover { background: rgba(255,255,255,.85); }
-  .hdot.is-active { background: var(--lime); width: 26px; }
+  .hdots { position: absolute; bottom: 10px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 0; }
+  /* padding zvětšuje tap area na ~44px bez změny vizuálního rozměru */
+  .hdot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: rgba(255,255,255,.55); cursor: pointer; padding: 14px; background-clip: content-box; transition: background var(--dur-base), width var(--dur-base); }
+  .hdot:hover { background: rgba(255,255,255,.85); background-clip: content-box; }
+  .hdot.is-active { background: var(--lime); background-clip: content-box; width: 26px; }
 
   @media (prefers-reduced-motion: reduce) {
     .hslide.is-active img { animation: none; transform: none; }
