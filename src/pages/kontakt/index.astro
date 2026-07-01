@@ -51,7 +51,8 @@ const addresses = [
 
       <div class="panel">
         <h2>Poptávka</h2>
-        <form class="form" method="post" action="https://formspree.io/f/your-endpoint" data-todo="backend">
+        <form class="form" method="post" action="/api/contact" data-contact-form>
+          <p class="hp" aria-hidden="true" style="position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden"><label>Toto pole nevyplňujte<input name="company_web" tabindex="-1" autocomplete="off" /></label></p>
           <div class="field"><label for="name">Jméno</label><input id="name" name="name" required /></div>
           <div class="field"><label for="firma">Firma</label><input id="firma" name="firma" /></div>
           <div class="field"><label for="email">Pracovní e-mail</label><input id="email" name="email" type="email" required /></div>
@@ -66,7 +67,37 @@ const addresses = [
             <label class="cbrow"><input type="checkbox" name="souhlas" required /> Souhlasím se <a href="/zasady-ochrany-udaju/">zpracováním údajů</a></label>
             <button class="btn primary" type="submit">Odeslat poptávku</button>
           </div>
+          <p class="form-status" data-status role="status" aria-live="polite" hidden></p>
         </form>
+        <style>
+          .form-status { margin-top: 14px; font-size: 15px; font-weight: 500; }
+          .form-status.ok { color: #3a7d00; }
+          .form-status.err { color: #c62828; }
+        </style>
+        <script>
+          const cf = document.querySelector('[data-contact-form]');
+          if (cf) {
+            const st = cf.querySelector('[data-status]');
+            const btn = cf.querySelector('button[type=submit]');
+            cf.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const orig = btn.textContent;
+              st.hidden = true; btn.disabled = true; btn.textContent = 'Odesílám…';
+              try {
+                const fd = new FormData(cf), payload = {};
+                for (const [k, v] of fd.entries()) {
+                  if (k === 'zajem') (payload.zajem ||= []).push(v); else payload[k] = v;
+                }
+                const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                const j = await r.json().catch(() => ({}));
+                if (r.ok && j.ok) { cf.reset(); st.textContent = 'Děkujeme, ozveme se co nejdřív.'; st.className = 'form-status ok'; }
+                else { st.textContent = j.error || 'Něco se pokazilo, zkuste to prosím znovu.'; st.className = 'form-status err'; }
+              } catch {
+                st.textContent = 'Odeslání selhalo — zkontrolujte připojení a zkuste to znovu.'; st.className = 'form-status err';
+              } finally { st.hidden = false; btn.disabled = false; btn.textContent = orig; }
+            });
+          }
+        </script>
       </div>
     </div>
 
