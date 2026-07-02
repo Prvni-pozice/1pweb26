@@ -52,7 +52,7 @@ const addresses = [
       <div class="panel">
         <h2>Poptávka</h2>
         <form class="form" method="post" action="/api/contact" data-contact-form>
-          <p class="hp" aria-hidden="true" style="position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden"><label>Toto pole nevyplňujte<input name="company_web" tabindex="-1" autocomplete="off" /></label></p>
+          <p class="hp" aria-hidden="true" style="position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden"><label>Toto pole nevyplňujte<input name="poznamka_extra" tabindex="-1" autocomplete="off" /></label></p>
           <div class="field"><label for="name">Jméno</label><input id="name" name="name" required /></div>
           <div class="field"><label for="firma">Firma</label><input id="firma" name="firma" /></div>
           <div class="field"><label for="email">Pracovní e-mail</label><input id="email" name="email" type="email" required /></div>
@@ -76,6 +76,7 @@ const addresses = [
         </style>
         <script>
           const cf = document.querySelector('[data-contact-form]');
+          const t0 = Date.now();
           if (cf) {
             const st = cf.querySelector('[data-status]');
             const btn = cf.querySelector('button[type=submit]');
@@ -88,6 +89,7 @@ const addresses = [
                 for (const [k, v] of fd.entries()) {
                   if (k === 'zajem') (payload.zajem ||= []).push(v); else payload[k] = v;
                 }
+                payload.f_ts = String(Date.now() - t0);
                 const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
                 const j = await r.json().catch(() => ({}));
                 if (r.ok && j.ok) { cf.reset(); st.textContent = 'Děkujeme, ozveme se co nejdřív.'; st.className = 'form-status ok'; }

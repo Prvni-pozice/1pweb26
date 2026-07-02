@@ -16,7 +16,14 @@ export default async function handler(req, res) {
   data = data || {};
 
   // honeypot — bot vyplní skryté pole → tvař se úspěšně, nic neodesílej
-  if (data.company_web) return respond(req, res, { ok: true });
+  // (nesémantický název: autofill v prohlížeči ho nerozpozná a nevyplní)
+  if (data.poznamka_extra) return respond(req, res, { ok: true });
+
+  // časová past — JS posílá dobu od načtení stránky do odeslání (ms);
+  // člověk potřebuje aspoň pár sekund, bot POSTuje hned nebo f_ts vůbec nepošle.
+  // Platí jen pro JSON (fetch) — nativní form bez JS kryje honeypot.
+  const isJson = (req.headers['content-type'] || '').includes('application/json');
+  if (isJson && !(Number(data.f_ts) >= 2500)) return respond(req, res, { ok: true });
 
   const name = String(data.name || '').trim();
   const email = String(data.email || '').trim();
