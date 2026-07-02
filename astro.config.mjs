@@ -6,4 +6,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.prvni-pozice.com',
   integrations: [sitemap()],
+  // Veškeré CSS inline do HTML — žádné render-blocking requesty (PSI/LCP).
+  build: { inlineStylesheets: 'always' },
 });
