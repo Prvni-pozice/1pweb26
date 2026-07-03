@@ -3,15 +3,20 @@
 // Slidy jsou buď fotky (src) nebo grafické 4:3 bannery (banner = varianta HeroBanner).
 import HeroBanner from './HeroBanner.astro';
 const slides = [
-  { src: '/img/hero/hero-1.webp', alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns' },
-  { src: '/img/hero/hero-2.webp', alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
-  { src: '/img/hero/hero-3.webp', alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
+  { src: '/img/hero/hero-1.webp', widths: [480, 900, 1448], alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns' },
+  { src: '/img/hero/hero-2.webp', widths: [480, 1000], alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
+  { src: '/img/hero/hero-3.webp', widths: [480, 900, 1448], alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
   { banner: 'stat', alt: '3× rychlejší prototyp díky AI vývoji — První pozice' },
-  { src: '/img/hero/hero-4.webp', alt: 'Náskok. Teď i s AI — První pozice', pos: '50% 50%', fx: 'kenburns' },
+  { src: '/img/hero/hero-4.webp', widths: [480, 900, 1448], alt: 'Náskok. Teď i s AI — První pozice', pos: '50% 50%', fx: 'kenburns' },
   { banner: 'skoleni', alt: 'Školení AI pro firmy na míru — První pozice' },
   // další snímky přidávej sem
 ];
 const multi = slides.length > 1;
+// srcset: poslední šířka = originál (hero-X.webp), menší = varianty hero-X-<w>.webp
+const srcset = (s: { src: string; widths: number[] }) =>
+  s.widths.map((w, i) => `${i === s.widths.length - 1 ? s.src : s.src.replace('.webp', `-${w}.webp`)} ${w}w`).join(', ');
+// slider je široký jako .wrap: max 1256 px (1320 − 2×32 padding), jinak plná šířka minus padding
+const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
 ---
 <div class="hslider" data-hero-slider>
   {slides.map((s, i) => (
@@ -19,7 +24,7 @@ const multi = slides.length > 1;
       {s.banner ? (
         <HeroBanner variant={s.banner as 'skoleni' | 'stat'} />
       ) : (
-        <img src={s.src} alt={s.alt} width="1448" height="1086" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
+        <img src={s.src} srcset={srcset(s as any)} sizes={sizes} alt={s.alt} width="1448" height="1086" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
       )}
     </figure>
   ))}

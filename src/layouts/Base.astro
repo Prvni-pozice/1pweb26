@@ -70,8 +70,6 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImageUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preload" href={fontBlackExt} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={fontBlack} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={fontRegularExt} as="font" type="font/woff2" crossorigin />
