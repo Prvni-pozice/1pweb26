@@ -32,12 +32,12 @@ const cols = [
   <div class="wrap">
     <div class="foot">
       <div class="foot-brand">
-        <img src="/assets/logo-1p-white.webp" alt="První pozice" width="440" height="116" />
+        <img src="/assets/logo-1p-white-sm.webp" alt="První pozice" width="320" height="85" />
         <p>Lokální internetová agentura. Weby, aplikace, e-shopy a AI — vždy o krok napřed.</p>
       </div>
       {cols.map((c) => (
         <div class="foot-col">
-          <h5>{c.title}</h5>
+          <p class="foot-h">{c.title}</p>
           {c.links.map((l) => <a href={l.href}>{l.label}</a>)}
         </div>
       ))}
@@ -55,7 +55,7 @@ const cols = [
   .foot-brand { max-width: 280px; }
   footer img { height: 24px; width: auto; }
   .foot-brand p { margin-top: 16px; font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.55); }
-  .foot-col h5 { font-size: 13px; font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin: 0 0 14px; }
+  .foot-col .foot-h { font-size: 13px; font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin: 0 0 14px; font-weight: var(--fw-bold); }
   .foot-col a { display: block; color: rgba(255, 255, 255, 0.66); font-size: 15px; margin-bottom: 9px; }
   .foot-col a:hover { color: #fff; }
   .foot-bottom {

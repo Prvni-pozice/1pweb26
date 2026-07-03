@@ -41,7 +41,7 @@ const isMarketing = cat === 'marketing';
 
     <section class="sr-features">
       {c.features.map((f: any) => (
-        <div class="feat"><div class="feat-mark"></div><h3>{f.title}</h3><p>{f.desc}</p></div>
+        <div class="feat"><div class="feat-mark"></div><h2>{f.title}</h2><p>{f.desc}</p></div>
       ))}
     </section>
 
@@ -105,7 +105,7 @@ const isMarketing = cat === 'marketing';
   .sr-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 72px; }
   .feat-mark { width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--lime-100); position: relative; margin-bottom: 16px; }
   .feat-mark::after { content: ""; position: absolute; inset: 13px; border-radius: var(--radius-pill); background: var(--lime); }
-  .feat h3 { font-size: 19px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .feat h2 { font-size: 19px; font-weight: var(--fw-bold); color: var(--text-strong); }
   .feat p { font-size: 15px; line-height: var(--lh-body); color: var(--text-muted); margin-top: 8px; }
 
   .sr-list { margin-top: 64px; }

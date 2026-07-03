@@ -14,6 +14,12 @@ import '@fontsource/roboto-mono/latin-400.css';
 import '@fontsource/roboto-mono/latin-ext-400.css';
 import '@fontsource/roboto-mono/latin-500.css';
 import '@fontsource/roboto-mono/latin-ext-500.css';
+// Preload kritických řezů (LCP): 900 = display nadpisy, 400 = běžný text.
+// ?url vrací stejnou hashovanou URL, jakou má soubor v bundlovaném CSS.
+import fontBlackExt from '@fontsource/roboto/files/roboto-latin-ext-900-normal.woff2?url';
+import fontBlack from '@fontsource/roboto/files/roboto-latin-900-normal.woff2?url';
+import fontRegularExt from '@fontsource/roboto/files/roboto-latin-ext-400-normal.woff2?url';
+import fontRegular from '@fontsource/roboto/files/roboto-latin-400-normal.woff2?url';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import VideoFooter from '../components/VideoFooter.astro';
@@ -66,15 +72,34 @@ const jsonLd = {
     <slot name="head" />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preload" href={fontBlackExt} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fontBlack} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fontRegularExt} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fontRegular} as="font" type="font/woff2" crossorigin />
     <!-- reveal-on-scroll skrývá obsah jen když běží JS (jinak je vždy vidět) -->
     <script is:inline>document.documentElement.classList.add('js');</script>
     <script src="/js/motion.js" defer></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XDVHLWRP4"></script>
     <script is:inline>
+      // GA4 — dataLayer se plní hned, samotný gtag.js (152 KiB) se stáhne až
+      // po první interakci, nejpozději 3,5 s po load (ať neblokuje LCP/TBT).
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-5XDVHLWRP4');
+      (function () {
+        var done = false;
+        function loadGtag() {
+          if (done) return; done = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5XDVHLWRP4';
+          document.head.appendChild(s);
+        }
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) {
+          addEventListener(e, loadGtag, { passive: true, once: true });
+        });
+        addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+      })();
     </script>
   </head>
   <body>
