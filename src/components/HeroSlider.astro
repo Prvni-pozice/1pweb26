@@ -111,12 +111,12 @@ const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
   @keyframes pan { from { transform: scale(1.08) translateX(-2%); } to { transform: scale(1.08) translateX(2%); } }
 
   /* tečky s průsvitným tmavým podkladem — čitelné na fotce i světlém/tmavém banneru */
-  .hdots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 9px 13px; border-radius: 999px; background: rgba(29,31,30,.32); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
-  .hdot { position: relative; width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: rgba(255,255,255,.6); cursor: pointer; transition: background var(--dur-base), width var(--dur-base); }
-  /* neviditelný pseudoelement zvětšuje tap area na ~35px */
-  .hdot::before { content: ""; position: absolute; inset: -13px; }
-  .hdot:hover { background: rgba(255,255,255,.9); }
-  .hdot.is-active { background: var(--lime); width: 26px; }
+  .hdots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; align-items: center; justify-content: center; gap: 2px; padding: 3px 6px; border-radius: 999px; background: rgba(29,31,30,.32); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  /* tap target ≥24×24 (a11y), vizuální tečka je ::after uvnitř */
+  .hdot { width: 24px; height: 24px; border: 0; padding: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .hdot::after { content: ""; width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.6); transition: background var(--dur-base), width var(--dur-base); }
+  .hdot:hover::after { background: rgba(255,255,255,.9); }
+  .hdot.is-active::after { background: var(--lime); width: 22px; }
 
   @media (prefers-reduced-motion: reduce) {
     .hslide.is-active img { animation: none; transform: none; }
