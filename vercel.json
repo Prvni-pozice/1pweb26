@@ -702,12 +702,12 @@
   },
   {
    "source": "/cs/420-vylouceni-odpovednosti",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
    "source": "/cs/420-vylouceni-odpovednosti/",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
@@ -1582,12 +1582,12 @@
   },
   {
    "source": "/cs/305-reseni-sporu",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
    "source": "/cs/305-reseni-sporu/",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
@@ -3378,6 +3378,66 @@
   {
    "source": "/cs/14-kontakt/",
    "destination": "/kontakt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/171-cookies",
+   "destination": "/zasady-ochrany-udaju/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/171-cookies/",
+   "destination": "/zasady-ochrany-udaju/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/15-divize",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/15-divize/",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/26-1p-marketing",
+   "destination": "/marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/26-1p-marketing/",
+   "destination": "/marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/31-1p-control",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/31-1p-control/",
+   "destination": "/o-nas/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/21-1p-design",
+   "destination": "/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/21-1p-design/",
+   "destination": "/weby/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/36-1p-is",
+   "destination": "/ai-agenti/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/36-1p-is/",
+   "destination": "/ai-agenti/",
    "permanent": true
   },
   {

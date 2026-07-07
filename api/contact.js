@@ -36,14 +36,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Vyplňte prosím jméno, platný e-mail a souhlas.' });
   }
 
-  // obsahový filtr — spam prošlý přes headless prohlížeč (JS + čekání):
-  // 2+ odkazů ve zprávě = zahodit; 1 odkaz bez jediného českého znaku
-  // v celém podání = doručit, ale označit [SPAM?] (ať se nic neztratí)
+  // obsahový filtr — spam prošlý přes headless prohlížeč (JS + čekání).
+  // Počítáme URL jako celé tokeny (jinak "https://www.x" = 2 shody):
   const zprava = String(data.zprava || '');
-  const links = (zprava.match(/https?:\/\/|www\./gi) || []).length;
+  const links = (zprava.match(/(https?:\/\/|www\.)\S+/gi) || []).length;
   const hasCz = /[ěščřžýáíéúůťďňó]/i.test(name + String(data.firma || '') + zprava);
-  if (links >= 2) return respond(req, res, { ok: true });
-  const spamTag = links >= 1 && !hasCz ? '[SPAM?] ' : '';
+  // 6+ odkazů = evidentní link-spam → tiše zahodit
+  if (links >= 6) return respond(req, res, { ok: true });
+  // 2–5 odkazů, nebo 1 odkaz bez jediného českého znaku → doručit s [SPAM?]
+  const spamTag = (links >= 2 || (links === 1 && !hasCz)) ? '[SPAM?] ' : '';
 
   const zajem = Array.isArray(data.zajem) ? data.zajem.join(', ') : String(data.zajem || '');
   const text = [
