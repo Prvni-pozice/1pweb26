@@ -19,11 +19,15 @@ export default async function handler(req, res) {
   // (nesémantický název: autofill v prohlížeči ho nerozpozná a nevyplní)
   if (data.poznamka_extra) return respond(req, res, { ok: true });
 
-  // časová past — JS posílá dobu od načtení stránky do odeslání (ms);
-  // člověk potřebuje aspoň pár sekund, bot POSTuje hned nebo f_ts vůbec nepošle.
-  // Platí jen pro JSON (fetch) — nativní form bez JS kryje honeypot.
+  // jen JSON (fetch z našeho JS) — nativní urlencoded POST byl spamová dálnice
+  // (boti POSTují form napřímo a časová past se na něj nevztahovala);
+  // reální uživatelé bez JS prakticky neexistují → tvař se úspěšně, nic neposílej
   const isJson = (req.headers['content-type'] || '').includes('application/json');
-  if (isJson && !(Number(data.f_ts) >= 2500)) return respond(req, res, { ok: true });
+  if (!isJson) return respond(req, res, { ok: true });
+
+  // časová past — JS posílá dobu od načtení stránky do odeslání (ms);
+  // člověk potřebuje aspoň pár sekund, bot POSTuje hned nebo f_ts vůbec nepošle
+  if (!(Number(data.f_ts) >= 2500)) return respond(req, res, { ok: true });
 
   const name = String(data.name || '').trim();
   const email = String(data.email || '').trim();
@@ -31,6 +35,15 @@ export default async function handler(req, res) {
   if (!name || !emailOk || !data.souhlas) {
     return res.status(400).json({ ok: false, error: 'Vyplňte prosím jméno, platný e-mail a souhlas.' });
   }
+
+  // obsahový filtr — spam prošlý přes headless prohlížeč (JS + čekání):
+  // 2+ odkazů ve zprávě = zahodit; 1 odkaz bez jediného českého znaku
+  // v celém podání = doručit, ale označit [SPAM?] (ať se nic neztratí)
+  const zprava = String(data.zprava || '');
+  const links = (zprava.match(/https?:\/\/|www\./gi) || []).length;
+  const hasCz = /[ěščřžýáíéúůťďňó]/i.test(name + String(data.firma || '') + zprava);
+  if (links >= 2) return respond(req, res, { ok: true });
+  const spamTag = links >= 1 && !hasCz ? '[SPAM?] ' : '';
 
   const zajem = Array.isArray(data.zajem) ? data.zajem.join(', ') : String(data.zajem || '');
   const text = [
@@ -55,7 +68,7 @@ export default async function handler(req, res) {
         from: process.env.MAIL_FROM,          // podpora@prvni-pozice.com (ověřená doména)
         to: [process.env.MAIL_TO],            // zdenek@prvni-pozice.com
         reply_to: `${name} <${email}>`,       // odpověď míří rovnou tazateli
-        subject: `Nová poptávka z webu — ${name}${data.firma ? ' (' + data.firma + ')' : ''}`,
+        subject: `${spamTag}Nová poptávka z webu — ${name}${data.firma ? ' (' + data.firma + ')' : ''}`,
         text,
       }),
     });
