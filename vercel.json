@@ -3381,7 +3381,7 @@
    "permanent": true
   },
   {
-   "source": "/cs/:path*",
+   "source": "/cs/(.*)",
    "destination": "/",
    "permanent": false
   }
