@@ -691,23 +691,13 @@
    "permanent": true
   },
   {
-   "source": "/cs/16-1p-prvni-pozice",
-   "destination": "/",
-   "permanent": true
-  },
-  {
-   "source": "/cs/16-1p-prvni-pozice/",
-   "destination": "/",
-   "permanent": true
-  },
-  {
    "source": "/cs/20-zasady-ochrany-udaju",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
    "source": "/cs/20-zasady-ochrany-udaju/",
-   "destination": "/",
+   "destination": "/zasady-ochrany-udaju/",
    "permanent": true
   },
   {
@@ -3379,6 +3369,21 @@
    "source": "/cs/298-webove-aplikace/",
    "destination": "/ai-agenti/",
    "permanent": true
+  },
+  {
+   "source": "/cs/14-kontakt",
+   "destination": "/kontakt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/14-kontakt/",
+   "destination": "/kontakt/",
+   "permanent": true
+  },
+  {
+   "source": "/cs/:path*",
+   "destination": "/",
+   "permanent": false
   }
  ],
  "headers": [
