@@ -19,3 +19,6 @@ node_modules/
 *.log
 .DS_Store
 !.env.example
+
+# stažené balíčky (artefakty instalace, ne zdroj)
+*.deb
