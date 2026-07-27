@@ -29,17 +29,22 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  jsonLd?: unknown[];
 }
 const {
   title = 'První pozice — Náskok napřed s AI',
   description = 'Lokální internetová agentura. Weby, e-shopy a aplikace — a posun dál pomocí AI nástrojů a agentů. Rychleji, chytřeji, měřitelně.',
   ogImage,
+  jsonLd: pageJsonLd = [],
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = ogImage ?? 'https://www.prvni-pozice.com/img/hero/hero-1.webp';
-const jsonLd = {
-  '@context': 'https://schema.org',
+// Firemní identita má pevné @id — podstrany se na ni odkazují (publisher),
+// místo aby si organizaci opisovaly znovu. Případné další uzly (drobečky,
+// článek) přidá stránka propem jsonLd do stejného @graphu.
+const org = {
   '@type': 'ProfessionalService',
+  '@id': 'https://www.prvni-pozice.com/#org',
   name: 'První pozice, s.r.o.',
   url: 'https://www.prvni-pozice.com',
   telephone: '+420775387231',
@@ -48,6 +53,10 @@ const jsonLd = {
   image: 'https://www.prvni-pozice.com/img/hero/hero-1.webp',
   areaServed: 'CZ',
   knowsLanguage: 'cs',
+};
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [org, ...pageJsonLd],
 };
 ---
 <!doctype html>

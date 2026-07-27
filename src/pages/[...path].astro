@@ -33,8 +33,39 @@ const sectionTop = pathKey.replace(/^\//, '').split('/')[0];
 const cardsHeading = sectionTop === 'blog' ? 'V této sekci' : (imageCards.length ? 'Reference' : 'V této sekci');
 const metaDesc = node.intro || `${node.label} — První pozice.`;
 const isRoot = pathKey in ROOTS;
+
+// Strukturovaná data: drobečky se počítají stejně jako v Breadcrumbs.astro
+// (řetěz parent_path + "Úvod"), ať JSON-LD odpovídá tomu, co je na stránce.
+const crumbChain: string[] = [];
+const crumbSeen = new Set<string>();
+let crumbCur: string | null = pathKey;
+while (crumbCur && map[crumbCur] && !crumbSeen.has(crumbCur)) {
+  crumbSeen.add(crumbCur);
+  crumbChain.unshift(crumbCur);
+  crumbCur = map[crumbCur].parent_path;
+}
+const crumbTrail = [{ label: 'Úvod', href: '/' }, ...crumbChain.map((p) => ({ label: map[p].label, href: p }))];
+const breadcrumbLd = {
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbTrail.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.label,
+    item: new URL(c.href, Astro.site).href,
+  })),
+};
+// Článek jen u type=article; datum ani autora v site.json nemáme, tak je nevyplňujeme.
+const articleLd = node.type === 'article' ? {
+  '@type': pathKey.startsWith('/blog/') ? 'BlogPosting' : 'Article',
+  headline: node.label,
+  ...(node.intro ? { description: node.intro } : {}),
+  ...(node.thumb ? { image: new URL(node.thumb, Astro.site).href } : {}),
+  mainEntityOfPage: new URL(pathKey, Astro.site).href,
+  publisher: { '@id': 'https://www.prvni-pozice.com/#org' },
+} : null;
+const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
 ---
-<Base title={`${node.label} — První pozice`} description={metaDesc.slice(0, 155)}>
+<Base title={`${node.label} — První pozice`} description={metaDesc.slice(0, 155)} jsonLd={pageJsonLd}>
   {isRoot ? (
     <SectionRoot cat={ROOTS[pathKey]} pathKey={pathKey} kids={children} />
   ) : (
