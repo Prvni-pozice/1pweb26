@@ -3,6 +3,11 @@
 Kolik poptávek web přinese, kde se na to podívat a jak přijde týdenní souhrn e-mailem.
 Založeno 2026-07-28.
 
+> **Stav: nasazeno a ověřeno 2026-07-28.** Proměnné ve Vercelu nastavené, Upstash Redis
+> připojený, dashboard běží, `/etc/web-1p-report.env` vytvořený a řádek v **root** crontabu
+> zapsaný. Ruční spuštění i volání endpointu prošlo, testovací e-maily dorazily.
+> První automatický běh: pondělí 3. 8. 2026 v 7:05.
+
 Z čeho se to skládá:
 
 | Část | Kde běží | Co dělá |
