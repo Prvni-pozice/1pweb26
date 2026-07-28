@@ -29,6 +29,7 @@ Odškrtnuté položky nechávat s datem, ať je vidět historie.
 
 ## Měření a provoz
 
+- [ ] **Upgradovat zaostávající Astro projekty.** Týdenní report hlásí verze Astra u všech projektů v `/data/bot/*/`. Ke dni 2026-07-28 jsou 3 ze 6 na Astru 4 (`prvni-pozice-blog`, `tripitalie`, `victory-blog`), zbytek na Astru 7. (`kapripastika` smazán 2026-07-28.)
 - [ ] **GA4 běží bez souhlasu návštěvníka** — bez cookie lišty i bez Consent Mode v2. Pro ČR právně rizikové. Varianty: consent lišta, nebo přechod na cookieless analytiku (Plausible/Umami/Vercel Analytics) a lišta odpadá. *Vědomě odloženo 2026-07-27.*
 - [ ] **Měřit konverze formuláře** — odeslání poptávky jako GA4 event nebo aspoň týdenní počet poptávek. Dnes není vidět, co web reálně nosí.
 - [ ] **Pravidelná údržba** — měsíčně `npm audit` + aktualizace závislostí, kontrola 404 a redirectů v Search Console. Dá se zautomatizovat jako report.
@@ -37,8 +38,8 @@ Odškrtnuté položky nechávat s datem, ať je vidět historie.
 
 Podrobné rozpracování je v `NAVRHY-cenik-positioning-mereni-udrzba.md`.
 
-- [ ] **Ceník + cenová kotva napříč webem** — návrh hotový (kde zobrazit „od X Kč", struktura podstrany `/cenik/`). *Blokuje: čísla od tebe.*
-- [ ] **Sjednocení příběhu „lokální agentura + AI"** — rozšířit kategorijní šablonu z `categories.json` na podřazené huby (/marketing/seo/, /marketing/geo/, /grafika/ …), přidat „AI nit" do každé služby.
+- [ ] **Ceník + cenová kotva napříč webem** — návrh hotový včetně konkrétních čísel podle rešerše trhu a náhledu podstrany. *Blokuje: odsouhlasit nebo přepsat čísla.*
+- ~~Sjednocení příběhu „lokální agentura + AI"~~ — **zamítnuto 2026-07-28**: jiný vzhled u hlubšího zanoření majiteli nevadí, vypadá to v pořádku. Necháváme.
 - [ ] **Serverové měření poptávek** — počítat konverze v `/api/contact` bez osobních údajů (nepotřebuje souhlas, měří 100 %) + týdenní e-mail.
 - [ ] **Měsíční automatický údržbový report** — audit závislostí, rozbité odkazy, build; mailem ve stylu stávajících health-check zpráv z `vps-setup`.
 

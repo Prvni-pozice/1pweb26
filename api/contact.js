@@ -3,6 +3,8 @@
 //   RESEND_API_KEY   MAIL_FROM   MAIL_TO
 // Pozn.: MAIL_FROM musí být na doméně OVĚŘENÉ v Resendu; jinak použij onboarding@resend.dev.
 
+import { uloziste, zapisPoptavku } from './_uloziste.js';
+
 // Rate limit na IP — brání vyčerpání Resend kvóty a zaplavení schránky.
 // Best-effort: serverless instance je krátkodobá a běží jich víc paralelně,
 // takže limit platí per-instance. Na botí smršť z jedné IP to stačí.
@@ -76,7 +78,8 @@ export default async function handler(req, res) {
   // 2–5 odkazů, nebo 1 odkaz bez jediného českého znaku → doručit s [SPAM?]
   const spamTag = (links >= 2 || (links === 1 && !hasCz)) ? '[SPAM?] ' : '';
 
-  const zajem = cap(Array.isArray(data.zajem) ? data.zajem.join(', ') : data.zajem, 200);
+  const zajemList = (Array.isArray(data.zajem) ? data.zajem : [data.zajem]).map((v) => cap(v, 60)).filter(Boolean).slice(0, 10);
+  const zajem = zajemList.join(', ').slice(0, 200);
   const text = [
     `Jméno:   ${name}`,
     `Firma:   ${firma || '—'}`,
@@ -113,7 +116,37 @@ export default async function handler(req, res) {
     return res.status(502).json({ ok: false, error: 'Odeslání se nezdařilo, zkuste to prosím znovu.' });
   }
 
+  // Statistika poptávek — ZÁMĚRNĚ bez osobních údajů: žádné jméno, e-mail, telefon
+  // ani text zprávy (proto se na to nemusí ptát na souhlas a nejsou potřeba cookies).
+  // Best-effort: když úložiště není nastavené nebo selže, poptávka je i tak odeslaná.
+  // Nenastavené úložiště je očekávaný stav (dokud se ve Vercelu nezaloží KV) —
+  // přeskočíme ho tiše, ať se log nezaplevelí u každé poptávky.
+  try {
+    if (uloziste()) await zapisPoptavku({
+      cas: new Date().toISOString(),
+      zajem: zajemList,
+      vstup: vstupniStranka(data.vstup),
+      spam: Boolean(spamTag),
+    });
+  } catch (e) {
+    console.error('statistika: zápis selhal:', e && e.message);
+  }
+
   return respond(req, res, { ok: true });
+}
+
+// Vstupní stránka z document.referrer: vlastní web → cesta, cizí zdroj → jen doména,
+// prázdný referrer → přímý vstup (zadaná adresa, záložka, klient bez referreru).
+function vstupniStranka(raw) {
+  const s = String(raw || '').replace(/[\x00-\x1f\x7f]/g, '').trim().slice(0, 300);
+  if (!s) return 'přímý vstup';
+  try {
+    const u = new URL(s);
+    if (/(^|\.)prvni-pozice\.com$/i.test(u.hostname)) return (u.pathname || '/').slice(0, 120);
+    return u.hostname.slice(0, 120);
+  } catch {
+    return 'neznámý zdroj';
+  }
 }
 
 // nativní form post (bez JS) → redirect na děkovnou; fetch → JSON

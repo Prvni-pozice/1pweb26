@@ -46,9 +46,40 @@ Psaná pro majitele firmy, ne pro nákupčího. Pořadí je záměrné — nejd�
 
 7. **CTA: „Nezávazná kalkulace do 2 pracovních dnů"** — konkrétnější a méně závazně znějící než „domluvit konzultaci".
 
+## Navržená čísla (2026-07-28, k odsouhlasení)
+
+Vychází z rešerše českého trhu, ne z tvých nákladů — ty znáš jen ty. Pozicování: jasně nad segmentem „web za 9 900 Kč", pod pražskými agenturami. Regionální agentura s 15 lety praxe a korporátními klienty (Asekol, Diton, Ciret) má na tuhle hladinu nárok. Vše bez DPH.
+
+**Weby**
+| Projekt | Od | Obvyklé rozpětí |
+|---|---|---|
+| Jednostránková prezentace | 25 000 Kč | 25–45 tis. |
+| Firemní web na míru ← vlajkový | 55 000 Kč | 55–120 tis. |
+| Rozsáhlý web / portál / vícejazyčný | 150 000 Kč | 150–400 tis. |
+
+**E-shopy**
+| Projekt | Od | Obvyklé rozpětí |
+|---|---|---|
+| E-shop na platformě (Shoptet, Upgates) s vlastním designem | 45 000 Kč | 45–90 tis. |
+| E-shop na míru s integracemi | 120 000 Kč | 120–300 tis. |
+
+**Online marketing** — SEO od 9 000 Kč/měsíc · správa PPC od 6 000 Kč/měsíc · jednorázový SEO audit od 18 000 Kč
+
+**AI** — školení týmu od 18 000 Kč/den · AI agent a automatizace od 45 000 Kč · AI aplikace na míru od 90 000 Kč
+
+**Provoz** — doména od 300 Kč/rok · hosting od 500 Kč/měsíc · správa a aktualizace od 1 500 Kč/měsíc · vícepráce 1 200 Kč/hod.
+
+### Proč právě tato čísla
+
+Trh v roce 2026: landing page 10–30 tis., firemní web 30–80 tis., pokročilý web 80–200 tis.; reálný rozpočet SMB na nový web 50–150 tis. E-shop na míru 60–150 tis., s integracemi od 150 tis. výš. SEO měsíčně: lokální firma 8–15 tis., střední web 20–50 tis. Hodinová sazba digitálních agentur kolem 1 450 Kč.
+
+Spodní hranici u firemního webu držím na 55 tis. schválně — je nad polovinou pásma, takže neláká hledače nejnižší ceny, ale zároveň nevyplaší firmu s rozpočtem 80 tis. Hodinovku dávám na 1 200 Kč, tedy mírně pod pražskou úrovní, což odpovídá regionální pozici.
+
+Zdroje rešerše: le-artist.cz, anfilov.cz, webui.cz, web-clever.cz, mipaco.cz, per4mens.cz.
+
 ## Co potřebuju od tebe
 
-Samotná čísla. Ta si nevymyslím a odhadovat je by bylo horší než je neuvést. Stačí mi ke každé službě spodní hranice a rozpětí typického projektu — zbytek stránky napíšu kolem toho.
+Odsouhlasit nebo přepsat čísla výše. Jakmile budou potvrzená, vyrobím podstranu do webu podle náhledu.
 
 ---
 

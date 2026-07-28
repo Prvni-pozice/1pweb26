@@ -90,6 +90,7 @@ const addresses = [
                   if (k === 'zajem') (payload.zajem ||= []).push(v); else payload[k] = v;
                 }
                 payload.f_ts = String(Date.now() - t0);
+                payload.vstup = document.referrer || ''; // vstupní stránka pro statistiku (prázdné = přímý vstup)
                 const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
                 const j = await r.json().catch(() => ({}));
                 if (r.ok && j.ok) { cf.reset(); st.textContent = 'Děkujeme, ozveme se co nejdřív.'; st.className = 'form-status ok'; }
