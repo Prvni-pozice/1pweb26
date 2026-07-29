@@ -3515,6 +3515,16 @@
       "source": "/marketing/prednasky/ppc-jak-na-placenou-reklamu-12-6-2017/",
       "destination": "/blog/akce-a-prednasky/ppc-jak-na-placenou-reklamu-12-6-2017/",
       "permanent": true
+    },
+    {
+      "source": "/blog/akce-a-prednasky/roadshow-digitalizace-msp",
+      "destination": "/blog/akce-a-prednasky/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/akce-a-prednasky/roadshow-digitalizace-msp/",
+      "destination": "/blog/akce-a-prednasky/",
+      "permanent": true
     }
   ],
   "headers": [
