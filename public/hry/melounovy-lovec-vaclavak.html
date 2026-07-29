@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Melounový lovec — Václavák</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; -webkit-tap-highlight-color:transparent; }
+  html,body { width:100%; height:100%; overflow:hidden; background:#1a0b2e; font-family:'Courier New', monospace; }
+  #c { display:block; width:100%; height:100%; touch-action:none; }
+
+  #hud { position:fixed; inset:0; pointer-events:none; }
+  .panel { background:rgba(20,8,40,.55); border:2px solid rgba(255,209,102,.6); border-radius:8px; color:#ffe9c9; padding:6px 12px; font-weight:bold; text-shadow:0 0 6px rgba(255,140,66,.8); backdrop-filter:blur(3px); }
+  #topbar { position:fixed; top:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px; font-size:15px; }
+  #arrows { position:fixed; left:50%; top:50%; width:0; height:0; }
+  .arrow { position:absolute; left:0; top:0; width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:16px solid #7CFC00; filter:drop-shadow(0 0 4px #2b8a00); }
+  #crosshair { position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); color:rgba(255,255,255,.7); font-size:14px; }
+
+  #joy { position:fixed; left:26px; bottom:26px; width:120px; height:120px; border-radius:50%; border:2px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); display:none; }
+  #knob { position:absolute; left:38px; top:38px; width:44px; height:44px; border-radius:50%; background:rgba(255,209,102,.55); border:2px solid rgba(255,255,255,.5); }
+
+  .overlay { position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; background:linear-gradient(180deg,#3b1d5a 0%,#7a2f6f 35%,#d94f8e 65%,#ff8c42 88%,#ffd166 100%); z-index:10; text-align:center; padding:20px; }
+  .overlay h1 { color:#fff; font-size:clamp(26px,6vw,52px); letter-spacing:2px; text-shadow:4px 4px 0 #7a2f6f, 0 0 30px #ff8c42; }
+  .overlay p { color:#ffe9c9; font-size:clamp(13px,2.6vw,17px); max-width:520px; line-height:1.6; text-shadow:1px 1px 0 rgba(0,0,0,.4); }
+  .bigbtn { pointer-events:auto; cursor:pointer; font-family:inherit; font-weight:bold; font-size:clamp(16px,3.5vw,22px); color:#3b1d5a; background:#ffd166; border:4px solid #fff; border-radius:12px; padding:14px 34px; box-shadow:0 6px 0 #b8862d, 0 0 30px rgba(255,209,102,.6); transition:transform .1s; }
+  .bigbtn:active { transform:translateY(4px); box-shadow:0 2px 0 #b8862d; }
+  .melon-ico { font-size:clamp(40px,9vw,70px); filter:drop-shadow(0 6px 12px rgba(0,0,0,.4)); }
+  #winTimes { color:#fff; font-size:clamp(15px,3vw,20px); font-weight:bold; text-shadow:1px 1px 0 rgba(0,0,0,.5); }
+  .hidden { display:none !important; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="topbar">
+    <div class="panel" id="hudLevel">Level 1</div>
+    <div class="panel" id="hudScore">🍉 0/8</div>
+    <div class="panel" id="hudTime">0:00.0</div>
+  </div>
+  <div id="arrows"></div>
+  <div id="crosshair">+</div>
+  <div id="joy"><div id="knob"></div></div>
+</div>
+
+<div id="startScreen" class="overlay">
+  <div class="melon-ico">🍉⚔️🚂</div>
+  <h1>MELOUNOVÝ LOVEC</h1>
+  <p><b>Václavské náměstí · západ slunce jako v Miami</b></p>
+  <p id="ctrlInfo"></p>
+  <p>Najdi a rozsekni světelným mečem všechny melouny. Zelené šipky tě navedou. Až budou všechny, projede náměstím oslavný vlak!</p>
+  <button class="bigbtn" id="startBtn">▶ START</button>
+</div>
+
+<div id="winScreen" class="overlay hidden">
+  <div class="melon-ico">🎉🚂🎉</div>
+  <h1 id="winTitle">LEVEL 1 HOTOVO!</h1>
+  <div id="winTimes"></div>
+  <button class="bigbtn" id="nextBtn">Další level (2× melounů) ➜</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+// ============================ ZÁKLAD ============================
+const IS_TOUCH = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:!IS_TOUCH});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0xff9e6d, 0.0038);
+const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 800);
+
+function resize(){
+  const w = window.innerWidth, h = window.innerHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', resize); resize();
+
+// ============================ TEXTURY (jen kódem) ============================
+function makeTex(size, fn){
+  const cv = document.createElement('canvas'); cv.width = cv.height = size;
+  fn(cv.getContext('2d'), size);
+  const t = new THREE.CanvasTexture(cv);
+  t.magFilter = THREE.NearestFilter; t.minFilter = THREE.NearestFilter;
+  return t;
+}
+function pix(ctx,s,n,colors){ // náhodné pixely
+  const c = s/n;
+  for(let y=0;y<n;y++) for(let x=0;x<n;x++){
+    ctx.fillStyle = colors[Math.floor(Math.random()*colors.length)];
+    ctx.fillRect(x*c,y*c,c,c);
+  }
+}
+const texCobble = makeTex(128, (ctx,s)=>{
+  pix(ctx,s,16,['#8d8496','#9b91a5','#7e7589','#a89dbb','#8a8098']);
+  ctx.strokeStyle='rgba(40,30,60,.5)'; ctx.lineWidth=2;
+  for(let i=0;i<=16;i++){ ctx.beginPath();ctx.moveTo(i*8,0);ctx.lineTo(i*8,s);ctx.stroke(); ctx.beginPath();ctx.moveTo(0,i*8);ctx.lineTo(s,i*8);ctx.stroke(); }
+});
+texCobble.wrapS = texCobble.wrapT = THREE.RepeatWrapping; texCobble.repeat.set(18,70);
+const texGrass = makeTex(64,(ctx,s)=>pix(ctx,s,16,['#4a9e3f','#3f8f36','#57ab48','#3a842f','#63b552']));
+texGrass.wrapS = texGrass.wrapT = THREE.RepeatWrapping; texGrass.repeat.set(3,60);
+function facadeTex(base, dark){
+  return makeTex(128,(ctx,s)=>{
+    ctx.fillStyle = base; ctx.fillRect(0,0,s,s);
+    for(let y=8;y<s-10;y+=24) for(let x=10;x<s-14;x+=28){
+      const lit = Math.random()<0.55;
+      ctx.fillStyle = lit ? '#ffd98a' : dark;
+      ctx.fillRect(x,y,14,16);
+      if(lit){ ctx.fillStyle='rgba(255,220,150,.35)'; ctx.fillRect(x-2,y-2,18,20); }
+      ctx.fillStyle='rgba(0,0,0,.25)'; ctx.fillRect(x,y+7,14,2);
+    }
+  });
+}
+const texMelon = makeTex(64,(ctx,s)=>{
+  ctx.fillStyle='#3f9b3f'; ctx.fillRect(0,0,s,s);
+  ctx.fillStyle='#2c6e2c';
+  for(let i=0;i<5;i++){
+    const x = i*13+2;
+    for(let y=0;y<s;y+=4) ctx.fillRect(x + Math.floor(Math.random()*3), y, 6, 4);
+  }
+});
+
+// ============================ OBLOHA — MIAMI SUNSET ============================
+const skyMat = new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite:false,
+  uniforms:{},
+  vertexShader:`varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+  fragmentShader:`varying vec3 vP;
+    void main(){
+      float h = normalize(vP).y;
+      vec3 top = vec3(0.23,0.11,0.35);
+      vec3 mid = vec3(0.85,0.31,0.56);
+      vec3 low = vec3(1.0,0.55,0.26);
+      vec3 hor = vec3(1.0,0.82,0.40);
+      vec3 col = h > 0.45 ? mix(mid,top,(h-0.45)/0.55)
+               : h > 0.12 ? mix(low,mid,(h-0.12)/0.33)
+               : mix(hor,low,max(h,0.0)/0.12);
+      gl_FragColor = vec4(col,1.0);
+    }`
+});
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(700,16,12), skyMat));
+
+// Slunce nad Muzeem + záře
+const sunTex = makeTex(128,(ctx,s)=>{
+  const g = ctx.createRadialGradient(s/2,s/2,4,s/2,s/2,s/2);
+  g.addColorStop(0,'rgba(255,250,220,1)'); g.addColorStop(0.35,'rgba(255,200,90,.95)');
+  g.addColorStop(0.7,'rgba(255,120,60,.35)'); g.addColorStop(1,'rgba(255,120,60,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,s,s);
+});
+const sun = new THREE.Sprite(new THREE.SpriteMaterial({map:sunTex, transparent:true, depthWrite:false}));
+sun.scale.set(260,260,1); sun.position.set(0,70,-620); scene.add(sun);
+
+// Světla — teplé, nízké, dlouhé stíny
+scene.add(new THREE.HemisphereLight(0xff9ec2, 0x4a2a6e, 0.55));
+scene.add(new THREE.AmbientLight(0x7a4a9e, 0.35));
+const dir = new THREE.DirectionalLight(0xffb070, 1.3);
+dir.position.set(-40, 60, -180); dir.castShadow = true;
+dir.shadow.mapSize.set(IS_TOUCH?1024:2048, IS_TOUCH?1024:2048);
+Object.assign(dir.shadow.camera, {left:-160, right:160, top:160, bottom:-160, far:500});
+dir.shadow.camera.updateProjectionMatrix();
+scene.add(dir);
+
+// ============================ VÁCLAVÁK ============================
+const PLAZA = { xMin:-29, xMax:29, zMin:-132, zMax:132 };
+const slopeY = z => (135 - z) * 0.030;   // stoupá k Muzeu (z záporné)
+
+function slopedPlane(w, len, tex, xOff){
+  const g = new THREE.PlaneGeometry(w, len, 1, 30);
+  g.rotateX(-Math.PI/2);
+  const pos = g.attributes.position;
+  for(let i=0;i<pos.count;i++) pos.setY(i, slopeY(pos.getZ(i)));
+  g.computeVertexNormals();
+  const m = new THREE.Mesh(g, new THREE.MeshLambertMaterial({map:tex}));
+  m.position.x = xOff||0; m.receiveShadow = true; scene.add(m); return m;
+}
+slopedPlane(76, 300, texCobble, 0);
+const grass = slopedPlane(13, 280, texGrass, 0); grass.position.y = 0.06;
+
+// Koleje uprostřed
+const railMat = new THREE.MeshLambertMaterial({color:0x5a4632});
+[-1.4, 1.4].forEach(x=>{
+  const g = new THREE.BoxGeometry(0.35, 0.25, 300, 1, 1, 30);
+  const pos = g.attributes.position;
+  for(let i=0;i<pos.count;i++) pos.setY(i, pos.getY(i) + slopeY(pos.getZ(i)) + 0.15);
+  const r = new THREE.Mesh(g, railMat); r.position.x = x; scene.add(r);
+});
+
+// Budovy po stranách
+const facades = ['#d9a0a8','#e8c98f','#a8c4d9','#d9d0a0','#c9a8d9','#a0d9b8','#e8a882','#b8b8d9'];
+function building(x, z, w, d, h, colIdx){
+  const base = slopeY(z) - 0.6;
+  const mat = new THREE.MeshLambertMaterial({map:facadeTex(facades[colIdx%facades.length], '#3a2a4a')});
+  const b = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat);
+  b.position.set(x, base + h/2, z); b.castShadow = b.receiveShadow = true; scene.add(b);
+  const roof = new THREE.Mesh(new THREE.BoxGeometry(w+1, 1.4, d+1), new THREE.MeshLambertMaterial({color:0x8a3a3a}));
+  roof.position.set(x, base + h + 0.7, z); roof.castShadow = true; scene.add(roof);
+}
+for(let z=-115; z<=125; z+=22){
+  const h1 = 14 + Math.random()*14, h2 = 14 + Math.random()*14;
+  building(-41, z, 16, 20, h1, Math.floor(Math.random()*8));
+  building( 41, z, 16, 20, h2, Math.floor(Math.random()*8));
+}
+
+// Národní muzeum (horní konec)
+(function museum(){
+  const base = slopeY(-140);
+  const mat = new THREE.MeshLambertMaterial({map:facadeTex('#c9b896','#4a3a2a')});
+  const main = new THREE.Mesh(new THREE.BoxGeometry(90, 26, 24), mat);
+  main.position.set(0, base+13, -155); main.castShadow = main.receiveShadow = true; scene.add(main);
+  [-38, 38].forEach(x=>{
+    const wing = new THREE.Mesh(new THREE.BoxGeometry(18, 32, 26), mat);
+    wing.position.set(x, base+16, -155); wing.castShadow = true; scene.add(wing);
+  });
+  const mid = new THREE.Mesh(new THREE.BoxGeometry(26, 34, 26), mat);
+  mid.position.set(0, base+17, -155); mid.castShadow = true; scene.add(mid);
+  const dome = new THREE.Mesh(new THREE.SphereGeometry(9, 10, 8), new THREE.MeshLambertMaterial({color:0x4a7a5a}));
+  dome.position.set(0, base+38, -155); dome.castShadow = true; scene.add(dome);
+  // schodiště
+  for(let i=0;i<4;i++){
+    const st = new THREE.Mesh(new THREE.BoxGeometry(50, 1, 3), new THREE.MeshLambertMaterial({color:0xa89880}));
+    st.position.set(0, base+1-i*0.9, -141+i*2.6); st.receiveShadow = true; scene.add(st);
+  }
+})();
+
+// Socha sv. Václava
+(function statue(){
+  const base = slopeY(-118);
+  const stone = new THREE.MeshLambertMaterial({color:0x6a6a7a});
+  const bronze = new THREE.MeshLambertMaterial({color:0x3a6a4a});
+  const ped = new THREE.Mesh(new THREE.BoxGeometry(6, 3.5, 9), stone);
+  ped.position.set(0, base+1.75, -118); ped.castShadow = ped.receiveShadow = true; scene.add(ped);
+  const body = new THREE.Mesh(new THREE.BoxGeometry(1.6, 2.2, 4.6), bronze); body.position.set(0, base+4.6, -118); // kůň
+  const head = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1.6, 1.4), bronze); head.position.set(0, base+6.2, -120.4);
+  const rider = new THREE.Mesh(new THREE.BoxGeometry(1.1, 2.2, 1.1), bronze); rider.position.set(0, base+6.7, -117.6);
+  const rHead = new THREE.Mesh(new THREE.BoxGeometry(0.8,0.8,0.8), bronze); rHead.position.set(0, base+8.2, -117.6);
+  const lance = new THREE.Mesh(new THREE.BoxGeometry(0.18, 4.5, 0.18), bronze); lance.position.set(0.8, base+8.2, -117.6);
+  [body,head,rider,rHead,lance].forEach(m=>{ m.castShadow=true; scene.add(m); });
+  for(let i=0;i<4;i++){
+    const leg = new THREE.Mesh(new THREE.BoxGeometry(0.4, 2, 0.4), bronze);
+    leg.position.set(i<2?-0.5:0.5, base+3.5, -118 + (i%2?1.6:-1.6)); leg.castShadow=true; scene.add(leg);
+  }
+})();
+
+// Stromy a lampy podél trávníku
+const trunkMat = new THREE.MeshLambertMaterial({color:0x6a4a2a});
+const leafMat  = new THREE.MeshLambertMaterial({color:0x3f7a35});
+const poleMat  = new THREE.MeshLambertMaterial({color:0x2a2a3a});
+const lampMat  = new THREE.MeshLambertMaterial({color:0xffd166, emissive:0xffaa33, emissiveIntensity:1});
+for(let z=-100; z<=120; z+=28){
+  [-8.5, 8.5].forEach((x,i)=>{
+    const y = slopeY(z);
+    if((z/28 + i) % 2 === 0){ // strom
+      const t = new THREE.Mesh(new THREE.BoxGeometry(0.9, 4, 0.9), trunkMat); t.position.set(x, y+2, z); t.castShadow=true; scene.add(t);
+      const l = new THREE.Mesh(new THREE.BoxGeometry(3.6, 3.6, 3.6), leafMat); l.position.set(x, y+5.4, z); l.castShadow=true; scene.add(l);
+    } else { // lampa
+      const p = new THREE.Mesh(new THREE.BoxGeometry(0.35, 5.5, 0.35), poleMat); p.position.set(x, y+2.75, z); p.castShadow=true; scene.add(p);
+      const g = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.9, 0.9), lampMat); g.position.set(x, y+5.7, z); scene.add(g);
+    }
+  });
+}
+
+// ============================ HRÁČ + SVĚTELNÝ MEČ ============================
+const player = { x:0, z:110, yaw:0, pitch:0 }; // kouká k Muzeu (-z)
+const saber = new THREE.Group();
+const handle = new THREE.Mesh(new THREE.CylinderGeometry(0.045,0.055,0.32,8), new THREE.MeshLambertMaterial({color:0x2a2a35}));
+const bladeCore = new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,1.5,8), new THREE.MeshBasicMaterial({color:0xffffff}));
+bladeCore.position.y = 0.9;
+const bladeGlow = new THREE.Mesh(new THREE.CylinderGeometry(0.075,0.075,1.55,8),
+  new THREE.MeshBasicMaterial({color:0x33ddff, transparent:true, opacity:0.55, blending:THREE.AdditiveBlending, depthWrite:false}));
+bladeGlow.position.y = 0.9;
+const bladeGlow2 = new THREE.Mesh(new THREE.CylinderGeometry(0.14,0.14,1.6,8),
+  new THREE.MeshBasicMaterial({color:0x33ddff, transparent:true, opacity:0.18, blending:THREE.AdditiveBlending, depthWrite:false}));
+bladeGlow2.position.y = 0.9;
+saber.add(handle, bladeCore, bladeGlow, bladeGlow2);
+camera.add(saber);
+const saberLight = new THREE.PointLight(0x33ddff, 0.9, 6); saberLight.position.set(0.4,-0.3,-0.8); camera.add(saberLight);
+scene.add(camera);
+
+// ============================ MELOUNY ============================
+let melons = [];
+const debris = [];
+function spawnMelons(n){
+  melons.forEach(m=>scene.remove(m.mesh)); melons = [];
+  const pts = [];
+  let guard = 0;
+  while(pts.length < n && guard++ < 4000){
+    const x = -26 + Math.random()*52;
+    const z = -122 + Math.random()*240;
+    if(Math.hypot(x, z+118) < 13) continue;                   // socha
+    if(Math.hypot(x-player.x, z-player.z) < 15) continue;     // ne u hráče
+    if(pts.some(p=>Math.hypot(p.x-x,p.z-z) < 7)) continue;
+    pts.push({x,z});
+  }
+  pts.forEach(p=>{
+    const mesh = new THREE.Mesh(new THREE.BoxGeometry(1.1,1.1,1.1), new THREE.MeshLambertMaterial({map:texMelon}));
+    mesh.position.set(p.x, slopeY(p.z)+0.75, p.z);
+    mesh.castShadow = true; scene.add(mesh);
+    melons.push({mesh, x:p.x, z:p.z, phase:Math.random()*6.28, alive:true});
+  });
+}
+function sliceMelon(m){
+  m.alive = false; scene.remove(m.mesh);
+  const y = slopeY(m.z)+0.75;
+  const flesh = new THREE.MeshLambertMaterial({color:0xff4d5a});
+  const rind  = new THREE.MeshLambertMaterial({map:texMelon});
+  [[-1,0],[1,0]].forEach(([sx])=>{
+    const half = new THREE.Mesh(new THREE.BoxGeometry(0.5,1.1,1.1), [sx>0?flesh:rind, sx>0?rind:flesh, rind, rind, rind, rind]);
+    half.position.set(m.x + sx*0.3, y, m.z);
+    half.castShadow = true; scene.add(half);
+    debris.push({mesh:half, vx:sx*(2+Math.random()*2), vy:3+Math.random()*2, vz:(Math.random()-0.5)*2, rot:(Math.random()-0.5)*8, life:1.6});
+  });
+  for(let i=0;i<12;i++){
+    const p = new THREE.Mesh(new THREE.BoxGeometry(0.16,0.16,0.16), i%3?flesh:new THREE.MeshLambertMaterial({color:0x2c6e2c}));
+    p.position.set(m.x, y, m.z); scene.add(p);
+    debris.push({mesh:p, vx:(Math.random()-0.5)*7, vy:2+Math.random()*4, vz:(Math.random()-0.5)*7, rot:(Math.random()-0.5)*12, life:1.2});
+  }
+  sfxSlice();
+}
+
+// ============================ VLAK ============================
+let train = null, smoke = [];
+function buildTrain(){
+  const g = new THREE.Group();
+  const dark = new THREE.MeshLambertMaterial({color:0x2a2a35});
+  const red  = new THREE.MeshLambertMaterial({color:0xc0392b});
+  const blue = new THREE.MeshLambertMaterial({color:0x2c5f8a});
+  const gold = new THREE.MeshLambertMaterial({color:0xffd166, emissive:0xaa7722, emissiveIntensity:0.6});
+  // lokomotiva
+  const boiler = new THREE.Mesh(new THREE.BoxGeometry(2.4,2.2,5), red); boiler.position.set(0,1.9,0);
+  const cab = new THREE.Mesh(new THREE.BoxGeometry(2.6,3,2.2), dark); cab.position.set(0,2.3,3.2);
+  const chim = new THREE.Mesh(new THREE.CylinderGeometry(0.35,0.5,1.4,8), dark); chim.position.set(0,3.6,-1.6);
+  const lampF = new THREE.Mesh(new THREE.BoxGeometry(0.7,0.7,0.4), gold); lampF.position.set(0,2.2,-2.6);
+  [boiler,cab,chim,lampF].forEach(m=>{ m.castShadow=true; g.add(m); });
+  // vagóny
+  for(let i=0;i<3;i++){
+    const w = new THREE.Mesh(new THREE.BoxGeometry(2.4,2.4,4.4), i%2?blue:red);
+    w.position.set(0,2,6.5+i*5.4); w.castShadow=true; g.add(w);
+  }
+  // kola
+  const wheelM = new THREE.MeshLambertMaterial({color:0x1a1a22});
+  for(let i=0;i<10;i++){
+    [-1.1,1.1].forEach(x=>{
+      const wh = new THREE.Mesh(new THREE.CylinderGeometry(0.55,0.55,0.3,10), wheelM);
+      wh.rotation.z = Math.PI/2; wh.position.set(x,0.55,-1.6+i*2.4); g.add(wh);
+    });
+  }
+  return g;
+}
+function startTrain(){
+  train = buildTrain(); train.position.z = 165; scene.add(train);
+  sfxHorn();
+}
+
+// ============================ ZVUK (WebAudio, žádné soubory) ============================
+let AC = null;
+function ac(){ if(!AC) AC = new (window.AudioContext||window.webkitAudioContext)(); return AC; }
+function tone(freq, dur, type, vol, when){
+  try{
+    const a = ac(), o = a.createOscillator(), gN = a.createGain();
+    o.type = type||'square'; o.frequency.value = freq;
+    gN.gain.setValueAtTime(vol||0.12, a.currentTime+(when||0));
+    gN.gain.exponentialRampToValueAtTime(0.001, a.currentTime+(when||0)+dur);
+    o.connect(gN); gN.connect(a.destination);
+    o.start(a.currentTime+(when||0)); o.stop(a.currentTime+(when||0)+dur);
+  }catch(e){}
+}
+const sfxSlice = ()=>{ tone(880,0.08,'sawtooth',0.1); tone(440,0.12,'square',0.08,0.05); };
+const sfxHorn  = ()=>{ tone(220,0.5,'square',0.14); tone(277,0.5,'square',0.14); tone(220,0.7,'square',0.12,0.7); tone(277,0.7,'square',0.12,0.7); };
+const sfxWin   = ()=>{ [523,659,784,1047].forEach((f,i)=>tone(f,0.25,'triangle',0.12,i*0.14)); };
+
+// ============================ OVLÁDÁNÍ ============================
+const keys = {};
+addEventListener('keydown', e=>keys[e.code]=true);
+addEventListener('keyup',   e=>keys[e.code]=false);
+
+if(!IS_TOUCH){
+  canvas.addEventListener('click', ()=>{ if(state==='play'||state==='train') canvas.requestPointerLock(); });
+  addEventListener('mousemove', e=>{
+    if(document.pointerLockElement === canvas){
+      player.yaw   -= e.movementX * 0.0024;
+      player.pitch = Math.max(-1.35, Math.min(1.35, player.pitch - e.movementY*0.0024));
+    } else if(dragLook){
+      player.yaw   -= (e.clientX - dragLook.x) * 0.005;
+      player.pitch = Math.max(-1.35, Math.min(1.35, player.pitch - (e.clientY - dragLook.y)*0.005));
+      dragLook = {x:e.clientX, y:e.clientY};
+    }
+  });
+  // fallback: tažení myší se stisknutým tlačítkem (když pointer lock není aktivní)
+  canvas.addEventListener('mousedown', e=>{ if(document.pointerLockElement !== canvas) dragLook = {x:e.clientX, y:e.clientY}; });
+  addEventListener('mouseup', ()=>{ dragLook = null; });
+}
+let dragLook = null;
+
+// Mobil: joystick + swipe rozhled
+const joyEl = document.getElementById('joy'), knob = document.getElementById('knob');
+let joyVec = {x:0, y:0}, joyId = null, lookId = null, lookLast = null;
+if(IS_TOUCH){
+  joyEl.style.display = 'block';
+  canvas.addEventListener('touchstart', e=>{
+    for(const t of e.changedTouches){
+      if(t.clientX < window.innerWidth/2 && joyId===null){ joyId = t.identifier; moveJoy(t); }
+      else if(lookId===null){ lookId = t.identifier; lookLast = {x:t.clientX, y:t.clientY}; }
+    }
+  }, {passive:false});
+  canvas.addEventListener('touchmove', e=>{
+    e.preventDefault();
+    for(const t of e.changedTouches){
+      if(t.identifier===joyId) moveJoy(t);
+      else if(t.identifier===lookId && lookLast){
+        player.yaw   -= (t.clientX-lookLast.x)*0.006;
+        player.pitch = Math.max(-1.35, Math.min(1.35, player.pitch-(t.clientY-lookLast.y)*0.006));
+        lookLast = {x:t.clientX, y:t.clientY};
+      }
+    }
+  }, {passive:false});
+  const endT = e=>{
+    for(const t of e.changedTouches){
+      if(t.identifier===joyId){ joyId=null; joyVec={x:0,y:0}; knob.style.left='38px'; knob.style.top='38px'; }
+      if(t.identifier===lookId){ lookId=null; lookLast=null; }
+    }
+  };
+  canvas.addEventListener('touchend', endT); canvas.addEventListener('touchcancel', endT);
+}
+function moveJoy(t){
+  const r = joyEl.getBoundingClientRect();
+  let dx = t.clientX-(r.left+60), dy = t.clientY-(r.top+60);
+  const len = Math.hypot(dx,dy), max = 44;
+  if(len>max){ dx*=max/len; dy*=max/len; }
+  knob.style.left = (38+dx)+'px'; knob.style.top = (38+dy)+'px';
+  joyVec = {x:dx/max, y:dy/max};
+}
+
+// ============================ HERNÍ STAV ============================
+let state = 'menu';        // menu | play | train | win
+let level = 1, score = 0, need = 8;
+let tStart = 0, tFinal = 0;
+const best = {};           // nejlepší časy v session
+let swing = 0, swingTarget = null;
+
+const hud = document.getElementById('hud');
+const hudLevel = document.getElementById('hudLevel');
+const hudScore = document.getElementById('hudScore');
+const hudTime  = document.getElementById('hudTime');
+const arrowsEl = document.getElementById('arrows');
+
+function fmt(ms){
+  const s = ms/1000, m = Math.floor(s/60);
+  return m + ':' + (s-m*60).toFixed(1).padStart(4,'0');
+}
+function startLevel(){
+  need = 8 * Math.pow(2, level-1);
+  score = 0; swing = 0; swingTarget = null;
+  player.x = 0; player.z = 110; player.yaw = 0; player.pitch = 0;
+  if(train){ scene.remove(train); train = null; }
+  smoke.forEach(s=>scene.remove(s.mesh)); smoke = [];
+  debris.forEach(d=>scene.remove(d.mesh)); debris.length = 0;
+  spawnMelons(need);
+  hudLevel.textContent = 'Level ' + level;
+  hudScore.textContent = '🍉 0/' + need;
+  tStart = performance.now();
+  state = 'play';
+  hud.classList.remove('hidden');
+  document.getElementById('startScreen').classList.add('hidden');
+  document.getElementById('winScreen').classList.add('hidden');
+  if(!IS_TOUCH) canvas.requestPointerLock();
+}
+document.getElementById('ctrlInfo').innerHTML = IS_TOUCH
+  ? '📱 <b>Levá půlka:</b> joystick pro pohyb · <b>Pravá půlka:</b> tažením se rozhlížíš'
+  : '⌨️ <b>WASD / šipky:</b> pohyb · <b>Q/E:</b> otáčení · <b>Myš:</b> rozhlížení — klikni do hry pro zamknutí kurzoru, nebo táhni se stisknutým tlačítkem';
+document.getElementById('startBtn').addEventListener('click', ()=>{ ac(); startLevel(); });
+document.getElementById('nextBtn').addEventListener('click', ()=>{ level++; startLevel(); });
+
+// ============================ ŠIPKY K MELOUNŮM ============================
+function updateArrows(){
+  arrowsEl.innerHTML = '';
+  const R = Math.min(window.innerWidth, window.innerHeight) * 0.16 + 40;
+  const alive = melons.filter(m=>m.alive)
+    .sort((a,b)=>Math.hypot(a.x-player.x,a.z-player.z)-Math.hypot(b.x-player.x,b.z-player.z))
+    .slice(0,12);
+  alive.forEach(m=>{
+    const dx = m.x - player.x, dz = m.z - player.z;
+    const bearing = Math.atan2(-dx, -dz) - player.yaw;
+    const d = Math.hypot(dx, dz);
+    const a = document.createElement('div');
+    a.className = 'arrow';
+    const scale = Math.max(0.55, Math.min(1.15, 26/d));
+    a.style.transform =
+      'rotate(' + (-bearing) + 'rad) translate(-9px,' + (-R) + 'px) scale(' + scale + ')';
+    a.style.opacity = Math.max(0.35, Math.min(1, 40/d));
+    arrowsEl.appendChild(a);
+  });
+}
+
+// ============================ SMYČKA ============================
+const clock = new THREE.Clock();
+function loop(){
+  requestAnimationFrame(loop);
+  const dt = Math.min(clock.getDelta(), 0.05);
+  const t = clock.elapsedTime;
+
+  if(state==='play' || state==='train'){
+    // pohyb — forward/strafe vektory podle yaw
+    let mx = 0, mz = 0;
+    if(keys['KeyW']||keys['ArrowUp']) mz -= 1;
+    if(keys['KeyS']||keys['ArrowDown']) mz += 1;
+    if(keys['KeyA']||keys['ArrowLeft']) mx -= 1;
+    if(keys['KeyD']||keys['ArrowRight']) mx += 1;
+    mx += joyVec.x; mz += joyVec.y;
+    // otáčení klávesami Q/E
+    if(keys['KeyQ']) player.yaw += 2.2*dt;
+    if(keys['KeyE']) player.yaw -= 2.2*dt;
+    const len = Math.hypot(mx, mz);
+    if(len > 0.01){
+      const inv = 1/Math.max(len, 1);
+      const f = -mz*inv, s = mx*inv;               // f = vpřed, s = doprava
+      const fx = -Math.sin(player.yaw), fz = -Math.cos(player.yaw);
+      const sx = -fz, sz = fx;
+      const sp = 11 * dt * Math.min(len, 1);
+      player.x += (fx*f + sx*s) * sp;
+      player.z += (fz*f + sz*s) * sp;
+    }
+
+    // kolize s hranicemi
+    player.x = Math.max(PLAZA.xMin, Math.min(PLAZA.xMax, player.x));
+    player.z = Math.max(PLAZA.zMin, Math.min(PLAZA.zMax, player.z));
+    // socha — obejít
+    const sd = Math.hypot(player.x, player.z+118);
+    if(sd < 6){ const k = 6/sd; player.x *= k; player.z = -118 + (player.z+118)*k; }
+
+    camera.position.set(player.x, slopeY(player.z)+1.75, player.z);
+    camera.rotation.order = 'YXZ';
+    camera.rotation.y = player.yaw; camera.rotation.x = player.pitch;
+
+    // meč — houpání + sek
+    const walkBob = len>0.01 ? Math.sin(t*9)*0.03 : 0;
+    saber.position.set(0.42, -0.38 + Math.sin(t*1.8)*0.012 + walkBob, -0.75);
+    if(swing > 0){
+      swing -= dt*3.2;
+      const p = 1 - Math.max(swing,0);           // 0→1
+      saber.rotation.set(0.5 - Math.sin(p*Math.PI)*1.7, 0.35, -0.5 + Math.sin(p*Math.PI)*1.9);
+      if(swingTarget && p > 0.45 && swingTarget.alive){
+        sliceMelon(swingTarget);
+        score++;
+        hudScore.textContent = '🍉 ' + score + '/' + need;
+        swingTarget = null;
+        if(score >= need){
+          tFinal = performance.now() - tStart;
+          hudTime.textContent = fmt(tFinal);
+          state = 'train'; startTrain();
+        }
+      }
+      if(swing<=0) saber.rotation.set(0.5,0.35,-0.5);
+    } else {
+      saber.rotation.set(0.5 + Math.sin(t*1.8)*0.02, 0.35, -0.5);
+      // auto-sek nejbližšího melounu
+      if(state==='play'){
+        let near = null, nd = 3.6;
+        melons.forEach(m=>{
+          if(!m.alive) return;
+          const d = Math.hypot(m.x-player.x, m.z-player.z);
+          if(d < nd){ nd = d; near = m; }
+        });
+        if(near){ swing = 1; swingTarget = near; }
+      }
+    }
+
+    // melouny — poskakování
+    melons.forEach(m=>{
+      if(!m.alive) return;
+      m.mesh.position.y = slopeY(m.z)+0.75 + Math.sin(t*2.2+m.phase)*0.12;
+      m.mesh.rotation.y = t*0.6 + m.phase;
+    });
+
+    // HUD
+    if(state==='play') hudTime.textContent = fmt(performance.now()-tStart);
+    updateArrows();
+  }
+
+  // trosky
+  for(let i=debris.length-1;i>=0;i--){
+    const d = debris[i];
+    d.life -= dt;
+    d.vy -= 12*dt;
+    d.mesh.position.x += d.vx*dt; d.mesh.position.y += d.vy*dt; d.mesh.position.z += d.vz*dt;
+    d.mesh.rotation.x += d.rot*dt; d.mesh.rotation.z += d.rot*dt;
+    const gy = slopeY(d.mesh.position.z)+0.1;
+    if(d.mesh.position.y < gy){ d.mesh.position.y = gy; d.vy *= -0.3; d.vx*=0.7; d.vz*=0.7; }
+    if(d.life<=0){ scene.remove(d.mesh); debris.splice(i,1); }
+  }
+
+  // vlak + kouř
+  if(train){
+    train.position.z -= 26*dt;
+    train.position.y = slopeY(train.position.z);
+    if(Math.random()<0.5){
+      const s = new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.5),
+        new THREE.MeshLambertMaterial({color:0xf0e0e8, transparent:true, opacity:0.8}));
+      s.position.set(train.position.x, train.position.y+4.3, train.position.z-1.6);
+      scene.add(s); smoke.push({mesh:s, life:1.8});
+    }
+    if(state==='train' && train.position.z < -170){
+      scene.remove(train); train = null;
+      state = 'win'; sfxWin();
+      if(document.pointerLockElement) document.exitPointerLock();
+      best[level] = Math.min(best[level]||Infinity, tFinal);
+      document.getElementById('winTitle').textContent = 'LEVEL ' + level + ' HOTOVO!';
+      document.getElementById('winTimes').innerHTML =
+        '⏱️ Čas: ' + fmt(tFinal) + '<br>🏆 Nejlepší čas levelu: ' + fmt(best[level]) +
+        '<br>🍉 Rozsekáno melounů: ' + need;
+      document.getElementById('winScreen').classList.remove('hidden');
+      hud.classList.add('hidden');
+    }
+  }
+  for(let i=smoke.length-1;i>=0;i--){
+    const s = smoke[i];
+    s.life -= dt;
+    s.mesh.position.y += 2.2*dt;
+    s.mesh.scale.multiplyScalar(1 + 1.1*dt);
+    s.mesh.material.opacity = s.life*0.45;
+    if(s.life<=0){ scene.remove(s.mesh); smoke.splice(i,1); }
+  }
+
+  renderer.render(scene, camera);
+}
+
+loop();
+})();
+</script>
+</body>
+</html>
