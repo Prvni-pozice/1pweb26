@@ -3525,6 +3525,16 @@
       "source": "/blog/akce-a-prednasky/roadshow-digitalizace-msp/",
       "destination": "/blog/akce-a-prednasky/",
       "permanent": true
+    },
+    {
+      "source": "/blog/akce-a-prednasky/roadshow-2025-digitalni-nastroje-pro-efektivni-vyrobu",
+      "destination": "/blog/akce-a-prednasky/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/akce-a-prednasky/roadshow-2025-digitalni-nastroje-pro-efektivni-vyrobu/",
+      "destination": "/blog/akce-a-prednasky/",
+      "permanent": true
     }
   ],
   "headers": [
