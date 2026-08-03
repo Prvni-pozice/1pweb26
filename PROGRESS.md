@@ -74,8 +74,42 @@ Zpětná vazba zadavatele: `/marketing/` měly být SLUŽBY (ne reference), blog
 - **301 mapa**: `vercel.json` 676 pravidel z 334 starých URL → nested cesty.
 - **Build 334 stran zelený.** Opraveno: `/marketing/`=služby (ListCard), `/eshopy/`=reference (ShowcaseCard), blog články pod `/blog/...`, staré `/reference/` → 404.
 
+## 2026-08-03 — Předávací kontrola (pre-launch-review)
+
+Web prošel kompletním protokolem fáze 0–4. Report pro klienta: `review/REVIEW_REPORT.md`,
+úplný soupis nálezů: `review/FINDINGS.md`.
+
+Opraveno (commity 1e84009, 77ffbfe, d01d6df):
+- **Souhlas s analytikou** — GA4 běžel bez souhlasu a bez cookie lišty (§ 89/3 zák. 127/2005 Sb.).
+  Nasazen Consent Mode v2 (výchozí `denied`) + `CookieConsent.astro`; gtag.js se stahuje až po souhlasu.
+  Zásady: právní titul analytiky změněn z oprávněného zájmu na souhlas.
+- **Chybné DIČ** na stránce zásad (CZ29136342 → CZ29136334).
+- **Chyběla stránka 404** → vytvořena (noindex).
+- Vložená videa z migrace přetékala mobil; navigace desktop vs. hamburger nekonzistentní;
+  jedna sekce měla 4 názvy; duplicitní titulky; meta popisky migrovaných stránek pod 120 znaků;
+  9 mrtvých odkazů na weby klientů; mrtvý Google Form u proběhlé akce.
+
 ## Zbývá
-- **OBSAHOVÉ STRÁNKY ~240 URL** (SEO blog `248-blog`, pojmy-v-seo, seo-diskuze, trendy-v-seo, info/servisní `20-zasady-ochrany-udaju`, status…) — rozhodnuto migrovat 1:1, ZATÍM NEHOTOVO. Všech 343 HTML staženo lokálně ve `scratchpad/pages/` → deterministická dávka.
-- **K vygenerování (zadavatel):** footer scrub video `/assets/footer/scrub.mp4` + poster (1920×1080, H.264 all-keyframe `-g 1`, ~15fps, 6–10 s, theme = AI síť/data horizon v limetce), pak `hasVideo=true` v `VideoFooter`. Volitelně ambient hero video.
-- **Form backend** `/kontakt/` (Formspree/vlastní endpoint).
-- GitHub remote. Reálný 100/100 PageSpeed = ověřit Lighthouse na Vercel preview (lokálně bez headless Chrome neměřitelné).
+
+### Čeká na zadavatele
+- **Sídlo + spisová značka do patičky** (§ 435 NOZ). IČO a DIČ na webu jsou. Údaje uvedené
+  na stránce zásad („Na Úlehli 1256/9, sp. zn. C 203684, Městský soud v Praze") nemají
+  v projektu zdroj — ověřit proti výpisu z OR.
+- **Rok založení** — „15+ let" nesedí s IČO zapsaným ~2011/2012.
+- **Podklad k „3× rychlejší prototyp"** na homepage.
+- **Souhlas 5 firem** v pásu „Důvěřují nám" (Diton, TLC, Ciret, Ostendorf-Osma, Synpro) —
+  žádná nemá na webu referenci.
+- **Ceny a průběh zakázky** — na webu nikde; ve fázi 2 to byl nejsilnější důvod k odchodu.
+- **2–3 case studies s čísly** — jediné, v čem nás konkurence trumfuje (viz fáze 4).
+
+### Technické
+- **Ověřit formulář na Vercelu** — lokální `astro preview` neobsluhuje API routes, takže
+  test odeslání skončil 404. Kód (`api/contact.js` + Resend) existuje, ale ostrý průchod
+  ještě nikdo neudělal.
+- **Footer scrub video** `/assets/footer/scrub.mp4` + poster (1920×1080, H.264 all-keyframe
+  `-g 1`, ~15 fps, 6–10 s, theme = AI síť v limetce), pak `hasVideo=true` ve `VideoFooter`.
+  Zatím běží záměrný CSS fallback.
+- GitHub remote. Lighthouse na Vercel preview.
+
+> Pozn.: migrace obsahových stránek je HOTOVÁ (347 stran, nic nevede do 404) — dřívější
+> položka „~240 URL zbývá" byla zastaralá.
