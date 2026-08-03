@@ -60,13 +60,17 @@ try { if (node.ext) host = new URL(node.ext).host.replace(/^www\./, ''); } catch
 const KIND: Record<string, string> = { hub: 'Sekce', article: 'Článek', reference: 'Reference' };
 const sectionTop = pathKey.replace(/^\//, '').split('/')[0];
 const cardsHeading = sectionTop === 'blog' ? 'V této sekci' : (imageCards.length ? 'Reference' : 'V této sekci');
-const REF_SUFFIX: Record<string, string> = {
+// Intra z migrace bývají kratší než doporučených 120 znaků — sekční dovětek je
+// doplní na použitelnou délku, aniž bychom obsah vymýšleli.
+const SECTION_SUFFIX: Record<string, string> = {
   weby: 'Reference tvorby webů — agentura První pozice.',
   eshopy: 'Reference tvorby e-shopů — agentura První pozice.',
+  marketing: 'Online marketing od agentury První pozice — SEO, PPC a obsah, který přivádí zákazníky.',
+  blog: 'Z blogu agentury První pozice — weby, e-shopy, marketing a AI v praxi.',
 };
 let metaDesc = node.intro || `${node.label} — První pozice.`;
-if (REF_SUFFIX[rootSeg] && metaDesc.length < 120) {
-  metaDesc = `${metaDesc} ${REF_SUFFIX[rootSeg]}`;
+if (SECTION_SUFFIX[rootSeg] && metaDesc.length < 120) {
+  metaDesc = `${metaDesc} ${SECTION_SUFFIX[rootSeg]}`;
 }
 if (metaDesc.length > 160) {
   metaDesc = metaDesc.slice(0, 159).replace(/\s+\S*$/u, '') + '…';

@@ -2,8 +2,10 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Melounový lovec — Václavák</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Melounový lovec — malá odpočinková hra od agentury První pozice. Chytejte melouny na Václaváku a zkuste překonat vlastní rekord.">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; -webkit-tap-highlight-color:transparent; }
   html,body { width:100%; height:100%; overflow:hidden; background:#1a0b2e; font-family:'Courier New', monospace; }
@@ -20,7 +22,7 @@
   #knob { position:absolute; left:38px; top:38px; width:44px; height:44px; border-radius:50%; background:rgba(255,209,102,.55); border:2px solid rgba(255,255,255,.5); }
 
   .overlay { position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; background:linear-gradient(180deg,#3b1d5a 0%,#7a2f6f 35%,#d94f8e 65%,#ff8c42 88%,#ffd166 100%); z-index:10; text-align:center; padding:20px; }
-  .overlay h1 { color:#fff; font-size:clamp(26px,6vw,52px); letter-spacing:2px; text-shadow:4px 4px 0 #7a2f6f, 0 0 30px #ff8c42; }
+  .overlay h1, .overlay .win-title { color:#fff; font-size:clamp(26px,6vw,52px); letter-spacing:2px; text-shadow:4px 4px 0 #7a2f6f, 0 0 30px #ff8c42; }
   .overlay p { color:#ffe9c9; font-size:clamp(13px,2.6vw,17px); max-width:520px; line-height:1.6; text-shadow:1px 1px 0 rgba(0,0,0,.4); }
   .bigbtn { pointer-events:auto; cursor:pointer; font-family:inherit; font-weight:bold; font-size:clamp(16px,3.5vw,22px); color:#3b1d5a; background:#ffd166; border:4px solid #fff; border-radius:12px; padding:14px 34px; box-shadow:0 6px 0 #b8862d, 0 0 30px rgba(255,209,102,.6); transition:transform .1s; }
   .bigbtn:active { transform:translateY(4px); box-shadow:0 2px 0 #b8862d; }
@@ -54,7 +56,7 @@
 
 <div id="winScreen" class="overlay hidden">
   <div class="melon-ico">🎉🚂🎉</div>
-  <h1 id="winTitle">LEVEL 1 HOTOVO!</h1>
+  <p class="win-title" id="winTitle">LEVEL 1 HOTOVO!</p>
   <div id="winTimes"></div>
   <button class="bigbtn" id="nextBtn">Další level (2× melounů) ➜</button>
 </div>
