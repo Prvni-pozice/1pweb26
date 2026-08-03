@@ -45,12 +45,18 @@
   .consent__title {
     font-weight: 700;
     margin-bottom: 0.25rem;
+    /* Lišta leží na tmavém podkladu — dědit tmavý body text by dalo 1,54:1. */
+    color: var(--n-0, #fff);
   }
   .consent__body {
     font-size: 0.9rem;
     color: var(--n-300, #c6cbc8);
   }
-  .consent__body a { text-decoration: underline; text-underline-offset: 2px; }
+  .consent__body a {
+    color: var(--lime-300, #bcdd5e);   /* --lime-800 na tmavé dává 3,11:1 */
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   .consent__actions {
     display: flex;
     gap: 0.6rem;
