@@ -5,6 +5,7 @@ import ShowcaseCard from '../components/ShowcaseCard.astro';
 import ListCard from '../components/ListCard.astro';
 import SectionRoot from '../components/SectionRoot.astro';
 import site from '../data/site.json';
+import { cleanMigratedContent } from '../lib/migrated-content';
 
 const map = site as Record<string, any>;
 const ROOTS: Record<string, string> = { '/weby/': 'weby', '/eshopy/': 'eshopy', '/marketing/': 'marketing' };
@@ -17,6 +18,34 @@ export function getStaticPaths() {
   }));
 }
 const { node, pathKey } = Astro.props;
+/* Obsah ze starého CMS – viz src/lib/migrated-content.ts. */
+const content = node.content ? cleanMigratedContent(node.content) : '';
+
+/* Titulek musí být unikátní. Tentýž klient se objevuje pod webem i pod SEO
+   (/weby/neza/ a /marketing/seo/neza/) a kategorie mají jmenovce v blogu —
+   bez rozlišení sekce mělo 15 stránek shodný titulek. */
+const SECTION: Record<string, string> = {
+  weby: 'weby',
+  eshopy: 'e-shopy',
+  marketing: 'marketing',
+  blog: 'blog',
+};
+const rootSeg = pathKey.split('/').filter(Boolean)[0] ?? '';
+const section = SECTION[rootSeg];
+const isRootPage = pathKey.replace(/\/+$/g, '').split('/').filter(Boolean).length <= 1;
+// Stejný label se v jednom stromu vyskytuje víckrát (rozcestník vs. článek téhož
+// jména) — v takovém případě titulek rozliší rodič, jinak by vznikly duplicity.
+const parentLabel = node.parent_path ? map[node.parent_path]?.label : undefined;
+const labelCollision =
+  Object.values(map).filter((n: any) => n?.label === node.label).length > 1;
+const titleBase =
+  labelCollision && parentLabel && parentLabel !== node.label
+    ? `${node.label} (${parentLabel})`
+    : node.label;
+const pageTitle =
+  section && !isRootPage
+    ? `${titleBase} — ${section} | První pozice`
+    : `${titleBase} — První pozice`;
 const children = (node.children || []).map((c: string) => map[c]).filter(Boolean);
 
 // Karta s obrázkem (ShowcaseCard) pro jakékoli dítě s thumbnailem; jinak ListCard.
@@ -31,7 +60,17 @@ try { if (node.ext) host = new URL(node.ext).host.replace(/^www\./, ''); } catch
 const KIND: Record<string, string> = { hub: 'Sekce', article: 'Článek', reference: 'Reference' };
 const sectionTop = pathKey.replace(/^\//, '').split('/')[0];
 const cardsHeading = sectionTop === 'blog' ? 'V této sekci' : (imageCards.length ? 'Reference' : 'V této sekci');
-const metaDesc = node.intro || `${node.label} — První pozice.`;
+const REF_SUFFIX: Record<string, string> = {
+  weby: 'Reference tvorby webů — agentura První pozice.',
+  eshopy: 'Reference tvorby e-shopů — agentura První pozice.',
+};
+let metaDesc = node.intro || `${node.label} — První pozice.`;
+if (REF_SUFFIX[rootSeg] && metaDesc.length < 120) {
+  metaDesc = `${metaDesc} ${REF_SUFFIX[rootSeg]}`;
+}
+if (metaDesc.length > 160) {
+  metaDesc = metaDesc.slice(0, 159).replace(/\s+\S*$/u, '') + '…';
+}
 const isRoot = pathKey in ROOTS;
 
 // Strukturovaná data: drobečky se počítají stejně jako v Breadcrumbs.astro
@@ -65,7 +104,7 @@ const articleLd = node.type === 'article' ? {
 } : null;
 const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
 ---
-<Base title={`${node.label} — První pozice`} description={metaDesc.slice(0, 155)} jsonLd={pageJsonLd}>
+<Base title={pageTitle} description={metaDesc} jsonLd={pageJsonLd}>
   {isRoot ? (
     <SectionRoot cat={ROOTS[pathKey]} pathKey={pathKey} kids={children} />
   ) : (
@@ -81,7 +120,7 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
         {isReference ? (
           <div class="node-body">
             <div class="node-main">
-              {node.content ? <div class="prose" set:html={node.content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
+              {content ? <div class="prose" set:html={content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
             </div>
             <aside class="node-aside">
               {host && (
@@ -91,7 +130,7 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
                 </div>
               )}
               <div class="cta-card">
-                <h3>Chcete podobný projekt?</h3>
+                <h2>Chcete podobný projekt?</h2>
                 <p>Ozvěte se — nezávazně probereme, co dává smysl právě pro vás.</p>
                 <a href="/kontakt/" class="btn primary">Domluvit konzultaci</a>
               </div>
@@ -99,7 +138,7 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
           </div>
         ) : (
           <div class="node-main wide">
-            {node.content ? <div class="prose" set:html={node.content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
+            {content ? <div class="prose" set:html={content} /> : node.intro && <p class="prose-lead">{node.intro}</p>}
           </div>
         )}
 
@@ -142,6 +181,10 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
   .prose :global(li) { font-size: 17px; line-height: var(--lh-body); color: var(--text); margin: 6px 0; }
   .prose :global(a) { color: var(--lime-800); text-decoration: underline; text-underline-offset: 2px; }
   .prose :global(img) { max-width: 100%; height: auto; border-radius: var(--radius-lg); margin: 20px 0 0; }
+  /* Migrovaný obsah nese <iframe width="560"> — bez tohohle přeteče mobil. */
+  .prose :global(iframe) { max-width: 100%; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; }
+  .prose :global(table) { display: block; width: 100%; overflow-x: auto; }
+  .prose :global(pre) { max-width: 100%; overflow-x: auto; }
   .prose :global(strong) { color: var(--text-strong); }
   .prose-lead { font-size: 19px; line-height: var(--lh-relaxed); color: var(--text-muted); }
 
@@ -151,7 +194,7 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
   .visit-link { display: inline-block; margin-top: 8px; font-size: 17px; font-weight: var(--fw-bold); color: #fff; }
   .visit-link:hover { color: var(--lime); }
   .cta-card { background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 24px; }
-  .cta-card h3 { font-size: 18px; font-weight: var(--fw-bold); color: var(--text-strong); }
+  .cta-card h2 { font-size: 18px; font-weight: var(--fw-bold); color: var(--text-strong); }
   .cta-card p { font-size: 14px; line-height: var(--lh-body); color: var(--text-muted); margin: 8px 0 16px; }
 
   .kids { margin-top: 56px; }

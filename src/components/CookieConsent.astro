@@ -1,0 +1,94 @@
+---
+// Lišta souhlasu s analytickými cookies. Analytika se spustí až po kliknutí
+// na „Souhlasím" — bez souhlasu se gtag.js vůbec nestahuje (§ 89 odst. 3
+// zákona č. 127/2005 Sb. vyžaduje u analytických cookies opt-in).
+---
+
+<div id="cookie-consent" class="consent" hidden role="dialog" aria-modal="false" aria-labelledby="consent-title">
+  <div class="consent__inner">
+    <div class="consent__text">
+      <p id="consent-title" class="consent__title">Měření návštěvnosti</p>
+      <p class="consent__body">
+        Rádi bychom měřili návštěvnost webu pomocí Google Analytics. Bez vašeho souhlasu
+        se žádný analytický skript nespustí. Souhlas můžete kdykoli odvolat.
+        <a href="/zasady-ochrany-udaju/">Zásady ochrany osobních údajů</a>
+      </p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn--ghost" data-consent="denied">Odmítnout</button>
+      <button type="button" class="btn" data-consent="granted">Souhlasím</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .consent {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 200;
+    background: var(--n-950, #0b0d0c);
+    border-top: 1px solid var(--n-800, #2a2f2c);
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+  }
+  .consent[hidden] { display: none; }
+  .consent__inner {
+    max-width: var(--container, 1200px);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .consent__text { max-width: 62ch; }
+  .consent__title {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .consent__body {
+    font-size: 0.9rem;
+    color: var(--n-300, #c6cbc8);
+  }
+  .consent__body a { text-decoration: underline; text-underline-offset: 2px; }
+  .consent__actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var KEY = 'consent-analytics';
+    var el = document.getElementById('cookie-consent');
+    if (!el) return;
+
+    function apply(state) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { analytics_storage: state });
+      }
+      if (state === 'granted' && typeof window.loadGtag === 'function') {
+        window.loadGtag();
+      }
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    if (stored === 'granted' || stored === 'denied') {
+      apply(stored);
+    } else {
+      el.hidden = false;
+    }
+
+    el.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-consent]');
+      if (!btn) return;
+      var state = btn.getAttribute('data-consent');
+      try { localStorage.setItem(KEY, state); } catch (err) {}
+      apply(state);
+      el.hidden = true;
+    });
+  })();
+</script>

@@ -2,27 +2,11 @@
 // Globální layout: hlavička, design-systém tokeny (src/styles/global.css), Nav + Footer.
 // Self-hostované fonty (Roboto + Roboto Mono) — pouze latin + latin-ext (CZ web).
 import '../styles/global.css';
-import '@fontsource/roboto/latin-400.css';
-import '@fontsource/roboto/latin-ext-400.css';
-import '@fontsource/roboto/latin-500.css';
-import '@fontsource/roboto/latin-ext-500.css';
-import '@fontsource/roboto/latin-700.css';
-import '@fontsource/roboto/latin-ext-700.css';
-import '@fontsource/roboto/latin-900.css';
-import '@fontsource/roboto/latin-ext-900.css';
-import '@fontsource/roboto-mono/latin-400.css';
-import '@fontsource/roboto-mono/latin-ext-400.css';
-import '@fontsource/roboto-mono/latin-500.css';
-import '@fontsource/roboto-mono/latin-ext-500.css';
-// Preload kritických řezů (LCP): 900 = display nadpisy, 400 = běžný text.
-// ?url vrací stejnou hashovanou URL, jakou má soubor v bundlovaném CSS.
-import fontBlackExt from '@fontsource/roboto/files/roboto-latin-ext-900-normal.woff2?url';
-import fontBlack from '@fontsource/roboto/files/roboto-latin-900-normal.woff2?url';
-import fontRegularExt from '@fontsource/roboto/files/roboto-latin-ext-400-normal.woff2?url';
-import fontRegular from '@fontsource/roboto/files/roboto-latin-400-normal.woff2?url';
+import { faces } from '../styles/fonts.js';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import VideoFooter from '../components/VideoFooter.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import SiteMenuOverlay from '../components/SiteMenuOverlay.astro';
 
 interface Props {
@@ -38,6 +22,18 @@ const {
   jsonLd: pageJsonLd = [],
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+
+/* @font-face schválně mimo kritické CSS. Prohlížeč si fonty vyžádá dřív, než
+   stáhne obrázek, který je LCP prvkem — na /weby/ to drželo LCP na 3,45 s.
+   Pravidla se vkládají až po `load`; text je od začátku čitelný náhradním
+   fontem (`swap`). Subset generuje scripts/subset-fonts.mjs. */
+const fontCss = faces
+  .map(
+    (f) =>
+      `@font-face{font-family:"${f.family}";font-style:normal;font-weight:${f.weight};` +
+      `font-display:swap;src:url("${f.url}") format("woff2")}`,
+  )
+  .join('');
 const ogImageUrl = ogImage ?? 'https://www.prvni-pozice.com/img/hero/hero-1.webp';
 // Firemní identita má pevné @id — podstrany se na ni odkazují (publisher),
 // místo aby si organizaci opisovaly znovu. Případné další uzly (drobečky,
@@ -79,33 +75,36 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImageUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
-    <link rel="preload" href={fontBlackExt} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={fontBlack} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={fontRegularExt} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={fontRegular} as="font" type="font/woff2" crossorigin />
+
+
+
     <!-- reveal-on-scroll skrývá obsah jen když běží JS (jinak je vždy vidět) -->
     <script is:inline>document.documentElement.classList.add('js');</script>
     <script src="/js/motion.js" defer></script>
     <script is:inline>
-      // GA4 — dataLayer se plní hned, samotný gtag.js (152 KiB) se stáhne až
-      // po první interakci, nejpozději 3,5 s po load (ať neblokuje LCP/TBT).
+      // GA4 s Consent Mode v2. Výchozí stav je „denied" a gtag.js se stahuje
+      // teprve po udělení souhlasu v liště (CookieConsent.astro) — analytické
+      // cookies vyžadují opt-in dle § 89 odst. 3 zákona č. 127/2005 Sb.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
       gtag('js', new Date());
       gtag('config', 'G-5XDVHLWRP4');
-      (function () {
+      window.loadGtag = (function () {
         var done = false;
-        function loadGtag() {
+        return function () {
           if (done) return; done = true;
           var s = document.createElement('script');
           s.async = true;
           s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5XDVHLWRP4';
           document.head.appendChild(s);
-        }
-        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) {
-          addEventListener(e, loadGtag, { passive: true, once: true });
-        });
-        addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+        };
       })();
     </script>
   </head>
@@ -118,6 +117,22 @@ const jsonLd = {
     </main>
     <VideoFooter />
     <Footer />
+    <CookieConsent />
+    <script is:inline define:vars={{ fontCss }}>
+      (() => {
+        const inject = () => {
+          const el = document.createElement('style');
+          el.textContent = fontCss;
+          document.head.appendChild(el);
+        };
+        const idle = () =>
+          'requestIdleCallback' in window
+            ? requestIdleCallback(inject, { timeout: 1500 })
+            : setTimeout(inject, 200);
+        if (document.readyState === 'complete') idle();
+        else window.addEventListener('load', idle, { once: true });
+      })();
+    </script>
   </body>
 </html>
 

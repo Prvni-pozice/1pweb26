@@ -23,7 +23,7 @@
     "ctaLabel": "Chci e-shop",
     "oldHref": "/cs/12-eshopy/",
     "features": [
-      { "title": "Rychlost", "desc": "Načtení během milisekund. Rychlý e-shop prodává víc a boduje ve vyhledávání." },
+      { "title": "Rychlost", "desc": "Načtení do sekundy a zelené Core Web Vitals. Rychlý e-shop prodává víc a boduje ve vyhledávání." },
       { "title": "Responzivita", "desc": "Většina nákupů začíná na telefonu — u nás vypadá e-shop skvěle všude." },
       { "title": "Design dle značky", "desc": "Moderní vzhled, který drží vaši firemní identitu — ne šablona z police." },
       { "title": "Nejnovější technologie", "desc": "Stabilní, bezpečné a snadno rozšiřitelné řešení připravené na růst." }
@@ -35,7 +35,7 @@
   "marketing": {
     "slug": "marketing",
     "eyebrow": "Služby · Online marketing",
-    "title": "Marketing, který jde <u>vidět v číslech</u>.",
+    "title": "Marketing, který je <u>vidět v číslech</u>.",
     "lead": "SEO, PPC a obsah s přehledem. Přivádíme návštěvníky, kteří se mění v zákazníky — a vše měříme.",
     "ctaLabel": "Chci víc zákazníků",
     "oldHref": "/cs/13-propagace-a-marketing/",

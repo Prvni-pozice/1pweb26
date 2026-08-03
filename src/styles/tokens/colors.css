@@ -42,7 +42,11 @@
   --text-strong:  var(--n-900);
   --text:         var(--n-800);   /* body copy = brand #333 */
   --text-muted:   var(--n-600);
-  --text-subtle:  var(--n-500);
+  /* ODCHYLKA OD DESIGN SYSTÉMU: role byla mapovaná na --n-500 (#7e837a), což je
+     na bílé 3,88:1 — pod hranicí AA pro běžný text. Používá se na drobečkovou
+     navigaci, popisky na kontaktu a datum aktualizace v právních textech, tedy
+     všude jako TEXT. Škála zůstává beze změny, mění se jen role. --n-600 dává 6,25:1. */
+  --text-subtle:  var(--n-600);
   --text-on-lime: var(--n-900);   /* dark ink reads best on bright lime */
   --text-on-dark: var(--n-0);
 

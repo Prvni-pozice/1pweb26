@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Stránka nenalezena — První pozice"
+  description="Tuhle stránku jsme nenašli. Zkuste úvod, nebo nám rovnou napište — ozveme se do 24 hodin."
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, follow" />
+  </Fragment>
+
+  <section class="nf">
+    <div class="container nf__inner">
+      <p class="overline">404</p>
+      <h1>Tahle stránka není ani na&nbsp;první pozici.</h1>
+      <p class="nf__lead">
+        Stránku jsme nenašli — nejspíš se přestěhovala, nebo nikdy neexistovala.
+        Zkuste úvod, nebo nám napište, co jste hledali.
+      </p>
+      <div class="nf__actions">
+        <a class="btn" href="/">Zpět na úvod</a>
+        <a class="btn btn--ghost" href="/kontakt/">Napsat nám</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { padding-block: clamp(80px, 18vh, 180px); }
+  .nf__inner { max-width: 62ch; }
+  .nf h1 { margin-block: 10px 16px; }
+  .nf__lead { color: var(--text-muted); font-size: 19px; line-height: var(--lh-relaxed); }
+  .nf__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+</style>
