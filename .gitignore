@@ -22,3 +22,8 @@ node_modules/
 
 # stažené balíčky (artefakty instalace, ne zdroj)
 *.deb
+
+# Pracovni vystupy predavaci kontroly (velke soubory)
+review/phase0.json
+review/shots/
+review-after/
