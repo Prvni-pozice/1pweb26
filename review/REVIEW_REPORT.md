@@ -10,6 +10,16 @@ Datum: 3. 8. 2026 · Rozsah: 347 stránek (ruční stránky + 340 migrovaných z
 - **Fáze 3 — UX audit a copywriting** (dva samostatné průchody).
 - **Fáze 4 — srovnání s oborem:** Webforte, Apertia.ai, eVisions.
 
+## Výsledek v číslech
+
+Automatická kontrola našla před opravami **187 tvrdých nálezů** na 347 stránkách.
+Po opravách a opakovaném proměření zbyly **tři** — a všechny tři jsou plané poplachy:
+odkazy na weby klientů alfa-top.cz, maturaknaklic.cz a parkdesetileti.cz, které
+při ověření z prohlížeče fungují a jen blokují automatické dotazy.
+
+Personální fáze 1–3 doplnily zhruba dalších 65 nálezů, z nichž je opraveno 30;
+zbytek čeká na podklady od vás (viz níže).
+
 ## Co se našlo a opravilo
 
 **Analytika běžela bez souhlasu (blokující).** Google Analytics se načítal každému návštěvníkovi a web neměl žádnou lištu souhlasu. U analytických cookies to zákon o elektronických komunikacích (§ 89 odst. 3) nedovoluje — vyžaduje předchozí souhlas. Zásady ochrany údajů navíc uváděly jako právní titul „oprávněný zájem", což pro tento účel neobstojí. Nasadil jsem Consent Mode v2 s výchozím stavem „zamítnuto" a lištu souhlasu; skript Googlu se nyní vůbec nestáhne, dokud návštěvník nesouhlasí. Text zásad je opravený na souhlas.
@@ -22,7 +32,7 @@ Datum: 3. 8. 2026 · Rozsah: 347 stránek (ruční stránky + 340 migrovaných z
 
 **Navigace byla nekonzistentní.** Na desktopu chyběly obě AI služby (dostupné jen z patičky a z karet na úvodní stránce), zatímco vysouvací menu na mobilu mělo úplně jiný seznam v jiném pořadí. Sjednoceno. Jedna sekce se navíc jmenovala čtyřmi způsoby — „Marketing", „GEO a marketing", „SEO a marketing", „Online marketing"; nyní všude „Online marketing".
 
-**Devět mrtvých odkazů na weby klientů.** V referencích i migrovaných článcích vedly odkazy na servery, které už neexistují. Každý jsem ověřil zvlášť — tři z nich (alfa-top.cz, maturaknaklic.cz, parkdesetileti.cz) jsou ve skutečnosti živé a jen blokují automatické dotazy, ty jsem ponechal. Zbylých devět jsem odlinkoval.
+**Mrtvé odkazy na weby klientů.** V referencích i migrovaných článcích vedlo dvanáct odkazů na servery, které neodpovídaly. Každý jsem ověřil zvlášť z prohlížeče — tři z nich (alfa-top.cz, maturaknaklic.cz, parkdesetileti.cz) jsou ve skutečnosti živé a jen blokují automatické dotazy, ty zůstávají. Zbylých devět je opravdu mrtvých a odlinkoval jsem je; text zůstal, zmizel jen odkaz.
 
 **Duplicitní titulky.** Tři dvojice stránek měly shodný titulek. Nešlo ale o duplicitní obsah — vždy jde o rozcestník a článek stejného jména, takže kanonizace nebo přesměrování by bylo chybné. Titulek nyní při shodě rozlišuje nadřazená sekce („SEO (Pojmy v SEO)").
 

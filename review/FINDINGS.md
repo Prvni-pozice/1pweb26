@@ -1,6 +1,7 @@
 # FINDINGS — web-1P, fáze 0–4
 
-> Stav k 3. 8. 2026: fáze 0–4 dokončeny, opravná fáze zatím NEPROBĚHLA.
+> Stav k 3. 8. 2026: fáze 0–4 dokončeny, opravná fáze hotová (commity 1e84009, 77ffbfe, d01d6df, 4364e50 a další).
+> Opakované proměření fáze 0: **187 → 3 nálezy** (a všechny tři jsou plané poplachy — weby klientů blokující roboty).
 > Detail per fáze: `findings-f1-integrita.md`, `findings-f2-zakaznik.md`, `findings-f3-ux.md`, `findings-f3-copy.md`, `findings-f4-konkurence.md`
 > Fáze 0: 347 stran, 187 řádků nálezů (`ISSUES.md`) — dominují krátké meta descriptions u referencí a 3 duplicitní titulky.
 
@@ -53,7 +54,7 @@ Prázdná plocha na /ai-agenti/ (lazy-load bez placeholderu); hamburger nefunguj
 
 ## Poznámka k PROGRESS.md
 
-Sekce „Zbývá" je zastaralá: migrace ~240 URL už proběhla (347 stran), formulářový backend není placeholder (`api/contact.js` + Resend, honeypot, rate-limit), footer video je záměrný CSS fallback. Aktualizovat.
+Sekce „Zbývá" byla zastaralá (migrace ~240 URL už proběhla, formulářový backend není placeholder, footer video je záměrný CSS fallback). **Aktualizováno commitem 4364e50.**
 
 ## Fáze 4 — verdikt
 
