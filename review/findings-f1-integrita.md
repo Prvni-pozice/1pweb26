@@ -19,3 +19,6 @@ KNOWN-ISSUES ZASTARALÉ: PROGRESS.md ř. 77-81 neplatí — migrace hotová (347
 POZOR: F2 hlásí formulář 404 — to je artefakt lokálního preview (astro preview neobsluhuje API routes); na Vercelu ověřit!
 
 Čisté: kontakty konzistentní (kromě P0 DIČ), tel:=text, © dynamický, žádné zbytky, migrace bez entit/starých cen, značka jednotná.
+
+
+> **Upřesnění (4. 8. 2026):** § 435 NOZ vyžaduje na webu jméno a sídlo podnikatele. Údaj o zápisu v rejstříku včetně oddílu a vložky (spisová značka) zákon váže na **obchodní listiny** — faktury, smlouvy, objednávky — nikoli výslovně na web. Doporučení „doplnit spisovou značku do patičky" bylo v původním znění reportu přeceněné; do patičky patří jméno, sídlo a IČO.

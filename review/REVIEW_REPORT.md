@@ -61,3 +61,6 @@ Proti Webforte, Apertia.ai a eVisions jsme měřitelně první v rychlosti (úvo
 Kde nás předbíhají: čísla. Webforte má 47 projektů, ale na úvodní stránce říká „+561 % návštěvnosti" a „94 % klientů se vrací". My máme přes 80 referencí a u žádné není jediný výsledek.
 
 **Jedna změna s největším dopadem: dvě až tři případové studie s čísly** — výsledek, doba dodání, co agent reálně ušetřil. Jedna případovka typu „AI prototyp za pět dní místo tří měsíců" by zhmotnila celé naše pozicování lépe než dalších sto referencí.
+
+
+> **Upřesnění (4. 8. 2026):** § 435 NOZ vyžaduje na webu jméno a sídlo podnikatele. Údaj o zápisu v rejstříku včetně oddílu a vložky (spisová značka) zákon váže na **obchodní listiny** — faktury, smlouvy, objednávky — nikoli výslovně na web. Doporučení „doplnit spisovou značku do patičky" bylo v původním znění reportu přeceněné; do patičky patří jméno, sídlo a IČO.

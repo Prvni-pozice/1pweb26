@@ -59,3 +59,6 @@ Sekce „Zbývá" byla zastaralá (migrace ~240 URL už proběhla, formulářov�
 ## Fáze 4 — verdikt
 
 Konkurence: Webforte, Apertia.ai, eVisions. Měřitelně první jsme v rychlosti (56 kB homepage proti 181–332 kB), v počtu jmenovaných referencí a v AI-first pozicování celé firmy včetně kategorie „rapidní vývoj s agenty", kterou nemá nikdo. **Jediná změna s největším dopadem: 2–3 case studies s čísly** — 80+ referencí bez jediného výsledku působí slaběji než konkurent se 47 projekty, který říká „+561 %".
+
+
+> **Upřesnění (4. 8. 2026):** § 435 NOZ vyžaduje na webu jméno a sídlo podnikatele. Údaj o zápisu v rejstříku včetně oddílu a vložky (spisová značka) zákon váže na **obchodní listiny** — faktury, smlouvy, objednávky — nikoli výslovně na web. Doporučení „doplnit spisovou značku do patičky" bylo v původním znění reportu přeceněné; do patičky patří jméno, sídlo a IČO.
