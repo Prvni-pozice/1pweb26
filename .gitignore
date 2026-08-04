@@ -27,3 +27,7 @@ node_modules/
 review/phase0.json
 review/shots/
 review-after/
+
+# Python
+__pycache__/
+*.pyc
