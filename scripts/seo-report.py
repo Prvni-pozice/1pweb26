@@ -20,8 +20,8 @@ Použití:
   python3 scripts/seo-report.py --soubor out.json  # jen zapsat JSON (bez POSTu)
   python3 scripts/seo-report.py --indexace       # vynutit i kontrolu indexace
 
-Cron (denně 6:50, jako root — kvůli čtení /etc/web-1p-report.env):
-  50 6 * * * /usr/bin/python3 /data/bot/web-1P/scripts/seo-report.py >> /var/log/web-1p-seo.log 2>&1
+Cron (denně 6:30, jako root — kvůli čtení /etc/web-1p-report.env; s rezervou před pondělním mailem v 7:05):
+  30 6 * * * /usr/bin/python3 /data/bot/web-1P/scripts/seo-report.py >> /var/log/web-1p-seo.log 2>&1
 """
 import csv
 import datetime as dt

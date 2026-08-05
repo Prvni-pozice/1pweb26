@@ -130,10 +130,10 @@ Dashboard i SEO blok v mailu čtou snapshot z úložiště (klíč `seo`). Plní
 - **Denní cron (root, kvůli `/etc/web-1p-report.env`):**
 
   ```
-  50 6 * * * /usr/bin/python3 /data/bot/web-1P/scripts/seo-report.py >> /var/log/web-1p-seo.log 2>&1
+  30 6 * * * /usr/bin/python3 /data/bot/web-1P/scripts/seo-report.py >> /var/log/web-1p-seo.log 2>&1
   ```
 
-  Běží před pondělním mailem (7:05), takže mail má vždy čerstvá data.
+  Běží v 6:30 — s rezervou před pondělním mailem (7:05), i když pondělní kontrola indexace trvá pár minut.
 - **Indexace**: v pondělí (nebo s `--indexace`) skript projde všechny URL ze sitemap přes
   URL Inspection API (~350 URL, kvóta 2000/den) a přidá stav indexace. Pokles pod 90 %
   ukáže dashboard i mail jako alert.
