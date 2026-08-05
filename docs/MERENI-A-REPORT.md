@@ -139,7 +139,7 @@ Dashboard i SEO blok v mailu čtou snapshot z úložiště (klíč `seo`). Plní
   ukáže dashboard i mail jako alert.
 - **Autentizace**: stejné tajemství jako týdenní report (`REPORT_SECRET`), POST na
   `/api/seo-data` s hlavičkou `Authorization: Bearer …`.
-- **Platform properties** (ChatGPT apod.): API je zatím nenabízí. CSV export z GSC se nahraje do
+- **Platform properties** (sociální sítě — Instagram, TikTok, X, YouTube): API je zatím nenabízí. CSV export z GSC se nahraje do
   `data/gsc-platformy/<platforma>/` (složka není v gitu) a další běh skriptu ho propíše
   do dashboardu. Až API platform properties zpřístupní, přepne se to na automatiku.
 - **Ladění bez POSTu**: `python3 scripts/seo-report.py --soubor /tmp/seo.json` — jen vypíše JSON.

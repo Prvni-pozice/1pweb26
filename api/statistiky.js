@@ -280,9 +280,10 @@ function sekceSeo(seo) {
     ? `<div class="karty">${seo.platformy.map((pl) => dlazdice(
         esc(pl.nazev), cislo(pl.kliky28), '', `kliků · ${cislo(pl.imprese28)} impresí za 28 dní`,
         sparkline(pl.denni, 1, 'var(--graf-1)', 'kliků'))).join('')}</div>`
-    : `<div class="karta platformy-cekaji"><p>Platform properties (ChatGPT a spol.) zatím API nenabízí
-        a provoz je v jednotkách návštěv. Jakmile bude co ukazovat, stačí nahrát CSV export z GSC do
-        <code>data/gsc-platformy/&lt;platforma&gt;/</code> na serveru — další běh reportu ho sem propíše.</p></div>`;
+    : `<div class="karta platformy-cekaji"><p>Platform properties sociálních sítí (Instagram, TikTok, X,
+        YouTube) zatím API nenabízí a provoz je v jednotkách návštěv. Jakmile bude co ukazovat, stačí nahrát
+        CSV export z GSC do <code>data/gsc-platformy/&lt;platforma&gt;/</code> na serveru — další běh reportu
+        ho sem propíše.</p></div>`;
 
   return `<section>
     <p class="overline">SEO výkon</p>
@@ -324,7 +325,7 @@ function sekceSeo(seo) {
       ${seo.indexace ? indexaceMetr(seo.indexace) : '<p class="prazdno">První týdenní kontrola indexace ještě neproběhla (běží v pondělí).</p>'}
     </div>
 
-    <h2 class="mezisekce">Platformy (ChatGPT, AI vyhledávání)</h2>
+    <h2 class="mezisekce">Platformy (Instagram, TikTok, X, YouTube)</h2>
     ${platformy}
   </section>`;
 }
