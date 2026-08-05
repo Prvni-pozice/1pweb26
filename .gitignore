@@ -31,3 +31,6 @@ review-after/
 # Python
 __pycache__/
 *.pyc
+
+# CSV exporty z GSC platform properties (data, ne zdroj)
+data/gsc-platformy/

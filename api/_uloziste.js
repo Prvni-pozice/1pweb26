@@ -6,6 +6,7 @@
 
 export const KLIC = 'poptavky';   // Redis list, nejnovější záznam první
 export const MAX_ZAZNAMU = 500;   // kolik posledních poptávek držíme
+export const KLIC_SEO = 'seo';    // JSON snapshot SEO dat z GSC (plní scripts/seo-report.py)
 
 // Konfigurace úložiště, nebo null když proměnné nejsou nastavené.
 export function uloziste() {
@@ -52,6 +53,18 @@ export async function nactiPoptavky() {
   return (polozky || [])
     .map((s) => { try { return JSON.parse(s); } catch { return null; } })
     .filter((z) => z && z.cas);
+}
+
+// Uložení SEO snapshotu (celý objekt nahrazuje předchozí).
+export async function zapisSeo(snapshot) {
+  await pipeline([['SET', KLIC_SEO, JSON.stringify(snapshot)]]);
+}
+
+// Načtení SEO snapshotu; null když ještě žádný není nebo je poškozený.
+export async function nactiSeo() {
+  const [s] = await pipeline([['GET', KLIC_SEO]]);
+  if (!s) return null;
+  try { return typeof s === 'string' ? JSON.parse(s) : s; } catch { return null; }
 }
 
 // Souhrn za posledních `dny` dní (volitelně posunutý o `posunDnu` do minulosti —

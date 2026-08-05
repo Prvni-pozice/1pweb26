@@ -5,7 +5,7 @@
 //   + KV_REST_API_URL / KV_REST_API_TOKEN (nebo UPSTASH_REDIS_REST_*)
 
 import { timingSafeEqual } from 'node:crypto';
-import { uloziste, nactiPoptavky, souhrn, esc, NENI_ULOZISTE } from './_uloziste.js';
+import { uloziste, nactiPoptavky, nactiSeo, souhrn, esc, NENI_ULOZISTE } from './_uloziste.js';
 
 const DASHBOARD = 'https://www.prvni-pozice.com/api/statistiky';
 
@@ -39,9 +39,13 @@ export default async function handler(req, res) {
     return res.status(502).json({ ok: false, error: 'Statistiky se nepodařilo načíst.' });
   }
 
+  // SEO snapshot je bonus — když chybí nebo se nenačte, mail jde bez něj
+  let seo = null;
+  try { seo = await nactiSeo(); } catch (e) { console.error('report: SEO snapshot se nenačetl:', e && e.message); }
+
   const tento = souhrn(zaznamy, 7);
   const minuly = souhrn(zaznamy, 7, 7);
-  const html = mail(tento, minuly, projekty);
+  const html = mail(tento, minuly, projekty, seo);
 
   try {
     const r = await fetch('https://api.resend.com/emails', {
@@ -102,7 +106,37 @@ function tabulka(hlavicky, radky, prazdno) {
     <thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table>`;
 }
 
-function mail(tento, minuly, projekty) {
+// SEO týden z denní řady snapshotu: posledních 7 dní vs. předchozích 7.
+function seoTyden(seo) {
+  const denni = Array.isArray(seo && seo.denni) ? seo.denni : [];
+  if (denni.length < 14) return null;
+  const secti = (dny) => dny.reduce((s, d) => [s[0] + (d[1] || 0), s[1] + (d[2] || 0)], [0, 0]);
+  const [kliky, imprese] = secti(denni.slice(-7));
+  const [klikyPred, impresePred] = secti(denni.slice(-14, -7));
+  return { kliky, imprese, klikyPred, impresePred };
+}
+
+function seoBlok(seo) {
+  const tyden = seoTyden(seo);
+  if (!tyden) return '';
+  const cislo = (n) => Number(n || 0).toLocaleString('cs-CZ');
+  const rozdil = tyden.kliky - tyden.klikyPred;
+  const smer = rozdil > 0 ? `o ${rozdil} víc` : rozdil < 0 ? `o ${-rozdil} méně` : 'stejně';
+  const prilezitost = (seo.prilezitosti || [])[0];
+  const idx = seo.indexace;
+  const podil = idx && idx.celkem ? idx.indexovano / idx.celkem : null;
+
+  return `<p style="${H}">SEO — Google vyhledávání</p>
+  <p style="${P}"><b>${cislo(tyden.kliky)}</b> kliků a <b>${cislo(tyden.imprese)}</b> impresí za posledních 7 dní
+  — kliků ${smer} než předchozí týden (${cislo(tyden.klikyPred)}).</p>
+  ${prilezitost ? `<p style="${P}">Příležitost týdne: <b>${esc(prilezitost.stranka)}</b> —
+    ${cislo(prilezitost.imprese)} impresí při CTR ${(prilezitost.ctr * 100).toLocaleString('cs-CZ', { maximumFractionDigits: 2 })} %
+    (pozice ${prilezitost.pozice}). Přepsání title/description může přinést ~${cislo(prilezitost.potencial)} kliků měsíčně.</p>` : ''}
+  ${podil !== null && podil < 0.9 ? `<p style="${P};color:#c62828"><b>Pozor:</b> v indexu je jen
+    ${cislo(idx.indexovano)} z ${cislo(idx.celkem)} URL ze sitemap (${Math.round(podil * 100)} %) — projít Search Console.</p>` : ''}`;
+}
+
+function mail(tento, minuly, projekty, seo) {
   const rozdil = tento.pocet - minuly.pocet;
   const smer = rozdil > 0 ? `o ${rozdil} víc` : rozdil < 0 ? `o ${-rozdil} méně` : 'stejně';
   const zastarale = projekty.filter((p) => p && p.aktualni === false).length;
@@ -116,6 +150,8 @@ function mail(tento, minuly, projekty) {
   <p style="${P}">${sklonuj(tento.pocet)} za posledních 7 dní — ${smer} než předchozí týden (${minuly.pocet}).${
     tento.spam ? ` Z toho ${tento.spam} označeno jako možný spam.` : ''
   }</p>
+
+  ${seoBlok(seo || {})}
 
   <p style="${H}">Zájem</p>
   ${tabulka(['Zájem', 'Počet'], tento.zajem.map(([k, v]) => [esc(k), v]), 'Tento týden nikdo nezaškrtl žádný zájem.')}

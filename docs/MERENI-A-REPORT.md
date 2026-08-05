@@ -13,9 +13,11 @@ Z čeho se to skládá:
 | Část | Kde běží | Co dělá |
 |---|---|---|
 | `api/contact.js` | Vercel | po odeslání poptávky zapíše anonymní záznam do úložiště |
-| `api/statistiky.js` | Vercel | dashboard za přihlášením — přehled poptávek |
-| `api/tydenni-report.js` | Vercel | pošle týdenní souhrn e-mailem přes Resend |
+| `api/statistiky.js` | Vercel | dashboard za přihlášením — SEO výkon + přehled poptávek |
+| `api/tydenni-report.js` | Vercel | pošle týdenní souhrn e-mailem přes Resend (vč. SEO bloku) |
+| `api/seo-data.js` | Vercel | přijme denní SEO snapshot z VPS a uloží ho do úložiště |
 | `scripts/tydenni-report.sh` | VPS (cron) | jednou týdně zjistí verze Astra a zavolá report |
+| `scripts/seo-report.py` | VPS (cron) | denně stáhne data z Search Console a pošle snapshot |
 
 E-mail odesílá vždy Vercel — klíč k Resendu je jen tam, na serveru k němu není přístup.
 Server dodává pouze údaje o verzích Astra.
@@ -80,8 +82,13 @@ proměnné se do běžících funkcí samy nepropíšou.
 
 - Přihlášení: HTTP Basic. **Uživatelské jméno je libovolné** (třeba `zdenek`),
   heslo = hodnota `STATS_PASSWORD`.
-- Obsahuje: počty poptávek za 7 a 30 dní (se srovnáním s předchozím týdnem), rozpad podle zájmu,
-  nejčastější vstupní stránky a tabulku posledních 50 záznamů.
+- Sekce **SEO výkon** (data z Search Console, denní snapshot z VPS): kliky/imprese/CTR/pozice
+  za 28 dní se srovnáním, vývoj po měsících, příležitosti s nízkým CTR, nové a ztracené dotazy,
+  dotazy na pozicích 4–10, top dotazy a stránky, týdenní kontrola indexace vs. sitemap
+  a sekce pro platform properties (zatím z CSV exportů).
+- Sekce **Poptávky**: počty za 7 a 30 dní (se srovnáním s předchozím týdnem), rozpad podle zájmu,
+  nejčastější vstupní stránky a tabulka posledních 50 záznamů.
+- Světlý i tmavý režim podle nastavení systému.
 - Stránka je `noindex` + `no-store`, takže se nedostane do vyhledávačů ani do cache.
 - Když chybí `STATS_PASSWORD`, vrací 503 a nic nezobrazí — bez hesla dashboard nikdy neběží.
 
@@ -113,6 +120,29 @@ Skript projde `/data/bot/*/package.json`, u každého projektu vytáhne verzi `a
 a výsledek pošle POSTem na `/api/tydenni-report`. Vercel z toho sestaví e-mail
 (předmět `[1P web] Týdenní souhrn — N poptávek`) a pošle ho na `MAIL_TO`.
 Projekty, které nejsou na aktuální hlavní verzi, jsou v mailu červeně jako *zastaralé*.
+
+## SEO data (denní snapshot z VPS)
+
+Dashboard i SEO blok v mailu čtou snapshot z úložiště (klíč `seo`). Plní ho
+`scripts/seo-report.py` na VPS — service account klíč ke GSC je jen tam
+(`/home/admin/.config/gsc/key.json`), do Vercelu se nedává.
+
+- **Denní cron (root, kvůli `/etc/web-1p-report.env`):**
+
+  ```
+  50 6 * * * /usr/bin/python3 /data/bot/web-1P/scripts/seo-report.py >> /var/log/web-1p-seo.log 2>&1
+  ```
+
+  Běží před pondělním mailem (7:05), takže mail má vždy čerstvá data.
+- **Indexace**: v pondělí (nebo s `--indexace`) skript projde všechny URL ze sitemap přes
+  URL Inspection API (~350 URL, kvóta 2000/den) a přidá stav indexace. Pokles pod 90 %
+  ukáže dashboard i mail jako alert.
+- **Autentizace**: stejné tajemství jako týdenní report (`REPORT_SECRET`), POST na
+  `/api/seo-data` s hlavičkou `Authorization: Bearer …`.
+- **Platform properties** (ChatGPT apod.): API je zatím nenabízí. CSV export z GSC se nahraje do
+  `data/gsc-platformy/<platforma>/` (složka není v gitu) a další běh skriptu ho propíše
+  do dashboardu. Až API platform properties zpřístupní, přepne se to na automatiku.
+- **Ladění bez POSTu**: `python3 scripts/seo-report.py --soubor /tmp/seo.json` — jen vypíše JSON.
 
 ## Jak si to ověřit
 
