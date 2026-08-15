@@ -6,9 +6,18 @@ interface Props {
   href: string;
   img?: string | null;
   bullets?: string[];
+  type?: string;
 }
-const { name, href, img, bullets = [] } = Astro.props;
+const { name, href, img, bullets = [], type } = Astro.props;
 const initial = (name || '?').trim().charAt(0).toUpperCase();
+// Kartičku dostávají i články a rozcestníky, ne jen reference — výzva musí sedět
+// na to, kam odkaz vede.
+const CTA: Record<string, string> = {
+  reference: 'Zobrazit referenci',
+  article: 'Zobrazit článek',
+  hub: 'Zobrazit sekci',
+};
+const cta = `${CTA[type ?? ''] ?? 'Zobrazit referenci'} →`;
 ---
 <a class={`showcase${img ? '' : ' no-img'}`} href={href}>
   <div class="media">
@@ -19,7 +28,7 @@ const initial = (name || '?').trim().charAt(0).toUpperCase();
     {bullets.length > 0 && (
       <ul>{bullets.slice(0, 3).map((b) => <li>{b}</li>)}</ul>
     )}
-    <span class="more">Zobrazit referenci →</span>
+    <span class="more">{cta}</span>
   </div>
 </a>
 

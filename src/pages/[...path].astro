@@ -150,7 +150,7 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
           <section class="kids">
             <h2 class="kids-title">{cardsHeading} <span class="count">{imageCards.length}</span></h2>
             <div class="grid" data-reveal-group>
-              {imageCards.map((c: any) => <ShowcaseCard name={c.label} href={c.path} img={c.thumb} />)}
+              {imageCards.map((c: any) => <ShowcaseCard name={c.label} href={c.path} img={c.thumb} type={c.type} />)}
             </div>
           </section>
         )}

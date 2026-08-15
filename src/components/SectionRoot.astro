@@ -49,7 +49,7 @@ const isMarketing = cat === 'marketing';
       <h2 class="sr-list-h">{GRID_TITLE[cat]} <span class="count">{cardChildren.length}</span></h2>
       <div class="grid" data-reveal-group>
         {cardChildren.map((x: any) => (
-          <ShowcaseCard name={x.label} href={x.path} img={x.thumb} />
+          <ShowcaseCard name={x.label} href={x.path} img={x.thumb} type={x.type} />
         ))}
       </div>
     </section>
