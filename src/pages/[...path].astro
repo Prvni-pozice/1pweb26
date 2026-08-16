@@ -107,8 +107,11 @@ const articleLd = node.type === 'article' ? {
   publisher: { '@id': 'https://www.prvni-pozice.com/#org' },
 } : null;
 const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
+
+// Při sdílení odkazu má vyskočit náhledovka té stránky, ne pořád hero z titulky.
+const ogImage = node.thumb ? new URL(node.thumb, Astro.site).href : undefined;
 ---
-<Base title={pageTitle} description={metaDesc} jsonLd={pageJsonLd}>
+<Base title={pageTitle} description={metaDesc} ogImage={ogImage} jsonLd={pageJsonLd}>
   {isRoot ? (
     <SectionRoot cat={ROOTS[pathKey]} pathKey={pathKey} kids={children} />
   ) : (

@@ -34,7 +34,11 @@ const fontCss = faces
       `font-display:swap;src:url("${f.url}") format("woff2")}`,
   )
   .join('');
+// Bez vlastního obrázku sdílíme hero z titulky; jeho rozměry známe a můžeme je
+// deklarovat. U vlastních náhledovek se rozměry liší kus od kusu, takže je
+// neuvádíme — špatný údaj je horší než žádný, sdílecí roboti si obrázek stáhnou.
 const ogImageUrl = ogImage ?? 'https://www.prvni-pozice.com/img/hero/hero-1.webp';
+const znameRozmery = !ogImage;
 // Firemní identita má pevné @id — podstrany se na ni odkazují (publisher),
 // místo aby si organizaci opisovaly znovu. Případné další uzly (drobečky,
 // článek) přidá stránka propem jsonLd do stejného @graphu.
@@ -69,8 +73,8 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1000" />
-    <meta property="og:image:height" content="1250" />
+    {znameRozmery && <meta property="og:image:width" content="1000" />}
+    {znameRozmery && <meta property="og:image:height" content="1250" />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImageUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
