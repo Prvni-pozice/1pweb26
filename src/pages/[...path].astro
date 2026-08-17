@@ -110,8 +110,11 @@ const pageJsonLd = articleLd ? [breadcrumbLd, articleLd] : [breadcrumbLd];
 
 // Při sdílení odkazu má vyskočit náhledovka té stránky, ne pořád hero z titulky.
 const ogImage = node.thumb ? new URL(node.thumb, Astro.site).href : undefined;
+// Články jsou `article`; reference i rozcestníky zůstávají `website` — nejsou to
+// texty s datem vydání, ale portfolio a výpisy.
+const ogType = node.type === 'article' ? 'article' : 'website';
 ---
-<Base title={pageTitle} description={metaDesc} ogImage={ogImage} jsonLd={pageJsonLd}>
+<Base title={pageTitle} description={metaDesc} ogImage={ogImage} ogType={ogType} jsonLd={pageJsonLd}>
   {isRoot ? (
     <SectionRoot cat={ROOTS[pathKey]} pathKey={pathKey} kids={children} />
   ) : (
