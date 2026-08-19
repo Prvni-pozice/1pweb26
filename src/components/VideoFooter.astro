@@ -5,7 +5,7 @@
 interface Props { hasVideo?: boolean; }
 const { hasVideo = false } = Astro.props;
 ---
-<section class="vfoot" data-scrub={hasVideo ? '' : undefined} aria-label="Náskok s AI">
+<section class="vfoot" data-scrub={hasVideo ? '' : undefined} aria-label="Vaše data. Vaše AI. Vaše pravidla.">
   {hasVideo ? (
     <video class="vfoot-media" muted playsinline preload="none"
       width="1920" height="1080" poster="/assets/footer/scrub-poster.webp">
@@ -34,8 +34,8 @@ const { hasVideo = false } = Astro.props;
 
   <div class="vfoot-overlay">
     <div class="wrap">
-      <span class="overline"><span class="dot"></span><span class="label vfl">Náskok napřed</span></span>
-      <h2>Náskok napřed. Teď&nbsp;i&nbsp;s&nbsp;AI.</h2>
+      <span class="overline"><span class="dot"></span><span class="label vfl">Vaše data. Vaše AI. Vaše pravidla.</span></span>
+      <h2>AI, kterou vlastníte. Ne&nbsp;AI, která vlastní&nbsp;vás.</h2>
       <a href="/kontakt/" class="btn primary lg">Pojďme to rozjet</a>
     </div>
   </div>
