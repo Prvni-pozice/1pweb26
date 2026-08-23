@@ -34,3 +34,6 @@ __pycache__/
 
 # CSV exporty z GSC platform properties (data, ne zdroj)
 data/gsc-platformy/
+
+# originální screenshoty z GA s nemaskovanými částkami klienta
+hero-sources/vandastore/
