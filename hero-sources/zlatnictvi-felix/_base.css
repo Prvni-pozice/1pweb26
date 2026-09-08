@@ -1,0 +1,14 @@
+@font-face{font-family:R;font-weight:400;src:url("../../src/styles/fonts/roboto-400.woff2")}
+@font-face{font-family:R;font-weight:500;src:url("../../src/styles/fonts/roboto-500.woff2")}
+@font-face{font-family:R;font-weight:700;src:url("../../src/styles/fonts/roboto-700.woff2")}
+@font-face{font-family:R;font-weight:900;src:url("../../src/styles/fonts/roboto-900.woff2")}
+@font-face{font-family:RM;font-weight:400;src:url("../../src/styles/fonts/roboto-mono-400.woff2")}
+@font-face{font-family:RM;font-weight:500;src:url("../../src/styles/fonts/roboto-mono-500.woff2")}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px}
+body{font-family:R,Arial,sans-serif;padding:104px 96px 190px;position:relative;display:flex;flex-direction:column}
+.over{display:flex;align-items:center;gap:16px;font-family:RM;font-weight:500;font-size:21px;
+  letter-spacing:.2em;text-transform:uppercase}
+.over b{width:12px;height:12px;border-radius:50%;display:block}
+.mark{position:absolute;top:96px;right:96px}
+.foot{position:absolute;left:96px;bottom:88px;font-family:RM;font-size:18px}
