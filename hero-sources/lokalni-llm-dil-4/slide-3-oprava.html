@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8">
+<style>
+ @font-face{font-family:R;font-weight:400;src:url("../../src/styles/fonts/roboto-400.woff2")}
+ @font-face{font-family:R;font-weight:900;src:url("../../src/styles/fonts/roboto-900.woff2")}
+ @font-face{font-family:RM;font-weight:400;src:url("../../src/styles/fonts/roboto-mono-400.woff2")}
+ @font-face{font-family:RM;font-weight:500;src:url("../../src/styles/fonts/roboto-mono-500.woff2")}
+ *{margin:0;padding:0;box-sizing:border-box}
+ html,body{width:1080px;height:1350px}
+ body{background:#98c800;color:#1d1f1e;font-family:R,Arial,sans-serif;
+   padding:104px 96px 190px;position:relative;display:flex;flex-direction:column}
+ .over{display:flex;align-items:center;gap:16px;font-family:RM;font-weight:500;font-size:21px;
+   letter-spacing:.2em;text-transform:uppercase}
+ .over b{width:12px;height:12px;border-radius:50%;background:#1d1f1e;display:block}
+ .mark{position:absolute;top:96px;right:96px;width:66px}
+ .block{margin:auto 0}
+ h1{font-weight:900;font-size:104px;line-height:1.05;letter-spacing:-.03em}
+ .rows{margin-top:44px;display:flex;flex-direction:column;gap:18px}
+ .row{display:flex;align-items:center;gap:28px;border-radius:22px;padding:30px 36px}
+ .row.a{background:#8bb703}
+ .row.b{background:#1d1f1e}
+ .lab{font-family:RM;font-weight:500;font-size:22px;letter-spacing:.14em;color:#62820133;
+   text-transform:uppercase;white-space:nowrap;width:170px;flex:none}
+ .row.a .lab{color:#628201}
+ .row.b .lab{color:#8bb703}
+ .code{font-family:RM;font-weight:400;font-size:40px;white-space:nowrap}
+ .row.b .code{color:#fff}
+ p{font-size:34px;line-height:1.44;margin-top:40px;max-width:900px;color:#37401f}
+ .foot{position:absolute;left:96px;bottom:88px;font-family:RM;font-size:18px;color:#3f4a22}
+</style>
+<div class="over"><b></b>Chyba, kterou oko přehlédne</div>
+<img class="mark" src="../zlatnictvi-felix/mark-1p-dark.png">
+<div class="block">
+  <h1>Jediný znak.</h1>
+  <div class="rows">
+    <div class="row a"><div class="lab">Model</div><div class="code">(11 - zbytek) % 11</div></div>
+    <div class="row b"><div class="lab">Správně</div><div class="code">(11 - zbytek) % 10</div></div>
+  </div>
+  <p>Selže ve 2 z 11 případů. Na pár náhodných IČO projde. Jedno z těch odmítnutých patří Alze.</p>
+</div>
+<div class="foot">@1pprvnipozice</div>
