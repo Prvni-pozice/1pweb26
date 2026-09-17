@@ -1,9 +1,10 @@
 ---
 // Hero slider — crossfade + Ken Burns + per-slide efekt, tečky + swipe + autoplay.
 // Slidy jsou buď fotky (src) nebo grafické 4:3 bannery (banner = varianta HeroBanner).
+// ms = jak dlouho snímek zůstane na obrazovce (výchozí 5500).
 import HeroBanner from './HeroBanner.astro';
 const slides = [
-  { src: '/img/hero/hero-1.webp', widths: [480, 700, 900, 1448], alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns' },
+  { src: '/img/hero/hero-1.webp', widths: [480, 700, 900, 1448], alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns', ms: 2500 },
   { banner: 'roadshow', href: '/blog/akce-a-prednasky/roadshow-2026-robotika-v-praxi/',
     alt: 'Roadshow digitalizace 2026: Robotika v praxi — 30. září, VŠPJ Jihlava, vstup zdarma po registraci' },
   { src: '/img/hero/hero-2.webp', widths: [480, 700, 1000], alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
@@ -22,7 +23,7 @@ const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
 ---
 <div class="hslider" data-hero-slider>
   {slides.map((s, i) => (
-    <figure class={`hslide${s.banner ? ' is-banner' : ` fx-${s.fx}`}${i === 0 ? ' is-active' : ''}`} data-index={i} aria-label={s.alt}>
+    <figure class={`hslide${s.banner ? ' is-banner' : ` fx-${s.fx}`}${i === 0 ? ' is-active' : ''}`} data-index={i} data-ms={s.ms} aria-label={s.alt}>
       {s.banner ? (
         s.href
           ? <a class="hbanner-link" href={s.href} aria-label={s.alt}><HeroBanner variant={s.banner as 'skoleni' | 'stat' | 'roadshow'} /></a>
@@ -56,8 +57,9 @@ const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
       slides[i].classList.add('is-active');
       if (dots[i]) dots[i].classList.add('is-active');
     }
-    function start() { if (reduce) return; stop(); timer = setInterval(function () { show(i + 1); }, 5500); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function hold(n) { return parseInt(slides[n].getAttribute('data-ms'), 10) || 5500; }
+    function start() { if (reduce) return; stop(); timer = setTimeout(function () { show(i + 1); start(); }, hold(i)); }
+    function stop() { if (timer) { clearTimeout(timer); timer = null; } }
     dots.forEach(function (d, n) {
       d.addEventListener('click', function () { show(n); start(); });
     });
