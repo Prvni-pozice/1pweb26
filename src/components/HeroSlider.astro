@@ -4,6 +4,8 @@
 import HeroBanner from './HeroBanner.astro';
 const slides = [
   { src: '/img/hero/hero-1.webp', widths: [480, 700, 900, 1448], alt: 'Vstupte s námi do éry rapidního vývoje s AI — První pozice', pos: '50% 30%', fx: 'kenburns' },
+  { banner: 'roadshow', href: '/blog/akce-a-prednasky/roadshow-2026-robotika-v-praxi/',
+    alt: 'Roadshow digitalizace 2026: Robotika v praxi — 30. září, VŠPJ Jihlava, vstup zdarma po registraci' },
   { src: '/img/hero/hero-2.webp', widths: [480, 700, 1000], alt: 'AI tip pro firmy: Nech agenta psát první verzi', pos: '50% 50%', fx: 'shine' },
   { src: '/img/hero/hero-3.webp', widths: [480, 700, 900, 1448], alt: 'Rychleji, chytřeji, měřitelně — První pozice', pos: '50% 50%', fx: 'pan' },
   { banner: 'stat', alt: '3× rychlejší prototyp díky AI vývoji — První pozice' },
@@ -22,7 +24,9 @@ const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
   {slides.map((s, i) => (
     <figure class={`hslide${s.banner ? ' is-banner' : ` fx-${s.fx}`}${i === 0 ? ' is-active' : ''}`} data-index={i} aria-label={s.alt}>
       {s.banner ? (
-        <HeroBanner variant={s.banner as 'skoleni' | 'stat'} />
+        s.href
+          ? <a class="hbanner-link" href={s.href} aria-label={s.alt}><HeroBanner variant={s.banner as 'skoleni' | 'stat' | 'roadshow'} /></a>
+          : <HeroBanner variant={s.banner as 'skoleni' | 'stat' | 'roadshow'} />
       ) : (
         <img src={s.src} srcset={srcset(s as any)} sizes={sizes} alt={s.alt} width="1448" height="1086" style={`object-position:${s.pos}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding={i === 0 ? 'sync' : 'async'} />
       )}
@@ -90,6 +94,8 @@ const sizes = '(min-width: 1384px) 1256px, calc(100vw - 64px)';
   .hslide img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.02); }
   /* grafický banner — container-query kontext pro --u škálování v HeroBanner */
   .hslide.is-banner { container-type: inline-size; }
+  /* proklikávací banner — odkaz musí vyplnit celý slide, ne jen text uvnitř */
+  .hbanner-link { display: block; width: 100%; height: 100%; color: inherit; text-decoration: none; }
 
   /* Efekt 1 — Ken Burns (pomalý zoom in) */
   .fx-kenburns.is-active img { animation: kenburns 14s ease-out forwards; }

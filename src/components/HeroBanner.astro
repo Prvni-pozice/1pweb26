@@ -3,7 +3,7 @@
 // (post-tip = "skoleni", post-stat = "stat"). Vše škálované přes container-query
 // jednotku --u (1 design px = 100cqw/1440), takže banner sedí v jakékoli velikosti.
 interface Props {
-  variant: 'skoleni' | 'stat';
+  variant: 'skoleni' | 'stat' | 'roadshow';
 }
 const { variant } = Astro.props;
 ---
@@ -28,6 +28,29 @@ const { variant } = Astro.props;
       <div class="bottom">
         <span class="handle">@1pprvnipozice</span>
         <span class="swipe">Domluvit školení →</span>
+      </div>
+    </>
+  )}
+  {variant === 'roadshow' && (
+    <>
+      <div class="top">
+        <span class="ov"><span class="dot"></span>Konference · 30. 9. 2026</span>
+        <img class="mark" src="/assets/logo-1p-dark-sm.webp" alt="První pozice" width="320" height="85" />
+      </div>
+      <div class="mid">
+        <p class="ey">Roadshow digitalizace · VŠPJ Jihlava</p>
+        <h2>Robotika v praxi — <span>od robotů po humanoidy</span>.</h2>
+        <p class="lead">Moderujeme osmý ročník. Vstup zdarma, zbývají poslední volná místa — a moc se na vás těšíme.</p>
+        <div class="chips">
+          <span class="chip">Průmysloví roboti</span>
+          <span class="chip">Koboti</span>
+          <span class="chip">Humanoidi</span>
+          <span class="chip">Digitální dvojčata</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <span class="handle">@1pprvnipozice</span>
+        <span class="swipe">Registrovat se →</span>
       </div>
     </>
   )}
@@ -90,6 +113,20 @@ const { variant } = Astro.props;
   .skoleni .bottom { border-top: 1px solid rgba(255,255,255,.16); }
   .skoleni .handle { color: rgba(255,255,255,.55); }
   .skoleni .swipe { color: #98c800; }
+
+  /* — Varianta „roadshow“ (limetková, pozvánka na konferenci) — */
+  .roadshow { background: #98c800; color: #1d1f1e; }
+  .roadshow::after { content: ""; position: absolute; right: calc(-200 * var(--u)); bottom: calc(-240 * var(--u)); width: calc(720 * var(--u)); height: calc(720 * var(--u)); border-radius: 999px; background: radial-gradient(circle at 35% 35%, rgba(29,31,30,.10), transparent 62%); pointer-events: none; }
+  .roadshow .ov { color: #1d1f1e; }
+  .roadshow .ov .dot { background: #1d1f1e; }
+  .roadshow .ey { color: rgba(29,31,30,.62); }
+  .roadshow h2 { color: #1d1f1e; }
+  .roadshow h2 span { color: #1d1f1e; box-shadow: inset 0 -.12em 0 #fff; }
+  .roadshow .lead { color: rgba(29,31,30,.78); }
+  .roadshow .chip { color: #1d1f1e; border: 1.5px solid rgba(29,31,30,.35); }
+  .roadshow .bottom { border-top: 1px solid rgba(29,31,30,.22); }
+  .roadshow .handle { color: rgba(29,31,30,.55); }
+  .roadshow .swipe { color: #1d1f1e; }
 
   /* — Varianta „stat" (bílá) — */
   .stat { background: #fff; color: #1d1f1e; }
