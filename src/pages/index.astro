@@ -43,7 +43,6 @@ const ICONS: Record<string, string> = {
         imagesizes="(min-width: 1384px) 1256px, calc(100vw - 64px)" fetchpriority="high" />
   <header class="hero">
     <div class="wrap">
-      <span class="overline"><span class="dot"></span><span class="label">Lokální agentura · nově s AI</span></span>
       <h1>Držíme vás na <u>první pozici</u>. Teď i s AI.</h1>
       <p class="sub">Tvoříme weby, e-shopy a aplikace — a posouváme je dál pomocí AI nástrojů a agentů. Rychleji, chytřeji, měřitelně.</p>
       <div class="cta">
@@ -130,8 +129,8 @@ const ICONS: Record<string, string> = {
 
 <style>
   /* HERO */
-  .hero { padding: 84px 0 64px; }
-  .hero h1 { font-size: var(--fs-display-2xl); font-weight: var(--fw-black); letter-spacing: -0.025em; line-height: 1.02; color: var(--text-strong); margin: 20px 0 0; max-width: 880px; }
+  .hero { padding: 36px 0 64px; }
+  .hero h1 { font-size: var(--fs-display-2xl); font-weight: var(--fw-black); letter-spacing: -0.025em; line-height: 1.02; color: var(--text-strong); margin: 0; max-width: 880px; }
   .hero h1 u { text-decoration: none; box-shadow: inset 0 -0.12em 0 var(--lime); }
   .hero .sub { font-size: 20px; line-height: var(--lh-body); color: var(--text-muted); max-width: 600px; margin: 26px 0 0; }
   .hero .cta { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
@@ -195,7 +194,7 @@ const ICONS: Record<string, string> = {
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 760px) {
-    .hero { padding: 56px 0 40px; }
+    .hero { padding: 28px 0 40px; }
     .hero h1 { font-size: 44px; }
     .cards { grid-template-columns: 1fr; }
     .band, .cta-band { padding: 44px 28px; }
